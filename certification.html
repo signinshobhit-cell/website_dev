@@ -1,3 +1,4 @@
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,6 +42,19 @@
           "addressCountry": "IN"
         }
       },
+      "founder": {
+        "@type": "Person",
+        "name": "Shobhit Verma",
+        "url": "https://www.linkedin.com/in/shobhit-verma-l00/",
+        "alumniOf": "Indian Institute of Foreign Trade"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/shobhit-verma-l00/",
+        "https://www.instagram.com/flexlyf_commerce_pvt_ltd/",
+        "https://www.youtube.com/@flexlyf",
+        "https://www.facebook.com/flexlyfcommerceprivatelimited",
+        "https://x.com/Shobhit73782089"
+      ],
       "areaServed": "IN",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -62,133 +76,6 @@
             margin: 0 auto;
             padding: 0 1.5rem;
             box-sizing: border-box;
-        }
-
-        /* Desktop Header Layout styling */
-        .navbar {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .navbar-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-        
-        .logo {
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .logo-text-main {
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            font-size: 1.75rem;
-            color: var(--color-primary-dark, #064E3B);
-            letter-spacing: -0.5px;
-        }
-        
-        .logo-text-sub {
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            font-size: 0.75rem;
-            color: var(--color-accent, #F59E0B);
-            letter-spacing: 2px;
-            display: block;
-            margin-top: -5px;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--color-text, #1F2937);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--color-primary, #059669);
-        }
-
-        .nav-phone {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: var(--color-primary-dark, #064E3B);
-            font-weight: 600;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 5px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--color-primary-dark, #064E3B);
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
-        /* Mobile Menu Overlay Hidden State Fix */
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            height: calc(100vh - 70px);
-            background: white;
-            z-index: 999;
-            overflow-y: auto;
-            border-top: 1px solid #E5E7EB;
-        }
-
-        .mobile-menu-content {
-            display: flex;
-            flex-direction: column;
-            padding: 2rem;
-            gap: 1.5rem;
-            text-align: center;
-        }
-
-        .mobile-menu-content a {
-            text-decoration: none;
-            color: #1F2937;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .mobile-menu-content a.active {
-            color: var(--color-primary, #059669);
-            font-weight: 600;
-        }
-
-        .mobile-menu.active {
-            display: block;
         }
 
         /* Page Content Specific Styles */
@@ -342,25 +229,6 @@
 
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
-        }
-
-        /* Media Queries for Viewport Breakpoints */
-        @media (max-width: 1024px) {
-            .nav-menu {
-                display: none;
-            }
-            .nav-phone {
-                display: none;
-            }
-            .hamburger {
-                display: flex;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .navbar-container {
-                padding: 1rem;
-            }
         }
     </style>
 </head>
@@ -560,14 +428,14 @@
             <div class="container">
                 <div style="text-align: center; max-width: 700px; margin: 0 auto;">
                     <h2 style="color: var(--color-primary-dark, #064E3B);">Our Certification Process</h2>
-                    <p style="color: var(--color-gray-600, #4B5563); margin-top: 1rem;">A streamlined 5-step approach to get you certified quickly.</p>
+                    <p style="color: var(--color-gray-600); margin-top: 1rem;">A streamlined 5-step approach to get you certified quickly.</p>
                 </div>
 
                 <div class="process-steps">
                     <div class="step-item">
                         <div class="step-number">1</div>
                         <h4 style="color: var(--color-primary-dark, #064E3B);">Free Consultation</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-600, #4B5563); margin-top: 0.5rem;">We analyze your product and target market requirements.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">We analyze your product and target market requirements.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">2</div>
@@ -691,8 +559,8 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
                 <div>
                     <div class="logo" style="margin-bottom: 1.5rem;">
-                        <span class="logo-main" style="color: white;">FLEXLYF</span>
-                        <span class="logo-sub" style="color: var(--color-accent, #F59E0B);">COMMERCE</span>
+                        <span class="logo-text-main" style="color: white;">FLEXLYF</span>
+                        <span class="logo-text-sub" style="color: var(--color-accent, #F59E0B);">COMMERCE</span>
                     </div>
                     <p style="color: #9CA3AF; line-height: 1.6; margin-bottom: 1.5rem;">
                         Empowering Indian MSMEs to conquer global markets through expert trade consultancy.
@@ -760,8 +628,8 @@
     <script>
         // Hamburger Mobile Toggle logic
         document.addEventListener('DOMContentLoaded', function() {
-            const toggleBtn = document.getElementById('mobile-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
+            const toggleBtn = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
 
             if (toggleBtn && mobileMenu) {
                 toggleBtn.addEventListener('click', function(e) {
@@ -769,7 +637,6 @@
                     mobileMenu.classList.toggle('active');
                 });
 
-                // Auto-close menu overlay if clicking background layout elements
                 document.addEventListener('click', function(e) {
                     if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
                         mobileMenu.classList.remove('active');
@@ -784,10 +651,8 @@
                 const faqItem = button.parentElement;
                 const isActive = faqItem.classList.contains('active');
                 
-                // Close all others
                 document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
                 
-                // Toggle current
                 if (!isActive) {
                     faqItem.classList.add('active');
                 }
