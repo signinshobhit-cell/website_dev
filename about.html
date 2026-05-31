@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Flexlyf Commerce - IIFT Alumni Trade Consultants</title>
     <meta name="description" content="Learn about Flexlyf Commerce - Founded by IIFT alumni with 15+ years experience helping Indian MSMEs expand globally through certification, licensing, and trade compliance.">
-    <link rel="canonical" href="https://signinshobhit-cell.github.io/website_dev/about.html">
+    <link class="canonical" href="https://signinshobhit-cell.github.io/website_dev/about.html">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="About Flexlyf Commerce | IIFT Alumni Trade Experts">
     <meta property="og:description" content="A decade of expertise. Thousands of MSMEs transformed. One clear mission - helping Indian businesses go global.">
     <meta property="og:image" content="https://signinshobhit-cell.github.io/website_dev/images/og-image.jpg">
     <meta property="og:url" content="https://signinshobhit-cell.github.io/website_dev/about.html">
     <meta property="og:type" content="website">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -31,10 +27,10 @@
         "description": "Foreign trade consultancy specialising in certification, licensing, product testing, inspection, and trade insurance for Indian MSMEs.",
         "url": "https://signinshobhit-cell.github.io/website_dev/",
         "telephone": "+919220819906",
-        "email": "info@flexlyfcommerce.com",
+        "email": "shobhit@flexlyf.com",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Connaught Place",
+            "streetAddress": "A-123, Sector 63",
             "addressLocality": "New Delhi",
             "addressRegion": "Delhi",
             "postalCode": "110001",
@@ -42,166 +38,162 @@
         },
         "founder": {
             "@type": "Person",
-            "name": "Shobhit Kumar",
+            "name": "Shobhit Verma",
+            "url": "https://www.linkedin.com/in/shobhit-verma-l00/",
             "alumniOf": "Indian Institute of Foreign Trade"
-        }
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/shobhit-verma-l00/",
+            "https://www.instagram.com/flexlyf_commerce_pvt_ltd/",
+            "https://www.youtube.com/@flexlyf",
+            "https://www.facebook.com/flexlyfcommerceprivatelimited",
+            "https://x.com/Shobhit73782089"
+        ]
     }
     </script>
 
     <style>
-        /* Specific styles to ensure your new nav layout works if not in styles.css */
-        .navbar-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 0;
+        /* Base Container & Structural Layout Fixes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            box-sizing: border-box;
         }
-        .logo-text-main {
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            font-size: 1.75rem;
-            color: var(--color-primary-dark, #064E3B);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-        .logo-text-sub {
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            font-size: 0.75rem;
-            color: var(--color-accent, #F59E0B);
-            letter-spacing: 2px;
-            display: block;
-            margin-top: -5px;
-        }
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-link {
-            text-decoration: none;
-            color: var(--color-text, #1F2937);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: var(--color-primary, #059669);
-        }
-        .nav-phone {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: var(--color-primary-dark, #064E3B);
-            font-weight: 600;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 5px;
-        }
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--color-primary-dark, #064E3B);
-            border-radius: 2px;
-            transition: 0.3s;
+
+        /* Page Content Specific Styles */
+        .page-hero {
+            background: linear-gradient(135deg, var(--color-primary-dark, #064E3B) 0%, var(--color-primary, #059669) 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         
-        @media (max-width: 900px) {
-            .nav-menu {
-                display: none; /* Ensure JS toggles this */
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 2rem;
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                gap: 1.5rem;
-                text-align: center;
-            }
-            .nav-menu.active {
-                display: flex;
-            }
-            .nav-phone {
-                display: none; /* Hide phone on mobile if needed, or move inside menu */
-            }
-            .hamburger {
-                display: flex;
-            }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .breadcrumb a {
+            color: var(--color-accent, #F59E0B);
+            text-decoration: none;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 4rem;
+            gap: 2rem;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--color-accent, #F59E0B);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+        }
+
+        .industry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .tag-pill {
+            background: #ECFDF5;
+            color: var(--color-primary-dark, #064E3B);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid #D1FAE5;
         }
     </style>
 </head>
 <body>
-    <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- NEW Navigation Bar -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;">
-        <div class="container navbar-container">
-            <a href="index.html" class="logo" aria-label="Flexlyf Commerce Home">
-                <span class="logo-text-main">FLEXLYF</span>
-                <span class="logo-text-sub">COMMERCE</span>
-            </a>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link active">About Us</a></li>
-                <li><a href="certification.html" class="nav-link">Certification</a></li>
-                <li><a href="licensing.html" class="nav-link">Licensing</a></li>
-                <li><a href="testing.html" class="nav-link">Testing</a></li>
-                <li><a href="inspection.html" class="nav-link">Inspection</a></li>
-                <li><a href="insurance.html" class="nav-link">Insurance</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            
-            <a href="tel:+919220819906" class="nav-phone">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                +91 92208 19906
-            </a>
-            
-            <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo" aria-label="Flexlyf Commerce Home">
+        <span class="logo-text-main">FLEXLYF</span>
+        <span class="logo-text-sub">COMMERCE</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="certification.html" class="nav-link">Certification</a></li>
+        <li><a href="licensing.html" class="nav-link">Licensing</a></li>
+        <li><a href="testing.html" class="nav-link">Testing</a></li>
+        <li><a href="inspection.html" class="nav-link">Inspection</a></li>
+        <li><a href="insurance.html" class="nav-link">Insurance</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <a href="tel:+919220819906" class="nav-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79(19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        +91 92208 19906
+      </a>
+      
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
     
     <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero hero-narrow" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%); color: white; padding: 100px 0 60px;">
+        <section class="page-hero">
             <div class="container">
-                <nav class="breadcrumb" aria-label="Breadcrumb" style="margin-bottom: 1rem; opacity: 0.9; font-size: 0.9rem;">
-                    <a href="index.html" style="color: var(--color-accent); text-decoration: none;">Home</a> › <span>About Us</span>
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a> › <span>About Us</span>
                 </nav>
-                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">About Flexlyf Commerce</h1>
-                <p class="hero-subtitle" style="font-size: 1.2rem; opacity: 0.9; max-width: 600px;">A decade of expertise. Thousands of MSMEs transformed. One clear mission.</p>
+                <h1>About Flexlyf Commerce</h1>
+                <p class="hero-subtext">A decade of expertise. Thousands of MSMEs transformed. One clear mission.</p>
             </div>
         </section>
         
-        <!-- Our Story -->
-        <section class="section" style="padding: 80px 0;">
+        <section class="section-padding">
             <div class="container">
                 <div class="two-column-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
                     <div>
                         <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">OUR STORY</span>
                         <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0;">Built on IIFT Excellence</h2>
                         <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1rem;">Flexlyf Commerce Private Limited was founded with a singular vision: to empower Indian MSMEs with the knowledge, certifications, and support they need to compete confidently in global markets.</p>
-                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1rem;">Our founder, Shobhit Kumar, an alumnus of the prestigious Indian Institute of Foreign Trade (IIFT), New Delhi, recognized that countless Indian businesses had world-class products but lacked the regulatory expertise to navigate international trade complexities.</p>
+                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1rem;">Our founder, Shobhit Verma, an alumnus of the prestigious Indian Institute of Foreign Trade (IIFT), New Delhi, recognized that countless Indian businesses had world-class products but lacked the regulatory expertise to navigate international trade complexities.</p>
                         <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 2rem;">Today, we've grown into a comprehensive trade consultancy serving 500+ MSMEs across India, helping them achieve certifications, secure licenses, conduct product testing, arrange inspections, and obtain trade insurance — all under one roof.</p>
                         <div class="feature-list">
                             <div class="feature-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; color: var(--color-primary-dark);">
@@ -219,7 +211,6 @@
                         </div>
                     </div>
                     <div class="image-placeholder" style="background: #ECFDF5; border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
-                        <!-- Placeholder for Image -->
                         <div style="text-align: center;">
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
                             <p style="font-weight: 600;">Founder Photo / Office Image</p>
@@ -229,8 +220,7 @@
             </div>
         </section>
         
-        <!-- Founder Profile -->
-        <section class="section section-alt" style="background: #F9FAFB; padding: 80px 0;">
+        <section class="section-padding" style="background: #F9FAFB;">
             <div class="container">
                 <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">LEADERSHIP</span>
                 <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">Meet Our Founder</h2>
@@ -243,7 +233,7 @@
                         </svg>
                     </div>
                     <div class="founder-info" style="flex: 1;">
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.5rem; margin-bottom: 0.5rem;">Shobhit Kumar</h3>
+                        <h3 style="color: var(--color-primary-dark); font-size: 1.5rem; margin-bottom: 0.5rem;">Shobhit Verma</h3>
                         <p class="founder-title" style="color: var(--color-accent); font-weight: 600; margin-bottom: 1.5rem;">Founder & Principal Consultant</p>
                         <ul class="founder-credentials" style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--color-gray-600); line-height: 1.8;">
                             <li style="margin-bottom: 0.5rem;">• Executive MBA, Indian Institute of Foreign Trade (IIFT), New Delhi</li>
@@ -251,8 +241,8 @@
                             <li style="margin-bottom: 0.5rem;">• Specialized in MSME global expansion strategies</li>
                             <li>• Certified Trade Compliance Expert</li>
                         </ul>
-                        <a href="https://linkedin.com/in/shobhit-verma-l00/" class="btn btn-secondary" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: white; border: 2px solid var(--color-primary); color: var(--color-primary); text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.3s;">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" class="btn btn-secondary" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: white; border: 2px solid var(--color-primary); color: var(--color-primary); text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.3s;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0h.003z"/></svg>
                             Connect on LinkedIn
                         </a>
                     </div>
@@ -260,55 +250,48 @@
             </div>
         </section>
         
-        <!-- Timeline -->
-        <section class="section" style="padding: 80px 0;">
+        <section class="section-padding">
             <div class="container">
                 <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">OUR JOURNEY</span>
                 <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">Milestones & Growth</h2>
                 <div class="timeline" style="position: relative; max-width: 800px; margin: 3rem auto 0; padding-left: 20px; border-left: 2px solid #D1FAE5;">
-                    <!-- Item 1 -->
                     <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="timeline-marker" style="position: absolute; left: -26px; top: 0; background: var(--color-accent); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">2015</div>
+                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);">2015</div>
                         <div class="timeline-content">
                             <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Founded</h4>
                             <p style="color: var(--color-gray-600);">Started with focus on MSME export consulting and IEC registration</p>
                         </div>
                     </div>
-                    <!-- Item 2 -->
                     <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="timeline-marker" style="position: absolute; left: -26px; top: 0; background: var(--color-primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">2017</div>
+                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2017</div>
                         <div class="timeline-content">
                             <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Expanded Services</h4>
                             <p style="color: var(--color-gray-600);">Added certification and DGFT licensing support</p>
                         </div>
                     </div>
-                    <!-- Item 3 -->
                     <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="timeline-marker" style="position: absolute; left: -26px; top: 0; background: var(--color-primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">2019</div>
+                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2019</div>
                         <div class="timeline-content">
                             <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">New Capabilities</h4>
                             <p style="color: var(--color-gray-600);">Launched product testing and inspection services</p>
                         </div>
                     </div>
-                    <!-- Item 4 -->
                     <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="timeline-marker" style="position: absolute; left: -26px; top: 0; background: var(--color-primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">2021</div>
+                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2021</div>
                         <div class="timeline-content">
                             <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Full-Service</h4>
                             <p style="color: var(--color-gray-600);">Added cargo insurance brokerage and logistics support</p>
                         </div>
                     </div>
-                    <!-- Item 5 -->
                     <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="timeline-marker" style="position: absolute; left: -26px; top: 0; background: var(--color-primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">2023</div>
+                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2023</div>
                         <div class="timeline-content">
                             <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">500+ Clients</h4>
                             <p style="color: var(--color-gray-600);">Crossed milestone of 500+ MSME clients served</p>
                         </div>
                     </div>
-                     <!-- Item 6 -->
                      <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="timeline-marker" style="position: absolute; left: -26px; top: 0; background: var(--color-primary-dark); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">2024</div>
+                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary-dark); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(6, 78, 59, 0.2);">2024</div>
                         <div class="timeline-content">
                             <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Global Reach</h4>
                             <p style="color: var(--color-gray-600);">Expanded partner network to 50+ countries worldwide</p>
@@ -318,8 +301,7 @@
             </div>
         </section>
         
-        <!-- Mission & Vision -->
-        <section class="section section-alt" style="background: #F9FAFB; padding: 80px 0;">
+        <section class="section-padding" style="background: #F9FAFB;">
             <div class="container">
                 <div class="two-column-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
                     <div class="mission-vision-card" style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--color-primary);">
@@ -338,8 +320,7 @@
             </div>
         </section>
         
-        <!-- Values -->
-        <section class="section" style="padding: 80px 0;">
+        <section class="section-padding">
             <div class="container">
                 <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">CORE VALUES</span>
                 <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">What Drives Us</h2>
@@ -353,7 +334,7 @@
                     </div>
                     <div class="value-card" style="text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
                         <div class="value-icon" style="width: 64px; height: 64px; background: #ECFDF5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--color-primary);">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
                         <h3 style="color: var(--color-primary-dark); font-size: 1.25rem; margin-bottom: 1rem;">Excellence</h3>
                         <p style="color: var(--color-gray-600); line-height: 1.6;">We pursue excellence in every service we deliver, leveraging our IIFT foundation and continuous learning to provide best-in-class solutions.</p>
@@ -376,8 +357,7 @@
             </div>
         </section>
         
-        <!-- Accreditations -->
-        <section class="section section-alt" style="background: #F9FAFB; padding: 80px 0;">
+        <section class="section-padding" style="background: #F9FAFB;">
             <div class="container">
                 <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">MEMBERSHIPS & ASSOCIATIONS</span>
                 <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">Professional Affiliations</h2>
@@ -402,20 +382,18 @@
             </div>
         </section>
         
-        <!-- CTA -->
         <section class="cta-section" style="background: var(--color-primary-dark); color: white; padding: 80px 0; text-align: center;">
             <div class="container">
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Expand Your Business Globally?</h2>
                 <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2.5rem;">Partner with IIFT experts who understand international trade inside out.</p>
                 <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="contact.html" class="btn btn-primary btn-large" style="background: var(--color-accent); color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem;">Schedule Free Consultation</a>
-                    <a href="tel:+919220819906" class="btn btn-outline-white btn-large" style="border: 2px solid white; color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem;">Call +91 92208 19906</a>
+                    <a href="tel:+919220819906" class="btn btn-outline-white btn-large" style="border: 2px solid white; color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: none;">Call +91 92208 19906</a>
                 </div>
             </div>
         </section>
     </main>
     
-    <!-- Footer -->
     <footer class="footer" role="contentinfo" style="background: #022c22; color: white; padding: 60px 0 20px;">
         <div class="container">
             <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
@@ -426,7 +404,7 @@
                     </div>
                     <p style="color: #9CA3AF; line-height: 1.6; margin-bottom: 1.5rem;">Empowering Indian MSMEs to compete confidently in global markets through expert trade consultancy.</p>
                     <div class="social-links" style="display: flex; gap: 1rem;">
-                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" aria-label="LinkedIn" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" aria-label="LinkedIn" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0h.003z"/></svg></a>
                         <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd" aria-label="Instagram" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
                         <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" aria-label="Facebook" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
                         <a href="https://www.youtube.com/@flexlyf" aria-label="YouTube" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
@@ -456,49 +434,46 @@
                 <div class="footer-col">
                     <h4 style="color: white; margin-bottom: 1.5rem;">Contact</h4>
                     <address style="font-style: normal; color: #9CA3AF; line-height: 1.8;">
-                        <p>New Delhi, India - 110001</p>
+                        <p>A-123, Sector 63, New Delhi - 110001</p>
                         <p><a href="tel:+919220819906" style="color: #9CA3AF; text-decoration: none;">+91 92208 19906</a></p>
-                        <p><a href="mailto:info@flexlyfcommerce.com" style="color: #9CA3AF; text-decoration: none;">info@flexlyfcommerce.com</a></p>
+                        <p><a href="mailto:shobhit@flexlyf.com" style="color: #9CA3AF; text-decoration: none;">shobhit@flexlyf.com</a></p>
                         <p><a href="https://wa.me/919220819906" class="whatsapp-link" style="color: var(--color-accent); text-decoration: none;">Chat on WhatsApp</a></p>
                     </address>
                 </div>
             </div>
             <div class="footer-bottom" style="border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem;">
-                <p>&copy; <span id="currentYear">2024</span> Flexlyf Commerce Private Limited. All rights reserved.</p>
+                <p>&copy; <span id="currentYear"></span> Flexlyf Commerce Private Limited. All rights reserved.</p>
                 <p class="iift-badge" style="margin-top: 0.5rem; font-weight: 600; color: var(--color-accent);">IIFT Alumni Founded</p>
             </div>
         </div>
     </footer>
     
-    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s;">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.437-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
     </a>
     
-    <script src="main.js"></script>
     <script>
-        // Simple script to handle the hamburger menu for this specific nav structure
+        // Hamburger Mobile Toggle logic
         document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            
-            if(hamburger && navMenu) {
-                hamburger.addEventListener('click', function() {
-                    navMenu.classList.toggle('active');
-                    // Animate hamburger lines if desired
+            const toggleBtn = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.nav-menu');
+
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('active');
                 });
-                
-                // Close menu when clicking outside
+
                 document.addEventListener('click', function(e) {
-                    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-                        navMenu.classList.remove('active');
+                    if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+                        mobileMenu.classList.remove('active');
                     }
                 });
             }
-            
-            // Dynamic Year
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
+
+        // Dynamic Year Setup
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
