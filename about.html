@@ -3,52 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Flexlyf Commerce - IIFT Alumni Trade Consultants</title>
-    <meta name="description" content="Learn about Flexlyf Commerce - Founded by IIFT alumni with 15+ years experience helping Indian MSMEs expand globally through certification, licensing, and trade compliance.">
-    <link class="canonical" href="https://signinshobhit-cell.github.io/website_dev/about.html">
+    <title>Certification Services | Flexlyf Commerce - ISO, CE, FDA & More</title>
+    <meta name="description" content="Expert guidance for ISO, CE, FDA, Organic, Halal, and Kosher certifications. Help Indian MSMEs navigate global compliance with Flexlyf Commerce.">
+    <meta name="keywords" content="ISO certification India, CE marking, FDA registration, Organic certification, Halal certificate, Export consultancy">
     
-    <meta property="og:title" content="About Flexlyf Commerce | IIFT Alumni Trade Experts">
-    <meta property="og:description" content="A decade of expertise. Thousands of MSMEs transformed. One clear mission - helping Indian businesses go global.">
-    <meta property="og:image" content="https://signinshobhit-cell.github.io/website_dev/images/og-image.jpg">
-    <meta property="og:url" content="https://signinshobhit-cell.github.io/website_dev/about.html">
+    <link rel="canonical" href="https://signinshobhit-cell.github.io/website_dev/certification.html">
+
+    <meta property="og:title" content="Certification Services | Flexlyf Commerce">
+    <meta property="og:description" content="Navigate international certification requirements with expert guidance — ISO, CE, FDA, and beyond.">
+    <meta property="og:image" content="https://signinshobhit-cell.github.io/website_dev/assets/og-certification.jpg">
+    <meta property="og:url" content="https://signinshobhit-cell.github.io/website_dev/certification.html">
     <meta property="og:type" content="website">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="styles.css">
     
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Export Certification Consulting",
+      "provider": {
+        "@type": "Organization",
         "name": "Flexlyf Commerce Private Limited",
-        "description": "Foreign trade consultancy specialising in certification, licensing, product testing, inspection, and trade insurance for Indian MSMEs.",
         "url": "https://signinshobhit-cell.github.io/website_dev/",
         "telephone": "+919220819906",
         "email": "shobhit@flexlyf.com",
         "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "A-123, Sector 63",
-            "addressLocality": "New Delhi",
-            "addressRegion": "Delhi",
-            "postalCode": "110001",
-            "addressCountry": "IN"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Shobhit Verma",
-            "url": "https://www.linkedin.com/in/shobhit-verma-l00/",
-            "alumniOf": "Indian Institute of Foreign Trade"
-        },
-        "sameAs": [
-            "https://www.linkedin.com/in/shobhit-verma-l00/",
-            "https://www.instagram.com/flexlyf_commerce_pvt_ltd/",
-            "https://www.youtube.com/@flexlyf",
-            "https://www.facebook.com/flexlyfcommerceprivatelimited",
-            "https://x.com/Shobhit73782089"
+          "@type": "PostalAddress",
+          "streetAddress": "A-123, Sector 63",
+          "addressLocality": "New Delhi",
+          "addressRegion": "Delhi",
+          "postalCode": "110001",
+          "addressCountry": "IN"
+        }
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Shobhit Verma",
+        "url": "https://www.linkedin.com/in/shobhit-verma-l00/",
+        "alumniOf": "Indian Institute of Foreign Trade"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/shobhit-verma-l00/",
+        "https://www.instagram.com/flexlyf_commerce_pvt_ltd/",
+        "https://www.youtube.com/@flexlyf",
+        "https://www.facebook.com/flexlyfcommerceprivatelimited",
+        "https://x.com/Shobhit73782089"
+      ],
+      "areaServed": "IN",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Certification Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ISO Certification"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "CE Marking"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "FDA Registration"}}
         ]
+      }
     }
     </script>
 
@@ -86,6 +101,40 @@
 
         .section-padding {
             padding: 80px 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(6, 78, 59, 0.15);
+            border-top-color: var(--color-accent, #F59E0B);
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            background: #ECFDF5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary, #059669);
         }
 
         .process-steps {
@@ -137,6 +186,49 @@
             font-size: 0.9rem;
             border: 1px solid #D1FAE5;
         }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-text, #1F2937);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--color-gray-600, #4B5563);
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
     </style>
 </head>
 <body>
@@ -151,8 +243,8 @@
       
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link active">About Us</a></li>
-        <li><a href="certification.html" class="nav-link">Certification</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="certification.html" class="nav-link active">Certification</a></li>
         <li><a href="licensing.html" class="nav-link">Licensing</a></li>
         <li><a href="testing.html" class="nav-link">Testing</a></li>
         <li><a href="inspection.html" class="nav-link">Inspection</a></li>
@@ -162,7 +254,7 @@
       
       <a href="tel:+919220819906" class="nav-phone">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79(19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
         +91 92208 19906
       </a>
@@ -174,244 +266,314 @@
       </div>
     </div>
   </nav>
-    
+
     <main id="main-content">
         <section class="page-hero">
             <div class="container">
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="index.html">Home</a> › <span>About Us</span>
-                </nav>
-                <h1>About Flexlyf Commerce</h1>
-                <p class="hero-subtext">A decade of expertise. Thousands of MSMEs transformed. One clear mission.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> › <span>Certification Services</span>
+                </div>
+                <h1>Global Certification Services</h1>
+                <p class="hero-subtext">Navigate international certification requirements with expert guidance — ISO, CE, FDA, and beyond.</p>
             </div>
         </section>
-        
+
         <section class="section-padding">
             <div class="container">
-                <div class="two-column-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-                    <div>
-                        <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">OUR STORY</span>
-                        <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0;">Built on IIFT Excellence</h2>
-                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1rem;">Flexlyf Commerce Private Limited was founded with a singular vision: to empower Indian MSMEs with the knowledge, certifications, and support they need to compete confidently in global markets.</p>
-                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1rem;">Our founder, Shobhit Verma, an alumnus of the prestigious Indian Institute of Foreign Trade (IIFT), New Delhi, recognized that countless Indian businesses had world-class products but lacked the regulatory expertise to navigate international trade complexities.</p>
-                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 2rem;">Today, we've grown into a comprehensive trade consultancy serving 500+ MSMEs across India, helping them achieve certifications, secure licenses, conduct product testing, arrange inspections, and obtain trade insurance — all under one roof.</p>
-                        <div class="feature-list">
-                            <div class="feature-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; color: var(--color-primary-dark);">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Executive MBA from Indian Institute of Foreign Trade (IIFT)</span>
-                            </div>
-                            <div class="feature-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; color: var(--color-primary-dark);">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>15+ years combined experience in foreign trade</span>
-                            </div>
-                            <div class="feature-item" style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem; color: var(--color-primary-dark);">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                <span>Trusted by exporters across 50+ countries</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-placeholder" style="background: #ECFDF5; border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
-                        <div style="text-align: center;">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                            <p style="font-weight: 600;">Founder Photo / Office Image</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section-padding" style="background: #F9FAFB;">
-            <div class="container">
-                <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">LEADERSHIP</span>
-                <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">Meet Our Founder</h2>
-                <div class="founder-card" style="display: flex; gap: 3rem; align-items: center; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-top: 2rem; flex-wrap: wrap;">
-                    <div class="founder-image" style="flex-shrink: 0;">
-                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="100" fill="#ECFDF5"/>
-                            <circle cx="100" cy="80" r="40" fill="#064E3B"/>
-                            <ellipse cx="100" cy="170" rx="60" ry="40" fill="#064E3B"/>
-                        </svg>
-                    </div>
-                    <div class="founder-info" style="flex: 1;">
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.5rem; margin-bottom: 0.5rem;">Shobhit Verma</h3>
-                        <p class="founder-title" style="color: var(--color-accent); font-weight: 600; margin-bottom: 1.5rem;">Founder & Principal Consultant</p>
-                        <ul class="founder-credentials" style="list-style: none; padding: 0; margin-bottom: 2rem; color: var(--color-gray-600); line-height: 1.8;">
-                            <li style="margin-bottom: 0.5rem;">• Executive MBA, Indian Institute of Foreign Trade (IIFT), New Delhi</li>
-                            <li style="margin-bottom: 0.5rem;">• 15+ years in international trade consulting</li>
-                            <li style="margin-bottom: 0.5rem;">• Specialized in MSME global expansion strategies</li>
-                            <li>• Certified Trade Compliance Expert</li>
+                <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 style="color: var(--color-primary-dark, #064E3B); margin-bottom: 1.5rem;">Why Certification Matters for Exporters</h2>
+                        <p style="color: var(--color-gray-600, #4B5563); line-height: 1.7; margin-bottom: 1.5rem;">
+                            In the global marketplace, certifications are not just badges—they are your passport to entry. 
+                            Whether you are exporting food to the EU, textiles to the US, or machinery to the Middle East, 
+                            compliance with international standards is mandatory.
+                        </p>
+                        <p style="color: var(--color-gray-600, #4B5563); line-height: 1.7;">
+                            At Flexlyf Commerce, we simplify this complex landscape. From document preparation to liaison 
+                            with accreditation bodies, we ensure your products meet global quality and safety norms, 
+                            reducing rejection risks and building buyer trust.
+                        </p>
+                        <ul style="margin-top: 1.5rem; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark, #064E3B);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent, #F59E0B);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Faster Market Entry
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark, #064E3B);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent, #F59E0B);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Enhanced Brand Credibility
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark, #064E3B);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent, #F59E0B);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Compliance with Global Regulations
+                            </li>
                         </ul>
-                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" class="btn btn-secondary" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: white; border: 2px solid var(--color-primary); color: var(--color-primary); text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.3s;">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0h.003z"/></svg>
-                            Connect on LinkedIn
-                        </a>
                     </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section-padding">
-            <div class="container">
-                <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">OUR JOURNEY</span>
-                <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">Milestones & Growth</h2>
-                <div class="timeline" style="position: relative; max-width: 800px; margin: 3rem auto 0; padding-left: 20px; border-left: 2px solid #D1FAE5;">
-                    <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-accent); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);">2015</div>
-                        <div class="timeline-content">
-                            <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Founded</h4>
-                            <p style="color: var(--color-gray-600);">Started with focus on MSME export consulting and IEC registration</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2017</div>
-                        <div class="timeline-content">
-                            <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Expanded Services</h4>
-                            <p style="color: var(--color-gray-600);">Added certification and DGFT licensing support</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2019</div>
-                        <div class="timeline-content">
-                            <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">New Capabilities</h4>
-                            <p style="color: var(--color-gray-600);">Launched product testing and inspection services</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2021</div>
-                        <div class="timeline-content">
-                            <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Full-Service</h4>
-                            <p style="color: var(--color-gray-600);">Added cargo insurance brokerage and logistics support</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);">2023</div>
-                        <div class="timeline-content">
-                            <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">500+ Clients</h4>
-                            <p style="color: var(--color-gray-600);">Crossed milestone of 500+ MSME clients served</p>
-                        </div>
-                    </div>
-                     <div class="timeline-item" style="margin-bottom: 2rem; position: relative; padding-left: 20px;">
-                        <div class="step-number" style="position: absolute; left: -46px; top: 0; width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary-dark); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(6, 78, 59, 0.2);">2024</div>
-                        <div class="timeline-content">
-                            <h4 style="color: var(--color-primary-dark); font-size: 1.2rem; margin-bottom: 0.5rem;">Global Reach</h4>
-                            <p style="color: var(--color-gray-600);">Expanded partner network to 50+ countries worldwide</p>
+                    <div style="flex: 1; min-width: 300px; text-align: center;">
+                        <div style="background: #ECFDF5; padding: 3rem; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">ISO 9001</span>
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">CE Mark</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">FDA</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Halal</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Kosher</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Organic</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="section-padding" style="background: #F9FAFB;">
             <div class="container">
-                <div class="two-column-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-                    <div class="mission-vision-card" style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--color-primary);">
-                        <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">OUR MISSION</span>
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.5rem; margin: 1rem 0;">Empowering Indian MSMEs to Go Global</h3>
-                        <p style="color: var(--color-gray-600); line-height: 1.7;">We believe that every Indian manufacturer and exporter, regardless of size, deserves access to world-class trade expertise. Our mission is to democratize international trade knowledge and make global expansion accessible, affordable, and achievable for MSMEs across India.</p>
-                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-top: 1rem;">Through comprehensive support spanning certification, licensing, testing, inspection, and insurance, we remove barriers and build confidence for businesses ready to compete on the global stage.</p>
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Our Certification Solutions</h2>
+                    <p style="color: var(--color-gray-600, #4B5563); margin-top: 1rem;">Comprehensive support for major international standards.</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3>ISO Certification</h3>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Global standard for quality, environment, and safety management systems.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>ISO 9001 (Quality)</li>
+                            <li>ISO 14001 (Environment)</li>
+                            <li>ISO 22000 (Food Safety)</li>
+                            <li>ISO 45001 (Occupational Health)</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
                     </div>
-                    <div class="mission-vision-card" style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 4px solid var(--color-accent);">
-                        <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">OUR VISION</span>
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.5rem; margin: 1rem 0;">Becoming India's Most Trusted Trade Partner</h3>
-                        <p style="color: var(--color-gray-600); line-height: 1.7;">We envision a future where Indian MSMEs are recognized globally for quality, compliance, and reliability. Flexlyf Commerce aims to be the catalyst for this transformation — the trusted advisor that guides businesses through every step of their international journey.</p>
-                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-top: 1rem;">By 2030, we aim to support 5,000+ Indian businesses in establishing successful global operations, contributing to India's position as a leading export nation.</p>
+
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path></svg>
+                        </div>
+                        <h3>CE Marking</h3>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Mandatory conformity mark for products sold within the European Economic Area.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Machinery & Electronics</li>
+                            <li>Medical Devices</li>
+                            <li>Toys & PPE</li>
+                            <li>Technical File Preparation</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <h3>FDA Registration</h3>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">US Food and Drug Administration registration for food, drugs, and medical devices.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Food Facility Registration</li>
+                            <li>Drug Establishment Listing</li>
+                            <li>Medical Device Listing</li>
+                            <li>FSVP Agent Services</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3>Organic Certification</h3>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Certification for organic agriculture and processing under NPOP, USDA, and EU norms.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>NPOP (India)</li>
+                            <li>USDA NOP (USA)</li>
+                            <li>EU Organic Regulation</li>
+                            <li>Transaction Certificates (TC)</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3>Halal Certification</h3>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Essential for exporting food, cosmetics, and pharmaceuticals to Muslim-majority countries.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Food & Beverage</li>
+                            <li>Cosmetics & Pharma</li>
+                            <li>Slaughterhouse Audits</li>
+                            <li>Supply Chain Verification</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3>Kosher Certification</h3>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Compliance with Jewish dietary laws for accessing the US and Israeli markets.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Ingredient Analysis</li>
+                            <li>Production Line Audit</li>
+                            <li>Annual Supervision</li>
+                            <li>Export Documentation</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="section-padding">
             <div class="container">
-                <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">CORE VALUES</span>
-                <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">What Drives Us</h2>
-                <div class="values-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                    <div class="value-card" style="text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-                        <div class="value-icon" style="width: 64px; height: 64px; background: #ECFDF5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--color-primary);">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        </div>
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.25rem; margin-bottom: 1rem;">Integrity</h3>
-                        <p style="color: var(--color-gray-600); line-height: 1.6;">We maintain unwavering ethical standards in all our dealings, ensuring transparent processes and honest communication with every client.</p>
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Our Certification Process</h2>
+                    <p style="color: var(--color-gray-600); margin-top: 1rem;">A streamlined 5-step approach to get you certified quickly.</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Free Consultation</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">We analyze your product and target market requirements.</p>
                     </div>
-                    <div class="value-card" style="text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-                        <div class="value-icon" style="width: 64px; height: 64px; background: #ECFDF5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--color-primary);">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        </div>
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.25rem; margin-bottom: 1rem;">Excellence</h3>
-                        <p style="color: var(--color-gray-600); line-height: 1.6;">We pursue excellence in every service we deliver, leveraging our IIFT foundation and continuous learning to provide best-in-class solutions.</p>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Document Assessment</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Gap analysis of your existing technical files and processes.</p>
                     </div>
-                    <div class="value-card" style="text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-                        <div class="value-icon" style="width: 64px; height: 64px; background: #ECFDF5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--color-primary);">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                        </div>
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.25rem; margin-bottom: 1rem;">Innovation</h3>
-                        <p style="color: var(--color-gray-600); line-height: 1.6;">We continuously evolve our services, embracing new technologies and methodologies to serve our clients more effectively.</p>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Application Prep</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Drafting manuals, procedures, and application forms.</p>
                     </div>
-                    <div class="value-card" style="text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-                        <div class="value-icon" style="width: 64px; height: 64px; background: #ECFDF5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--color-primary);">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </div>
-                        <h3 style="color: var(--color-primary-dark); font-size: 1.25rem; margin-bottom: 1rem;">Client Focus</h3>
-                        <p style="color: var(--color-gray-600); line-height: 1.6;">Your success is our success. We tailor our approach to each client's unique needs, providing personalized support throughout their global journey.</p>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Audit & Follow-up</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Coordinating with the certification body for audits.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Certificate Delivery</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Successful issuance of your global certification.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section class="section-padding" style="background: #F9FAFB;">
+
+        <section class="section-padding" style="background: #ECFDF5;">
             <div class="container">
-                <span class="eyebrow" style="color: var(--color-accent); font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; display: block; text-align: center;">MEMBERSHIPS & ASSOCIATIONS</span>
-                <h2 style="color: var(--color-primary-dark); font-size: 2rem; margin: 1rem 0; text-align: center;">Professional Affiliations</h2>
-                <div class="logo-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin-top: 3rem; text-align: center;">
-                    <div class="logo-item">
-                        <div class="logo-placeholder" style="background: white; padding: 2rem; border-radius: 8px; font-weight: 700; color: var(--color-primary-dark); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">IIFT</div>
-                        <p style="margin-top: 0.5rem; color: var(--color-gray-600); font-size: 0.9rem;">Alumni Network</p>
-                    </div>
-                    <div class="logo-item">
-                        <div class="logo-placeholder" style="background: white; padding: 2rem; border-radius: 8px; font-weight: 700; color: var(--color-primary-dark); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">FIEO</div>
-                        <p style="margin-top: 0.5rem; color: var(--color-gray-600); font-size: 0.9rem;">Member</p>
-                    </div>
-                    <div class="logo-item">
-                        <div class="logo-placeholder" style="background: white; padding: 2rem; border-radius: 8px; font-weight: 700; color: var(--color-primary-dark); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">DGFT</div>
-                        <p style="margin-top: 0.5rem; color: var(--color-gray-600); font-size: 0.9rem;">Registered Consultant</p>
-                    </div>
-                    <div class="logo-item">
-                        <div class="logo-placeholder" style="background: white; padding: 2rem; border-radius: 8px; font-weight: 700; color: var(--color-primary-dark); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">ISO</div>
-                        <p style="margin-top: 0.5rem; color: var(--color-gray-600); font-size: 0.9rem;">Certified Processes</p>
+                <div style="text-align: center;">
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Industries We Certify</h2>
+                    <div class="industry-tags">
+                        <span class="tag-pill">Food & Beverage</span>
+                        <span class="tag-pill">Pharmaceuticals</span>
+                        <span class="tag-pill">Textiles & Apparel</span>
+                        <span class="tag-pill">Engineering Goods</span>
+                        <span class="tag-pill">Agriculture</span>
+                        <span class="tag-pill">Cosmetics</span>
+                        <span class="tag-pill">Medical Devices</span>
+                        <span class="tag-pill">Electronics</span>
+                        <span class="tag-pill">Chemicals</span>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section class="cta-section" style="background: var(--color-primary-dark); color: white; padding: 80px 0; text-align: center;">
+
+        <section class="section-padding">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What documents do I need for ISO certification?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Typically, you need business registration proofs, process flow charts, quality manuals, and existing standard operating procedures (SOPs). We help you create these if they are missing.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does CE marking take?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            The timeline varies by product risk category. For low-risk products, it can take 2-4 weeks. For high-risk machinery or medical devices requiring notified body intervention, it may take 2-3 months.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can you help with multi-country certifications?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes, we specialize in bundled certifications for exporters targeting multiple regions (e.g., CE for Europe, FDA for USA, and GCC for Middle East) simultaneously to save time and cost.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you assist with renewal of existing certifications?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Absolutely. We offer surveillance audit support and renewal services to ensure your certifications remain valid without interruption.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is the cost of certification support?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Costs depend on the specific standard, company size, and complexity. Contact us for a free preliminary assessment and a tailored quote.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" style="background: var(--color-primary-dark, #064E3B); color: white; padding: 80px 0; text-align: center;">
             <div class="container">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Expand Your Business Globally?</h2>
-                <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2.5rem;">Partner with IIFT experts who understand international trade inside out.</p>
-                <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn btn-primary btn-large" style="background: var(--color-accent); color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem;">Schedule Free Consultation</a>
-                    <a href="tel:+919220819906" class="btn btn-outline-white btn-large" style="border: 2px solid white; color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.1rem; background: none;">Call +91 92208 19906</a>
+                <h2 style="color: white; margin-bottom: 1.5rem;">Get Your Certification Started Today</h2>
+                <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
+                    Don't let compliance barriers stop your global expansion. Talk to our experts now.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary" style="background: var(--color-accent, #F59E0B); color: white; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none;">Request Free Assessment</a>
+                    <a href="tel:+919220819906" class="btn btn-secondary" style="border: 2px solid white; color: white; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none; background:none;">Call +91 92208 19906</a>
                 </div>
             </div>
         </section>
     </main>
-    
-    <footer class="footer" role="contentinfo" style="background: #022c22; color: white; padding: 60px 0 20px;">
+
+    <footer class="footer" style="background: #022c22; color: white; padding: 60px 0 20px;">
         <div class="container">
-            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-                <div class="footer-col">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <div>
                     <div class="logo" style="margin-bottom: 1.5rem;">
                         <span class="logo-text-main" style="color: white;">FLEXLYF</span>
-                        <span class="logo-text-sub" style="color: var(--color-accent);">COMMERCE</span>
+                        <span class="logo-text-sub" style="color: var(--color-accent, #F59E0B);">COMMERCE</span>
                     </div>
-                    <p style="color: #9CA3AF; line-height: 1.6; margin-bottom: 1.5rem;">Empowering Indian MSMEs to compete confidently in global markets through expert trade consultancy.</p>
-                    <div class="social-links" style="display: flex; gap: 1rem;">
-                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" aria-label="LinkedIn" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0h.003z"/></svg></a>
-                        <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd" aria-label="Instagram" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                        <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" aria-label="Facebook" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
-                        <a href="https://www.youtube.com/@flexlyf" aria-label="YouTube" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
-                        <a href="https://x.com/Shobhit73782089" aria-label="Twitter" target="_blank" rel="noopener" style="color: white;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <p style="color: #9CA3AF; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Empowering Indian MSMEs to conquer global markets through expert trade consultancy.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                        <a href="https://www.youtube.com/@flexlyf" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                        <a href="https://x.com/Shobhit73782089" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                     </div>
                 </div>
-                <div class="footer-col">
+                
+                <div>
                     <h4 style="color: white; margin-bottom: 1.5rem;">Services</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 0.8rem;"><a href="certification.html" style="color: #9CA3AF; text-decoration: none;">Certification</a></li>
@@ -419,10 +581,10 @@
                         <li style="margin-bottom: 0.8rem;"><a href="testing.html" style="color: #9CA3AF; text-decoration: none;">Product Testing</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="inspection.html" style="color: #9CA3AF; text-decoration: none;">Inspection</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="insurance.html" style="color: #9CA3AF; text-decoration: none;">Trade Insurance</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="logistics.html" style="color: #9CA3AF; text-decoration: none;">Logistics & Customs</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+
+                <div>
                     <h4 style="color: white; margin-bottom: 1.5rem;">Company</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #9CA3AF; text-decoration: none;">Home</a></li>
@@ -431,32 +593,42 @@
                         <li style="margin-bottom: 0.8rem;"><a href="privacy.html" style="color: #9CA3AF; text-decoration: none;">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+
+                <div>
                     <h4 style="color: white; margin-bottom: 1.5rem;">Contact</h4>
-                    <address style="font-style: normal; color: #9CA3AF; line-height: 1.8;">
-                        <p>A-123, Sector 63, New Delhi - 110001</p>
-                        <p><a href="tel:+919220819906" style="color: #9CA3AF; text-decoration: none;">+91 92208 19906</a></p>
-                        <p><a href="mailto:shobhit@flexlyf.com" style="color: #9CA3AF; text-decoration: none;">shobhit@flexlyf.com</a></p>
-                        <p><a href="https://wa.me/919220819906" class="whatsapp-link" style="color: var(--color-accent); text-decoration: none;">Chat on WhatsApp</a></p>
-                    </address>
+                    <ul style="list-style: none; padding: 0; color: #9CA3AF;">
+                        <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            A-123, Sector 63, New Delhi - 110001
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            +91 92208 19906
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            shobhit@flexlyf.com
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom" style="border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem;">
-                <p>&copy; <span id="currentYear"></span> Flexlyf Commerce Private Limited. All rights reserved.</p>
-                <p class="iift-badge" style="margin-top: 0.5rem; font-weight: 600; color: var(--color-accent);">IIFT Alumni Founded</p>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem;">
+                <p>&copy; <span id="year"></span> Flexlyf Commerce Private Limited. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    
-    <a href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s;">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+
+    <a href="https://wa.me/919220819906?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20certification%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000;">
+        <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
-    
+
+    <script src="main.js"></script>
     <script>
         // Hamburger Mobile Toggle logic
         document.addEventListener('DOMContentLoaded', function() {
             const toggleBtn = document.querySelector('.hamburger');
-            const mobileMenu = document.querySelector('.nav-menu');
+            const mobileMenu = document.querySelector('.mobile-menu');
 
             if (toggleBtn && mobileMenu) {
                 toggleBtn.addEventListener('click', function(e) {
@@ -472,8 +644,22 @@
             }
         });
 
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+                
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
         // Dynamic Year Setup
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
