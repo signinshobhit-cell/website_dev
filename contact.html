@@ -20,7 +20,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -33,16 +33,29 @@
       "name": "Flexlyf Commerce Private Limited",
       "image": "https://signinshobhit-cell.github.io/website_dev/assets/logo.png",
       "telephone": "+919220819906",
-      "email": "info@flexlyfcommerce.com",
+      "email": "shobhit@flexlyf.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "New Delhi",
+        "streetAddress": "A-123, Sector 63",
         "addressLocality": "New Delhi",
         "addressRegion": "Delhi",
         "postalCode": "110001",
         "addressCountry": "IN"
       },
       "url": "https://signinshobhit-cell.github.io/website_dev/",
+      "founder": {
+        "@type": "Person",
+        "name": "Shobhit Verma",
+        "url": "https://www.linkedin.com/in/shobhit-verma-l00/",
+        "alumniOf": "Indian Institute of Foreign Trade"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/shobhit-verma-l00/",
+        "https://www.instagram.com/flexlyf_commerce_pvt_ltd/",
+        "https://www.youtube.com/@flexlyf",
+        "https://www.facebook.com/flexlyfcommerceprivatelimited",
+        "https://x.com/Shobhit73782089"
+      ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
@@ -215,234 +228,217 @@
     </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-main">FLEXLYF</span>
-                <span class="logo-sub">COMMERCE</span>
-            </a>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Services ▾</button>
-                    <div class="dropdown-content">
-                        <a href="certification.html">Certification</a>
-                        <a href="licensing.html">Licensing</a>
-                        <a href="testing.html">Product Testing</a>
-                        <a href="inspection.html">Inspection</a>
-                        <a href="insurance.html">Trade Insurance</a>
-                        <a href="logistics.html">Logistics</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="active">Contact</a>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="tel:+919220819906" class="phone-link">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    <span>+91 92208 19906</span>
-                </a>
-                <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-content">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="certification.html">Certification</a>
-            <a href="licensing.html">Licensing</a>
-            <a href="testing.html">Product Testing</a>
-            <a href="inspection.html">Inspection</a>
-            <a href="insurance.html">Trade Insurance</a>
-            <a href="logistics.html">Logistics</a>
-            <a href="contact.html" class="active">Contact Us</a>
-        </div>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo" aria-label="Flexlyf Commerce Home">
+        <span class="logo-text-main">FLEXLYF</span>
+        <span class="logo-text-sub">COMMERCE</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="certification.html" class="nav-link">Certification</a></li>
+        <li><a href="licensing.html" class="nav-link">Licensing</a></li>
+        <li><a href="testing.html" class="nav-link">Testing</a></li>
+        <li><a href="inspection.html" class="nav-link">Inspection</a></li>
+        <li><a href="insurance.html" class="nav-link">Insurance</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      
+      <a href="tel:+919220819906" class="nav-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        +91 92208 19906
+      </a>
+      
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Let's Talk Trade</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 1rem auto 0;">
-                Our experts are ready to help you navigate global markets. Reach out today for a free consultation.
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Methods -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Visit Us -->
-                <div class="contact-card">
-                    <div class="icon-box-large">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    </div>
-                    <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Visit Us</h3>
-                    <p style="color: var(--color-gray-600);">New Delhi, India - 110001</p>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-500); margin-top: 0.5rem;">Mon - Sat, 9:00 AM - 6:00 PM</p>
-                </div>
-
-                <!-- Call Us -->
-                <div class="contact-card">
-                    <div class="icon-box-large">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    </div>
-                    <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Call Us</h3>
-                    <p style="color: var(--color-gray-600);">+91 92208 19906</p>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-500); margin-top: 0.5rem;">Direct line to consultants</p>
-                </div>
-
-                <!-- WhatsApp -->
-                <div class="contact-card">
-                    <div class="icon-box-large" style="background: #DCFCE7; color: #16A34A;">
-                        <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    </div>
-                    <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">WhatsApp</h3>
-                    <p style="color: var(--color-gray-600);">Chat with us instantly</p>
-                    <a href="https://wa.me/919220819906?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" style="color: var(--color-accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 0.5rem;">Start Chat →</a>
-                </div>
-
-                <!-- Email -->
-                <div class="contact-card">
-                    <div class="icon-box-large">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Email</h3>
-                    <p style="color: var(--color-gray-600);">info@flexlyfcommerce.com</p>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-500); margin-top: 0.5rem;">Response within 24 hours</p>
-                </div>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Let's Talk Trade</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 1rem auto 0;">
+                    Our experts are ready to help you navigate global markets. Reach out today for a free consultation.
+                </p>
             </div>
+        </section>
 
-            <!-- Form & Map -->
-            <div class="contact-form-container">
-                <!-- Contact Form -->
-                <div>
-                    <h2 style="color: var(--color-primary-dark); margin-bottom: 1.5rem;">Send Us a Message</h2>
-                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Full Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+        <!-- Contact Methods -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Visit Us -->
+                    <div class="contact-card">
+                        <div class="icon-box-large">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Visit Us</h3>
+                        <p style="color: var(--color-gray-600);">A-123, Sector 63, New Delhi - 110001</p>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-500); margin-top: 0.5rem;">Mon - Sat, 9:00 AM - 6:00 PM IST</p>
+                    </div>
+
+                    <!-- Call Us -->
+                    <div class="contact-card">
+                        <div class="icon-box-large">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Call Us</h3>
+                        <p style="color: var(--color-gray-600);">+91 92208 19906</p>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-500); margin-top: 0.5rem;">Direct line to consultants</p>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact-card">
+                        <div class="icon-box-large" style="background: #DCFCE7; color: #16A34A;">
+                            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        </div>
+                        <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">WhatsApp</h3>
+                        <p style="color: var(--color-gray-600);">Chat with us instantly</p>
+                        <a href="https://wa.me/919220819906?text=Hello,%20I%20visited%20your%20contact%20page%20and%20need%20assistance." target="_blank" style="color: var(--color-accent); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 0.5rem;">Start Chat →</a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card">
+                        <div class="icon-box-large">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 0 0(2-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 style="color: var(--color-primary-dark); margin-bottom: 0.5rem;">Email</h3>
+                        <p style="color: var(--color-gray-600);">shobhit@flexlyf.com</p>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-500); margin-top: 0.5rem;">Response within 24 hours</p>
+                    </div>
+                </div>
+
+                <!-- Form & Map -->
+                <div class="contact-form-container">
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 style="color: var(--color-primary-dark); margin-bottom: 1.5rem;">Send Us a Message</h2>
+                        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                             <div class="form-group">
-                                <label for="email" class="form-label">Email Address *</label>
-                                <input type="email" id="email" name="email" class="form-control" required placeholder="john@company.com">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
                             </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-control" required placeholder="john@company.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+
                             <div class="form-group">
-                                <label for="phone" class="form-label">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+91 XXXXX XXXXX">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" id="company" name="company" class="form-control" placeholder="Your Company Ltd.">
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="company" class="form-label">Company Name</label>
-                            <input type="text" id="company" name="company" class="form-control" placeholder="Your Company Ltd.">
-                        </div>
+                            <div class="form-group">
+                                <label for="service" class="form-label">Service of Interest</label>
+                                <select id="service" name="service" class="form-control">
+                                    <option value="">Select a service...</option>
+                                    <option value="Certification">Certification (ISO, CE, FDA)</option>
+                                    <option value="Licensing">Licensing (IEC, DGFT)</option>
+                                    <option value="Testing">Product Testing</option>
+                                    <option value="Inspection">Inspection Services</option>
+                                    <option value="Insurance">Trade Insurance</option>
+                                    <option value="Logistics">Logistics & Customs</option>
+                                    <option value="Other">Other Inquiry</option>
+                                </select>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="service" class="form-label">Service of Interest</label>
-                            <select id="service" name="service" class="form-control">
-                                <option value="">Select a service...</option>
-                                <option value="Certification">Certification (ISO, CE, FDA)</option>
-                                <option value="Licensing">Licensing (IEC, DGFT)</option>
-                                <option value="Testing">Product Testing</option>
-                                <option value="Inspection">Inspection Services</option>
-                                <option value="Insurance">Trade Insurance</option>
-                                <option value="Logistics">Logistics & Customs</option>
-                                <option value="Other">Other Inquiry</option>
-                            </select>
-                        </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-control" required placeholder="Tell us about your requirements..."></textarea>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message *</label>
-                            <textarea id="message" name="message" class="form-control" required placeholder="Tell us about your requirements..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">Send Message</button>
-                        <p style="font-size: 0.85rem; color: var(--color-gray-500); margin-top: 1rem; text-align: center;">
-                            By submitting, you agree to our <a href="privacy.html" style="color: var(--color-primary);">Privacy Policy</a>.
-                        </p>
-                    </form>
-                </div>
-
-                <!-- Google Map -->
-                <div class="map-container">
-                    <!-- Embedded Google Map for New Delhi -->
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.886646379!2d76.83892897070312!3d28.64480019999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b7b6c4b5%3A0x8012bf24e12b6bf!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        title="Flexlyf Commerce Location">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section-padding" style="background: #F9FAFB;">
-        <div class="container" style="max-width: 800px;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="color: var(--color-primary-dark);">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How quickly can I get a consultation?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        We typically respond to all inquiries within 24 hours. For urgent matters, you can call or WhatsApp us directly at +91 92208 19906 for an immediate response during business hours.
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">Send Message</button>
+                            <p style="font-size: 0.85rem; color: var(--color-gray-500); margin-top: 1rem; text-align: center;">
+                                By submitting, you agree to our <a href="privacy.html" style="color: var(--color-primary);">Privacy Policy</a>.
+                            </p>
+                        </form>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do you offer free initial consultations?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        Yes! We offer a free 15-20 minute initial consultation to understand your requirements and suggest the best path forward for your export/import needs.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can you visit our factory for inspection?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        Absolutely. We provide on-site factory audits, pre-shipment inspections, and process consultations across major industrial hubs in India. Travel charges may apply depending on location.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What information should I prepare before contacting you?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        To speed up the process, have your product details (HS Code if known), target export country, and current business status (Proprietorship, Pvt Ltd, etc.) ready. If you already have an IEC, keep the number handy.
+                    <!-- Google Map -->
+                    <div class="map-container">
+                        <!-- Embedded Google Map for New Delhi -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.886646379!2d76.83892897070312!3d28.64480019999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b7b6c4b5%3A0x8012bf24e12b6bf!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            title="Flexlyf Commerce Location">
+                        frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding" style="background: #F9FAFB;">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: var(--color-primary-dark);">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How quickly can I get a consultation?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            We typically respond to all inquiries within 24 hours. For urgent matters, you can call or WhatsApp us directly at +91 92208 19906 for an immediate response during business hours.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you offer free initial consultations?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes! We offer a free 15-20 minute initial consultation to understand your requirements and suggest the best path forward for your export/import needs.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can you visit our factory for inspection?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Absolutely. We provide on-site factory audits, pre-shipment inspections, and process consultations across major industrial hubs in India. Travel charges may apply depending on location.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What information should I prepare before contacting you?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            To speed up the process, have your product details (HS Code if known), target export country, and current business status (Proprietorship, Pvt Ltd, etc.) ready. If you already have an IEC, keep the number handy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" style="background: #022c22; color: white; padding: 60px 0 20px;">
@@ -495,7 +491,7 @@
                     <ul style="list-style: none; padding: 0; color: #9CA3AF;">
                         <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            New Delhi, India - 110001
+                            A-123, Sector 63, New Delhi - 110001
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -503,7 +499,7 @@
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            info@flexlyfcommerce.com
+                            shobhit@flexlyf.com
                         </li>
                     </ul>
                 </div>
