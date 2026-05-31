@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Insurance Services | Flexlyf Commerce - Cargo & Export Credit</title>
+    <meta name="description" content="Comprehensive trade insurance solutions for exporters. Marine cargo insurance, export credit insurance (ECGC), and liability coverage to protect your global shipments.">
+    <meta name="keywords" content="Marine cargo insurance India, ECGC policy, Export credit insurance, Freight insurance, Trade risk management, Shipping insurance, Liability coverage">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://signinshobhit-cell.github.io/website_dev/insurance.html">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Trade Insurance Services | Flexlyf Commerce">
+    <meta property="og:description" content="Protect your shipments and receivables with comprehensive trade insurance solutions tailored for Indian exporters.">
+    <meta property="og:image" content="https://signinshobhit-cell.github.io/website_dev/assets/og-insurance.jpg">
+    <meta property="og:url" content="https://signinshobhit-cell.github.io/website_dev/insurance.html">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Trade Insurance & Risk Management",
+      "provider": {
+        "@type": "Organization",
+        "name": "Flexlyf Commerce Private Limited",
+        "url": "https://signinshobhit-cell.github.io/website_dev/"
+      },
+      "areaServed": "IN",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Insurance Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Marine Cargo Insurance"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Export Credit Insurance"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Liability Coverage"}}
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        /* Page Specific Styles */
+        .page-hero {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .breadcrumb a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(6, 78, 59, 0.15);
+            border-top-color: var(--color-accent);
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            background: #ECFDF5;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 4rem;
+            gap: 2rem;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+        }
+
+        .industry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .tag-pill {
+            background: #ECFDF5;
+            color: var(--color-primary-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px solid #D1FAE5;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-text);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--color-gray-600);
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Callout Box */
+        .callout-box {
+            background: #FFFBEB;
+            border-left: 4px solid var(--color-accent);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .callout-icon {
+            flex-shrink: 0;
+            color: var(--color-accent);
+        }
+
+        /* Partner Logos */
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            opacity: 0.8;
+        }
+
+        .partner-logo {
+            font-weight: 700;
+            color: var(--color-gray-400);
+            font-size: 1.2rem;
+            border: 2px solid #e5e7eb;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-main">FLEXLYF</span>
+                <span class="logo-sub">COMMERCE</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Services ▾</button>
+                    <div class="dropdown-content">
+                        <a href="certification.html">Certification</a>
+                        <a href="licensing.html">Licensing</a>
+                        <a href="testing.html">Product Testing</a>
+                        <a href="inspection.html">Inspection</a>
+                        <a href="insurance.html" class="active">Trade Insurance</a>
+                        <a href="logistics.html">Logistics</a>
+                    </div>
+                </div>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="tel:+919220819906" class="phone-link">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>+91 92208 19906</span>
+                </a>
+                <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="certification.html">Certification</a>
+            <a href="licensing.html">Licensing</a>
+            <a href="testing.html">Product Testing</a>
+            <a href="inspection.html">Inspection</a>
+            <a href="insurance.html" class="active">Trade Insurance</a>
+            <a href="logistics.html">Logistics</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> › <span>Trade Insurance</span>
+            </div>
+            <h1>Comprehensive Trade Insurance Solutions</h1>
+            <p class="hero-subtext">Protect your shipments, receivables, and liabilities. From marine cargo to export credit — we secure your global trade interests.</p>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="color: var(--color-primary-dark); margin-bottom: 1.5rem;">Why Insurance is Vital for Exporters</h2>
+                    <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1.5rem;">
+                        International trade involves inherent risks — from storm damage at sea and theft in transit to buyer insolvency and political unrest. A single uninsured incident can wipe out months of profit or even threaten business continuity.
+                    </p>
+                    <p style="color: var(--color-gray-600); line-height: 1.7;">
+                        At Flexlyf Commerce, we partner with leading insurers and ECGC to provide tailored coverage. We help you identify vulnerabilities, select the right policies, and ensure swift claim settlement so you can trade with confidence.
+                    </p>
+                    <ul style="margin-top: 1.5rem; list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Comprehensive Risk Coverage
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Fast Claim Settlement Support
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Competitive Premium Rates
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: center;">
+                    <!-- Placeholder for Insurance Icons -->
+                    <div style="background: #ECFDF5; padding: 3rem; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
+                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Marine Cargo</span>
+                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">ECGC</span>
+                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Liability</span>
+                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Air Freight</span>
+                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Road Transit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Did You Know Callout -->
+    <div class="container">
+        <div class="callout-box">
+            <div class="callout-icon">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <div>
+                <h3 style="color: var(--color-primary-dark); margin-top: 0;">Did You Know?</h3>
+                <p style="color: var(--color-gray-700); margin-bottom: 0; line-height: 1.6;">
+                    Over 60% of disputed export claims arise from inadequate documentation or incorrect policy clauses. Our experts review your shipping documents beforehand to ensure your claim is never rejected on technical grounds.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Insurance Types Grid -->
+    <section class="section-padding" style="background: #F9FAFB;">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 style="color: var(--color-primary-dark);">Our Insurance Products</h2>
+                <p style="color: var(--color-gray-600); margin-top: 1rem;">Tailored coverage for every mode of transport and risk type.</p>
+            </div>
+
+            <div class="card-grid">
+                <!-- Marine Cargo Card -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path></svg>
+                    </div>
+                    <h3>Marine Cargo Insurance</h3>
+                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Coverage for goods moving via sea, air, road, or rail against physical loss or damage.</p>
+                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <li>Institute Cargo Clauses (A, B, C)</li>
+                        <li>War & Strikes Coverage</li>
+                        <li>Warehouse-to-Warehouse</li>
+                        <li>Open Policy & Single Shipment</li>
+                    </ul>
+                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Get Quote →</a>
+                </div>
+
+                <!-- Export Credit Card -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3>Export Credit Insurance (ECGC)</h3>
+                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Protect your receivables against buyer non-payment due to commercial or political risks.</p>
+                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <li>Buyer Insolvency Protection</li>
+                        <li>Political Risk Coverage</li>
+                        <li>Credit Limit Assessment</li>
+                        <li>Debt Recovery Support</li>
+                    </ul>
+                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Get Quote →</a>
+                </div>
+
+                <!-- Transit Insurance Card -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                    </div>
+                    <h3>Road & Rail Transit</h3>
+                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Specialized coverage for domestic and cross-border land transportation.</p>
+                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <li>Truck Cargo Coverage</li>
+                        <li>Railway Consignment</li>
+                        <li>Theft & Pilferage</li>
+                        <li>Accident Damage</li>
+                    </ul>
+                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Get Quote →</a>
+                </div>
+
+                <!-- Liability Card -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3>Product Liability</h3>
+                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Coverage against legal liabilities arising from product defects causing injury or damage.</p>
+                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <li>Third-Party Injury</li>
+                        <li>Property Damage</li>
+                        <li>Legal Defense Costs</li>
+                        <li>Global Jurisdiction</li>
+                    </ul>
+                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Get Quote →</a>
+                </div>
+
+                <!-- Air Freight Card -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    </div>
+                    <h3>Air Freight Insurance</h3>
+                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Fast and secure coverage for high-value goods transported via air cargo.</p>
+                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <li>High-Value Goods</li>
+                        <li>Perishables Coverage</li>
+                        <li>Airport-to-Airport</li>
+                        <li>Express Courier</li>
+                    </ul>
+                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Get Quote →</a>
+                </div>
+
+                <!-- Project Cargo Card -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3>Project Cargo</h3>
+                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Specialized insurance for oversized, heavy, or complex machinery shipments.</p>
+                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <li>Oversized Dimensions</li>
+                        <li>Lifting & Installation</li>
+                        <li>Multi-Modal Transit</li>
+                        <li>Delay in Start-up</li>
+                    </ul>
+                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Get Quote →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Claims Process -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 style="color: var(--color-primary-dark);">Claims Settlement Process</h2>
+                <p style="color: var(--color-gray-600); margin-top: 1rem;">We advocate for you to ensure fast and fair claim resolution.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4 style="color: var(--color-primary-dark);">Incident Reporting</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Immediate notification to insurer upon loss/damage discovery.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4 style="color: var(--color-primary-dark);">Surveyor Appointment</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Independent surveyor assesses extent of loss/damage.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4 style="color: var(--color-primary-dark);">Documentation</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Submission of claim form, invoice, BL, and survey report.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h4 style="color: var(--color-primary-dark);">Settlement</h4>
+                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Negotiation and final payment release by insurer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Logos -->
+    <section class="section-padding" style="background: #F9FAFB;">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3 style="color: var(--color-primary-dark); margin-bottom: 1rem;">Our Insurance Partners</h3>
+                <p style="color: var(--color-gray-600);">We work with top-rated insurers and ECGC to provide best-in-class coverage.</p>
+                <div class="partner-logos">
+                    <div class="partner-logo">ECGC</div>
+                    <div class="partner-logo">New India Assurance</div>
+                    <div class="partner-logo">ICICI Lombard</div>
+                    <div class="partner-logo">Bajaj Allianz</div>
+                    <div class="partner-logo">Tata AIG</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center;">
+                <h2 style="color: var(--color-primary-dark);">Who Needs Trade Insurance?</h2>
+                <div class="industry-tags">
+                    <span class="tag-pill">Exporters</span>
+                    <span class="tag-pill">Importers</span>
+                    <span class="tag-pill">Freight Forwarders</span>
+                    <span class="tag-pill">Logistics Providers</span>
+                    <span class="tag-pill">Manufacturers</span>
+                    <span class="tag-pill">Trading Houses</span>
+                    <span class="tag-pill">E-commerce Sellers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" style="background: #F9FAFB;">
+        <div class="container" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="color: var(--color-primary-dark);">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the difference between Marine Cargo and Export Credit Insurance?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Marine Cargo Insurance covers physical loss or damage to goods during transit (e.g., ship sinking, fire, theft). Export Credit Insurance covers financial loss due to buyer non-payment (e.g., bankruptcy, political blockade). Both are essential for complete protection.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How is the premium calculated?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Premiums depend on factors like commodity type, value of goods, mode of transport, destination country, past claim history, and coverage scope (Institute Cargo Clauses A/B/C). Rates typically range from 0.1% to 0.5% of the insured value.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I get an open policy for multiple shipments?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, an Open Policy (or Declaration Policy) is highly recommended for regular exporters. It covers all shipments made during the policy period (usually 1 year) under a single sum insured, simplifying administration and often reducing premiums.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What documents are needed for a claim?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Typically required: Original Policy, Bill of Lading/Airway Bill, Commercial Invoice, Packing List, Survey Report, Claim Bill, and correspondence with carriers. We assist in compiling this dossier to prevent rejection.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you handle ECGC policy renewals?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we manage the entire lifecycle of your ECGC policy, including initial application, credit limit requests for buyers, premium payments, and annual renewals to ensure continuous coverage.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: var(--color-primary-dark); color: white; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 1.5rem;">Secure Your Shipments Today</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
+                Don't leave your global trade to chance. Get a comprehensive insurance quote tailored to your needs.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary" style="background: var(--color-accent); color: white; border: none;">Get Insurance Quote</a>
+                <a href="tel:+919220819906" class="btn btn-secondary" style="border-color: white; color: white;">Call +91 92208 19906</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: #022c22; color: white; padding: 60px 0 20px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <!-- Col 1 -->
+                <div>
+                    <div class="logo" style="margin-bottom: 1.5rem;">
+                        <span class="logo-main" style="color: white;">FLEXLYF</span>
+                        <span class="logo-sub" style="color: var(--color-accent);">COMMERCE</span>
+                    </div>
+                    <p style="color: #9CA3AF; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Empowering Indian MSMEs to conquer global markets through expert trade consultancy.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                        <a href="https://www.youtube.com/@flexlyf" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                        <a href="https://x.com/Shobhit73782089" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Col 2 -->
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Services</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><a href="certification.html" style="color: #9CA3AF; text-decoration: none;">Certification</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="licensing.html" style="color: #9CA3AF; text-decoration: none;">Licensing</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="testing.html" style="color: #9CA3AF; text-decoration: none;">Product Testing</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="inspection.html" style="color: #9CA3AF; text-decoration: none;">Inspection</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="insurance.html" style="color: #9CA3AF; text-decoration: none;">Trade Insurance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Company</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #9CA3AF; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #9CA3AF; text-decoration: none;">About Us</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #9CA3AF; text-decoration: none;">Contact</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="privacy.html" style="color: #9CA3AF; text-decoration: none;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 style="color: white; margin-bottom: 1.5rem;">Contact</h4>
+                    <ul style="list-style: none; padding: 0; color: #9CA3AF;">
+                        <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            New Delhi, India - 110001
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            +91 92208 19906
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            info@flexlyfcommerce.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem;">
+                <p>&copy; <span id="year"></span> Flexlyf Commerce Private Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919220819906?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20trade%20insurance%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script>
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+                
+                // Toggle current
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Dynamic Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
