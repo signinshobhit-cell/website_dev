@@ -20,7 +20,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -34,7 +34,17 @@
       "provider": {
         "@type": "Organization",
         "name": "Flexlyf Commerce Private Limited",
-        "url": "https://signinshobhit-cell.github.io/website_dev/"
+        "url": "https://signinshobhit-cell.github.io/website_dev/",
+        "telephone": "+919220819906",
+        "email": "shobhit@flexlyf.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "A-123, Sector 63",
+          "addressLocality": "New Delhi",
+          "addressRegion": "Delhi",
+          "postalCode": "110001",
+          "addressCountry": "IN"
+        }
       },
       "areaServed": "IN",
       "hasOfferCatalog": {
@@ -226,361 +236,343 @@
     </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <header class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-main">FLEXLYF</span>
-                <span class="logo-sub">COMMERCE</span>
-            </a>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Services ▾</button>
-                    <div class="dropdown-content">
-                        <a href="certification.html">Certification</a>
-                        <a href="licensing.html">Licensing</a>
-                        <a href="testing.html">Product Testing</a>
-                        <a href="inspection.html" class="active">Inspection</a>
-                        <a href="insurance.html">Trade Insurance</a>
-                        <a href="logistics.html">Logistics</a>
-                    </div>
-                </div>
-                <a href="contact.html">Contact</a>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="tel:+919220819906" class="phone-link">
-                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    <span>+91 92208 19906</span>
-                </a>
-                <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-content">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="certification.html">Certification</a>
-            <a href="licensing.html">Licensing</a>
-            <a href="testing.html">Product Testing</a>
-            <a href="inspection.html" class="active">Inspection</a>
-            <a href="insurance.html">Trade Insurance</a>
-            <a href="logistics.html">Logistics</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo" aria-label="Flexlyf Commerce Home">
+        <span class="logo-text-main">FLEXLYF</span>
+        <span class="logo-text-sub">COMMERCE</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="certification.html" class="nav-link">Certification</a></li>
+        <li><a href="licensing.html" class="nav-link">Licensing</a></li>
+        <li><a href="testing.html" class="nav-link">Testing</a></li>
+        <li><a href="inspection.html" class="nav-link active">Inspection</a></li>
+        <li><a href="insurance.html" class="nav-link">Insurance</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <a href="tel:+919220819906" class="nav-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79(19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        +91 92208 19906
+      </a>
+      
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="page-hero">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a> › <span>Inspection Services</span>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> › <span>Inspection Services</span>
+                </div>
+                <h1>Quality Inspection & Audit Services</h1>
+                <p class="hero-subtext">Verify product quality and factory compliance before shipment. Reduce returns, protect your brand, and ensure buyer satisfaction.</p>
             </div>
-            <h1>Quality Inspection & Audit Services</h1>
-            <p class="hero-subtext">Verify product quality and factory compliance before shipment. Reduce returns, protect your brand, and ensure buyer satisfaction.</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Service Overview -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
-                <div style="flex: 1; min-width: 300px;">
-                    <h2 style="color: var(--color-primary-dark); margin-bottom: 1.5rem;">Why Independent Inspection Matters</h2>
-                    <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1.5rem;">
-                        Shipping defective goods can be catastrophic for an exporter's reputation and finances. Returns, chargebacks, and lost future orders are real risks when quality control is overlooked.
-                    </p>
-                    <p style="color: var(--color-gray-600); line-height: 1.7;">
-                        Flexlyf Commerce provides independent, third-party inspection services across India. Our qualified inspectors verify quantity, workmanship, packaging, and function against your specific requirements or international standards (AQL). We give you the confidence to ship only what meets expectations.
-                    </p>
-                    <ul style="margin-top: 1.5rem; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Prevent Costly Returns
-                        </li>
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            Unbiased Third-Party Reports
-                        </li>
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            AQL Standard Compliance
-                        </li>
-                    </ul>
-                </div>
-                <div style="flex: 1; min-width: 300px; text-align: center;">
-                    <!-- Placeholder for Inspection Image -->
-                    <div style="background: #ECFDF5; padding: 3rem; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
-                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Pre-Shipment</span>
-                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">During Production</span>
-                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Factory Audit</span>
-                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Container Load</span>
-                        <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Sample Check</span>
+        <!-- Service Overview -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 style="color: var(--color-primary-dark); margin-bottom: 1.5rem;">Why Independent Inspection Matters</h2>
+                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1.5rem;">
+                            Shipping defective goods can be catastrophic for an exporter's reputation and finances. Returns, chargebacks, and lost future orders are real risks when quality control is overlooked.
+                        </p>
+                        <p style="color: var(--color-gray-600); line-height: 1.7;">
+                            Flexlyf Commerce provides independent, third-party inspection services across India. Our qualified inspectors verify quantity, workmanship, packaging, and function against your specific requirements or international standards (AQL). We give you the confidence to ship only what meets expectations.
+                        </p>
+                        <ul style="margin-top: 1.5rem; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Prevent Costly Returns
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Unbiased Third-Party Reports
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                AQL Standard Compliance
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Inspection Types Grid -->
-    <section class="section-padding" style="background: #F9FAFB;">
-        <div class="container">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-                <h2 style="color: var(--color-primary-dark);">Our Inspection Solutions</h2>
-                <p style="color: var(--color-gray-600); margin-top: 1rem;">Comprehensive quality checks at every stage of production.</p>
-            </div>
-
-            <div class="card-grid">
-                <!-- Pre-Shipment Card -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                    </div>
-                    <h3>Pre-Shipment Inspection</h3>
-                    <p style="color: var(--color-gray-600); margin: 1rem 0;">The most common inspection, performed when goods are 100% produced and at least 80% packed.</p>
-                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
-                        <li>Quantity Verification</li>
-                        <li>Random Sampling (AQL)</li>
-                        <li>Workmanship & Function Check</li>
-                        <li>Packaging & Labeling Review</li>
-                    </ul>
-                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
-                </div>
-
-                <!-- During Production Card -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3>During Production (DUPRO)</h3>
-                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Conducted when 20-50% of production is complete to catch issues early.</p>
-                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
-                        <li>Early Defect Detection</li>
-                        <li>Production Line Assessment</li>
-                        <li>Raw Material Check</li>
-                        <li>Timeline Verification</li>
-                    </ul>
-                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
-                </div>
-
-                <!-- Factory Audit Card -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                    </div>
-                    <h3>Factory Audit</h3>
-                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Evaluate a supplier's capability, capacity, and compliance before placing an order.</p>
-                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
-                        <li>Business License Verification</li>
-                        <li>Production Capacity Check</li>
-                        <li>QC System Assessment</li>
-                        <li>Social Compliance (Optional)</li>
-                    </ul>
-                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
-                </div>
-
-                <!-- Container Loading Card -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-                    </div>
-                    <h3>Container Loading Supervision</h3>
-                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Witness the loading process to ensure correct quantity and safe handling.</p>
-                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
-                        <li>Container Condition Check</li>
-                        <li>Loading Quantity Count</li>
-                        <li>Packing Method Observation</li>
-                        <li>Sealing Verification</li>
-                    </ul>
-                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
-                </div>
-
-                <!-- Sample Check Card -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    </div>
-                    <h3>Sample Collection & Check</h3>
-                    <p style="color: var(--color-gray-600); margin: 1rem 0;">Independent collection of pre-production samples for buyer approval or lab testing.</p>
-                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
-                        <li>Random Sample Selection</li>
-                        <li>Secure Packaging & Shipping</li>
-                        <li>Photo Documentation</li>
-                        <li>Comparison with Tech Pack</li>
-                    </ul>
-                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
-                </div>
-
-                <!-- Lab Testing Coordination Card -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                    </div>
-                    <h3>Lab Testing Coordination</h3>
-                    <p style="color: var(--color-gray-600); margin: 1rem 0;">We collect samples and coordinate with accredited labs for chemical/physical testing.</p>
-                    <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
-                        <li>Sample Pickup</li>
-                        <li>Lab Liaison</li>
-                        <li>Report Interpretation</li>
-                        <li>Fail/Pass Advisory</li>
-                    </ul>
-                    <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Timeline -->
-    <section class="section-padding">
-        <div class="container">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-                <h2 style="color: var(--color-primary-dark);">Inspection Workflow</h2>
-                <p style="color: var(--color-gray-600); margin-top: 1rem;">From request to report in 4 simple steps.</p>
-            </div>
-
-            <div class="process-steps">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <h4 style="color: var(--color-primary-dark);">Request & Brief</h4>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Submit your requirements, product details, and checklist (or use our standard).</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <h4 style="color: var(--color-primary-dark);">Schedule & Pay</h4>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">We coordinate with the factory for a suitable date and confirm the booking.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <h4 style="color: var(--color-primary-dark);">On-Site Inspection</h4>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Our inspector visits the factory, performs checks, and documents findings with photos.</p>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <h4 style="color: var(--color-primary-dark);">Digital Report</h4>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">You receive a detailed PDF report within 24 hours with Pass/Fail recommendation.</p>
-                </div>
-            </div>
-
-            <!-- Report Preview -->
-            <div style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <div class="report-preview">
-                    <h4 style="color: var(--color-primary-dark); margin-bottom: 1rem;">Sample Report Format</h4>
-                    <div class="report-placeholder">
-                        [Detailed PDF Report with Photos, Charts, and Defect Breakdown]
-                    </div>
-                    <p style="font-size: 0.9rem; color: var(--color-gray-600);">
-                        Our reports include executive summary, quantity verified, defect classification (Critical/Major/Minor), photos of issues, and final recommendation.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industries We Serve -->
-    <section class="section-padding" style="background: #ECFDF5;">
-        <div class="container">
-            <div style="text-align: center;">
-                <h2 style="color: var(--color-primary-dark);">Industries We Inspect</h2>
-                <div class="industry-tags">
-                    <span class="tag-pill">Apparel & Textiles</span>
-                    <span class="tag-pill">Footwear & Leather</span>
-                    <span class="tag-pill">Electronics & Appliances</span>
-                    <span class="tag-pill">Home Decor & Furniture</span>
-                    <span class="tag-pill">Toys & Juvenile Products</span>
-                    <span class="tag-pill">Engineering Goods</span>
-                    <span class="tag-pill">Food & Agriculture</span>
-                    <span class="tag-pill">Packaging Materials</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section-padding">
-        <div class="container" style="max-width: 800px;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="color: var(--color-primary-dark);">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What is AQL and do you use it?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        AQL (Acceptable Quality Limit) is the international standard (ISO 2859-1) for random sampling inspections. Yes, we strictly follow AQL levels (usually Level II) to determine sample size and acceptance/rejection criteria unless you specify otherwise.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How soon can you deploy an inspector?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        Typically, we can schedule an inspection within 2-3 working days of your request, depending on the factory location. Urgent requests (24-48 hours) may be accommodated based on inspector availability.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What if the inspection fails?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        If the goods fail, the report will detail the defects. You can then instruct the factory to rework or repair the goods. We can perform a re-inspection (at a discounted rate) to verify the corrections before you authorize shipment.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do you inspect single pieces or only bulk orders?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        While our primary focus is bulk export shipments, we also offer sample checks and small-batch inspections for e-commerce sellers and startups. Contact us for custom pricing.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can you inspect goods at multiple factory locations?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        Yes, we have a network of inspectors across major industrial hubs in India (Delhi NCR, Gujarat, Tamil Nadu, UP, etc.). We can coordinate multi-location inspections simultaneously.
+                    <div style="flex: 1; min-width: 300px; text-align: center;">
+                        <div style="background: #ECFDF5; padding: 3rem; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Pre-Shipment</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">During Production</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Factory Audit</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Container Load</span>
+                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">Sample Check</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" style="background: var(--color-primary-dark); color: white; padding: 80px 0; text-align: center;">
-        <div class="container">
-            <h2 style="color: white; margin-bottom: 1.5rem;">Ensure Quality Before Shipping</h2>
-            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
-                Don't risk your reputation. Book an inspection today and ship with confidence.
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-primary" style="background: var(--color-accent); color: white; border: none;">Book Inspection</a>
-                <a href="tel:+919220819906" class="btn btn-secondary" style="border-color: white; color: white;">Call +91 92208 19906</a>
+        <!-- Inspection Types Grid -->
+        <section class="section-padding" style="background: #F9FAFB;">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 style="color: var(--color-primary-dark);">Our Inspection Solutions</h2>
+                    <p style="color: var(--color-gray-600); margin-top: 1rem;">Comprehensive quality checks at every stage of production.</p>
+                </div>
+
+                <div class="card-grid">
+                    <!-- Pre-Shipment Card -->
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                        </div>
+                        <h3>Pre-Shipment Inspection</h3>
+                        <p style="color: var(--color-gray-600); margin: 1rem 0;">The most common inspection, performed when goods are 100% produced and at least 80% packed.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Quantity Verification</li>
+                            <li>Random Sampling (AQL)</li>
+                            <li>Workmanship & Function Check</li>
+                            <li>Packaging & Labeling Review</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <!-- During Production Card -->
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3>During Production (DUPRO)</h3>
+                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Conducted when 20-50% of production is complete to catch issues early.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Early Defect Detection</li>
+                            <li>Production Line Assessment</li>
+                            <li>Raw Material Check</li>
+                            <li>Timeline Verification</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <!-- Factory Audit Card -->
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h3>Factory Audit</h3>
+                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Evaluate a supplier's capability, capacity, and compliance before placing an order.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Business License Verification</li>
+                            <li>Production Capacity Check</li>
+                            <li>QC System Assessment</li>
+                            <li>Social Compliance (Optional)</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <!-- Container Loading Card -->
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        </div>
+                        <h3>Container Loading Supervision</h3>
+                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Witness the loading process to ensure correct quantity and safe handling.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Container Condition Check</li>
+                            <li>Loading Quantity Count</li>
+                            <li>Packing Method Observation</li>
+                            <li>Sealing Verification</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <!-- Sample Check Card -->
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <h3>Sample Collection & Check</h3>
+                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Independent collection of pre-production samples for buyer approval or lab testing.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Random Sample Selection</li>
+                            <li>Secure Packaging & Shipping</li>
+                            <li>Photo Documentation</li>
+                            <li>Comparison with Tech Pack</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+
+                    <!-- Lab Testing Coordination Card -->
+                    <div class="service-card">
+                        <div class="icon-box">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <h3>Lab Testing Coordination</h3>
+                        <p style="color: var(--color-gray-600); margin: 1rem 0;">We collect samples and coordinate with accredited labs for chemical/physical testing.</p>
+                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                            <li>Sample Pickup</li>
+                            <li>Lab Liaison</li>
+                            <li>Report Interpretation</li>
+                            <li>Fail/Pass Advisory</li>
+                        </ul>
+                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Process Timeline -->
+        <section class="section-padding">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                    <h2 style="color: var(--color-primary-dark);">Inspection Workflow</h2>
+                    <p style="color: var(--color-gray-600); margin-top: 1rem;">From request to report in 4 simple steps.</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h4 style="color: var(--color-primary-dark);">Request & Brief</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Submit your requirements, product details, and checklist (or use our standard).</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h4 style="color: var(--color-primary-dark);">Schedule & Pay</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">We coordinate with the factory for a suitable date and confirm the booking.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h4 style="color: var(--color-primary-dark);">On-Site Inspection</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Our inspector visits the factory, performs checks, and documents findings with photos.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h4 style="color: var(--color-primary-dark);">Digital Report</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">You receive a detailed PDF report within 24 hours with Pass/Fail recommendation.</p>
+                    </div>
+                </div>
+
+                <!-- Report Preview -->
+                <div style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <div class="report-preview">
+                        <h4 style="color: var(--color-primary-dark); margin-bottom: 1rem;">Sample Report Format</h4>
+                        <div class="report-placeholder">
+                            [Detailed PDF Report with Photos, Charts, and Defect Breakdown]
+                        </div>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-600);">
+                            Our reports include executive summary, quantity verified, defect classification (Critical/Major/Minor), photos of issues, and final recommendation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries We Serve -->
+        <section class="section-padding" style="background: #ECFDF5;">
+            <div class="container">
+                <div style="text-align: center;">
+                    <h2 style="color: var(--color-primary-dark);">Industries We Inspect</h2>
+                    <div class="industry-tags">
+                        <span class="tag-pill">Apparel & Textiles</span>
+                        <span class="tag-pill">Footwear & Leather</span>
+                        <span class="tag-pill">Electronics & Appliances</span>
+                        <span class="tag-pill">Home Decor & Furniture</span>
+                        <span class="tag-pill">Toys & Juvenile Products</span>
+                        <span class="tag-pill">Engineering Goods</span>
+                        <span class="tag-pill">Food & Agriculture</span>
+                        <span class="tag-pill">Packaging Materials</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="color: var(--color-primary-dark);">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is AQL and do you use it?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            AQL (Acceptable Quality Limit) is the international standard (ISO 2859-1) for random sampling inspections. Yes, we strictly follow AQL levels (usually Level II) to determine sample size and acceptance/rejection criteria unless you specify otherwise.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How soon can you deploy an inspector?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Typically, we can schedule an inspection within 2-3 working days of your request, depending on the factory location. Urgent requests (24-48 hours) may be accommodated based on inspector availability.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What if the inspection fails?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            If the goods fail, the report will detail the defects. You can then instruct the factory to rework or repair the goods. We can perform a re-inspection (at a discounted rate) to verify the corrections before you authorize shipment.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do you inspect single pieces or only bulk orders?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            While our primary focus is bulk export shipments, we also offer sample checks and small-batch inspections for e-commerce sellers and startups. Contact us for custom pricing.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can you inspect goods at multiple factory locations?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes, we have a network of inspectors across major industrial hubs in India (Delhi NCR, Gujarat, Tamil Nadu, UP, etc.). We can coordinate multi-location inspections simultaneously.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="background: var(--color-primary-dark); color: white; padding: 80px 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: white; margin-bottom: 1.5rem;">Ensure Quality Before Shipping</h2>
+                <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
+                    Don't risk your reputation. Book an inspection today and ship with confidence.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary" style="background: var(--color-accent); color: white; border: none;">Book Inspection</a>
+                    <a href="tel:+919220819906" class="btn btn-secondary" style="border-color: white; color: white;">Call +91 92208 19906</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" style="background: #022c22; color: white; padding: 60px 0 20px;">
@@ -633,7 +625,7 @@
                     <ul style="list-style: none; padding: 0; color: #9CA3AF;">
                         <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            New Delhi, India - 110001
+                            A-123, Sector 63, New Delhi - 110001
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -641,7 +633,7 @@
                         </li>
                         <li style="margin-bottom: 1rem; display: flex; gap: 10px;">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            info@flexlyfcommerce.com
+                            shobhit@flexlyf.com
                         </li>
                     </ul>
                 </div>
