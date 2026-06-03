@@ -7,25 +7,20 @@
     <meta name="description" content="Complete licensing support for Indian exporters. IEC registration, DGFT licenses, EPCG scheme, RoDTEP claims, and RCMC assistance by Flexlyf Commerce.">
     <meta name="keywords" content="IEC code India, DGFT license, EPCG scheme, RoDTEP benefits, RCMC registration, Export Import License, AD Code">
     
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://signinshobhit-cell.github.io/website_dev/licensing.html">
 
-    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Licensing Services | Flexlyf Commerce">
     <meta property="og:description" content="Secure your export-import licenses hassle-free. Expert guidance on IEC, DGFT, EPCG, and government schemes.">
     <meta property="og:image" content="https://signinshobhit-cell.github.io/website_dev/assets/og-licensing.jpg">
     <meta property="og:url" content="https://signinshobhit-cell.github.io/website_dev/licensing.html">
     <meta property="og:type" content="website">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,9 +55,52 @@
     </script>
 
     <style>
-        /* Page Specific Styles (Matching Certification Page) */
+        /* Base Container & Structural Layout Fixes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            box-sizing: border-box;
+        }
+
+        /* Custom Dark Green Header Theme Override for Licensing Page */
+        nav.navbar {
+            background: #064E3B !important; /* Deep Green solid mode background */
+            box-shadow: 0 4px 15px rgba(2, 44, 34, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav.navbar .logo-text-main {
+            color: #FFFFFF !important;
+        }
+        nav.navbar .logo-text-sub {
+            color: #F59E0B !important;
+        }
+        nav.navbar .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+        }
+        nav.navbar .nav-link:hover, nav.navbar .nav-link.active {
+            color: #F59E0B !important;
+        }
+        nav.navbar .nav-phone {
+            color: #FFFFFF !important;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        nav.navbar .nav-phone:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        nav.navbar .hamburger span {
+            background-color: #FFFFFF !important;
+        }
+
+        /* Page Content Specific Styles */
         .page-hero {
-            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            background: linear-gradient(135deg, var(--color-primary-dark, #064E3B) 0%, var(--color-primary, #059669) 100%);
             padding: 120px 0 80px;
             color: white;
             text-align: center;
@@ -78,7 +116,7 @@
         }
         
         .breadcrumb a {
-            color: var(--color-accent);
+            color: var(--color-accent, #F59E0B);
             text-decoration: none;
         }
 
@@ -105,7 +143,7 @@
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 30px rgba(6, 78, 59, 0.15);
-            border-top-color: var(--color-accent);
+            border-top-color: var(--color-accent, #F59E0B);
         }
 
         .icon-box {
@@ -117,7 +155,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            color: var(--color-primary);
+            color: var(--color-primary, #059669);
         }
 
         .process-steps {
@@ -140,7 +178,7 @@
         .step-number {
             width: 50px;
             height: 50px;
-            background: var(--color-accent);
+            background: var(--color-accent, #F59E0B);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -162,7 +200,7 @@
 
         .tag-pill {
             background: #ECFDF5;
-            color: var(--color-primary-dark);
+            color: var(--color-primary-dark, #064E3B);
             padding: 0.5rem 1.5rem;
             border-radius: 50px;
             font-weight: 500;
@@ -184,18 +222,19 @@
             border: none;
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--color-text);
+            color: var(--color-text, #1F2937);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-family: inherit;
         }
 
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
-            color: var(--color-gray-600);
+            color: var(--color-gray-600, #4B5563);
             line-height: 1.6;
         }
 
@@ -214,7 +253,7 @@
 
         .checklist-box {
             background: #F0FDF4;
-            border-left: 4px solid var(--color-primary);
+            border-left: 4px solid var(--color-primary, #059669);
             padding: 2rem;
             border-radius: 8px;
             margin-top: 2rem;
@@ -222,10 +261,8 @@
     </style>
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container navbar-container">
       <a href="index.html" class="logo" aria-label="Flexlyf Commerce Home">
@@ -246,7 +283,7 @@
       
       <a href="tel:+919220819906" class="nav-phone">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79(19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 .7 2.81A2 2 0 0 1 22 16.92z"/>
         </svg>
         +91 92208 19906
       </a>
@@ -260,7 +297,6 @@
   </nav>
 
     <main id="main-content">
-        <!-- Hero Section -->
         <section class="page-hero">
             <div class="container">
                 <div class="breadcrumb">
@@ -271,12 +307,11 @@
             </div>
         </section>
 
-        <!-- Service Overview -->
         <section class="section-padding">
             <div class="container">
                 <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
                     <div style="flex: 1; min-width: 300px;">
-                        <h2 style="color: var(--color-primary-dark); margin-bottom: 1.5rem;">Your Legal Passport to Global Trade</h2>
+                        <h2 style="color: var(--color-primary-dark, #064E3B); margin-bottom: 1.5rem;">Your Legal Passport to Global Trade</h2>
                         <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1.5rem;">
                             Before you ship your first container, you need the right licenses. The Indian regulatory landscape, governed by the Directorate General of Foreign Trade (DGFT), is complex and ever-changing. A single error in application can lead to delays, penalties, or shipment holds.
                         </p>
@@ -284,181 +319,172 @@
                             Flexlyf Commerce acts as your compliance partner. We manage end-to-end licensing services, ensuring you secure necessary approvals like IEC, AD Code, and specialized schemes like EPCG and RoDTEP efficiently. Our expertise minimizes rejection risks and accelerates your market entry.
                         </p>
                         <ul style="margin-top: 1.5rem; list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark, #064E3B);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent, #F59E0B);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 100% DGFT Compliance
                             </li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark, #064E3B);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent, #F59E0B);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 Fast-Track Processing
                             </li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark);">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark, #064E3B);">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent, #F59E0B);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 Scheme Benefit Maximization
                             </li>
                         </ul>
                     </div>
                     <div style="flex: 1; min-width: 300px; text-align: center;">
                         <div style="background: #ECFDF5; padding: 3rem; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
-                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">IEC Code</span>
-                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">DGFT</span>
-                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">EPCG</span>
-                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">RoDTEP</span>
-                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">RCMC</span>
-                            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.2rem;">AD Code</span>
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">IEC Code</span>
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">DGFT</span>
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">EPCG</span>
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">RoDTEP</span>
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">RCMC</span>
+                            <span style="font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem;">AD Code</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Licensing Types Grid -->
         <section class="section-padding" style="background: #F9FAFB;">
             <div class="container">
                 <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-                    <h2 style="color: var(--color-primary-dark);">Our Licensing Services</h2>
-                    <p style="color: var(--color-gray-600); margin-top: 1rem;">Comprehensive support for all DGFT and regulatory requirements.</p>
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Our Licensing Services</h2>
+                    <p style="color: var(--color-gray-600, #4B5563); margin-top: 1rem;">Comprehensive support for all DGFT and regulatory requirements.</p>
                 </div>
 
                 <div class="card-grid">
-                    <!-- IEC Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"></path></svg>
                         </div>
                         <h3>IEC Registration</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Mandatory 10-digit code for any import/export activity in India. Lifetime validity.</p>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Mandatory 10-digit code for any import/export activity in India. Lifetime validity.</p>
                         <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
                             <li>PAN-based Application</li>
                             <li>Bank Certificate Verification</li>
                             <li>Digital Signature Integration</li>
                             <li>Instant Issuance Support</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Apply Now →</a>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Apply Now →</a>
                     </div>
 
-                    <!-- DGFT Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         </div>
                         <h3>DGFT Licenses</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Special licenses for restricted items, SCOMET goods, and dual-use technologies.</p>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Special licenses for restricted items, SCOMET goods, and dual-use technologies.</p>
                         <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
                             <li>Import/Export Licenses</li>
                             <li>SCOMET Clearance</li>
                             <li>Restricted Item Permissions</li>
                             <li>Amendment Services</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
                     </div>
 
-                    <!-- EPCG Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         </div>
                         <h3>EPCG Scheme</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Export Promotion Capital Goods scheme allowing duty-free import of capital machinery.</p>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Export Promotion Capital Goods scheme allowing duty-free import of capital machinery.</p>
                         <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
                             <li>Eligibility Assessment</li>
                             <li>Application & Bonding</li>
                             <li>EOU Compliance Monitoring</li>
                             <li>Redemption of Bonds</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
                     </div>
 
-                    <!-- RoDTEP Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <h3>RoDTEP Claims</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Remission of Duties and Taxes on Exported Products. Get refunds on embedded taxes.</p>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Remission of Duties and Taxes on Exported Products. Get refunds on embedded taxes.</p>
                         <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
                             <li>Scheme Eligibility Check</li>
                             <li>Shipping Bill Filing</li>
                             <li>e-Scrip Generation</li>
                             <li>Utilization Guidance</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
                     </div>
 
-                    <!-- RCMC Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                         </div>
                         <h3>RCMC Registration</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Registration Cum Membership Certificate from Export Promotion Councils.</p>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Registration Cum Membership Certificate from Export Promotion Councils.</p>
                         <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
                             <li>FIEO, APEDA, TEXPROCIL</li>
                             <li>New Membership Application</li>
                             <li>Renewal Services</li>
                             <li>Benefit Access Guidance</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
                     </div>
 
-                    <!-- AD Code Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
                         </div>
                         <h3>AD Code Registration</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Authorised Dealer Code linkage with ICEGATE for customs clearance.</p>
+                        <p style="color: var(--color-gray-600, #4B5563); margin: 1rem 0;">Authorised Dealer Code linkage with ICEGATE for customs clearance.</p>
                         <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
                             <li>Bank Letter Procurement</li>
                             <li>ICEGATE Portal Linkage</li>
                             <li>Port-wise Registration</li>
                             <li>Verification Support</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact.html" style="color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none;">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Timeline -->
         <section class="section-padding">
             <div class="container">
                 <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-                    <h2 style="color: var(--color-primary-dark);">Our Licensing Process</h2>
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Our Licensing Process</h2>
                     <p style="color: var(--color-gray-600); margin-top: 1rem;">A transparent 5-step workflow to get your licenses approved.</p>
                 </div>
 
                 <div class="process-steps">
                     <div class="step-item">
                         <div class="step-number">1</div>
-                        <h4 style="color: var(--color-primary-dark);">Requirement Analysis</h4>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Requirement Analysis</h4>
                         <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Identifying exact licenses needed based on your product HS Code.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">2</div>
-                        <h4 style="color: var(--color-primary-dark);">Document Collection</h4>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Document Collection</h4>
                         <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Gathering corporate, tax, banking, and structural records.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">3</div>
-                        <h4 style="color: var(--color-primary-dark);">Application Filing</h4>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">Application Filing</h4>
                         <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Precise data entry and submission on the DGFT/ICEGATE portal.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">4</div>
-                        <h4 style="color: var(--color-primary-dark);">RA/Follow-up</h4>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">RA/Follow-up</h4>
                         <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Handling queries from Regional Authorities promptly.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">5</div>
-                        <h4 style="color: var(--color-primary-dark);">License Issuance</h4>
+                        <h4 style="color: var(--color-primary-dark, #064E3B);">License Issuance</h4>
                         <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Digital delivery of your signed license/certificate.</p>
                     </div>
                 </div>
 
-                <!-- Compliance Checklist -->
                 <div class="checklist-box">
-                    <h3 style="color: var(--color-primary-dark); margin-top: 0;">📋 Basic Document Checklist</h3>
+                    <h3 style="color: var(--color-primary-dark, #064E3B); margin-top: 0;">📋 Basic Document Checklist</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
                         <div style="display: flex; align-items: center;"><svg width="20" height="20" fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" style="margin-right: 8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> PAN Card</div>
                         <div style="display: flex; align-items: center;"><svg width="20" height="20" fill="none" stroke="var(--color-primary)" viewBox="0 0 24 24" style="margin-right: 8px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Incorporation Records</div>
@@ -471,11 +497,10 @@
             </div>
         </section>
 
-        <!-- Industries We Serve -->
         <section class="section-padding" style="background: #ECFDF5;">
             <div class="container">
                 <div style="text-align: center;">
-                    <h2 style="color: var(--color-primary-dark);">Who Needs These Licenses?</h2>
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Who Needs These Licenses?</h2>
                     <div class="industry-tags">
                         <span class="tag-pill">New Exporters</span>
                         <span class="tag-pill">Manufacturers</span>
@@ -489,11 +514,10 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section class="section-padding">
             <div class="container" style="max-width: 800px;">
                 <div style="text-align: center; margin-bottom: 3rem;">
-                    <h2 style="color: var(--color-primary-dark);">Frequently Asked Questions</h2>
+                    <h2 style="color: var(--color-primary-dark, #064E3B);">Frequently Asked Questions</h2>
                 </div>
 
                 <div class="faq-container">
@@ -550,30 +574,27 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section" style="background: var(--color-primary-dark); color: white; padding: 80px 0; text-align: center;">
+        <section class="cta-section" style="background: var(--color-primary-dark, #064E3B); color: white; padding: 80px 0; text-align: center;">
             <div class="container">
                 <h2 style="color: white; margin-bottom: 1.5rem;">Start Your Licensing Process Today</h2>
                 <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
                     Avoid regulatory hurdles. Get your IEC and other licenses approved quickly with expert assistance.
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn btn-primary" style="background: var(--color-accent); color: white; border: none;">Get Free Consultation</a>
-                    <a href="tel:+919220819906" class="btn btn-secondary" style="border-color: white; color: white;">Call +91 92208 19906</a>
+                    <a href="contact.html" class="btn btn-primary" style="background: var(--color-accent); color: white; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none;">Get Free Consultation</a>
+                    <a href="tel:+919220819906" class="btn btn-secondary" style="border: 2px solid white; color: white; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none; background:none;">Call +91 92208 19906</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer" style="background: #022c22; color: white; padding: 60px 0 20px;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-                <!-- Col 1 -->
                 <div>
                     <div class="logo" style="margin-bottom: 1.5rem;">
-                        <span class="logo-main" style="color: white;">FLEXLYF</span>
-                        <span class="logo-sub" style="color: var(--color-accent);">COMMERCE</span>
+                        <span class="logo-text-main" style="color: white;">FLEXLYF</span>
+                        <span class="logo-text-sub" style="color: var(--color-accent, #F59E0B);">COMMERCE</span>
                     </div>
                     <p style="color: #9CA3AF; line-height: 1.6; margin-bottom: 1.5rem;">
                         Empowering Indian MSMEs to conquer global markets through expert trade consultancy.
@@ -587,30 +608,27 @@
                     </div>
                 </div>
                 
-                <!-- Col 2 -->
                 <div>
                     <h4 style="color: white; margin-bottom: 1.5rem;">Services</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.8rem;"><a href="certification.html" style="color: #9CA3AF; text-decoration: none;">Certification</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="licensing.html" style="color: #9CA3AF; text-decoration: none;">Licensing</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="testing.html" style="color: #9CA3AF; text-decoration: none;">Product Testing</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="inspection.html" style="color: #9CA3AF; text-decoration: none;">Inspection</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="insurance.html" style="color: #9CA3AF; text-decoration: none;">Trade Insurance</a></li>
+                        <li><a href="certification.html" style="color: #9CA3AF; text-decoration: none;">Certification</a></li>
+                        <li><a href="licensing.html" style="color: #9CA3AF; text-decoration: none;">Licensing</a></li>
+                        <li><a href="testing.html" style="color: #9CA3AF; text-decoration: none;">Product Testing</a></li>
+                        <li><a href="inspection.html" style="color: #9CA3AF; text-decoration: none;">Inspection</a></li>
+                        <li><a href="insurance.html" style="color: #9CA3AF; text-decoration: none;">Trade Insurance</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3 -->
                 <div>
                     <h4 style="color: white; margin-bottom: 1.5rem;">Company</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #9CA3AF; text-decoration: none;">Home</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #9CA3AF; text-decoration: none;">About Us</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #9CA3AF; text-decoration: none;">Contact</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="privacy.html" style="color: #9CA3AF; text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="index.html" style="color: #9CA3AF; text-decoration: none;">Home</a></li>
+                        <li><a href="about.html" style="color: #9CA3AF; text-decoration: none;">About Us</a></li>
+                        <li><a href="contact.html" style="color: #9CA3AF; text-decoration: none;">Contact</a></li>
+                        <li><a href="privacy.html" style="color: #9CA3AF; text-decoration: none;">Privacy Policy</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 4 -->
                 <div>
                     <h4 style="color: white; margin-bottom: 1.5rem;">Contact</h4>
                     <ul style="list-style: none; padding: 0; color: #9CA3AF;">
@@ -636,12 +654,10 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/919220819906?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20licensing%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919220819906?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20licensing%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000;">
         <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
-    <!-- Scripts -->
     <script src="main.js"></script>
     <script>
         // FAQ Accordion Logic
