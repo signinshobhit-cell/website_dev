@@ -60,171 +60,161 @@
   </script>
 
   <style>
-    /* ==========================================================================
-       Horizontal News & Events Section Custom Component Styles
-       ========================================================================== */
-    .news-section {
-      padding: 60px 0;
-      background: #FFFFFF;
+    /* Custom Scroller and Adaptive Layout Architecture Overrides */
+    .hero-showcase-section {
+      background: linear-gradient(135deg, #022c22 0%, #064E3B 100%);
+      padding: 100px 0 70px;
+      color: white;
+      text-align: center;
       overflow: hidden;
+      position: relative;
     }
-    
-    .news-header-block {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+
+    .hero-headline-block {
+      max-width: 850px;
+      margin: 0 auto 3.5rem;
+      padding: 0 1rem;
+    }
+
+    .hero-headline-block h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-headline-block p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      color: #E5E7EB;
+      line-height: 1.6;
       margin-bottom: 2rem;
     }
 
-    .news-title-area {
-      text-align: left;
-    }
-
-    .news-title-area h2 {
-      color: #064E3B;
-      margin: 0.5rem 0 0;
-      font-size: 2.2rem;
-      font-weight: 800;
-    }
-
-    .news-navigation-controls {
+    .hero-buttons-wrapper {
       display: flex;
-      gap: 0.75rem;
-    }
-
-    .news-nav-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1px solid #E5E7EB;
-      background: #FFFFFF;
-      color: #064E3B;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
+      gap: 1rem;
       justify-content: center;
-      transition: all 0.2s ease;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
 
-    .news-nav-btn:hover {
-      background: #ECFDF5;
-      border-color: #059669;
-    }
-
-    /* Horizontal Scroller container setup */
-    .news-scroll-container {
+    /* Infinite Horizontal Loop Slider Framework */
+    .infinite-loop-wrapper {
+      width: 100%;
       display: flex;
-      gap: 1.5rem;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding: 1rem 0 2rem;
-      scrollbar-width: none; /* Hide default browser elements Firefox */
-    }
-
-    .news-scroll-container::-webkit-scrollbar {
-      display: none; /* Hide default scroll view Chrome/Safari */
-    }
-
-    /* news custom card structure */
-    .news-card {
-      flex: 0 0 360px; /* Force uniform structural dimensions */
-      background: #F9FAFB;
-      border-radius: 12px;
-      border: 1px solid #E5E7EB;
       overflow: hidden;
-      box-sizing: border-box;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .infinite-loop-track {
+      display: flex;
+      gap: 2rem;
+      width: max-content;
+      animation: loopMarquee 45s linear infinite;
+    }
+
+    .infinite-loop-wrapper:hover .infinite-loop-track {
+      animation-play-state: paused;
+    }
+
+    /* Interactive B2B Showcase Cards */
+    .showcase-item-card {
+      width: 320px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: left;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
       display: flex;
       flex-direction: column;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .news-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(6, 78, 59, 0.08);
-      border-color: #D1FAE5;
+    .showcase-item-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(74, 169, 35, 0.3);
+      border-color: #64C119;
     }
 
-    .news-image-frame {
+    .card-graphic-container {
       width: 100%;
-      height: 200px;
-      background: #ECFDF5;
+      height: 170px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #059669;
     }
 
-    /* Alternate fallback styling for cards */
-    .news-card:nth-child(even) .news-image-frame {
-      background: #FEF3C7;
-      color: #D97706;
-    }
-
-    .news-tag-overlay {
+    .card-status-badge {
       position: absolute;
       top: 1rem;
       left: 1rem;
-      background: #064E3B;
-      color: #FFFFFF;
-      padding: 0.35rem 0.85rem;
-      border-radius: 50px;
+      padding: 0.35rem 0.8rem;
+      border-radius: 4px;
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      color: white;
     }
 
-    .news-card:nth-child(even) .news-tag-overlay {
-      background: #F59E0B;
-    }
+    .badge-certified { background: #059669; }
+    .badge-inspected { background: #2563EB; }
+    .badge-secured { background: #7C3AED; }
+    .badge-monetized { background: #D97706; }
 
-    .news-body-content {
+    .card-inner-info {
       padding: 1.5rem;
+      background: #FFFFFF;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
     }
 
-    .news-meta-date {
-      font-size: 0.85rem;
-      color: #6B7280;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .news-body-content h3 {
-      font-size: 1.25rem;
+    .card-inner-info h3 {
+      font-size: 1.2rem;
       color: #1F2937;
-      margin: 0 0 0.75rem;
-      line-height: 1.4;
+      margin: 0 0 0.5rem;
       font-weight: 700;
+      line-height: 1.4;
     }
 
-    .news-body-content p {
-      font-size: 0.95rem;
+    .card-inner-info p {
+      font-size: 0.9rem;
       color: #4B5563;
-      line-height: 1.6;
+      line-height: 1.5;
       margin: 0 0 1.5rem;
     }
 
-    .news-action-link {
+    .card-action-trigger {
       margin-top: auto;
-      color: #059669;
+      font-size: 0.9rem;
       font-weight: 600;
-      text-decoration: none;
-      font-size: 0.95rem;
+      color: #2B7A1A;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.25rem;
     }
 
-    .news-action-link:hover {
-      color: #064E3B;
+    @keyframes loopMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-headline-block h1 { font-size: 2.2rem; }
+      .hero-headline-block p { font-size: 1.05rem; }
     }
   </style>
 </head>
 <body>
+  
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
   <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -233,18 +223,14 @@
         <svg class="corporate-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="180" height="65">
           <circle cx="500" cy="470" r="380" fill="none" stroke="#4AA923" stroke-width="25" stroke-dasharray="12 6" opacity="0.85"/>
           <circle cx="500" cy="470" r="365" fill="none" stroke="#2B7A1A" stroke-width="12" />
-          
           <circle cx="500" cy="350" r="160" fill="#2B7A1A" opacity="0.85"/>
           <path d="M340 350 A160 160 0 0 0 660 350 Z" fill="#4AA923" opacity="0.4"/>
           <path d="M500 190 A160 160 0 0 0 500 510 Z" fill="none" stroke="#E3F4D7" stroke-width="3" opacity="0.3"/>
           <line x1="340" y1="350" x2="660" y2="350" stroke="#E3F4D7" stroke-width="3" opacity="0.3"/>
-          
           <path d="M300 370 Q400 240 630 200" fill="none" stroke="#7FE327" stroke-width="28" stroke-linecap="round"/>
           <polygon points="625,185 655,200 625,220" fill="#7FE327"/>
-          
           <path d="M315 450 Q500 550 670 420" fill="none" stroke="#56C127" stroke-width="22" opacity="0.9"/>
           <path d="M330 490 Q500 580 650 470" fill="none" stroke="#1E5414" stroke-width="15" opacity="0.8"/>
-          
           <g fill="#DCA337" stroke="#9A6F1A" stroke-width="3">
             <rect x="510" y="365" width="80" height="55" rx="4"/>
             <rect x="560" y="390" width="75" height="55" rx="4"/>
@@ -252,7 +238,6 @@
             <rect x="465" y="440" width="65" height="45" rx="4"/>
             <rect x="385" y="440" width="80" height="45" rx="4"/>
           </g>
-          
           <text x="500" y="680" font-family="'Inter', 'Helvetica Neue', sans-serif" font-size="122" font-weight="800" fill="#155810" text-anchor="middle" letter-spacing="-2">Flex<tspan fill="#64C119">LyF</tspan></text>
           <text x="500" y="750" font-family="'Inter', 'Arial', sans-serif" font-size="34" font-weight="700" fill="#1C3F18" text-anchor="middle" letter-spacing="4">COMMERCE PVT. LTD.</text>
         </svg>
@@ -261,14 +246,14 @@
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="rodtep-exchange.html" class="nav-link">RoDTEP/RoSCTL</a></li>
         <li><a href="certification.html" class="nav-link">Certification</a></li>
         <li><a href="licensing.html" class="nav-link">Licensing</a></li>
         <li><a href="testing.html" class="nav-link">Testing</a></li>
         <li><a href="inspection.html" class="nav-link">Inspection</a></li>
         <li><a href="insurance.html" class="nav-link">Insurance</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
         <li><a href="commodity.html" class="nav-link">Commodity</a></li>
-        <li><a href="rodtep-exchange.html" class="nav-link">RoDTEP/RoSCTL</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       
       <a href="tel:+919220819906" class="nav-phone">
@@ -279,120 +264,133 @@
       </a>
       
       <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
     </div>
   </nav>
 
   <main id="main-content">
-    <section class="hero" aria-label="Introduction">
-      <div class="hero-content">
-        <span class="hero-eyebrow">IIFT Alumni | 10+ Years Experience</span>
-        <h1>Your Gateway to Global Markets.<br>Certified. Compliant. Confident.</h1>
-        <p class="hero-subtitle">End-to-end foreign trade consultancy for Indian MSMEs. From certification to insurance — we handle every step of your global trade journey.</p>
-        <div class="hero-cta">
-          <a href="contact.html" class="btn btn-primary">Schedule Free Consultation</a>
-          <a href="#services" class="btn btn-secondary-white">Explore Services ↓</a>
-        </div>
-        <div class="trust-bar">
-          <span>ISO</span>
-          <span>•</span>
-          <span>CE</span>
-          <span>•</span>
-          <span>FDA</span>
-          <span>•</span>
-          <span>DGFT</span>
-          <span>•</span>
-          <span>ECGC</span>
-          <span>•</span>
-          <span>BIS</span>
+    
+    <section class="hero-showcase-section" aria-label="Introduction and Live Trade Track">
+      <div class="container">
+        <div class="hero-headline-block">
+          <span class="hero-eyebrow" style="color:#64C119; font-weight:700; font-size:0.9rem; text-transform:uppercase; tracking-spacing:1px; display:block; margin-bottom:0.75rem;">IIFT Alumni Led | 10+ Years Sourcing Mastery</span>
+          <h1>Your Gateway to Global Markets.<br>Certified. Compliant. Confident.</h1>
+          <p>End-to-end foreign trade consultancy for Indian MSMEs. From international regulatory certification to structured container risk insurance — we manage every checkpoint of your cross-border supply sequence.</p>
+          <div class="hero-buttons-wrapper">
+            <a href="contact.html" class="btn btn-primary">Schedule Free Consultation</a>
+            <a href="#services" class="btn btn-secondary-white">Explore Core Services ↓</a>
+          </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 5v14M19 12l-7 7-7-7"/>
-        </svg>
+
+      <div class="infinite-loop-wrapper">
+        <div class="infinite-loop-track">
+          
+          <a href="certification.html" class="showcase-item-card">
+            <div class="card-graphic-container" style="background: #ECFDF5; color: #059669;">
+              <span class="card-status-badge badge-certified">Certified</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <div class="card-inner-info">
+              <h3>ISO & REACH Standards</h3>
+              <p>Turnkey compliance audits for ISO 9001 quality systems and complete European REACH chemical declarations.</p>
+              <span class="card-action-trigger">Learn Certification →</span>
+            </div>
+          </a>
+
+          <a href="commodity.html" class="showcase-item-card">
+            <div class="card-graphic-container" style="background: #EFF6FF; color: #1D4ED8;">
+              <span class="card-status-badge badge-certified">Certified</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-2h2zm0-4h-2V7h2z"></path></svg>
+            </div>
+            <div class="card-inner-info">
+              <h3>Phytosanitary & RCMC</h3>
+              <p>Validating mandatory APEDA logs, health clearances, and official EU Organic verification frameworks.</p>
+              <span class="card-action-trigger">Sourcing Spec Sheets →</span>
+            </div>
+          </a>
+
+          <a href="inspection.html" class="showcase-item-card">
+            <div class="card-graphic-container" style="background: #F5F3FF; color: #6D28D9;">
+              <span class="card-status-badge badge-inspected">Inspection Passed</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line></svg>
+            </div>
+            <div class="card-inner-info">
+              <h3>Vegetable Quality Inspection</h3>
+              <p>Pre-shipment batch sorting, freshness threshold checks, and coordination with SGS / Intertek port stations.</p>
+              <span class="card-action-trigger">Verify Inspection Steps →</span>
+            </div>
+          </a>
+
+          <a href="insurance.html" class="showcase-item-card">
+            <div class="card-graphic-container" style="background: #FFFBEB; color: #B45309;">
+              <span class="card-status-badge badge-secured">Risk Covered</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <div class="card-inner-info">
+              <h3>Marine Transit Insurance</h3>
+              <p>Securing temperature-controlled shipping rows and perishables against global freight disruptions.</p>
+              <span class="card-action-trigger">Mitigate Transit Risks →</span>
+            </div>
+          </a>
+
+          <a href="testing.html" class="showcase-item-card">
+            <div class="card-graphic-container" style="background: #FDF2F8; color: #BE185D;">
+              <span class="card-status-badge badge-inspected">Testing Done</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.25-2.5 3.5-2.5 5.5h20c0-2-1-4.25-2.5-5.5"></path><path d="M12 2v12"></path></svg>
+            </div>
+            <div class="card-inner-info">
+              <h3>Specialty Food Testing</h3>
+              <p>Purity analysis matrices for premium dried mango lots and organic hibiscus fine herbal powders.</p>
+              <span class="card-action-trigger">Explore Lab Networks →</span>
+            </div>
+          </a>
+
+          <a href="rodtep-exchange.html" class="showcase-item-card">
+            <div class="card-graphic-container" style="background: #FEF3C7; color: #D97706;">
+              <span class="card-status-badge badge-monetized" style="background:#D97706;">Best Value: 98.25%</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div class="card-inner-info">
+              <h3>RoDTEP & RoSCTL Ledger</h3>
+              <p>Fast ledger optimization desk. Liquidate your active ICEGATE e-scrip instruments at record rates.</p>
+              <span class="card-action-trigger">Monetize Scrips Now →</span>
+            </div>
+          </a>
+
+          <div class="showcase-item-card" aria-hidden="true">
+            <div class="card-graphic-container" style="background: #ECFDF5; color: #059669;"><span class="card-status-badge badge-certified">Certified</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="card-inner-info"><h3>ISO & REACH Standards</h3><p>Turnkey compliance audits for ISO 9001 and European REACH chemical declarations.</p></div>
+          </div>
+          <div class="showcase-item-card" aria-hidden="true">
+            <div class="card-graphic-container" style="background: #EFF6FF; color: #1D4ED8;"><span class="card-status-badge badge-certified">Certified</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-2h2zm0-4h-2V7h2z"></path></svg></div>
+            <div class="card-inner-info"><h3>Phytosanitary & RCMC</h3><p>Validating mandatory APEDA logs, health clearances, and official EU Organic frameworks.</p></div>
+          </div>
+          <div class="showcase-item-card" aria-hidden="true">
+            <div class="card-graphic-container" style="background: #F5F3FF; color: #6D28D9;"><span class="card-status-badge badge-inspected">Inspection Passed</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle></svg></div>
+            <div class="card-inner-info"><h3>Vegetable Quality Inspection</h3><p>Pre-shipment batch sorting, freshness threshold checks, and station coordination.</p></div>
+          </div>
+          <div class="showcase-item-card" aria-hidden="true">
+            <div class="card-graphic-container" style="background: #FFFBEB; color: #B45309;"><span class="card-status-badge badge-secured">Risk Covered</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg></div>
+            <div class="card-inner-info"><h3>Marine Transit Insurance</h3><p>Securing temperature-controlled shipping rows and perishables against transit delays.</p></div>
+          </div>
+          <div class="showcase-item-card" aria-hidden="true">
+            <div class="card-graphic-container" style="background: #FDF2F8; color: #BE185D;"><span class="card-status-badge badge-inspected">Testing Done</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v12"></path></svg></div>
+            <div class="card-inner-info"><h3>Specialty Food Testing</h3><p>Purity analysis matrices for premium dried mango slices and organic hibiscus powders.</p></div>
+          </div>
+          <div class="showcase-item-card" aria-hidden="true">
+            <div class="card-graphic-container" style="background: #FEF3C7; color: #D97706;"><span class="card-status-badge badge-monetized" style="background:#D97706;">Best Value: 98.25%</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"></line></svg></div>
+            <div class="card-inner-info"><h3>RoDTEP & RoSCTL Ledger</h3><p>Fast ledger optimization desk. Liquidate your active ICEGATE e-scrip instruments.</p></div>
+          </div>
+
+        </div>
       </div>
     </section>
 
     <section class="marquee-section" aria-label="Supported certifications">
       <div class="marquee-content">
-        <span>ISO 9001</span><span>•</span><span>CE Marking</span><span>•</span><span>FDA Registration</span><span>•</span><span>DGFT Licensing</span><span>•</span><span>ECGC Insurance</span><span>•</span><span>Halal Certification</span><span>•</span><span>Kosher Certification</span><span>•</span><span>BIS Standards</span><span>•</span><span>NPOP Organic</span><span>•</span><span>FSSAI</span><span>•</span><span>RCMC</span><span>•</span><span>IEC Code</span><span>•</span><span>ISO 9001</span><span>•</span><span>CE Marking</span><span>•</span><span>FDA Registration</span><span>•</span><span>DGFT Licensing</span><span>•</span><span>ECGC Insurance</span><span>•</span><span>Halal Certification</span><span>•</span><span>Kosher Certification</span><span>•</span><span>BIS Standards</span><span>•</span><span>NPOP Organic</span><span>•</span><span>FSSAI</span><span>•</span><span>RCMC</span><span>•</span><span>IEC Code</span>
-      </div>
-    </section>
-
-    <section class="news-section" aria-labelledby="news-heading">
-      <div class="container">
-        <div class="news-header-block">
-          <div class="news-title-area">
-            <span class="eyebrow" style="color: #059669; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">TRADE INTEL</span>
-            <h2 id="news-heading">Latest Updates & Trade Events</h2>
-          </div>
-          <div class="news-navigation-controls">
-            <button class="news-nav-btn" id="slide-left" aria-label="Scroll left">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            </button>
-            <button class="news-nav-btn" id="slide-right" aria-label="Scroll right">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="news-scroll-container" id="news-slider">
-          <article class="news-card">
-            <div class="news-image-frame">
-              <span class="news-tag-overlay">Policy Update</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            </div>
-            <div class="news-body-content">
-              <span class="news-meta-date">June 10, 2026</span>
-              <h3>DGFT RoDTEP Appendix 4R Additions</h3>
-              <p>New manufacturing tariff alignments added to electronic reward structures. Ensure compliance parameters match standard port logs to avoid credit freezing.</p>
-              <a href="rodtep-exchange.html" class="news-action-link">Optimize Claims →</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="news-image-frame">
-              <span class="news-tag-overlay">Trade Seminar</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-            </div>
-            <div class="news-body-content">
-              <span class="news-meta-date">Upcoming: July 05, 2026</span>
-              <h3>MSME Global Sourcing Masterclass</h3>
-              <p>Join Shobhit Verma for a live practical breakdown of cross-border payment structures, UCP 600 document synchronization, and safe cargo protection protocols.</p>
-              <a href="contact.html" class="news-action-link">Reserve Your Seat →</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="news-image-frame">
-              <span class="news-tag-overlay">Compliance Alert</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
-            </div>
-            <div class="news-body-content">
-              <span class="news-meta-date">June 02, 2026</span>
-              <h3>EU Market Entry Quality Parameters</h3>
-              <p>Stricter evaluation changes applied to CE marking frameworks and organic agricultural transaction records. Check your testing schedules before clearing loading docks.</p>
-              <a href="certification.html" class="news-action-link">Verify Credentials →</a>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="news-image-frame">
-              <span class="news-tag-overlay">Commodity Market</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-            </div>
-            <div class="news-body-content">
-              <span class="news-meta-date">May 28, 2026</span>
-              <h3>Agribusiness Bulk Sourcing Launch</h3>
-              <p>Flexlyf expands bulk aggregation desks for Basmati staples, graded red onions, and air-freight premium fruit parcels tailored for Gulf delivery.</p>
-              <a href="commodity.html" class="news-action-link">Check Specifications →</a>
-            </div>
-          </article>
-        </div>
+        <span>ISO 9001</span><span>•</span><span>CE Marking</span><span>•</span><span>FDA Registration</span><span>•</span><span>DGFT Licensing</span><span>•</span><span>ECGC Insurance</span><span>•</span><span>Halal Certification</span><span>•</span><span>Kosher Certification</span><span>•</span><span>BIS Standards</span><span>•</span><span>NPOP Organic</span><span>•</span><span>FSSAI</span><span>•</span><span>RCMC</span><span>•</span><span>IEC Code</span><span>•</span><span>ISO 9001</span><span>•</span><span>CE Marking</span><span>•</span><span>FDA Registration</span><span>•</span><span>DGFT Licensing</span><span>•</span><span>ECGC Insurance</span>
       </div>
     </section>
 
@@ -416,10 +414,7 @@
             <p>ISO, CE, FDA, Organic, Halal, Kosher certifications with expert guidance and fast turnaround times.</p>
             <a href="certification.html" class="btn-ghost">
               Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </article>
 
@@ -432,10 +427,7 @@
             <p>IEC registration, DGFT licensing, EPCG schemes, RoDTEP claims, and RCMC registration handled seamlessly.</p>
             <a href="licensing.html" class="btn-ghost">
               Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </article>
 
@@ -450,10 +442,7 @@
             <p>Chemical, food, textile, electronics, and pharmaceutical testing as per international standards (ASTM, EN, BIS).</p>
             <a href="testing.html" class="btn-ghost">
               Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </article>
 
@@ -466,10 +455,7 @@
             <p>Pre-shipment inspection, factory audits, quality control checks, and compliance verification across industries.</p>
             <a href="inspection.html" class="btn-ghost">
               Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </article>
 
@@ -481,10 +467,7 @@
             <p>Marine cargo insurance, air freight insurance, ECGC policies, and claims assistance for complete protection.</p>
             <a href="insurance.html" class="btn-ghost">
               Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </article>
 
@@ -499,10 +482,7 @@
             <p>Freight forwarding, customs clearance, documentation support, and port handling for seamless shipments.</p>
             <a href="contact.html" class="btn-ghost">
               Learn More
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </article>
         </div>
@@ -546,36 +526,27 @@
             <p>Our founder, Shobhit Verma, an Executive MBA graduate from the prestigious Indian Institute of Foreign Trade (IIFT), brings over a decade of hands-on experience in international trade compliance, certification processes, and export strategy.</p>
             <ul>
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Executive MBA — Indian Institute of Foreign Trade
               </li>
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Specialised in MSME global expansion
               </li>
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 Trusted by exporters across 50+ countries
               </li>
             </ul>
             <a href="about.html" class="btn-ghost">
               Know More About Us
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/>
-                <polyline points="12 5 19 12 12 19"/>
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
           <div class="about-image fade-in">
             <svg class="about-image-placeholder" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
         </div>
@@ -591,56 +562,32 @@
         
         <div class="features-grid">
           <div class="feature-card fade-in">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-            </svg>
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
             <h4>IIFT Academic Foundation</h4>
             <p>Expertise backed by India's premier institute for international trade education and research.</p>
           </div>
-          
           <div class="feature-card fade-in">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg>
             <h4>MSME-Focused Approach</h4>
             <p>Tailored solutions designed specifically for the unique challenges faced by small and medium enterprises.</p>
           </div>
-          
           <div class="feature-card fade-in">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
             <h4>Global Partner Network</h4>
             <p>Established relationships with certification bodies, labs, and insurers across 50+ countries.</p>
           </div>
-          
           <div class="feature-card fade-in">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             <h4>Fast Turnaround Times</h4>
             <p>Streamlined processes ensuring quick certification and licensing without compromising quality.</p>
           </div>
-          
           <div class="feature-card fade-in">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-            </svg>
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
             <h4>End-to-End Managed Service</h4>
             <p>Single-point accountability from initial consultation through final certification and beyond.</p>
           </div>
-          
           <div class="feature-card fade-in">
-            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
+            <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             <h4>Regulatory Compliance Guaranteed</h4>
             <p>Stay updated with ever-changing DGFT, customs, and international trade regulations.</p>
           </div>
@@ -657,82 +604,42 @@
         
         <div class="industries-grid">
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="2" x2="12" y2="6"/>
-              <line x1="12" y1="18" x2="12" y2="22"/>
-              <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
-              <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
-              <line x1="2" y1="12" x2="6" y2="12"/>
-              <line x1="18" y1="12" x2="22" y2="12"/>
-              <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
-              <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line></svg>
             <h4>Exporters</h4>
             <p>Manufacturers and traders looking to expand globally</p>
           </div>
-          
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
             <h4>Importers</h4>
             <p>Businesses sourcing products from international markets</p>
           </div>
-          
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="1" y="3" width="15" height="13"/>
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-              <circle cx="5.5" cy="18.5" r="2.5"/>
-              <circle cx="18.5" cy="18.5" r="2.5"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle></svg>
             <h4>Freight Forwarders</h4>
             <p>Logistics partners managing cross-border shipments</p>
           </div>
-          
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
             <h4>Customs Agents</h4>
             <p>CHA professionals requiring compliance support</p>
           </div>
-          
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
             <h4>Logistics Providers</h4>
             <p>Supply chain companies managing warehousing & distribution</p>
           </div>
-          
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path></svg>
             <h4>Manufacturers</h4>
             <p>Production units seeking export readiness certification</p>
           </div>
-          
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="M9 12l2 2 4-4"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             <h4>Agri Exporters</h4>
             <p>Agricultural product exporters needing phytosanitary certs</p>
           </div>
-          
           <div class="industry-card fade-in">
-            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
+            <svg class="industry-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
             <h4>Pharma Companies</h4>
             <p>Pharmaceutical exporters requiring regulatory compliance</p>
           </div>
@@ -761,7 +668,6 @@
             <div class="testimonial-company">MD, SunGrow Agri Exports, Gujarat</div>
             <span class="testimonial-tag">Agri Export</span>
           </article>
-
           <article class="testimonial-card fade-in">
             <div class="testimonial-stars">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -775,7 +681,6 @@
             <div class="testimonial-company">Director, TextilePro India, Surat</div>
             <span class="testimonial-tag">Textiles</span>
           </article>
-
           <article class="testimonial-card fade-in">
             <div class="testimonial-stars">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -815,31 +720,15 @@
               <circle cx="500" cy="470" r="365" fill="none" stroke="#2B7A1A" stroke-width="12" />
               <circle cx="500" cy="350" r="160" fill="#2B7A1A" opacity="0.85"/>
               <path d="M340 350 A160 160 0 0 0 660 350 Z" fill="#4AA923" opacity="0.4"/>
-              <path d="M300 370 Q400 240 630 200" fill="none" stroke="#7FE327" stroke-width="28" stroke-linecap="round"/>
-              <polygon points="625,185 655,200 625,220" fill="#7FE327"/>
-              <path d="M315 450 Q500 550 670 420" fill="none" stroke="#56C127" stroke-width="22" opacity="0.9"/>
-              <g fill="#DCA337" stroke="#9A6F1A" stroke-width="3">
-                <rect x="420" y="395" width="90" height="60" rx="4"/>
-                <rect x="465" y="440" width="65" height="45" rx="4"/>
-              </g>
-              <text x="500" y="680" font-family="'Inter', sans-serif" font-size="122" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-2">Flex<tspan fill="#64C119">LyF</tspan></text>
+              <text x="500" y="680" font-family="'Inter', sans-serif" font-size="122" font-weight="800" fill="#FFFFFF" text-anchor="middle">Flex<tspan fill="#64C119">LyF</tspan></text>
               <text x="500" y="750" font-family="'Inter', sans-serif" font-size="34" font-weight="700" fill="#E3F4D7" text-anchor="middle" letter-spacing="4">COMMERCE PVT. LTD.</text>
             </svg>
           </div>
           <p class="footer-tagline">Empowering Indian MSMEs to compete confidently in global markets through premium IIFT expert trade consultancy.</p>
           <div class="footer-social">
-            <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="https://www.youtube.com/@flexlyf" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 3.88 12 3.88 12 3.88s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-            </a>
-            <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
+            <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+            <a href="https://www.youtube.com/@flexlyf" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 3.88 12 3.88 12 3.88s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
           </div>
         </div>
 
@@ -862,31 +751,21 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="site.html">Site Map</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="currency.html">Currency Exchange</a></li>
-            <li><a href="resource.html">Important Resource</a></li>
           </ul>
         </div>
 
         <div class="footer-contact">
           <h4>Contact Grid</h4>
           <p class="address-node">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             <span><strong>Corporate Office:</strong><br>310, Arjangarh,<br>New Delhi, Delhi, India</span>
           </p>
           <p class="address-node">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
             <span><strong>Registered Office:</strong><br>606, Malviya Nagar, Prayagraj,<br>Uttar Pradesh, India - 211003</span>
           </p>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+919220819906" style="color: inherit;">+91 92208 19906</a>
-          </p>
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:shobhit@flexlyf.com" style="color: inherit;">shobhit@flexlyf.com</a>
-          </p>
+          <p><a href="tel:+919220819906" style="color: inherit;">+91 92208 19906</a></p>
+          <p><a href="mailto:shobhit@flexlyf.com" style="color: inherit;">shobhit@flexlyf.com</a></p>
         </div>
       </div>
 
@@ -895,46 +774,23 @@
         <span class="iift-badge">IIFT Alumni</span>
       </div>
     </div>
-  </nav>
+  </footer>
 
   <a href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414z"/>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414z"/></svg>
     <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
   </a>
 
   <button class="back-to-top" aria-label="Back to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15"/>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
   <script src="main.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Dynamic Footer Year Logic
       const yearSpan = document.querySelector('.footer-year');
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
-      }
-
-      // Horizontal Scroller Navigation Trigger Click Logic
-      const slider = document.getElementById('news-slider');
-      const btnLeft = document.getElementById('slide-left');
-      const btnRight = document.getElementById('slide-right');
-
-      if (slider && btnLeft && btnRight) {
-        // Move horizontal layout by exactly one full card length width fraction
-        const scrollAmount = 380; 
-
-        btnLeft.addEventListener('click', function() {
-          slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-
-        btnRight.addEventListener('click', function() {
-          slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        });
       }
     });
   </script>
