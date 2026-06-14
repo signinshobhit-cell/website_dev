@@ -60,10 +60,39 @@
   </script>
 
   <style>
-    /* Custom Scroller and Adaptive Layout Architecture Overrides */
+    /* Premium Locked Theme Overrides */
+    nav.navbar {
+      background: #064E3B !important; 
+      box-shadow: 0 4px 15px rgba(2, 44, 34, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav.navbar .nav-link {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+    nav.navbar .nav-link:hover, nav.navbar .nav-link.active {
+      color: #7FE327 !important;
+    }
+    nav.navbar .nav-phone {
+      color: #FFFFFF !important;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    nav.navbar .hamburger span {
+      background-color: #FFFFFF !important;
+    }
+
+    /* Hero Section Sizing and Layout */
     .hero-showcase-section {
       background: linear-gradient(135deg, #022c22 0%, #064E3B 100%);
-      padding: 100px 0 70px;
+      padding: 90px 0 70px;
       color: white;
       text-align: center;
       overflow: hidden;
@@ -71,15 +100,15 @@
     }
 
     .hero-headline-block {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto 3.5rem;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
 
     .hero-headline-block h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.15;
       color: #FFFFFF;
       margin-bottom: 1.25rem;
       letter-spacing: -0.5px;
@@ -88,7 +117,7 @@
     .hero-headline-block p {
       font-size: 1.2rem;
       opacity: 0.95;
-      color: #E5E7EB;
+      color: #E3F4D7;
       line-height: 1.6;
       margin-bottom: 2rem;
     }
@@ -98,10 +127,9 @@
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 1.5rem;
     }
 
-    /* Infinite Horizontal Loop Slider Framework */
+    /* Infinite Auto Scrolling Loop Track Custom Styles */
     .infinite-loop-wrapper {
       width: 100%;
       display: flex;
@@ -114,21 +142,21 @@
       display: flex;
       gap: 2rem;
       width: max-content;
-      animation: loopMarquee 45s linear infinite;
+      animation: loopMarquee 50s linear infinite;
     }
 
     .infinite-loop-wrapper:hover .infinite-loop-track {
       animation-play-state: paused;
     }
 
-    /* Interactive B2B Showcase Cards */
+    /* Interactive B2B Showcase Cards Sizing */
     .showcase-item-card {
-      width: 320px;
+      width: 330px;
       background: #FFFFFF;
       border-radius: 12px;
       overflow: hidden;
       text-align: left;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
       display: flex;
       flex-direction: column;
       text-decoration: none;
@@ -138,13 +166,13 @@
 
     .showcase-item-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 18px 35px rgba(74, 169, 35, 0.3);
-      border-color: #64C119;
+      box-shadow: 0 18px 35px rgba(74, 169, 35, 0.35);
+      border-color: #4AA923;
     }
 
     .card-graphic-container {
       width: 100%;
-      height: 170px;
+      height: 165px;
       position: relative;
       display: flex;
       align-items: center;
@@ -164,7 +192,7 @@
       color: white;
     }
 
-    .badge-certified { background: #059669; }
+    .badge-certified { background: #2B7A1A; }
     .badge-inspected { background: #2563EB; }
     .badge-secured { background: #7C3AED; }
     .badge-monetized { background: #D97706; }
@@ -178,11 +206,11 @@
     }
 
     .card-inner-info h3 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: #1F2937;
       margin: 0 0 0.5rem;
       font-weight: 700;
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
     .card-inner-info p {
@@ -274,9 +302,9 @@
     <section class="hero-showcase-section" aria-label="Introduction and Live Trade Track">
       <div class="container">
         <div class="hero-headline-block">
-          <span class="hero-eyebrow" style="color:#64C119; font-weight:700; font-size:0.9rem; text-transform:uppercase; tracking-spacing:1px; display:block; margin-bottom:0.75rem;">IIFT Alumni Led | 10+ Years Sourcing Mastery</span>
+          <span class="hero-eyebrow" style="color:#7FE327; font-weight:700; font-size:0.9rem; text-transform:uppercase; tracking-spacing:1px; display:block; margin-bottom:0.75rem;">IIFT Alumni Led Team | Foreign Trade Experts</span>
           <h1>Your Gateway to Global Markets.<br>Certified. Compliant. Confident.</h1>
-          <p>End-to-end foreign trade consultancy for Indian MSMEs. From international regulatory certification to structured container risk insurance — we manage every checkpoint of your cross-border supply sequence.</p>
+          <p>End-to-end foreign trade consultancy for Indian MSMEs. We streamline cross-border regulatory setups, optimize central tax remissions, and clear logistical friction across global loading docks.</p>
           <div class="hero-buttons-wrapper">
             <a href="contact.html" class="btn btn-primary">Schedule Free Consultation</a>
             <a href="#services" class="btn btn-secondary-white">Explore Core Services ↓</a>
@@ -288,37 +316,37 @@
         <div class="infinite-loop-track">
           
           <a href="certification.html" class="showcase-item-card">
-            <div class="card-graphic-container" style="background: #ECFDF5; color: #059669;">
+            <div class="card-graphic-container" style="background: #ECFDF5; color: #2B7A1A;">
               <span class="card-status-badge badge-certified">Certified</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
             </div>
             <div class="card-inner-info">
-              <h3>ISO & REACH Standards</h3>
-              <p>Turnkey compliance audits for ISO 9001 quality systems and complete European REACH chemical declarations.</p>
+              <h3>ISO & REACH Compliance</h3>
+              <p>Turnkey verification mapping for ISO 9001 quality architectures and strict European chemical parameter declarations.</p>
               <span class="card-action-trigger">Learn Certification →</span>
             </div>
           </a>
 
-          <a href="commodity.html" class="showcase-item-card">
+          <a href="licensing.html" class="showcase-item-card">
             <div class="card-graphic-container" style="background: #EFF6FF; color: #1D4ED8;">
-              <span class="card-status-badge badge-certified">Certified</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-2h2zm0-4h-2V7h2z"></path></svg>
+              <span class="card-status-badge badge-certified">DGFT Approved</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
             </div>
             <div class="card-inner-info">
               <h3>Phytosanitary & RCMC</h3>
-              <p>Validating mandatory APEDA logs, health clearances, and official EU Organic verification frameworks.</p>
-              <span class="card-action-trigger">Sourcing Spec Sheets →</span>
+              <p>Complete execution desk handling critical APEDA log registrations, EU Organic validation, and custom health documentation.</p>
+              <span class="card-action-trigger">Sourcing Licenses →</span>
             </div>
           </a>
 
           <a href="inspection.html" class="showcase-item-card">
             <div class="card-graphic-container" style="background: #F5F3FF; color: #6D28D9;">
-              <span class="card-status-badge badge-inspected">Inspection Passed</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line></svg>
+              <span class="card-status-badge badge-inspected">Cargo Passed</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </div>
             <div class="card-inner-info">
-              <h3>Vegetable Quality Inspection</h3>
-              <p>Pre-shipment batch sorting, freshness threshold checks, and coordination with SGS / Intertek port stations.</p>
+              <h3>Vegetable Shipment Inspection</h3>
+              <p>On-field batch grading, sorting verification, and pre-loading clearances issued with SGS and Intertek stations.</p>
               <span class="card-action-trigger">Verify Inspection Steps →</span>
             </div>
           </a>
@@ -329,8 +357,8 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
             </div>
             <div class="card-inner-info">
-              <h3>Marine Transit Insurance</h3>
-              <p>Securing temperature-controlled shipping rows and perishables against global freight disruptions.</p>
+              <h3>Marine & Cargo Insurance</h3>
+              <p>Securing temperature-sensitive vegetable consignments and industrial manifests against cross-border losses.</p>
               <span class="card-action-trigger">Mitigate Transit Risks →</span>
             </div>
           </a>
@@ -341,47 +369,47 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.25-2.5 3.5-2.5 5.5h20c0-2-1-4.25-2.5-5.5"></path><path d="M12 2v12"></path></svg>
             </div>
             <div class="card-inner-info">
-              <h3>Specialty Food Testing</h3>
-              <p>Purity analysis matrices for premium dried mango lots and organic hibiscus fine herbal powders.</p>
+              <h3>Dehydrated Produce Testing</h3>
+              <p>Rigorous micro-biological profile assays specifically run for dried mango lots and hibiscus herbal powders.</p>
               <span class="card-action-trigger">Explore Lab Networks →</span>
             </div>
           </a>
 
           <a href="rodtep-exchange.html" class="showcase-item-card">
             <div class="card-graphic-container" style="background: #FEF3C7; color: #D97706;">
-              <span class="card-status-badge badge-monetized" style="background:#D97706;">Best Value: 98.25%</span>
+              <span class="card-status-badge badge-monetized">Best Value: 98.25%</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             </div>
             <div class="card-inner-info">
-              <h3>RoDTEP & RoSCTL Ledger</h3>
-              <p>Fast ledger optimization desk. Liquidate your active ICEGATE e-scrip instruments at record rates.</p>
+              <h3>RoDTEP & RoSCTL Exchange</h3>
+              <p>Direct electronic credit optimization desk. Turn custom shipping scrolls into liquid funds at peak value.</p>
               <span class="card-action-trigger">Monetize Scrips Now →</span>
             </div>
           </a>
 
           <div class="showcase-item-card" aria-hidden="true">
-            <div class="card-graphic-container" style="background: #ECFDF5; color: #059669;"><span class="card-status-badge badge-certified">Certified</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-            <div class="card-inner-info"><h3>ISO & REACH Standards</h3><p>Turnkey compliance audits for ISO 9001 and European REACH chemical declarations.</p></div>
+            <div class="card-graphic-container" style="background: #ECFDF5; color: #2B7A1A;"><span class="card-status-badge badge-certified">Certified</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div class="card-inner-info"><h3>ISO & REACH Standards</h3><p>Turnkey verification mapping for ISO 9001 and European REACH chemical declarations.</p></div>
           </div>
           <div class="showcase-item-card" aria-hidden="true">
-            <div class="card-graphic-container" style="background: #EFF6FF; color: #1D4ED8;"><span class="card-status-badge badge-certified">Certified</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-2h2zm0-4h-2V7h2z"></path></svg></div>
-            <div class="card-inner-info"><h3>Phytosanitary & RCMC</h3><p>Validating mandatory APEDA logs, health clearances, and official EU Organic frameworks.</p></div>
+            <div class="card-graphic-container" style="background: #EFF6FF; color: #1D4ED8;"><span class="card-status-badge badge-certified">DGFT Approved</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg></div>
+            <div class="card-inner-info"><h3>Phytosanitary & RCMC</h3><p>Complete execution desk handling APEDA logs, EU Organic validation, and health certificates.</p></div>
           </div>
           <div class="showcase-item-card" aria-hidden="true">
-            <div class="card-graphic-container" style="background: #F5F3FF; color: #6D28D9;"><span class="card-status-badge badge-inspected">Inspection Passed</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle></svg></div>
-            <div class="card-inner-info"><h3>Vegetable Quality Inspection</h3><p>Pre-shipment batch sorting, freshness threshold checks, and station coordination.</p></div>
+            <div class="card-graphic-container" style="background: #F5F3FF; color: #6D28D9;"><span class="card-status-badge badge-inspected">Cargo Passed</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle></svg></div>
+            <div class="card-inner-info"><h3>Vegetable Shipment Inspection</h3><p>On-field batch grading, sorting verification, and clearances with SGS and Intertek stations.</p></div>
           </div>
           <div class="showcase-item-card" aria-hidden="true">
             <div class="card-graphic-container" style="background: #FFFBEB; color: #B45309;"><span class="card-status-badge badge-secured">Risk Covered</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect></svg></div>
-            <div class="card-inner-info"><h3>Marine Transit Insurance</h3><p>Securing temperature-controlled shipping rows and perishables against transit delays.</p></div>
+            <div class="card-inner-info"><h3>Marine & Cargo Insurance</h3><p>Securing temperature-sensitive vegetable consignments against global freight disruptions.</p></div>
           </div>
           <div class="showcase-item-card" aria-hidden="true">
             <div class="card-graphic-container" style="background: #FDF2F8; color: #BE185D;"><span class="card-status-badge badge-inspected">Testing Done</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v12"></path></svg></div>
-            <div class="card-inner-info"><h3>Specialty Food Testing</h3><p>Purity analysis matrices for premium dried mango slices and organic hibiscus powders.</p></div>
+            <div class="card-inner-info"><h3>Dehydrated Produce Testing</h3><p>Rigorous micro-biological profile assays run for dried mango lots and hibiscus powders.</p></div>
           </div>
           <div class="showcase-item-card" aria-hidden="true">
-            <div class="card-graphic-container" style="background: #FEF3C7; color: #D97706;"><span class="card-status-badge badge-monetized" style="background:#D97706;">Best Value: 98.25%</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"></line></svg></div>
-            <div class="card-inner-info"><h3>RoDTEP & RoSCTL Ledger</h3><p>Fast ledger optimization desk. Liquidate your active ICEGATE e-scrip instruments.</p></div>
+            <div class="card-graphic-container" style="background: #FEF3C7; color: #D97706;"><span class="card-status-badge badge-monetized">Best Value: 98.25%</span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"></line></svg></div>
+            <div class="card-inner-info"><h3>RoDTEP & RoSCTL Exchange</h3><p>Direct electronic credit optimization desk. Turn custom shipping scrolls into liquid funds.</p></div>
           </div>
 
         </div>
@@ -720,15 +748,23 @@
               <circle cx="500" cy="470" r="365" fill="none" stroke="#2B7A1A" stroke-width="12" />
               <circle cx="500" cy="350" r="160" fill="#2B7A1A" opacity="0.85"/>
               <path d="M340 350 A160 160 0 0 0 660 350 Z" fill="#4AA923" opacity="0.4"/>
-              <text x="500" y="680" font-family="'Inter', sans-serif" font-size="122" font-weight="800" fill="#FFFFFF" text-anchor="middle">Flex<tspan fill="#64C119">LyF</tspan></text>
+              <path d="M300 370 Q400 240 630 200" fill="none" stroke="#7FE327" stroke-width="28" stroke-linecap="round"/>
+              <polygon points="625,185 655,200 625,220" fill="#7FE327"/>
+              <path d="M315 450 Q500 550 670 420" fill="none" stroke="#56C127" stroke-width="22" opacity="0.9"/>
+              <g fill="#DCA337" stroke="#9A6F1A" stroke-width="3">
+                <rect x="420" y="395" width="90" height="60" rx="4"/>
+                <rect x="465" y="440" width="65" height="45" rx="4"/>
+              </g>
+              <text x="500" y="680" font-family="'Inter', sans-serif" font-size="122" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="-2">Flex<tspan fill="#64C119">LyF</tspan></text>
               <text x="500" y="750" font-family="'Inter', sans-serif" font-size="34" font-weight="700" fill="#E3F4D7" text-anchor="middle" letter-spacing="4">COMMERCE PVT. LTD.</text>
             </svg>
           </div>
           <p class="footer-tagline">Empowering Indian MSMEs to compete confidently in global markets through premium IIFT expert trade consultancy.</p>
           <div class="footer-social">
-            <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"/></svg></a>
             <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
             <a href="https://www.youtube.com/@flexlyf" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 3.88 12 3.88 12 3.88s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+            <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
           </div>
         </div>
 
@@ -751,21 +787,31 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="site.html">Site Map</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="currency.html">Currency Exchange</a></li>
+            <li><a href="resource.html">Important Resource</a></li>
           </ul>
         </div>
 
         <div class="footer-contact">
           <h4>Contact Grid</h4>
           <p class="address-node">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span><strong>Corporate Office:</strong><br>310, Arjangarh,<br>New Delhi, Delhi, India</span>
           </p>
           <p class="address-node">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
             <span><strong>Registered Office:</strong><br>606, Malviya Nagar, Prayagraj,<br>Uttar Pradesh, India - 211003</span>
           </p>
-          <p><a href="tel:+919220819906" style="color: inherit;">+91 92208 19906</a></p>
-          <p><a href="mailto:shobhit@flexlyf.com" style="color: inherit;">shobhit@flexlyf.com</a></p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+919220819906" style="color: inherit;">+91 92208 19906</a>
+          </p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:shobhit@flexlyf.com" style="color: inherit;">shobhit@flexlyf.com</a>
+          </p>
         </div>
       </div>
 
@@ -777,7 +823,7 @@
   </footer>
 
   <a href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
   </a>
 
