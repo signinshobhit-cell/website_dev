@@ -58,6 +58,171 @@
     ]
   }
   </script>
+
+  <style>
+    /* ==========================================================================
+       Horizontal News & Events Section Custom Component Styles
+       ========================================================================== */
+    .news-section {
+      padding: 60px 0;
+      background: #FFFFFF;
+      overflow: hidden;
+    }
+    
+    .news-header-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2rem;
+    }
+
+    .news-title-area {
+      text-align: left;
+    }
+
+    .news-title-area h2 {
+      color: #064E3B;
+      margin: 0.5rem 0 0;
+      font-size: 2.2rem;
+      font-weight: 800;
+    }
+
+    .news-navigation-controls {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .news-nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid #E5E7EB;
+      background: #FFFFFF;
+      color: #064E3B;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .news-nav-btn:hover {
+      background: #ECFDF5;
+      border-color: #059669;
+    }
+
+    /* Horizontal Scroller container setup */
+    .news-scroll-container {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1rem 0 2rem;
+      scrollbar-width: none; /* Hide default browser elements Firefox */
+    }
+
+    .news-scroll-container::-webkit-scrollbar {
+      display: none; /* Hide default scroll view Chrome/Safari */
+    }
+
+    /* news custom card structure */
+    .news-card {
+      flex: 0 0 360px; /* Force uniform structural dimensions */
+      background: #F9FAFB;
+      border-radius: 12px;
+      border: 1px solid #E5E7EB;
+      overflow: hidden;
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(6, 78, 59, 0.08);
+      border-color: #D1FAE5;
+    }
+
+    .news-image-frame {
+      width: 100%;
+      height: 200px;
+      background: #ECFDF5;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #059669;
+    }
+
+    /* Alternate fallback styling for cards */
+    .news-card:nth-child(even) .news-image-frame {
+      background: #FEF3C7;
+      color: #D97706;
+    }
+
+    .news-tag-overlay {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: #064E3B;
+      color: #FFFFFF;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .news-card:nth-child(even) .news-tag-overlay {
+      background: #F59E0B;
+    }
+
+    .news-body-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .news-meta-date {
+      font-size: 0.85rem;
+      color: #6B7280;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .news-body-content h3 {
+      font-size: 1.25rem;
+      color: #1F2937;
+      margin: 0 0 0.75rem;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .news-body-content p {
+      font-size: 0.95rem;
+      color: #4B5563;
+      line-height: 1.6;
+      margin: 0 0 1.5rem;
+    }
+
+    .news-action-link {
+      margin-top: auto;
+      color: #059669;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .news-action-link:hover {
+      color: #064E3B;
+    }
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -96,17 +261,17 @@
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link active">Home</a></li>
         <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="rodtep-exchange.html" class="nav-link">RoDTEP/RoSCTL</a></li>
         <li><a href="certification.html" class="nav-link">Certification</a></li>
         <li><a href="licensing.html" class="nav-link">Licensing</a></li>
         <li><a href="testing.html" class="nav-link">Testing</a></li>
         <li><a href="inspection.html" class="nav-link">Inspection</a></li>
         <li><a href="insurance.html" class="nav-link">Insurance</a></li>
-        <li><a href="commodity.html" class="nav-link">Commodity</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="commodity.html" class="nav-link">Commodity</a></li>
+        <li><a href="rodtep-exchange.html" class="nav-link">RoDTEP/RoSCTL</a></li>
       </ul>
       
-      <a>
+      <a href="tel:+919220819906" class="nav-phone">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
@@ -155,6 +320,79 @@
     <section class="marquee-section" aria-label="Supported certifications">
       <div class="marquee-content">
         <span>ISO 9001</span><span>•</span><span>CE Marking</span><span>•</span><span>FDA Registration</span><span>•</span><span>DGFT Licensing</span><span>•</span><span>ECGC Insurance</span><span>•</span><span>Halal Certification</span><span>•</span><span>Kosher Certification</span><span>•</span><span>BIS Standards</span><span>•</span><span>NPOP Organic</span><span>•</span><span>FSSAI</span><span>•</span><span>RCMC</span><span>•</span><span>IEC Code</span><span>•</span><span>ISO 9001</span><span>•</span><span>CE Marking</span><span>•</span><span>FDA Registration</span><span>•</span><span>DGFT Licensing</span><span>•</span><span>ECGC Insurance</span><span>•</span><span>Halal Certification</span><span>•</span><span>Kosher Certification</span><span>•</span><span>BIS Standards</span><span>•</span><span>NPOP Organic</span><span>•</span><span>FSSAI</span><span>•</span><span>RCMC</span><span>•</span><span>IEC Code</span>
+      </div>
+    </section>
+
+    <section class="news-section" aria-labelledby="news-heading">
+      <div class="container">
+        <div class="news-header-block">
+          <div class="news-title-area">
+            <span class="eyebrow" style="color: #059669; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">TRADE INTEL</span>
+            <h2 id="news-heading">Latest Updates & Trade Events</h2>
+          </div>
+          <div class="news-navigation-controls">
+            <button class="news-nav-btn" id="slide-left" aria-label="Scroll left">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            <button class="news-nav-btn" id="slide-right" aria-label="Scroll right">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="news-scroll-container" id="news-slider">
+          <article class="news-card">
+            <div class="news-image-frame">
+              <span class="news-tag-overlay">Policy Update</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="news-body-content">
+              <span class="news-meta-date">June 10, 2026</span>
+              <h3>DGFT RoDTEP Appendix 4R Additions</h3>
+              <p>New manufacturing tariff alignments added to electronic reward structures. Ensure compliance parameters match standard port logs to avoid credit freezing.</p>
+              <a href="rodtep-exchange.html" class="news-action-link">Optimize Claims →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image-frame">
+              <span class="news-tag-overlay">Trade Seminar</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="news-body-content">
+              <span class="news-meta-date">Upcoming: July 05, 2026</span>
+              <h3>MSME Global Sourcing Masterclass</h3>
+              <p>Join Shobhit Verma for a live practical breakdown of cross-border payment structures, UCP 600 document synchronization, and safe cargo protection protocols.</p>
+              <a href="contact.html" class="news-action-link">Reserve Your Seat →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image-frame">
+              <span class="news-tag-overlay">Compliance Alert</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+            </div>
+            <div class="news-body-content">
+              <span class="news-meta-date">June 02, 2026</span>
+              <h3>EU Market Entry Quality Parameters</h3>
+              <p>Stricter evaluation changes applied to CE marking frameworks and organic agricultural transaction records. Check your testing schedules before clearing loading docks.</p>
+              <a href="certification.html" class="news-action-link">Verify Credentials →</a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image-frame">
+              <span class="news-tag-overlay">Commodity Market</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div class="news-body-content">
+              <span class="news-meta-date">May 28, 2026</span>
+              <h3>Agribusiness Bulk Sourcing Launch</h3>
+              <p>Flexlyf expands bulk aggregation desks for Basmati staples, graded red onions, and air-freight premium fruit parcels tailored for Gulf delivery.</p>
+              <a href="commodity.html" class="news-action-link">Check Specifications →</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -657,11 +895,11 @@
         <span class="iift-badge">IIFT Alumni</span>
       </div>
     </div>
-  </footer>
+  </nav>
 
   <a href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414z"/>
     </svg>
     <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
   </a>
@@ -675,9 +913,28 @@
   <script src="main.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
+      // Dynamic Footer Year Logic
       const yearSpan = document.querySelector('.footer-year');
       if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // Horizontal Scroller Navigation Trigger Click Logic
+      const slider = document.getElementById('news-slider');
+      const btnLeft = document.getElementById('slide-left');
+      const btnRight = document.getElementById('slide-right');
+
+      if (slider && btnLeft && btnRight) {
+        // Move horizontal layout by exactly one full card length width fraction
+        const scrollAmount = 380; 
+
+        btnLeft.addEventListener('click', function() {
+          slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        btnRight.addEventListener('click', function() {
+          slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
       }
     });
   </script>
