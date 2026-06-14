@@ -9,21 +9,18 @@
   
   <link rel="canonical" href="https://signinshobhit-cell.github.io/website_dev/rodtep-exchange.html">
 
-  <!-- Open Graph Tags -->
   <meta property="og:title" content="RoDTEP & RoSCTL Incentive Desk | Flexlyf Commerce">
   <meta property="og:description" content="Recover embedded hidden duties and turn your e-scrips into immediate liquid cashflow. Professional advisory for global trade networks.">
   <meta property="og:image" content="https://signinshobhit-cell.github.io/website_dev/assets/og-rodtep.jpg">
   <meta property="og:url" content="https://signinshobhit-cell.github.io/website_dev/rodtep-exchange.html">
   <meta property="og:type" content="website">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
   
-  <!-- JSON-LD Enterprise Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,7 +109,7 @@
     .breadcrumb a { color: #7FE327; text-decoration: none; }
     .section-padding { padding: 80px 0; }
 
-    /* WOW FACTOR 1: Live Exchange Board Grid */
+    /* LIVE EXCHANGE RATE TICKER BOARD */
     .rate-ticker-board {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -125,7 +122,7 @@
     .ticker-card {
       background: #FFFFFF;
       border-radius: 12px;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
       box-shadow: 0 10px 30px rgba(2, 44, 34, 0.12);
       border-top: 5px solid #2B7A1A;
       text-align: center;
@@ -136,15 +133,15 @@
     }
     
     .ticker-label {
-      font-size: 0.85rem;
-      color: #4B5563;
+      font-size: 0.9rem;
+      color: #374151; /* High contrast dark gray */
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
     
     .ticker-rate-display {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       font-weight: 800;
       color: #064E3B;
       margin: 0.5rem 0;
@@ -156,12 +153,12 @@
     }
     
     .ticker-status {
-      font-size: 0.9rem;
-      color: #10B981;
+      font-size: 0.95rem;
+      color: #059669; /* Deep visible emerald */
       font-weight: 600;
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.35rem;
     }
 
     /* Dynamic Split Scheme Cards Grid */
@@ -191,12 +188,12 @@
       background: #ECFDF5;
       padding: 0.6rem 1rem;
       border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.9rem;
+      font-weight: 700;
       color: #064E3B;
     }
 
-    /* WOW FACTOR 2: Interactive E-Scrip Pipeline Visualizer */
+    /* INTERACTIVE SCRIP TRANSFER FLOW PIPELINE */
     .pipeline-section {
       background: #F4FBF7;
       border-radius: 16px;
@@ -211,7 +208,7 @@
       align-items: flex-start;
       gap: 1.5rem;
       position: relative;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
     
     .pipeline-connection-line {
@@ -256,17 +253,81 @@
     }
     
     .node-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #064E3B;
       margin-bottom: 0.5rem;
     }
     
     .node-desc {
-      font-size: 0.85rem;
-      color: #4B5563;
-      line-height: 1.4;
+      font-size: 0.9rem;
+      color: #374151; /* Darker color for high contrast scannability */
+      line-height: 1.5;
     }
+
+    /* VALUE ADDED SECTION: B2B EXCHANGE MARKETPLACE ROLES */
+    .exchange-roles-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .exchange-roles-grid { grid-template-columns: 1fr; }
+    }
+    .role-box {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 2.5rem;
+      position: relative;
+    }
+    .role-box h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; }
+    .role-exporter { border-top: 4px solid #2B7A1A; }
+    .role-importer { border-top: 4px solid #D97706; }
+    .role-list { list-style: none; padding: 0; margin: 0; }
+    .role-list li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.95rem;
+      color: #4B5563;
+      line-height: 1.5;
+    }
+    .role-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #2B7A1A;
+      font-weight: 800;
+    }
+    .role-importer .role-list li::before { color: #D97706; }
+
+    /* VALUE ADDED SECTION: ICEGATE COMPLIANCE AUDIT PACK */
+    .audit-checklist-card {
+      background: #064E3B;
+      color: #FFFFFF;
+      border-radius: 14px;
+      padding: 3.5rem;
+      margin-top: 4.5rem;
+      box-shadow: 0 12px 30px rgba(2, 44, 34, 0.2);
+    }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .checklist-item {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: background 0.2s ease;
+    }
+    .checklist-item:hover { background: rgba(255, 255, 255, 0.12); }
+    .checklist-item h4 { color: #7FE327; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .checklist-item p { color: #E3F4D7; font-size: 0.9rem; line-height: 1.4; margin: 0; }
 
     @media (max-width: 992px) {
       .pipeline-track { flex-direction: column; gap: 4rem; padding-top: 2rem; }
@@ -274,37 +335,14 @@
       .pipeline-node { width: 100%; box-sizing: border-box; }
     }
 
-    /* Interactive Estimator Component Sizing */
-    .estimator-box {
-      background: #064E3B;
-      color: white;
-      border-radius: 12px;
-      padding: 3rem;
-      margin-top: 4rem;
-      box-shadow: 0 10px 30px rgba(2, 44, 34, 0.2);
-    }
-    .estimator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; }
-    @media(max-width:768px){ .estimator-grid { grid-template-columns: 1fr; } }
-    
-    .calc-control {
-      width: 100%; padding: 0.75rem; border: 1px solid rgba(255,255,255,0.2);
-      background: rgba(255,255,255,0.1); color: white; border-radius: 6px; font-size: 1rem;
-    }
-    .calc-control option { color: #1F2937; }
-    
-    .result-panel {
-      background: rgba(255,255,255,0.08); padding: 2rem; border-radius: 8px;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      border: 1px dashed rgba(255,255,255,0.2);
-    }
-
     /* Form Framework Inputs */
     .form-group { margin-bottom: 1.25rem; text-align: left; }
-    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #1F2937; }
     .form-control {
-      width: 100%; padding: 0.75rem; border: 1px solid #D1D5DB; border-radius: 6px;
-      box-sizing: border-box; font-family: inherit;
+      width: 100%; padding: 0.75rem; border: 1px solid #C4C7CC; border-radius: 6px;
+      box-sizing: border-box; font-family: inherit; color: #1F2937; font-size: 1rem;
     }
+    .form-control::placeholder { color: #9CA3AF; }
 
     /* Global Process List Elements */
     .process-steps { display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 4rem; gap: 1.5rem; }
@@ -314,23 +352,25 @@
       display: flex; align-items: center; justify-content: center; font-weight: 700;
       margin: 0 auto 1rem; box-shadow: 0 4px 10px rgba(43, 122, 26, 0.3);
     }
+    .step-item h4 { color: #064E3B; font-weight: 700; margin-bottom: 0.5rem; }
+    .step-item p { color: #4B5563; font-size: 0.9rem; line-height: 1.5; }
 
     .industry-tags { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
     .tag-pill {
       background: #FFFFFF; color: #064E3B; padding: 0.5rem 1.5rem; border-radius: 50px;
-      font-weight: 500; font-size: 0.9rem; border: 1px solid #D1FAE5; box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      font-weight: 600; font-size: 0.9rem; border: 1px solid #D1FAE5; box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     }
 
     /* Accordion Structure Elements */
     .faq-item { border-bottom: 1px solid #e5e7eb; margin-bottom: 1rem; }
     .faq-question {
       width: 100%; text-align: left; padding: 1.5rem 0; background: none; border: none;
-      font-size: 1.1rem; font-weight: 600; color: #1F2937; cursor: pointer;
+      font-size: 1.15rem; font-weight: 700; color: #1F2937; cursor: pointer;
       display: flex; justify-content: space-between; align-items: center; font-family: inherit;
     }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #4B5563; line-height: 1.6; }
     .faq-item.active .faq-answer { max-height: 200px; padding-bottom: 1.5rem; }
-    .faq-icon { transition: transform 0.3s ease; }
+    .faq-icon { transition: transform 0.3s ease; font-size: 1.25rem; color: #2B7A1A; }
     .faq-item.active .faq-icon { transform: rotate(45deg); }
 
     /* Premium Uniform Green Theme Footer Architecture Mapping */
@@ -345,7 +385,7 @@
       color: rgba(255, 255, 255, 0.8) !important; text-decoration: none; transition: color 0.2s ease;
     }
     footer.footer .footer-links a:hover, footer.footer a:hover { color: #7FE327 !important; }
-    footer.footer .footer-tagline { color: #E3F4D7 !important; }
+    footer.footer .footer-tagline { color: #E3F4D7 !important; line-height: 1.6; }
     footer.footer .address-node span strong { color: #7FE327 !important; }
     footer.footer .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; margin-top: 2rem; }
   </style>
@@ -354,7 +394,6 @@
   
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Navigation Framework Menu -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container navbar-container">
       <a href="index.html" class="logo-wrapper" aria-label="Flexlyf Commerce Home">
@@ -408,7 +447,6 @@
   </nav>
 
   <main id="main-content">
-    <!-- Hero Section -->
     <section class="page-hero">
       <div class="container">
         <div class="breadcrumb">
@@ -420,7 +458,6 @@
     </section>
 
     <div class="container">
-      <!-- WOW FACTOR 1: Live Automatic Counter Exchange Rate Board -->
       <section class="rate-ticker-board" aria-label="Live Liquidation Rates Display">
         <div class="ticker-card">
           <span class="ticker-label">RoDTEP e-Scrip Liquidation Rate</span>
@@ -441,7 +478,6 @@
       </section>
     </div>
 
-    <!-- Core Insight Context Block -->
     <section class="section-padding" style="padding-top: 20px;">
       <div class="container">
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
@@ -451,9 +487,7 @@
           </p>
         </div>
 
-        <!-- Split Dual Columns for Schemes -->
         <div class="card-grid">
-          <!-- RoDTEP Strategy Card -->
           <div class="scheme-card">
             <span style="font-weight:800; color:#2B7A1A; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px;">General Sectors Block</span>
             <h3 style="color:#064E3B; margin: 0.5rem 0 1rem; font-size:1.8rem; font-weight:800;">RoDTEP Scheme</h3>
@@ -467,7 +501,6 @@
             <p style="font-size:0.9rem; color:#6B7280; margin: 0;">*Note: Available for both Domestic Tariff Area (DTA) units and advanced configurations like SEZ/EOUs.</p>
           </div>
 
-          <!-- RoSCTL Strategy Card -->
           <div class="scheme-card card-accent">
             <span style="font-weight:800; color:#D97706; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px;">Textiles & Apparel Only</span>
             <h3 style="color:#064E3B; margin: 0.5rem 0 1rem; font-size:1.8rem; font-weight:800;">RoSCTL Scheme</h3>
@@ -482,18 +515,45 @@
           </div>
         </div>
 
-        <!-- WOW FACTOR 2: Interactive E-Scrip Transfer Flow Pipeline Diagram -->
+        <div style="margin-top: 6rem;">
+          <div style="text-align: center; max-width: 700px; margin: 0 auto 1.5rem;">
+            <span style="color:#2B7A1A; font-weight:700; font-size:0.85rem; text-transform:uppercase; letter-spacing:1px;">Institutional Matchmaking Desk</span>
+            <h2 style="color:#064E3B; font-weight:800; margin-top:0.5rem; font-size: 2rem;">Connecting Exporters and Importers Directly</h2>
+            <p style="color:#4B5563; font-size:0.95rem;">Flexlyf operates a high-liquidity matchmaking clearinghouse that helps trading entities balance customs liabilities and cash flow.</p>
+          </div>
+
+          <div class="exchange-roles-grid">
+            <div class="role-box role-exporter">
+              <h3 style="color: #2B7A1A;">For Exporters (Sellers)</h3>
+              <ul class="role-list">
+                <li>Convert dead credit scrolls inside your ICEGATE account into instant working capital.</li>
+                <li>Avoid brokerage degradation and liquidate scripts at optimal market percentages up to **98.25%**.</li>
+                <li>Zero-risk transfers: Complete escrow matching ensures secure validation before final ledger release.</li>
+                <li>Comprehensive time-bar protection: We monitor and combine scrolls before the 1-year expiration windows close.</li>
+              </ul>
+            </div>
+            <div class="role-box role-importer">
+              <h3 style="color: #D97706;">For Importers (Buyers)</h3>
+              <ul class="role-list">
+                <li>Instantly reduce your net Basic Customs Duty (BCD) liabilities at ports of discharge.</li>
+                <li>Source verified, high-volume scripts with immediate transfer confirmation flags on ICEGATE.</li>
+                <li>Guaranteed regulatory clearance: Every matched scrip undergoes rigorous validation against Customs circulars.</li>
+                <li>Seamless bulk processing matching major logistics manifests and container arrivals.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div class="pipeline-section">
           <div style="text-align: center; max-width: 650px; margin: 0 auto 3rem;">
             <span style="color:#2B7A1A; font-weight:700; font-size:0.85rem; text-transform:uppercase; letter-spacing:1px;">MONETIZATION PIPELINE</span>
-            <h2 style="color:#064E3B; font-weight:800; margin-top:0.5rem;">How Exporters Monetize e-Scrips to Importers</h2>
+            <h2 style="color:#064E3B; font-weight:800; margin-top:0.5rem; font-size: 2rem;">How Exporters Monetize e-Scrips to Importers</h2>
             <p style="color:#4B5563; font-size:0.95rem; margin-top:0.5rem;">A secure bank-to-bank electronic transfer mechanism executed entirely within the ICEGATE automated customs portal.</p>
           </div>
           
           <div class="pipeline-track">
             <div class="pipeline-connection-line"></div>
             
-            <!-- Node 1 -->
             <div class="pipeline-node">
               <div class="node-icon-box">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line></svg>
@@ -502,7 +562,6 @@
               <div class="node-desc">Exporter flags shipping bills. Customs scrolls process automatically after EGM filing, tracking directly to the ICEGATE ledger.</div>
             </div>
 
-            <!-- Node 2 -->
             <div class="pipeline-node">
               <div class="node-icon-box">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
@@ -511,14 +570,12 @@
               <div class="node-desc">Exporters register a dynamic e-scrip account balance using secure Digital Signature Certificates (DSC) via customs nodes.</div>
             </div>
 
-            <!-- Node 3 -->
             <div class="pipeline-node">
               <div class="node-icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
               <div class="node-title">03. Transfer Initiation</div>
               <div class="node-desc">The Exporter locates a verified Importer and initiates a ledger transfer by inputting the transferee's valid Import Export Code (IEC).</div>
             </div>
 
-            <!-- Node 4 -->
             <div class="pipeline-node">
               <div class="node-icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
               <div class="node-title">04. Duty Liquidation</div>
@@ -527,43 +584,33 @@
           </div>
         </div>
 
-        <!-- Integrated Calculator Widget Box -->
-        <div class="estimator-box">
-          <h3 style="margin-top: 0; font-size: 1.6rem; font-weight:800;">Interactive Credit Estimator Desk</h3>
-          <p style="opacity: 0.9; font-size: 0.95rem;">Simulate your standard projected credit ledger allocations based on your average shipping manifest metrics.</p>
+        <div class="audit-checklist-card">
+          <h3 style="margin-top: 0; font-size: 1.8rem; font-weight:800; color: #FFFFFF; text-align: center;">ICEGATE E-Scrip Pre-Transfer Audit Check-sheet</h3>
+          <p style="color: #E3F4D7; font-size: 0.95rem; text-align: center; margin-top: 0.5rem; opacity: 0.9;">Filing mistakes can lock up dynamic trading balances. Our advisory desk screens every transaction against these four compliance pillars:</p>
           
-          <div class="estimator-grid">
-            <div>
-              <div class="form-group">
-                <label style="color:white;" for="calc-scheme">Target Remission Path</label>
-                <select id="calc-scheme" class="calc-control">
-                  <option value="rodtep-agri">RoDTEP: Agribusiness/Grains Fractions (Estimated ~1.5%)</option>
-                  <option value="rodtep-eng">RoDTEP: Engineering / General Cargo (Estimated ~2.2%)</option>
-                  <option value="rosctl-textile">RoSCTL: Apparel & Textile Made-ups (Estimated ~3.8%)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label style="color:white;" for="calc-fob">Total Shipping Manifest FOB Value (INR)</label>
-                <input type="number" id="calc-fob" class="calc-control" placeholder="e.g. 5000000" value="1000000">
-              </div>
-              <button id="run-calc" style="width:100%; background:#D97706; border:none; padding:0.85rem; border-radius:6px; color:white; font-weight:700; cursor:pointer; font-size:1rem;">
-                Run Remission Projection
-              </button>
+          <div class="checklist-grid">
+            <div class="checklist-item">
+              <h4>1. Custom Port Locks</h4>
+              <p>E-scrips are structurally tethered to the unique Port Code of generation. Transfers must align carefully with the recipient's target customs clearance entries.</p>
             </div>
-            
-            <div class="result-panel">
-              <span style="font-size:0.9rem; text-transform:uppercase; opacity:0.8; margin-bottom:0.5rem; font-weight:700;">Estimated e-Scrip Generation</span>
-              <div id="scrip-output" style="font-size: 2.8rem; font-weight: 800; color: #7FE327;">₹15,000</div>
-              <p style="font-size:0.85rem; text-align:center; opacity:0.8; margin-top:1rem; margin-bottom:0; line-height:1.5;">
-                This digital asset maintains an absolute 1:1 face value for clearing Basic Customs Duty (BCD) parameters or can be liquidated via authorized electronic broker transfers.
-              </p>
+            <div class="checklist-item">
+              <h4>2. Time-Bar Thresholds</h4>
+              <p>Exporters must combine multiple eligible shipping scrolls into active, tradeable scrips within exactly 1 year from the generation date, or the benefit permanently expires.</p>
+            </div>
+            <div class="checklist-item">
+              <h4>3. PAN-IEC Validation</h4>
+              <p>The system verifies that the primary exporter's PAN card records match their active IEC license profile on the DGFT portal to prevent systemic transaction rejection errors.</p>
+            </div>
+            <div class="checklist-item">
+              <h4>4. Scroll Realization Vetting</h4>
+              <p>Our audit confirms that customs scrolls have transitioned completely out of "Provisional" holding flags before initiating automated buyer matching.</p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Structured Process Flow Block -->
     <section class="section-padding" style="background: #F9FAFB;">
       <div class="container">
         <div style="text-align: center; max-width: 700px; margin: 0 auto;">
@@ -574,34 +621,33 @@
         <div class="process-steps">
           <div class="step-item">
             <div class="step-number">1</div>
-            <h4 style="color: #064E3B; font-weight:700;">Shipping Bill Flagging</h4>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-top: 0.5rem;">Mandatory initialization ("RODTEPY" or "ROSCTLY") directly inside the customs filing module before export clearance.</p>
+            <h4>Shipping Bill Flagging</h4>
+            <p>Mandatory initialization ("RODTEPY" or "ROSCTLY") directly inside the customs filing module before export clearance.</p>
           </div>
           <div class="step-item">
             <div class="step-number">2</div>
-            <h4 style="color: #064E3B; font-weight:700;">Customs Scroll Generation</h4>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-top: 0.5rem;">Automated systemic validation of HS classifications after Export General Manifest (EGM) logs seal.</p>
+            <h4>Customs Scroll Generation</h4>
+            <p>Automated systemic validation of HS classifications after Export General Manifest (EGM) logs seal.</p>
           </div>
           <div class="step-item">
             <div class="step-number">3</div>
-            <h4 style="color: #064E3B; font-weight:700;">Ledger Activation</h4>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-top: 0.5rem;">Setting up your secure e-scrip account using registered Digital Signature Certificates (DSC) via ICEGATE.</p>
+            <h4>Ledger Activation</h4>
+            <p>Setting up your secure e-scrip account using registered Digital Signature Certificates (DSC) via ICEGATE.</p>
           </div>
           <div class="step-item">
             <div class="step-number">4</div>
-            <h4 style="color: #064E3B; font-weight:700;">Scrip Consolidation</h4>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-top: 0.5rem;">Grouping multiple verified shipping scroll balances to create functional individual digital asset instruments.</p>
+            <h4>Scrip Consolidation</h4>
+            <p>Grouping multiple verified shipping scroll balances to create functional individual digital asset instruments.</p>
           </div>
           <div class="step-item">
             <div class="step-number">5</div>
-            <h4 style="color: #064E3B; font-weight:700;">Monetization / Transfer</h4>
-            <p style="font-size: 0.9rem; color: #4B5563; margin-top: 0.5rem;">Using scrips to offset personal basic customs duties or executing a transfer to institutional buyers for cash liquidity.</p>
+            <h4>Monetization / Transfer</h4>
+            <p>Using scrips to offset personal basic customs duties or executing a transfer to institutional buyers for cash liquidity.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Policy Exclusions Tag Banner Section -->
     <section class="section-padding" style="background: #F4FBF7; border-top: 1px solid #E5E7EB; border-bottom: 1px solid #E5E7EB;">
       <div class="container">
         <div style="text-align: center;">
@@ -618,7 +664,6 @@
       </div>
     </section>
 
-    <!-- Technical FAQ Section -->
     <section class="section-padding">
       <div class="container" style="max-width: 800px;">
         <div style="text-align: center; margin-bottom: 3rem;">
@@ -669,7 +714,6 @@
       </div>
     </section>
 
-    <!-- B2B Strategic Inquiry Entry Form Section -->
     <section id="trade-desk" class="section-padding" style="background: #F9FAFB; border-top: 1px solid #E5E7EB;">
       <div class="container" style="max-width: 650px;">
         <div style="text-align: center; margin-bottom: 2rem;">
@@ -716,7 +760,6 @@
       </div>
     </section>
 
-    <!-- CTA Action Footer Block -->
     <section class="cta-section" style="background: linear-gradient(135deg, #022c22 0%, #064E3B 100%); color: white; padding: 80px 0; text-align: center;">
       <div class="container">
         <h2 style="color: white; margin-bottom: 1.5rem; font-weight:800; font-size:2.2rem;">Maximize Your Export Revenue Margins</h2>
@@ -731,11 +774,9 @@
     </section>
   </main>
 
-  <!-- Premium Unified Green Theme Footer Structure -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <!-- Col 1: Corporate Brand Identity Summary -->
         <div>
           <div class="logo-wrapper footer-logo" style="margin-bottom: 1.5rem;">
             <svg class="corporate-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="160" height="60">
@@ -763,7 +804,6 @@
           </div>
         </div>
 
-        <!-- Col 2: Services Directory -->
         <div>
           <h4>Services</h4>
           <ul class="footer-links" style="list-style: none; padding: 0; margin: 0;">
@@ -775,7 +815,6 @@
           </ul>
         </div>
 
-        <!-- Col 3: Extended Corporate Matrix -->
         <div>
           <h4>Company</h4>
           <ul class="footer-links" style="list-style: none; padding: 0; margin: 0;">
@@ -791,7 +830,6 @@
           </ul>
         </div>
 
-        <!-- Col 4: Address Tracking Nodes -->
         <div class="footer-contact">
           <h4>Contact Grid</h4>
           <p class="address-node" style="display: flex; gap: 10px; margin-bottom: 1rem; align-items: flex-start;">
@@ -813,7 +851,6 @@
         </div>
       </div>
 
-      <!-- Footer Bottom Attribution Block -->
       <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <p class="footer-copyright" style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);">© <span class="footer-year"></span> Flexlyf Commerce Private Limited. All rights reserved.</p>
         <span class="iift-badge" style="background: rgba(255, 255, 255, 0.15); padding: 0.35rem 0.85rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; color: #7FE327; text-transform: uppercase; letter-spacing: 0.5px;">IIFT Alumni</span>
@@ -821,19 +858,16 @@
     </div>
   </footer>
 
-  <!-- Fixed Floating WhatsApp Access Framework -->
   <a href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000;" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
   </a>
 
-  <!-- Smooth Back to Top Navigation Toggle -->
   <button class="back-to-top" aria-label="Back to top" style="position:fixed; bottom:95px; right:20px; width:40px; height:40px; border-radius:6px; background:#064E3B; border:none; color:white; display:none; align-items:center; justify-content:center; cursor:pointer; z-index:1000;">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
-  <!-- Script Modules Execution -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // 1. Mobile Menu Hamburger Animation Toggle
@@ -855,7 +889,7 @@
         });
       });
 
-      // 3. WOW FACTOR 1: Hardware-Accelerated High-Performance Rolling Counter Script
+      // 3. WOW FACTOR: Hardware-Accelerated High-Performance Rolling Counter Script
       const targetCounters = document.querySelectorAll('.stat-counter');
       
       const animateDecimalCounter = (element) => {
@@ -895,23 +929,7 @@
 
       targetCounters.forEach(counter => counterObserver.observe(counter));
 
-      // 4. Custom Credit Calculation Engine Desk Execution
-      const runCalcBtn = document.getElementById('run-calc');
-      if (runCalcBtn) {
-        runCalcBtn.addEventListener('click', function() {
-          const schemeType = document.getElementById('calc-scheme').value;
-          const fobValue = parseFloat(document.getElementById('calc-fob').value) || 0;
-          let factor = 0.015; // standard fallback
-
-          if (schemeType === 'rodtep-eng') factor = 0.022;
-          if (schemeType === 'rosctl-textile') factor = 0.038;
-
-          const computedRemission = Math.round(fobValue * factor);
-          document.getElementById('scrip-output').textContent = '₹' + computedRemission.toLocaleString('en-IN');
-        });
-      }
-
-      // 5. Back to Top Smooth Trigger Scroll Logic
+      // 4. Back to Top Smooth Trigger Scroll Logic
       const topBtn = document.querySelector('.back-to-top');
       window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
