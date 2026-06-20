@@ -1,233 +1,254 @@
 /**
- * FLEXYF COMMERCE - Main JavaScript
- * International Web Standards Compliant
+ * Flexlyf Commerce - Main JavaScript
+ * Premium International Trade Consultancy
+ * Optimized for peak performance and 60fps frame rates
  */
 
-(function() {
-  'use strict';
+// DOM Content Loaded Execution Desk
+document.addEventListener('DOMContentLoaded', function() {
+  initGlobalScrollEffects(); // Combined throttled scroll listener
+  initMobileMenu();
+  initScrollAnimations();
+  initStatsCounter();
+  initFAQAccordion();
+  initSmoothScroll();
+  updateFooterYear();
+  initContactFormValidation();
+});
 
-  // ========================================
-  // DOM ELEMENTS
-  // ========================================
-  
-  const header = document.querySelector('.header');
-  const navToggle = document.querySelector('.nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  const scrollAnimateElements = document.querySelectorAll('.fade-in');
-  
-  // ========================================
-  // NAVIGATION
-  // ========================================
-  
-  // Mobile Menu Toggle
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
-      const isExpanded = navMenu.classList.contains('active');
-      navToggle.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!header.contains(e.target) && navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
+// Optimized Window Scroll Architecture (Combines Navbar and Back-To-Top to save event threads)
+function initGlobalScrollEffects() {
+  const navbar = document.querySelector('.navbar');
+  const backToTop = document.querySelector('.back-to-top');
+  let scrollTimeout;
+
+  if (!navbar && !backToTop) return;
+
+  // Use a passive scroll listener to prevent touch/scroll performance degradation on mobile
+  window.addEventListener('scroll', () => {
+    if (!scrollTimeout) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+
+        // Navbar scroll state check
+        if (navbar) {
+          if (currentScrollY > 80) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        }
+
+        // Back-To-Top visibility button check
+        if (backToTop) {
+          if (currentScrollY > 500) {
+            backToTop.style.display = 'flex';
+            // Use a tiny micro-timeout for CSS visibility transitions to trigger cleanly
+            setTimeout(() => backToTop.classList.add('visible'), 10);
+          } else {
+            backToTop.classList.remove('visible');
+            setTimeout(() => {
+              if(!backToTop.classList.contains('visible')) backToTop.style.display = 'none';
+            }, 300);
+          }
+        }
+
+        scrollTimeout = null;
+      });
+      scrollTimeout = true;
+    }
+  }, { passive: true });
+
+  // Back-to-top execution click link hook
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+}
+
+// Mobile Menu Toggle Modules
+function initMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
   
-  // Header Scroll Effect
-  function handleHeaderScroll() {
-    if (header) {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+  if (!hamburger || !navMenu) return;
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+  });
+
+  // Close navigation tray smoothly when selecting a deep-anchored link strip
+  const navLinks = navMenu.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+// Memory-Leaking Proof Scroll Animations Observer
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.fade-in');
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Optimization: Unobserve elements once visible to save ongoing browser layout evaluation loops
+        observer.unobserve(entry.target);
       }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
+  });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+// High-Performance Stats Counter Observation
+function initStatsCounter() {
+  const statNumbers = document.querySelectorAll('.stat-number');
+  if (!statNumbers.length) return;
+
+  const observer = new IntersectionObserver((entries, observerInstance) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        const targetValue = parseInt(entry.target.getAttribute('data-target'), 10) || 0;
+        animateFluidCounter(entry.target, targetValue);
+        observerInstance.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  statNumbers.forEach(stat => observer.observe(stat));
+}
+
+// Hardware-Accelerated progressive Easing Counter engine (Replaces choppy setInterval loops)
+function animateFluidCounter(element, target) {
+  const duration = 2000; // Counter runtime frame speed in ms
+  const startTime = performance.now();
+  const isPercentage = element.textContent.includes('%') || element.getAttribute('data-target').includes('%');
+
+  function updateFrame(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    
+    // Progressive Quad out easing mathematical curve formula mapping
+    const easeOutQuad = progress * (2 - progress);
+    const currentCount = Math.floor(easeOutQuad * target);
+
+    element.textContent = currentCount + (isPercentage ? '%' : '+');
+
+    if (progress < 1) {
+      requestAnimationFrame(updateFrame);
+    } else {
+      element.textContent = target + (isPercentage ? '%' : '+');
     }
   }
-  
-  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
-  handleHeaderScroll(); // Check on load
-  
-  // Smooth Scroll for Anchor Links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href !== '#' && href.length > 1) {
+
+  requestAnimationFrame(updateFrame);
+}
+
+// Clean FAQ Single-Open Accordion Toggling Logic
+function initFAQAccordion() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  if (!faqQuestions.length) return;
+
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
+
+      // Close all alternative active elements
+      document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+
+      // If selection wasn't open, cycle state flag on
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    });
+  });
+}
+
+// Ultra-Smooth Page Anchor Intercept Controls
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const hrefValue = this.getAttribute('href');
+      if (hrefValue === '#') return;
+
+      const targetElement = document.querySelector(hrefValue);
+      if (targetElement) {
         e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          const headerHeight = header ? header.offsetHeight : 80;
-          const offsetTop = target.offsetTop - headerHeight;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
-          
-          // Close mobile menu if open
-          if (navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            navToggle && navToggle.setAttribute('aria-expanded', 'false');
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+}
+
+// Dynamic Calendar Setup Nodal Logic
+function updateFooterYear() {
+  const yearElements = document.querySelectorAll('.footer-year, #year');
+  const currentYear = new Date().getFullYear();
+  yearElements.forEach(el => {
+    el.textContent = currentYear;
+  });
+}
+
+// Secure Field Form Validation Architecture Setup
+function initContactFormValidation() {
+  const contactForm = document.getElementById('contactForm') || document.querySelector('form');
+  if (!contactForm) return;
+
+  contactForm.addEventListener('submit', function(e) {
+    const inputs = this.querySelectorAll('[required]');
+    let isFormValid = true;
+
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        input.style.borderColor = '#ef4444';
+        isFormValid = false;
+      } else {
+        input.style.borderColor = '#C4C7CC';
+        
+        if (input.type === 'email') {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(input.value)) {
+            input.style.borderColor = '#ef4444';
+            isFormValid = false;
           }
         }
       }
     });
-  });
-  
-  // ========================================
-  // SCROLL ANIMATIONS
-  // ========================================
-  
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-  
-  const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, observerOptions);
-  
-  scrollAnimateElements.forEach(element => {
-    scrollObserver.observe(element);
-  });
-  
-  // ========================================
-  // COUNTER ANIMATION FOR STATS
-  // ========================================
-  
-  function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16); // 60fps
-    
-    function updateCounter() {
-      start += increment;
-      if (start < target) {
-        element.textContent = Math.floor(start).toLocaleString();
-        requestAnimationFrame(updateCounter);
-      } else {
-        element.textContent = target.toLocaleString();
-      }
-    }
-    
-    updateCounter();
-  }
-  
-  // Observe stat numbers for animation
-  const statNumbers = document.querySelectorAll('.stat-number');
-  const statObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-        const target = parseInt(entry.target.getAttribute('data-target'));
-        if (target) {
-          animateCounter(entry.target, target);
-          entry.target.classList.add('animated');
-        }
-      }
-    });
-  }, { threshold: 0.5 });
-  
-  statNumbers.forEach(stat => {
-    statObserver.observe(stat);
-  });
-  
-  // ========================================
-  // FORM HANDLING
-  // ========================================
-  
-  const contactForm = document.querySelector('.contact-form form');
-  
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+
+    if (!isFormValid) {
       e.preventDefault();
-      
-      // Basic form validation
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
-      // Simple validation
-      let isValid = true;
-      const requiredFields = this.querySelectorAll('[required]');
-      
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          isValid = false;
-          field.classList.add('error');
-        } else {
-          field.classList.remove('error');
-        }
-      });
-      
-      // Email validation
-      const emailField = this.querySelector('input[type="email"]');
-      if (emailField && emailField.value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailField.value)) {
-          isValid = false;
-          emailField.classList.add('error');
-        }
-      }
-      
-      if (isValid) {
-        // Show success message (in production, send to server)
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
+      alert('Please complete all required fields correctly to connect with our Trade Desk.');
+    }
+  });
+
+  // Setup reactive border transitions for active form inputs blur out fields
+  contactForm.querySelectorAll('input, textarea').forEach(input => {
+    input.addEventListener('blur', function() {
+      if (this.hasAttribute('required') && !this.value.trim()) {
+        this.style.borderColor = '#ef4444';
       } else {
-        alert('Please fill in all required fields correctly.');
-      }
-    });
-    
-    // Remove error class on input
-    const formInputs = contactForm.querySelectorAll('input, textarea');
-    formInputs.forEach(input => {
-      input.addEventListener('input', function() {
-        this.classList.remove('error');
-      });
-    });
-  }
-  
-  // ========================================
-  // FAQ ACCORDION
-  // ========================================
-  
-  const faqQuestions = document.querySelectorAll('.faq-question');
-  
-  faqQuestions.forEach(question => {
-    question.addEventListener('click', function() {
-      const item = this.closest('.faq-item');
-      const answer = item.querySelector('.faq-answer');
-      const isActive = item.classList.contains('active');
-      
-      // Close all other items
-      document.querySelectorAll('.faq-item.active').forEach(activeItem => {
-        activeItem.classList.remove('active');
-        activeItem.querySelector('.faq-answer').style.maxHeight = null;
-      });
-      
-      // Toggle current item
-      if (!isActive) {
-        item.classList.add('active');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
+        this.style.borderColor = '#C4C7CC';
       }
     });
   });
-  
-  // ========================================
-  // INITIALIZATION
-  // ========================================
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('Flexlyf Commerce website loaded successfully!');
-    
-    // Add loaded class to body for CSS transitions
-    document.body.classList.add('loaded');
-    
-    // Initialize any other components here
-  });
-  
-})();
+}
+
+// Corporate Technical Branding Log Message Node Group
+console.log('%cFlexlyf Commerce', 'color: #2B7A1A; font-size: 24px; font-weight: bold;');
+console.log('%cPremium International Trade Advisory Services', 'color: #064E3B; font-size: 14px;');
+console.log('%cBuilt with Performance Precision for Indian MSMEs', 'color: #6B7280; font-size: 12px;');
