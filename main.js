@@ -1,48 +1,87 @@
 /**
  * Flexlyf Commerce - Main JavaScript
  * Premium International Trade Consultancy
+ * Optimized for peak performance and 60fps frame rates
  */
 
-// DOM Content Loaded
+// DOM Content Loaded Execution Desk
 document.addEventListener('DOMContentLoaded', function() {
-  initNavbar();
+  initGlobalScrollEffects(); // Combined throttled scroll listener
   initMobileMenu();
   initScrollAnimations();
   initStatsCounter();
   initFAQAccordion();
-  initBackToTop();
   initSmoothScroll();
   updateFooterYear();
+  initContactFormValidation();
 });
 
-// Navbar Scroll Effect
-function initNavbar() {
+// Optimized Window Scroll Architecture (Combines Navbar and Back-To-Top to save event threads)
+function initGlobalScrollEffects() {
   const navbar = document.querySelector('.navbar');
-  if (!navbar) return;
+  const backToTop = document.querySelector('.back-to-top');
+  let scrollTimeout;
 
+  if (!navbar && !backToTop) return;
+
+  // Use a passive scroll listener to prevent touch/scroll performance degradation on mobile
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    if (!scrollTimeout) {
+      window.requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+
+        // Navbar scroll state check
+        if (navbar) {
+          if (currentScrollY > 80) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        }
+
+        // Back-To-Top visibility button check
+        if (backToTop) {
+          if (currentScrollY > 500) {
+            backToTop.style.display = 'flex';
+            // Use a tiny micro-timeout for CSS visibility transitions to trigger cleanly
+            setTimeout(() => backToTop.classList.add('visible'), 10);
+          } else {
+            backToTop.classList.remove('visible');
+            setTimeout(() => {
+              if(!backToTop.classList.contains('visible')) backToTop.style.display = 'none';
+            }, 300);
+          }
+        }
+
+        scrollTimeout = null;
+      });
+      scrollTimeout = true;
     }
-  });
+  }, { passive: true });
+
+  // Back-to-top execution click link hook
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 }
 
-// Mobile Menu Toggle
+// Mobile Menu Toggle Modules
 function initMobileMenu() {
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
   
   if (!hamburger || !navMenu) return;
 
-  hamburger.addEventListener('click', () => {
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
     document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
   });
 
-  // Close menu when clicking a link
+  // Close navigation tray smoothly when selecting a deep-anchored link strip
   const navLinks = navMenu.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -53,185 +92,163 @@ function initMobileMenu() {
   });
 }
 
-// Scroll Animations (Fade In)
+// Memory-Leaking Proof Scroll Animations Observer
 function initScrollAnimations() {
   const elements = document.querySelectorAll('.fade-in');
-  
   if (!elements.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        // Optimization: Unobserve elements once visible to save ongoing browser layout evaluation loops
+        observer.unobserve(entry.target);
       }
     });
   }, {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -30px 0px'
   });
 
   elements.forEach(el => observer.observe(el));
 }
 
-// Stats Counter Animation
+// High-Performance Stats Counter Observation
 function initStatsCounter() {
   const statNumbers = document.querySelectorAll('.stat-number');
-  
   if (!statNumbers.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, observerInstance) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        const target = parseInt(entry.target.getAttribute('data-target'));
-        animateCounter(entry.target, target);
         entry.target.classList.add('counted');
+        const targetValue = parseInt(entry.target.getAttribute('data-target'), 10) || 0;
+        animateFluidCounter(entry.target, targetValue);
+        observerInstance.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   statNumbers.forEach(stat => observer.observe(stat));
 }
 
-function animateCounter(element, target) {
-  let current = 0;
-  const increment = target / 50;
-  const duration = 2000;
-  const stepTime = duration / 50;
+// Hardware-Accelerated progressive Easing Counter engine (Replaces choppy setInterval loops)
+function animateFluidCounter(element, target) {
+  const duration = 2000; // Counter runtime frame speed in ms
+  const startTime = performance.now();
+  const isPercentage = element.textContent.includes('%') || element.getAttribute('data-target').includes('%');
 
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      element.textContent = target + '+';
-      clearInterval(timer);
+  function updateFrame(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    
+    // Progressive Quad out easing mathematical curve formula mapping
+    const easeOutQuad = progress * (2 - progress);
+    const currentCount = Math.floor(easeOutQuad * target);
+
+    element.textContent = currentCount + (isPercentage ? '%' : '+');
+
+    if (progress < 1) {
+      requestAnimationFrame(updateFrame);
     } else {
-      element.textContent = Math.floor(current) + '+';
+      element.textContent = target + (isPercentage ? '%' : '+');
     }
-  }, stepTime);
+  }
+
+  requestAnimationFrame(updateFrame);
 }
 
-// FAQ Accordion
+// Clean FAQ Single-Open Accordion Toggling Logic
 function initFAQAccordion() {
   const faqQuestions = document.querySelectorAll('.faq-question');
-  
   if (!faqQuestions.length) return;
 
   faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
-      const answer = question.nextElementSibling;
-      const isActive = question.classList.contains('active');
+      const faqItem = question.parentElement;
+      const isActive = faqItem.classList.contains('active');
 
-      // Close all other FAQs
-      faqQuestions.forEach(q => {
-        q.classList.remove('active');
-        q.nextElementSibling.classList.remove('open');
-      });
+      // Close all alternative active elements
+      document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
 
-      // Toggle current FAQ
+      // If selection wasn't open, cycle state flag on
       if (!isActive) {
-        question.classList.add('active');
-        answer.classList.add('open');
+        faqItem.classList.add('active');
       }
     });
   });
 }
 
-// Back to Top Button
-function initBackToTop() {
-  const backToTop = document.querySelector('.back-to-top');
-  
-  if (!backToTop) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-      backToTop.classList.add('visible');
-    } else {
-      backToTop.classList.remove('visible');
-    }
-  });
-
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-// Smooth Scroll for Anchor Links
+// Ultra-Smooth Page Anchor Intercept Controls
 function initSmoothScroll() {
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
-  
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (href === '#') return;
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const hrefValue = this.getAttribute('href');
+      if (hrefValue === '#') return;
 
-      const target = document.querySelector(href);
-      if (target) {
+      const targetElement = document.querySelector(hrefValue);
+      if (targetElement) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
 }
 
-// Update Footer Year Dynamically
+// Dynamic Calendar Setup Nodal Logic
 function updateFooterYear() {
-  const yearElements = document.querySelectorAll('.footer-year');
+  const yearElements = document.querySelectorAll('.footer-year, #year');
   const currentYear = new Date().getFullYear();
-  
   yearElements.forEach(el => {
     el.textContent = currentYear;
   });
 }
 
-// Form Validation (Contact Page)
-function validateForm(form) {
-  const inputs = form.querySelectorAll('[required]');
-  let isValid = true;
+// Secure Field Form Validation Architecture Setup
+function initContactFormValidation() {
+  const contactForm = document.getElementById('contactForm') || document.querySelector('form');
+  if (!contactForm) return;
 
-  inputs.forEach(input => {
-    if (!input.value.trim()) {
-      input.style.borderColor = '#ef4444';
-      isValid = false;
-    } else {
-      input.style.borderColor = '#E8EDF5';
-      
-      // Email validation
-      if (input.type === 'email') {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(input.value)) {
-          input.style.borderColor = '#ef4444';
-          isValid = false;
+  contactForm.addEventListener('submit', function(e) {
+    const inputs = this.querySelectorAll('[required]');
+    let isFormValid = true;
+
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        input.style.borderColor = '#ef4444';
+        isFormValid = false;
+      } else {
+        input.style.borderColor = '#C4C7CC';
+        
+        if (input.type === 'email') {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(input.value)) {
+            input.style.borderColor = '#ef4444';
+            isFormValid = false;
+          }
         }
       }
-    }
-  });
+    });
 
-  return isValid;
-}
-
-// Add form submission handler if contact form exists
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    if (!validateForm(this)) {
+    if (!isFormValid) {
       e.preventDefault();
-      alert('Please fill in all required fields correctly.');
+      alert('Please complete all required fields correctly to connect with our Trade Desk.');
     }
   });
 
-  // Real-time validation
-  const inputs = contactForm.querySelectorAll('input, textarea');
-  inputs.forEach(input => {
+  // Setup reactive border transitions for active form inputs blur out fields
+  contactForm.querySelectorAll('input, textarea').forEach(input => {
     input.addEventListener('blur', function() {
       if (this.hasAttribute('required') && !this.value.trim()) {
         this.style.borderColor = '#ef4444';
       } else {
-        this.style.borderColor = '#E8EDF5';
+        this.style.borderColor = '#C4C7CC';
       }
     });
   });
 }
 
-// Console message for developers
-console.log('%cFlexlyf Commerce', 'color: #C9922A; font-size: 24px; font-weight: bold;');
-console.log('%cPremium International Trade Consultancy', 'color: #0A1F44; font-size: 14px;');
-console.log('%cBuilt with ❤️ for Indian MSMEs', 'color: #8A94A6; font-size: 12px;');
+// Corporate Technical Branding Log Message Node Group
+console.log('%cFlexlyf Commerce', 'color: #2B7A1A; font-size: 24px; font-weight: bold;');
+console.log('%cPremium International Trade Advisory Services', 'color: #064E3B; font-size: 14px;');
+console.log('%cBuilt with Performance Precision for Indian MSMEs', 'color: #6B7280; font-size: 12px;');
