@@ -504,7 +504,7 @@ img {
   letter-spacing: -1px;
 }
 
-.stat-label {
+.stat-heading {
   font-size: 0.9rem;
   color: var(--color-green-accent);
   font-weight: 700;
@@ -590,7 +590,7 @@ img {
 .feature-icon { width: 40px; height: 40px; color: var(--color-green-mid); margin-bottom: var(--space-md); }
 .feature-card h4 { color: var(--color-navy); font-size: 1.25rem; font-weight: 700; }
 
-/* Industries Matrix Grid */
+/* Industries Grid Layout */
 .industries-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -806,16 +806,16 @@ footer.footer h4 {
 .back-to-top:hover { background-color: var(--color-gold); transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 .back-to-top svg { width: 24px; height: 24px; color: var(--color-white); }
 
-/* Inner Page Header Base Styles */
-.page-header {
-  background: linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%);
+/* Inner Page Header Base Styles & Contrast Overhaul Fix */
+.page-header, .page-hero {
+  background: linear-gradient(135deg, var(--color-navy-mid) 0%, var(--color-navy) 100%) !important;
   padding: 140px 0 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.page-header::before {
+.page-header::before, .page-hero::before {
   content: '';
   position: absolute;
   top: 0;
@@ -828,9 +828,21 @@ footer.footer h4 {
   opacity: 0.3;
 }
 
-.page-header-content { position: relative; z-index: 2; }
-.page-header h1 { color: var(--color-white); margin-bottom: var(--space-sm); font-weight: 800; }
-.page-header p { color: #E3F4D7; font-size: 1.125rem; max-width: 700px; margin: 0 auto; opacity: 0.95; }
+.page-header-content, .page-hero .container { position: relative; z-index: 2; }
+
+.page-header h1, .page-hero h1 { 
+  color: var(--color-white) !important; 
+  margin-bottom: var(--space-sm); 
+  font-weight: 800; 
+}
+
+.page-header p, .page-hero p, .page-hero p.hero-subtext, .page-header p.hero-subtext { 
+  color: #E3F4D7 !important; 
+  font-size: 1.125rem; 
+  max-width: 700px; 
+  margin: 0 auto; 
+  opacity: 1 !important; 
+}
 
 .breadcrumb {
   display: flex; justify-content: center; gap: 8px; margin-bottom: var(--space-md); font-size: 0.9rem; color: var(--color-gray-100); font-weight: 500;
