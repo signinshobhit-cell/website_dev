@@ -252,3 +252,27 @@ function initContactFormValidation() {
 console.log('%cFlexlyf Commerce', 'color: #2B7A1A; font-size: 24px; font-weight: bold;');
 console.log('%cPremium International Trade Advisory Services', 'color: #064E3B; font-size: 14px;');
 console.log('%cBuilt with Performance Precision for Indian MSMEs', 'color: #6B7280; font-size: 12px;');
+// ... Your existing javascript code is up here ...
+// ... Dynamic text animations, mobile menu toggles, etc. ...
+
+function someExistingFunction() {
+    // Existing logic
+}
+
+// ==========================================
+// PASTE THE NEW CODE AT THE ABSOLUTE BOTTOM:
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        link.classList.remove("active"); 
+        
+        const href = link.getAttribute("href");
+        
+        if (currentPath === href || (currentPath === "/" && href === "/")) {
+            link.classList.add("active");
+        }
+    });
+});
