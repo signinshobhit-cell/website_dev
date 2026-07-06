@@ -258,10 +258,6 @@ console.log('%cBuilt with Performance Precision for Indian MSMEs', 'color: #6B72
 function someExistingFunction() {
     // Existing logic
 }
-
-// ==========================================
-// PASTE THE NEW CODE AT THE ABSOLUTE BOTTOM:
-// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll(".nav-link");
