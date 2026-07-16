@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK54MK80YZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK54MK80YZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-DK54MK80YZ');
-</script>
+      gtag('config', 'G-DK54MK80YZ');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspection Services | Flexlyf Commerce - Quality Control & Audits</title>
     <meta name="description" content="Professional pre-shipment inspection, factory audits, and quality control services for Indian exporters. Ensure your products meet global standards before shipping.">
     <meta name="keywords" content="Pre-shipment inspection India, Quality control services, Factory audit, Product inspection, Export quality check, Third party inspection">
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://signinshobhit-cell.github.io/website_dev/inspection.html">
+    <link rel="canonical" href="https://flexlyf.com/inspection">
 
-    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Inspection Services | Flexlyf Commerce">
     <meta property="og:description" content="Protect your brand reputation with rigorous quality inspections before your goods leave the factory.">
-    <meta property="og:image" content="https://signinshobhit-cell.github.io/website_dev/assets/og-inspection.jpg">
-    <meta property="og:url" content="https://signinshobhit-cell.github.io/website_dev/inspection.html">
+    <meta property="og:image" content="https://flexlyf.com/assets/og-inspection.jpg">
+    <meta property="og:url" content="https://flexlyf.com/inspection">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Flexlyf Commerce Private Limited">
 
-    <!-- Fonts -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://flexlyf.com/inspection">
+    <meta name="twitter:title" content="Inspection Services | Flexlyf Commerce">
+    <meta name="twitter:description" content="Protect your brand reputation with rigorous quality inspections before your goods leave the factory.">
+    <meta name="twitter:image" content="https://flexlyf.com/assets/og-inspection.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     
-    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -43,7 +45,7 @@
       "provider": {
         "@type": "Organization",
         "name": "Flexlyf Commerce Private Limited",
-        "url": "https://signinshobhit-cell.github.io/website_dev/",
+        "url": "https://flexlyf.com/",
         "telephone": "+919220819906",
         "email": "shobhit@flexlyf.com",
         "address": {
@@ -51,7 +53,7 @@
           "streetAddress": "310, Arjangarh",
           "addressLocality": "New Delhi",
           "addressRegion": "Delhi",
-          "postalCode": "11047",
+          "postalCode": "110047",
           "addressCountry": "IN"
         }
       },
@@ -80,24 +82,17 @@
 
         /* Custom Dark Green Header Theme Override for Inspection Page */
         nav.navbar {
-            background: #064E3B !important; /* Deep Green solid mode background */
+            background: #064E3B !important; 
             box-shadow: 0 4px 15px rgba(2, 44, 34, 0.15);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
-        nav.navbar .logo-text-main {
-            color: #FFFFFF !important;
-        }
-        nav.navbar .logo-text-sub {
-            color: #F59E0B !important;
-        }
-        nav.navbar .nav-link {
-            color: rgba(255, 255, 255, 0.85) !important;
-        }
-        nav.navbar .nav-link:hover, nav.navbar .nav-link.active {
-            color: #F59E0B !important;
-        }
+        nav.navbar .logo-text-main { color: #FFFFFF !important; }
+        nav.navbar .logo-text-sub { color: #F59E0B !important; }
+        nav.navbar .nav-link { color: rgba(255, 255, 255, 0.85) !important; }
+        nav.navbar .nav-link:hover, nav.navbar .nav-link.active { color: #F59E0B !important; }
+        
         nav.navbar .nav-phone {
             color: #FFFFFF !important;
             background: rgba(255, 255, 255, 0.1);
@@ -105,12 +100,8 @@
             border-radius: 6px;
             transition: background 0.3s ease;
         }
-        nav.navbar .nav-phone:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        nav.navbar .hamburger span {
-            background-color: #FFFFFF !important;
-        }
+        nav.navbar .nav-phone:hover { background: rgba(255, 255, 255, 0.2); }
+        nav.navbar .hamburger span { background-color: #FFFFFF !important; }
 
         /* Page Content Specific Styles */
         .page-hero {
@@ -128,15 +119,42 @@
             margin-bottom: 1rem;
             display: inline-block;
         }
-        
         .breadcrumb a {
             color: var(--color-accent, #F59E0B);
             text-decoration: none;
         }
 
-        .section-padding {
-            padding: 80px 0;
+        .section-padding { padding: 80px 0; }
+        .bg-light { background: #F9FAFB; }
+
+        .row-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
         }
+        @media (min-width: 768px) {
+            .row-flex { flex-direction: row; }
+            .row-flex > div { flex: 1; min-width: 300px; }
+        }
+
+        .section-title-dark { color: var(--color-primary-dark, #064E3B); margin-bottom: 1.5rem; }
+        .text-muted { color: var(--color-gray-600, #4B5563); line-height: 1.7; margin-bottom: 1.5rem; }
+        .list-unstyled { margin-top: 1.5rem; list-style: none; padding: 0; }
+        .list-item-flex { margin-bottom: 0.8rem; display: flex; align-items: center; color: var(--color-primary-dark, #064E3B); }
+        .list-item-flex svg { margin-right: 10px; color: var(--color-accent, #F59E0B); }
+
+        .badge-pill-container {
+            background: #ECFDF5;
+            padding: 3rem;
+            border-radius: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .badge-pill-text { font-weight: 700; color: var(--color-primary, #059669); font-size: 1.2rem; }
 
         .card-grid {
             display: grid;
@@ -153,7 +171,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-top: 4px solid transparent;
         }
-
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 30px rgba(6, 78, 59, 0.15);
@@ -172,23 +189,16 @@
             color: var(--color-primary, #059669);
         }
 
+        .card-list { font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem; }
+        .card-link { color: var(--color-accent, #F59E0B); font-weight: 600; text-decoration: none; }
+
         .process-steps {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             margin-top: 4rem;
             gap: 2rem;
         }
-
-        .step-item {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
+        .step-item { text-align: center; position: relative; z-index: 2; }
         .step-number {
             width: 50px;
             height: 50px;
@@ -204,14 +214,7 @@
             box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
         }
 
-        .industry-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
+        .industry-tags { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; }
         .tag-pill {
             background: #ECFDF5;
             color: var(--color-primary-dark, #064E3B);
@@ -222,12 +225,8 @@
             border: 1px solid #D1FAE5;
         }
 
-        /* FAQ Accordion */
-        .faq-item {
-            border-bottom: 1px solid #e5e7eb;
-            margin-bottom: 1rem;
-        }
-
+        /* FAQ Accordion Layout Framework */
+        .faq-item { border-bottom: 1px solid #e5e7eb; margin-bottom: 1rem; }
         .faq-question {
             width: 100%;
             text-align: left;
@@ -243,59 +242,38 @@
             align-items: center;
             font-family: inherit;
         }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: var(--color-gray-600, #4B5563); line-height: 1.6; }
+        .faq-item.active .faq-answer { max-height: 200px; padding-bottom: 1.5rem; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: var(--color-gray-600, #4B5563);
-            line-height: 1.6;
-        }
+        /* Report Preview Layout Framework */
+        .report-preview-box { margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .report-preview { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .report-placeholder { background: #F3F4F6; height: 200px; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-weight: 500; margin-bottom: 1rem; border: 2px dashed #D1D5DB; }
 
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-            padding-bottom: 1.5rem;
-        }
+        /* Call To Action Framework Elements */
+        .cta-section { background: var(--color-primary-dark, #064E3B); color: white; padding: 80px 0; text-align: center; }
+        .btn-cta-primary { background: var(--color-accent, #F59E0B); color: white; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none; display: inline-block; }
+        .btn-cta-secondary { border: 2px solid white; color: white; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none; background:none; display: inline-block; }
 
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-
-        /* Report Preview Box */
-        .report-preview {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        .report-placeholder {
-            background: #F3F4F6;
-            height: 200px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9CA3AF;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            border: 2px dashed #D1D5DB;
-        }
+        /* Footer System Components */
+        .footer { background: #022c22; color: white; padding: 60px 0 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+        .footer h4 { color: white; margin-bottom: 1.5rem; }
+        .footer ul { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a { color: #9CA3AF; text-decoration: none; }
+        .footer-contact-list li { margin-bottom: 1rem; display: flex; gap: 10px; color: #9CA3AF; }
+        .footer-bottom { border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container navbar-container">
-      <a href="index.html" class="logo" aria-label="Flexlyf Commerce Home">
+      <a href="/" class="logo" aria-label="Flexlyf Commerce Home">
         <span class="logo-text-main">FLEXLYF</span>
         <span class="logo-text-sub">COMMERCE</span>
       </a>
@@ -320,7 +298,7 @@
         +91 92208 19906
       </a>
       
-      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0" aria-expanded="false" aria-controls="mobile-nav-menu">
         <span></span>
         <span></span>
         <span></span>
@@ -329,204 +307,193 @@
   </nav>
 
     <main id="main-content">
-        <!-- Hero Section -->
         <section class="page-hero">
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="index.html">Home</a> › <span>Inspection Services</span>
+                    <a href="index">Home</a> › <span>Inspection Services</span>
                 </div>
                 <h1>Quality Inspection & Audit Services</h1>
                 <p class="hero-subtext">Verify product quality and factory compliance before shipment. Reduce returns, protect your brand, and ensure buyer satisfaction.</p>
             </div>
         </section>
 
-        <!-- Service Overview -->
         <section class="section-padding">
             <div class="container">
-                <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <h2 style="color: #064E3B; margin-bottom: 1.5rem;">Why Independent Inspection Matters</h2>
-                        <p style="color: var(--color-gray-600); line-height: 1.7; margin-bottom: 1.5rem;">
+                <div class="row-flex">
+                    <div>
+                        <h2 class="section-title-dark">Why Independent Inspection Matters</h2>
+                        <p class="text-muted">
                             Shipping defective goods can be catastrophic for an exporter's reputation and finances. Returns, chargebacks, and lost future orders are real risks when quality control is overlooked.
                         </p>
-                        <p style="color: var(--color-gray-600); line-height: 1.7;">
+                        <p class="text-muted">
                             Flexlyf Commerce provides independent, third-party inspection services across India. Our qualified inspectors verify quantity, workmanship, packaging, and function against your specific requirements or international standards (AQL). We give you the confidence to ship only what meets expectations.
                         </p>
-                        <ul style="margin-top: 1.5rem; list-style: none; padding: 0;">
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: #064E3B;">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <ul class="list-unstyled">
+                            <li class="list-item-flex">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 Prevent Costly Returns
                             </li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: #064E3B;">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="list-item-flex">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 Unbiased Third-Party Reports
                             </li>
-                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; color: #064E3B;">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 10px; color: var(--color-accent);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <li class="list-item-flex">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 AQL Standard Compliance
                             </li>
                         </ul>
                     </div>
-                    <div style="flex: 1; min-width: 300px; text-align: center;">
-                        <div style="background: #ECFDF5; padding: 3rem; border-radius: 12px; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; align-items: center;">
-                            <span style="font-weight: 700; color: #059669; font-size: 1.2rem;">Pre-Shipment</span>
-                            <span style="font-weight: 700; color: #059669; font-size: 1.2rem;">During Production</span>
-                            <span style="font-weight: 700; color: #059669; font-size: 1.2rem;">Factory Audit</span>
-                            <span style="font-weight: 700; color: #059669; font-size: 1.2rem;">Container Load</span>
-                            <span style="font-weight: 700; color: #059669; font-size: 1.2rem;">Sample Check</span>
+                    <div>
+                        <div class="badge-pill-container">
+                            <span class="badge-pill-text">Pre-Shipment</span>
+                            <span class="badge-pill-text">During Production</span>
+                            <span class="badge-pill-text">Factory Audit</span>
+                            <span class="badge-pill-text">Container Load</span>
+                            <span class="badge-pill-text">Sample Check</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Inspection Solutions Grid -->
         <section class="section-padding" style="background: #F9FAFB;">
             <div class="container">
                 <div style="text-align: center; max-width: 700px; margin: 0 auto;">
                     <h2 style="color: #064E3B;">Our Inspection Solutions</h2>
-                    <p style="color: var(--color-gray-600); margin-top: 1rem;">Comprehensive quality checks at every stage of production.</p>
+                    <p class="text-muted" style="margin-top: 1rem;">Comprehensive quality checks at every stage of production.</p>
                 </div>
 
                 <div class="card-grid">
-                    <!-- Pre-Shipment Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
                         </div>
-                        <h3 style="color: #064E3B;">Pre-Shipment Inspection</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">The most common inspection, performed when goods are 100% produced and at least 80% packed.</p>
-                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <h3>Pre-Shipment Inspection</h3>
+                        <p class="text-muted" style="margin: 1rem 0;">The most common inspection, performed when goods are 100% produced and at least 80% packed.</p>
+                        <ul class="card-list">
                             <li>Quantity Verification</li>
                             <li>Random Sampling (AQL)</li>
                             <li>Workmanship & Function Check</li>
                             <li>Packaging & Labeling Review</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact" class="card-link">Learn More →</a>
                     </div>
 
-                    <!-- During Production Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h3 style="color: #064E3B;">During Production (DUPRO)</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Conducted when 20-50% of production is complete to catch issues early.</p>
-                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <h3>During Production (DUPRO)</h3>
+                        <p class="text-muted" style="margin: 1rem 0;">Conducted when 20-50% of production is complete to catch issues early.</p>
+                        <ul class="card-list">
                             <li>Early Defect Detection</li>
                             <li>Production Line Assessment</li>
                             <li>Raw Material Check</li>
                             <li>Timeline Verification</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact" class="card-link">Learn More →</a>
                     </div>
 
-                    <!-- Factory Audit Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         </div>
-                        <h3 style="color: #064E3B;">Factory Audit</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Evaluate a supplier's capability, capacity, and compliance before placing an order.</p>
-                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <h3>Factory Audit</h3>
+                        <p class="text-muted" style="margin: 1rem 0;">Evaluate a supplier's capability, capacity, and compliance before placing an order.</p>
+                        <ul class="card-list">
                             <li>Business License Verification</li>
                             <li>Production Capacity Check</li>
                             <li>QC System Assessment</li>
                             <li>Social Compliance (Optional)</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact" class="card-link">Learn More →</a>
                     </div>
 
-                    <!-- Container Loading Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                         </div>
-                        <h3 style="color: #064E3B;">Container Loading Supervision</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Witness the loading process to ensure correct quantity and safe handling.</p>
-                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <h3>Container Loading Supervision</h3>
+                        <p class="text-muted" style="margin: 1rem 0;">Witness the loading process to ensure correct quantity and safe handling.</p>
+                        <ul class="card-list">
                             <li>Container Condition Check</li>
                             <li>Loading Quantity Count</li>
                             <li>Packing Method Observation</li>
                             <li>Sealing Verification</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact" class="card-link">Learn More →</a>
                     </div>
 
-                    <!-- Sample Check Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </div>
-                        <h3 style="color: #064E3B;">Sample Collection & Check</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">Independent collection of pre-production samples for buyer approval or lab testing.</p>
-                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <h3>Sample Collection & Check</h3>
+                        <p class="text-muted" style="margin: 1rem 0;">Independent collection of pre-production samples for buyer approval or lab testing.</p>
+                        <ul class="card-list">
                             <li>Random Sample Selection</li>
                             <li>Secure Packaging & Shipping</li>
                             <li>Photo Documentation</li>
                             <li>Comparison with Tech Pack</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact" class="card-link">Learn More →</a>
                     </div>
 
-                    <!-- Lab Testing Coordination Card -->
                     <div class="service-card">
                         <div class="icon-box">
                             <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                         </div>
-                        <h3 style="color: #064E3B;">Lab Testing Coordination</h3>
-                        <p style="color: var(--color-gray-600); margin: 1rem 0;">We collect samples and coordinate with accredited labs for chemical/physical testing.</p>
-                        <ul style="font-size: 0.9rem; color: var(--color-gray-500); margin-bottom: 1.5rem; padding-left: 1.2rem;">
+                        <h3>Lab Testing Coordination</h3>
+                        <p class="text-muted" style="margin: 1rem 0;">We collect samples and coordinate with accredited labs for chemical/physical testing.</p>
+                        <ul class="card-list">
                             <li>Sample Pickup</li>
                             <li>Lab Liaison</li>
                             <li>Report Interpretation</li>
                             <li>Fail/Pass Advisory</li>
                         </ul>
-                        <a href="contact.html" style="color: var(--color-accent); font-weight: 600; text-decoration: none;">Learn More →</a>
+                        <a href="contact" class="card-link">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Process Timeline -->
         <section class="section-padding">
             <div class="container">
                 <div style="text-align: center; max-width: 700px; margin: 0 auto;">
                     <h2 style="color: #064E3B;">Inspection Workflow</h2>
-                    <p style="color: var(--color-gray-600); margin-top: 1rem;">From request to report in 4 simple steps.</p>
+                    <p class="text-muted" style="margin-top: 1rem;">From request to report in 4 simple steps.</p>
                 </div>
 
                 <div class="process-steps">
                     <div class="step-item">
                         <div class="step-number">1</div>
                         <h4 style="color: #064E3B;">Request & Brief</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Submit your requirements, product details, and checklist (or use our standard).</p>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">Submit your requirements, product details, and checklist (or use our standard).</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">2</div>
                         <h4 style="color: #064E3B;">Schedule & Pay</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">We coordinate with the factory for a suitable date and confirm the booking.</p>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">We coordinate with the factory for a suitable date and confirm the booking.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">3</div>
                         <h4 style="color: #064E3B;">On-Site Inspection</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">Our inspector visits the factory, performs checks, and documents findings with photos.</p>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">Our inspector visits the factory, performs checks, and documents findings with photos.</p>
                     </div>
                     <div class="step-item">
                         <div class="step-number">4</div>
                         <h4 style="color: #064E3B;">Digital Report</h4>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-600); margin-top: 0.5rem;">You receive a detailed PDF report within 24 hours with Pass/Fail recommendation.</p>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">You receive a detailed PDF report within 24 hours with Pass/Fail recommendation.</p>
                     </div>
                 </div>
 
-                <!-- Report Preview -->
-                <div style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <div class="report-preview-box">
                     <div class="report-preview">
                         <h4 style="color: #064E3B; margin-bottom: 1rem;">Sample Report Format</h4>
                         <div class="report-placeholder">
                             [Detailed PDF Report with Photos, Charts, and Defect Breakdown]
                         </div>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-600);">
+                        <p class="text-muted" style="font-size: 0.9rem;">
                             Our reports include executive summary, quantity verified, defect classification (Critical/Major/Minor), photos of issues, and final recommendation.
                         </p>
                     </div>
@@ -534,8 +501,7 @@
             </div>
         </section>
 
-        <!-- Industries We Serve -->
-        <section class="section-padding" style="background: #ECFDF5;">
+        <section class="section-padding bg-light">
             <div class="container">
                 <div style="text-align: center;">
                     <h2 style="color: #064E3B;">Industries We Inspect</h2>
@@ -553,7 +519,6 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section class="section-padding">
             <div class="container" style="max-width: 800px;">
                 <div style="text-align: center; margin-bottom: 3rem;">
@@ -614,71 +579,65 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section" style="background: #064E3B; color: white; padding: 80px 0; text-align: center;">
+        <section class="cta-section">
             <div class="container">
-                <h2 style="color: white; margin-bottom: 1.5rem;">Ensure Quality Before Shipping</h2>
-                <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
+                <h2>Ensure Quality Before Shipping</h2>
+                <p class="text-muted" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem; font-size: 1.1rem;">
                     Don't risk your reputation. Book an inspection today and ship with confidence.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn btn-primary" style="background: var(--color-accent); color: white; border: none; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none;">Book Inspection</a>
-                    <a href="tel:+919220819906" class="btn btn-secondary" style="border: 2px solid white; color: white; padding: 0.75rem 2rem; border-radius: 6px; font-weight:600; text-decoration:none; background:none;">Call +91 92208 19906</a>
+                <div class="cta-buttons">
+                    <a href="contact" class="btn-cta-primary">Book Inspection</a>
+                    <a href="tel:+919220819906" class="btn-cta-secondary">Call +91 92208 19906</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer" style="background: #022c22; color: white; padding: 60px 0 20px;">
+    <footer class="footer">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-                <!-- Col 1 -->
+            <div class="footer-grid">
                 <div>
                     <div class="logo" style="margin-bottom: 1.5rem;">
                         <span class="logo-text-main" style="color: white;">FLEXLYF</span>
                         <span class="logo-text-sub" style="color: var(--color-accent, #F59E0B);">COMMERCE</span>
                     </div>
-                    <p style="color: #9CA3AF; line-height: 1.6; margin-bottom: 1.5rem;">
+                    <p class="text-muted" style="color: #9CA3AF; margin-bottom: 1.5rem;">
                         Empowering Indian MSMEs to conquer global markets through expert trade consultancy.
                     </p>
                     <div style="display: flex; gap: 1rem;">
-                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                        <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                        <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
-                        <a href="https://www.youtube.com/@flexlyf" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
-                        <a href="https://x.com/Shobhit73782089" target="_blank" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                        <a href="https://www.linkedin.com/in/shobhit-verma-l00/" target="_blank" aria-label="LinkedIn Profile" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd" target="_blank" aria-label="Instagram Profile" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        <a href="https://www.facebook.com/flexlyfcommerceprivatelimited" target="_blank" aria-label="Facebook Page" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+                        <a href="https://www.youtube.com/@flexlyf" target="_blank" aria-label="YouTube Channel" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+                        <a href="https://x.com/Shobhit73782089" target="_blank" aria-label="Twitter Profile" style="color: white;"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                     </div>
                 </div>
                 
-                <!-- Col 2 -->
                 <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Services</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.8rem;"><a href="certification.html" style="color: #9CA3AF; text-decoration: none;">Certification</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="licensing.html" style="color: #9CA3AF; text-decoration: none;">Licensing</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="testing.html" style="color: #9CA3AF; text-decoration: none;">Product Testing</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="inspection.html" style="color: #9CA3AF; text-decoration: none;">Inspection</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="insurance.html" style="color: #9CA3AF; text-decoration: none;">Trade Insurance</a></li>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="certification">Certification</a></li>
+                        <li><a href="licensing">Licensing</a></li>
+                        <li><a href="testing">Product Testing</a></li>
+                        <li><a href="inspection">Inspection</a></li>
+                        <li><a href="insurance">Trade Insurance</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3 -->
                 <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Company</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: #9CA3AF; text-decoration: none;">Home</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: #9CA3AF; text-decoration: none;">About Us</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: #9CA3AF; text-decoration: none;">Contact</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="privacy.html" style="color: #9CA3AF; text-decoration: none;">Privacy Policy</a></li>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 4 -->
                 <div>
-                    <h4 style="color: white; margin-bottom: 1.5rem;">Contact Us</h4>
-                    <ul style="list-style: none; padding: 0; color: #9CA3AF; line-height: 1.8;">
-                        <li style="margin-bottom: 1rem; display: flex; gap: 10px; align-items: flex-start;">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact-list">
+                        <li>
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-top: 4px; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             <span>
                                 <strong>Corporate Office:</strong><br>
@@ -687,11 +646,11 @@
                                 606, Malviya Nagar, Prayagraj, Uttar Pradesh, India - 211003
                             </span>
                         </li>
-                        <li style="margin-bottom: 1rem; display: flex; gap: 10px; align-items: center;">
+                        <li>
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             <a href="tel:+919220819906" style="color: #9CA3AF; text-decoration: none;">+91 92208 19906</a>
                         </li>
-                        <li style="margin-bottom: 1rem; display: flex; gap: 10px; align-items: center;">
+                        <li>
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <a href="mailto:shobhit@flexlyf.com" style="color: #9CA3AF; text-decoration: none;">shobhit@flexlyf.com</a>
                         </li>
@@ -699,21 +658,18 @@
                 </div>
             </div>
             
-            <div style="border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem;">
+            <div class="footer-bottom">
                 <p>&copy; <span id="year"></span> Flexlyf Commerce Private Limited. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Action Button -->
     <a href="https://wa.me/919220819906?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20inspection%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000;">
         <svg width="30" height="30" fill="white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
-    <!-- Scripts -->
     <script src="main.js"></script>
     <script>
-        // Hamburger Mobile Toggle logic
         document.addEventListener('DOMContentLoaded', function() {
             const toggleBtn = document.querySelector('.hamburger');
             const mobileMenu = document.querySelector('.mobile-menu');
@@ -721,18 +677,21 @@
             if (toggleBtn && mobileMenu) {
                 toggleBtn.addEventListener('click', function(e) {
                     e.stopPropagation();
+                    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                    toggleBtn.setAttribute('aria-expanded', !isExpanded);
                     mobileMenu.classList.toggle('active');
                 });
 
                 document.addEventListener('click', function(e) {
                     if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
                         mobileMenu.classList.remove('active');
+                        toggleBtn.setAttribute('aria-expanded', 'false');
                     }
                 });
             }
         });
 
-        // FAQ Accordion Logic
+        // FAQ Interaction Logic
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
@@ -746,8 +705,11 @@
             });
         });
 
-        // Dynamic Year Setup
-        document.getElementById('year').textContent = new Date().getFullYear();
+        // Safe Dynamic Year Interpolation
+        const dynamicYearElement = document.getElementById('year');
+        if (dynamicYearElement) {
+            dynamicYearElement.textContent = new Date().getFullYear();
+        }
     </script>
 </body>
-</html> 
+</html>
