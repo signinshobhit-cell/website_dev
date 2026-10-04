@@ -1,3 +1,62 @@
 {
-  "news": []
+  "news": [
+    {
+      "title": "India's April–August exports reach an estimated US$399.27 billion",
+      "category": "international",
+      "categoryLabel": "International Trade",
+      "date": "2026-10-04",
+      "summary": "India's combined merchandise and services exports reached an estimated US$399.27 billion during April–August 2026–27, up 15.55% year on year. Merchandise exports rose 17.85%, according to the Commerce Ministry's 15 September release.",
+      "source": "Ministry of Commerce & Industry · PIB release dated 15 September 2026",
+      "sourceUrl": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=294736",
+      "image": "",
+      "content": [
+        "The Ministry of Commerce & Industry's release of 15 September 2026 estimated India's combined merchandise and services exports at US$399.27 billion for April–August 2026–27. This compares with US$345.55 billion in the corresponding earlier period, an increase of 15.55%.",
+        "Merchandise exports reached US$215.91 billion, growing 17.85%. For August alone, combined exports were estimated at US$82.68 billion, up 25.41% year on year.",
+        "Electronics and engineering goods were among August's merchandise growth drivers, with increases of 89.82% and 24.86% respectively. Merchandise imports during April–August were US$363.00 billion, producing a goods trade deficit of US$147.09 billion.",
+        "The release notes that August services figures are estimated using available RBI data. Combined totals containing these estimates should be distinguished from merchandise-only figures and may subsequently be revised."
+      ],
+      "takeaways": [
+        "Combined exports: estimated US$399.27 billion, up 15.55%.",
+        "Merchandise exports: US$215.91 billion, up 17.85%.",
+        "Services figures include estimates and may be revised."
+      ],
+      "id": "03ff9e51-4dfd-4870-a67e-4e9021ac531b",
+      "slug": "india-s-april-august-exports-reach-an-estimated-us-399-27-billion",
+      "type": "news",
+      "published": true,
+      "updatedAt": "2026-10-04T12:43:11.223Z",
+      "category_key": "international",
+      "category_label": "International Trade",
+      "source_url": "https://www.pib.gov.in/newsite/erelcontent.aspx?lang=2&reg=48&relid=294736"
+    },
+    {
+      "title": "DGFT exempts export consignments up to ₹3 lakh from RCMC requirements",
+      "category": "dgft",
+      "categoryLabel": "DGFT & FTP",
+      "date": "2026-10-04",
+      "summary": "DGFT has exempted export consignments with an FOB value of ₹3 lakh or less from RCMC or Certificate of Registration requirements under FTP 2023. The notification took effect on 15 September 2026.",
+      "source": "DGFT Notification 36/2026–27, dated 15 September 2026 · Official copy hosted by APEDA",
+      "sourceUrl": "https://apeda.gov.in/sites/default/files/dgft_notifications/Notification_36.pdf",
+      "image": "",
+      "content": [
+        "DGFT Notification 36/2026–27, issued on 15 September 2026, added paragraph 2.57(c) to the Foreign Trade Policy 2023 with immediate effect.",
+        "Under the amendment, an export consignment whose Free-on-Board (FOB) value does not exceed ₹3,00,000 is exempt from the policy's Registration-cum-Membership Certificate (RCMC) or Certificate of Registration requirement.",
+        "The notification identifies small-value exports, including postal, courier and other emerging channels, as the focus of the measure. Consignments above ₹3,00,000 continue to require the relevant certificate wherever FTP 2023 otherwise requires it.",
+        "Exporters should review the linked notification when checking a shipment's eligibility. This exemption concerns registration certificates; it does not announce a general waiver of other export obligations."
+      ],
+      "takeaways": [
+        "The threshold applies to each consignment's FOB value.",
+        "The relief covers RCMC or Certificate of Registration requirements.",
+        "Above ₹3 lakh, existing applicable requirements continue."
+      ],
+      "id": "4108993a-6b1b-458d-bd13-018ffc5017b7",
+      "slug": "dgft-exempts-export-consignments-up-to-3-lakh-from-rcmc-requirements",
+      "type": "news",
+      "published": true,
+      "updatedAt": "2026-10-04T12:43:11.120Z",
+      "category_key": "dgft",
+      "category_label": "DGFT & FTP",
+      "source_url": "https://apeda.gov.in/sites/default/files/dgft_notifications/Notification_36.pdf"
+    }
+  ]
 }
