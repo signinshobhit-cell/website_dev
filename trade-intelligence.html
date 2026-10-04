@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
        ========================================================= -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
 <title>
     Trade Intelligence | Export, Import &amp; International Trade Updates | Flexlyf Commerce
   </title>
@@ -1151,6 +1151,7 @@
   .trade-news-loading.error { color: #991B1B; }
 </style>
 
+<link href="news-archive.css" rel="stylesheet"/>
 </head>
 <body>
 <!-- =========================================================
@@ -1384,8 +1385,10 @@
          ======================================================= -->
 <section class="trade-intelligence-toolbar">
 <div class="container">
-<div class="trade-intelligence-toolbar-inner">
+<div class="news-filters">
 <!-- SEARCH -->
+<div class="news-filter">
+<label for="tradeSearch">Search news</label>
 <div class="trade-search-box">
 <svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg">
 <circle cx="11" cy="11" r="8">
@@ -1395,7 +1398,10 @@
 </svg>
 <input aria-label="Search trade updates" class="trade-search-input" id="tradeSearch" placeholder="Search trade updates..." type="search"/>
 </div>
+</div>
 <!-- CATEGORY FILTER -->
+<div class="news-filter">
+<label for="tradeCategory">Category</label>
 <select aria-label="Filter trade updates by category" class="trade-category-select" id="tradeCategory">
 <option value="all">
               All Categories
@@ -1423,6 +1429,12 @@
             </option>
 </select>
 </div>
+<div class="news-filter"><label for="tradeDateFrom">From date</label><input id="tradeDateFrom" type="date" aria-describedby="newsDateHelp newsFilterError"></div>
+<div class="news-filter"><label for="tradeDateTo">To date</label><input id="tradeDateTo" type="date" aria-describedby="newsDateHelp newsFilterError"></div>
+<button class="news-button" id="tradeClear" type="button">Clear filters</button>
+</div>
+<p class="news-filter-help" id="newsDateHelp">Newest first · Date ranges include both days. Undated entries appear last and are excluded when filtering by date.</p>
+<p class="news-filter-error" id="newsFilterError" role="alert" hidden></p>
 </div>
 </section>
 <!-- =======================================================
@@ -1437,70 +1449,24 @@
               TRADE INTELLIGENCE
             </span>
 <h2>
-              Latest Trade Developments
+              All News &amp; Trade Updates
             </h2>
 <p>
-              Curated areas of interest for exporters,
-              importers and international trade businesses.
+              Browse the complete published record of trade updates,
+              from the latest developments to earlier news.
             </p>
 </div>
-<span class="trade-results-count" id="tradeResultsCount">
+<span class="trade-results-count" id="tradeResultsCount" role="status" aria-live="polite">
             Showing updates
           </span>
 </div>
-<!-- FEATURED -->
-<article class="trade-featured-card">
-<div class="trade-featured-visual">
-<div class="trade-featured-visual-content">
-<div class="trade-featured-visual-icon">
-<svg fill="none" height="34" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="34" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4h16v16H4z">
-</path>
-<path d="M8 8h8">
-</path>
-<path d="M8 12h6">
-</path>
-<path d="M8 16h4">
-</path>
-</svg>
-</div>
-<h3>
-                Verified Trade Information
-              </h3>
-<p>
-                Important regulatory and market developments
-                should always be checked against the applicable
-                official notification, circular or authority source.
-              </p>
-</div>
-</div>
-<div class="trade-featured-content">
-<span class="trade-news-category">
-              TRADE ALERT
-            </span>
-<h2>
-              Stay Ahead of Export &amp; Import Changes
-            </h2>
-<p>
-              Trade regulations, customs procedures, export
-              incentives and market conditions can directly
-              affect shipment planning, compliance and
-              commercial decisions.
-            </p>
-<p>
-              Use Trade Intelligence to identify the topic,
-              understand the business impact and then verify
-              the applicable official source before acting.
-            </p>
-<a class="btn btn-primary" href="contact.html" style="width: fit-content;">
-              Speak With Trade Desk →
-            </a>
-</div>
-</article>
+
 <!-- =====================================================
              NEWS GRID
              ===================================================== -->
-<div aria-live="polite" class="trade-intelligence-grid" id="tradeNewsGrid"><div class="trade-news-loading">Loading trade updates…</div></div>
+<div class="trade-intelligence-grid" id="tradeNewsGrid" aria-busy="true"><div class="trade-news-loading" role="status">Loading trade updates…</div></div>
+<nav class="news-pagination" id="newsPagination" aria-label="News pagination" hidden></nav>
+<noscript><p>Please enable JavaScript to search and browse the news archive.</p></noscript>
 <!-- =====================================================
              CTA
              ===================================================== -->
@@ -1633,7 +1599,13 @@
 <!-- =========================================================
        EXISTING GLOBAL JS
        ========================================================= -->
-<script src="main.js"></script><script defer="True" src="trade-intelligence.js"></script>
+<dialog class="news-dialog" id="newsDialog" aria-labelledby="newsDialogTitle">
+<div class="news-dialog-inner">
+<div class="news-dialog-top"><span class="eyebrow">NEWS IN BRIEF</span><button class="news-button news-dialog-close" id="newsDialogClose" type="button" autofocus>Close <span aria-hidden="true">×</span></button></div>
+<div id="newsDialogContent"></div>
+</div>
+</dialog>
+<script src="main.js"></script><script src="news-core.js"></script><script src="news-view.js"></script><script defer src="news-archive.js"></script>
 <!-- =========================================================
        TRADE INTELLIGENCE PAGE JS
        ========================================================= -->

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Newsroom · Flexlyf</title><link rel="stylesheet" href="/manager.css"><link rel="stylesheet" href="/news-archive.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="/" target="_blank" rel="noopener">Flexlyf <span>Newsroom</span></a><div class="top-actions"><span class="private-label">Private · on this computer</span><a href="/trade-intelligence.html" target="_blank" rel="noopener">View website ↗</a><a href="/guide.md" target="_blank">Guide ↗</a></div></header>
+<main class="workspace">
+<aside class="library" aria-label="News library">
+ <div class="library-heading"><div><p class="eyebrow">YOUR PUBLICATION</p><h1>News library</h1></div><button class="primary" id="newArticle" type="button">+ New update</button></div>
+ <label class="sr-only" for="librarySearch">Search your news</label><input type="search" id="librarySearch" placeholder="Search your news…">
+ <div class="filters"><label class="sr-only" for="libraryStatus">Article status</label><select id="libraryStatus"><option value="all">All active articles</option><option value="draft">Drafts</option><option value="published">Published</option><option value="changes">Unpublished changes</option><option value="trash">Trash</option></select><span id="libraryCount"></span></div>
+ <div id="articleList" class="article-list"><p class="muted">Connecting to your workspace…</p></div>
+ <div class="library-tools"><button id="importButton" type="button">Import JSON</button><input type="file" id="importFile" accept=".json,application/json" hidden><a class="button" href="/api/export" download>Export backup</a><button id="reloadButton" type="button">Reload library</button></div>
+ <div class="sync-panel"><h2>Publish to GitHub</h2><p id="gitStatus">Checking connection…</p><button id="syncButton" type="button" disabled>Sync website to GitHub</button><p class="muted">Publish prepares your local website. Sync sends those changes to the live site.</p></div>
+</aside>
+<section class="editor" aria-label="Article editor">
+ <div id="notice" class="notice" role="status" aria-live="polite">Opening your newsroom…</div>
+ <div id="emptyEditor" class="empty-editor"><span class="eyebrow">WRITE. REVIEW. PUBLISH.</span><h2>Your next update starts here.</h2><p>Select an article to improve it, or create a fresh update.<br>Drafts stay private until you publish.</p></div>
+ <div id="editorPanel" hidden>
+  <div class="editor-toolbar"><div><span id="articleBadge" class="badge">Draft</span><span id="saveStatus" role="status">Saved</span></div><div class="editor-actions"><button id="previewButton" type="button">Preview</button><button id="saveButton" type="button">Save draft</button><button class="primary" id="publishButton" type="button">Publish update</button></div></div>
+  <form id="articleForm">
+   <fieldset id="editorFields">
+    <label for="title">Headline <span class="required">Required to publish</span></label><input class="headline" id="title" maxlength="160" required placeholder="What changed, and why does it matter?">
+    <div class="field-row"><div><label for="category">Category</label><select id="category"></select></div><div><label for="date">Publication date</label><input id="date" type="date" required><p class="hint">Keep the original date when revising older news.</p></div></div>
+    <label for="summary">In a nutshell <span class="required">Required to publish</span></label><textarea id="summary" rows="3" maxlength="600" required placeholder="Give readers the key development in two or three sentences."></textarea><p class="hint" id="summaryCount">0 / 600 characters · Appears on cards and in the popup.</p>
+    <label for="takeaways">Key takeaways <span class="optional">Optional</span></label><textarea id="takeaways" rows="3" placeholder="One takeaway per line, up to three."></textarea><p class="hint">Use short, useful points. These appear in the bite-sized popup.</p>
+    <label for="content">Full update <span class="required">Required to publish</span></label><textarea id="content" rows="10" required placeholder="Add context, important dates, who is affected, and what readers should do next. Separate paragraphs with a blank line."></textarea><p class="hint" id="wordCount">0 words · Plain text; no HTML required.</p>
+    <details><summary>Source &amp; cover image</summary><div class="details-body">
+     <div class="field-row"><div><label for="source">Source name</label><input id="source" maxlength="300" placeholder="e.g. DGFT"></div><div><label for="sourceUrl">Source link</label><input id="sourceUrl" type="url" placeholder="https://…"></div></div>
+     <label for="image">Cover image link</label><input id="image" placeholder="Upload below, or paste an HTTPS image URL"><div class="image-actions"><label class="button" for="imageFile">Upload image</label><input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp,image/gif" class="sr-only"><button type="button" id="removeImage">Remove image</button><span class="hint">PNG, JPG, WebP or GIF · up to 5 MB</span></div><img id="imagePreview" alt="Article cover preview" hidden>
+    </div></details>
+   </fieldset>
+  </form>
+  <div class="editor-footer"><div><span class="muted">Article link</span><code id="articleSlug"></code></div><a id="openArticle" target="_blank" rel="noopener" hidden>Open published update ↗</a></div>
+  <div class="article-tools"><button id="duplicateButton" type="button">Duplicate as draft</button><button id="discardButton" type="button" hidden>Discard unpublished changes</button><button id="unpublishButton" type="button" hidden>Unpublish</button><button id="trashButton" class="danger" type="button">Move to trash</button><button id="restoreButton" type="button" hidden>Restore as draft</button></div>
+  <details class="history"><summary>Recent saved versions</summary><p class="hint">Restore a saved version as a draft. The published article stays unchanged.</p><div id="historyList"></div></details>
+ </div>
+</section>
+</main>
+<dialog id="confirmDialog" aria-labelledby="confirmTitle"><form method="dialog"><h2 id="confirmTitle"></h2><p id="confirmText"></p><div class="dialog-actions"><button value="cancel" autofocus>Cancel</button><button id="confirmAction" value="confirm" class="primary">Confirm</button></div></form></dialog>
+<script src="/news-view.js"></script><script src="/manager.js"></script>
+</body></html>

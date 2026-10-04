@@ -292,6 +292,8 @@
       100% { transform: translateX(-50%); }
     }
   </style>
+  <link rel="stylesheet" href="news-archive.css">
+  <link rel="stylesheet" href="home-news.css">
 </head>
 <body>
   
@@ -652,7 +654,7 @@
 
     <!-- PHONE -->
     <a href="tel:+919220819906"
-       class="nav-phone">
+       class="nav-phone" data-phone-motion>
 
       <svg xmlns="http://www.w3.org/2000/svg"
            width="18"
@@ -1216,6 +1218,21 @@
       </div>
     </section>
 
+    <section class="section home-news" id="latest-news" aria-labelledby="latest-news-heading">
+      <div class="container">
+        <div class="home-news-header">
+          <div><span class="eyebrow">TRADE INTELLIGENCE</span><h2 id="latest-news-heading">Latest News</h2><p>The latest updates for your next trade decision.</p></div>
+          <a class="news-button" href="trade-intelligence.html">View all news <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="home-news-controls" id="homeNewsControls" hidden>
+          <span class="home-news-position" id="homeNewsPosition">Latest published updates</span>
+          <div class="home-news-actions"><button class="news-button" id="homeNewsPrevious" type="button" aria-label="Previous news">←</button><button class="news-button" id="homeNewsPause" type="button" aria-pressed="false">Pause slideshow</button><button class="news-button" id="homeNewsNext" type="button" aria-label="Next news">→</button></div>
+        </div>
+        <div class="home-news-track" id="homeNewsTrack" role="region" aria-label="Latest news cards" tabindex="0" aria-busy="true"><p role="status">Loading latest news…</p></div>
+        <noscript><p><a href="trade-intelligence.html">Browse all news</a> with JavaScript enabled.</p></noscript>
+      </div>
+    </section>
+
     <!-- Global CTA Banner -->
     <section class="cta-banner" aria-label="Call to action">
       <div class="container">
@@ -1328,7 +1345,12 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
 
+  <script src="assets/gsap.min.js"></script>
+  <script src="phone-motion.js"></script>
   <script src="main.js"></script>
+  <script src="news-core.js"></script>
+  <script src="news-view.js"></script>
+  <script src="home-news.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       // Setup current calendar date value strings dynamically inside footer nodes

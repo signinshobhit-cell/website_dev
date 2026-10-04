@@ -1,0 +1,38 @@
+/* Public archive additions, using the existing Flexlyf palette. */
+.trade-intelligence-toolbar > .container { padding: 1.5rem; background: var(--color-white); border: 1px solid var(--color-gray-100); border-radius: 8px; }
+#tradeNewsGrid { scroll-margin-top: 120px; }
+.news-filters { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)) auto; gap: 1rem; align-items: end; }
+.news-filter { display: flex; flex-direction: column; gap: .5rem; min-width: 0; }
+.news-filter label { font-size: .8rem; font-weight: 600; color: var(--color-gray-700); }
+.news-filter input, .news-filter select { width: 100%; min-width: 0; height: 48px; padding: .75rem; font: inherit; color: var(--color-text); background: var(--color-white); border: 1px solid var(--color-gray-100); border-radius: 6px; }
+.news-filter .trade-search-input { padding-left: 2.75rem; }
+.news-button { min-height: 44px; padding: .65rem 1rem; border: 1px solid var(--color-gray-100); border-radius: 6px; background: var(--color-white); color: var(--color-navy); font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer; }
+.news-button:hover { background: var(--color-off-white); border-color: var(--color-navy); }
+.news-button { text-decoration: none; }
+.news-button:disabled { opacity: .5; cursor: default; }
+.news-button[aria-current="page"] { background: var(--color-navy); color: var(--color-white); border-color: var(--color-navy); }
+.news-filters :focus-visible, .news-pagination :focus-visible, .trade-news-card :focus-visible, .news-dialog :focus-visible { outline: 2px solid var(--color-navy); outline-offset: 4px; }
+.news-filter-error { margin-top: .75rem; color: #991b1b; font-size: .875rem; }
+.news-filter-help { margin: .75rem 0 0; font-size: .8rem; color: var(--color-gray-700); }
+.news-pagination { display: flex; justify-content: space-between; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 2rem; }
+.news-page-buttons { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+.news-page-summary { font-size: .875rem; color: var(--color-gray-700); }
+.news-pagination[hidden], [hidden].news-filter-error { display: none; }
+.trade-news-card { cursor: pointer; }
+.trade-news-card .trade-news-source, .trade-news-card .trade-news-date { color: var(--color-gray-700); }
+.news-empty-action { margin-top: 1rem; }
+.news-dialog { width: min(640px, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); margin: auto; padding: 0; border: 0; border-radius: 12px; color: var(--color-text); background: var(--color-white); overscroll-behavior: contain; }
+.news-dialog::backdrop { background: rgba(2, 44, 34, .7); }
+.news-dialog-inner { padding: 2rem; overflow-wrap: anywhere; }
+.news-dialog-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.news-dialog-close { flex-shrink: 0; }
+.news-dialog h2 { font-size: clamp(1.35rem, 4vw, 1.85rem); line-height: 1.25; margin: .75rem 0 1rem; color: var(--color-navy); }
+.news-dialog-meta { font-size: .875rem; color: var(--color-gray-700); }
+.news-dialog-summary { font-size: 1rem; line-height: 1.7; margin-bottom: 1rem; }
+.news-dialog ul { padding-left: 1.25rem; margin-bottom: 1.5rem; }
+.news-dialog li { margin-bottom: .75rem; line-height: 1.6; }
+.news-dialog-footer { border-top: 1px solid var(--color-gray-100); padding-top: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.news-dialog-source { color: var(--color-navy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+html.news-modal-open { overflow: hidden; }
+@media (max-width: 1024px) { .news-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); } .news-filter:first-child { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .news-filters { grid-template-columns: minmax(0, 1fr); } .news-filter:first-child { grid-column: auto; } .news-dialog-inner { padding: 1.25rem; } .news-page-buttons { gap: .25rem; } .news-page-buttons .news-button { padding: .5rem .75rem; } }

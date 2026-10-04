@@ -1,5 +1,7 @@
 {
-  "news": [
+  "schemaVersion": 1,
+  "lastUpdated": "2026-10-04",
+  "items": [
     {
       "title": "Extension in Minimum Import Price (MIP) Condition of specific items covered under Chapter 48 of ITC HS, 2022, Schedule - I (Import Policy) - regarding",
       "category": "dgft",
@@ -19,10 +21,7 @@
       "slug": "extension-in-minimum-import-price-mip-condition-of-specific-items-covered-under-chapter-48",
       "type": "news",
       "published": true,
-      "updatedAt": "2026-10-04T12:04:21.176Z",
-      "category_key": "dgft",
-      "category_label": "DGFT & FTP",
-      "source_url": "https://www.dgft.gov.in/CP/"
+      "updatedAt": "2026-10-04T12:04:21.176Z"
     },
     {
       "title": "DGFT & Foreign Trade Policy Updates",
@@ -41,10 +40,7 @@
       "slug": "dgft-foreign-trade-policy-updates",
       "type": "news",
       "published": true,
-      "updatedAt": "2026-10-04T11:46:43.163Z",
-      "category_key": "dgft",
-      "category_label": "DGFT & FTP",
-      "source_url": "https://www.dgft.gov.in/"
+      "updatedAt": "2026-10-04T11:46:43.163Z"
     },
     {
       "title": "Customs & ICEGATE Compliance Alerts",
@@ -63,10 +59,7 @@
       "slug": "customs-icegate-compliance-alerts",
       "type": "news",
       "published": true,
-      "updatedAt": "2026-10-04T11:46:43.163Z",
-      "category_key": "customs",
-      "category_label": "Customs & ICEGATE",
-      "source_url": "https://www.icegate.gov.in/"
+      "updatedAt": "2026-10-04T11:46:43.163Z"
     },
     {
       "title": "RoDTEP & RoSCTL Updates",
@@ -85,10 +78,7 @@
       "slug": "rodtep-rosctl-updates",
       "type": "news",
       "published": true,
-      "updatedAt": "2026-10-04T11:46:43.163Z",
-      "category_key": "incentives",
-      "category_label": "Export Incentives",
-      "source_url": "https://www.dgft.gov.in/"
+      "updatedAt": "2026-10-04T11:46:43.163Z"
     }
   ]
 }

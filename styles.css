@@ -309,6 +309,11 @@ img {
   color: var(--color-green-accent);
 }
 
+[data-phone-motion]:focus-visible {
+  outline: 2px solid var(--color-green-accent);
+  outline-offset: 4px;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
