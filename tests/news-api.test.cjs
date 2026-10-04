@@ -36,3 +36,16 @@ test('image upload accepts PNG and rejects executable or unsupported content', a
   const response = await post('/api/images', { data: png }); assert.equal(response.status, 201);
   const result = await response.json(); assert.ok(fs.existsSync(path.join(root, result.image))); assert.match(result.image, /^news-images\/.+\.png$/);
 });
+
+test('API archives, restores and permanently deletes a published article', async t => {
+  const { base, post, root } = await fixture(t);
+  let { record } = await (await post('/api/articles', { title: 'Lifecycle test', summary: 'A summary', content: ['Full text'] })).json();
+  const action = async name => { const response = await post(`/api/articles/${record.id}/${name}`, { revision: record.revision }); assert.equal(response.status, 200); ({ record } = await response.json()); };
+  await action('publish'); await action('archive');
+  assert.ok(record.archivedAt);
+  assert.equal(JSON.parse(fs.readFileSync(path.join(root, 'data/news.json'))).items.length, 0);
+  await action('unarchive'); assert.equal(record.live.title, 'Lifecycle test');
+  await action('delete'); assert.equal(record.deleted, true);
+  const session = await (await fetch(base + '/api/session')).json(); assert.equal(session.records.length, 0);
+  const backup = await (await fetch(base + '/api/export')).json(); assert.equal(backup.items.length, 0);
+});

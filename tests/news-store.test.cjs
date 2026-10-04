@@ -36,6 +36,40 @@ test('concurrent editors cannot overwrite a newer revision', t => {
   assert.throws(() => store.change(record.id, record.revision, 'save', { ...article, title: 'Stale edit' }), error => error.status === 409);
   assert.equal(store.list()[0].draft.title, 'Saved first');
 });
+
+test('archive hides public news while preserving snapshots, draft changes, history and URL', t => {
+  const { root, store } = fixture(t);
+  let record = store.create(article); record = store.change(record.id, record.revision, 'publish');
+  const slug = record.slug;
+  record = store.change(record.id, record.revision, 'save', { ...article, title: 'Private revision' });
+  record = store.change(record.id, record.revision, 'archive');
+  assert.ok(record.archivedAt); assert.equal(publicItems(root).length, 0);
+  assert.equal(record.live.title, article.title); assert.equal(record.draft.title, 'Private revision');
+  const restarted = new NewsStore(root);
+  assert.ok(restarted.list()[0].archivedAt);
+  assert.throws(() => restarted.change(record.id, record.revision, 'publish'), /Restore this archived/);
+  record = restarted.change(record.id, record.revision, 'unarchive');
+  assert.equal(record.archivedAt, null); assert.equal(record.slug, slug);
+  assert.equal(publicItems(root)[0].title, article.title); assert.equal(record.draft.title, 'Private revision');
+  assert.ok(record.history.length > 0);
+});
+
+test('permanent delete removes published, archived and trashed records and rejects stale revisions', t => {
+  const { root, store } = fixture(t);
+  for (const state of ['published', 'archived', 'trashed']) {
+    let record = store.create(article); record = store.change(record.id, record.revision, 'publish');
+    if (state === 'archived') record = store.change(record.id, record.revision, 'archive');
+    if (state === 'trashed') record = store.change(record.id, record.revision, 'trash');
+    assert.throws(() => store.change(record.id, record.revision - 1, 'delete'), error => error.status === 409);
+    assert.deepEqual(store.change(record.id, record.revision, 'delete'), { id: record.id, deleted: true });
+    assert.equal(store.list().some(item => item.id === record.id), false);
+    assert.equal(new NewsStore(root).list().some(item => item.id === record.id), false);
+    assert.throws(() => store.change(record.id, record.revision, 'delete'), error => error.status === 404);
+  }
+  assert.equal(publicItems(root).length, 0);
+  const draft = store.create(article);
+  assert.throws(() => store.change(draft.id, draft.revision, 'archive'), /Only published/);
+});
 test('unpublish, trash and restore retain editable content without silently publishing', t => {
   const { root, store } = fixture(t); let record = store.create(article);
   record = store.change(record.id, record.revision, 'publish');
@@ -73,6 +107,7 @@ test('public build excludes the editor, drafts, backups and unused image uploads
   fs.mkdirSync(path.join(root, 'news-images'), { recursive: true });
   fs.writeFileSync(path.join(root, 'index.html'), '<h1>Public</h1>');
   fs.writeFileSync(path.join(root, 'news-manager.html'), 'Private editor');
+  fs.mkdirSync(path.join(root, 'junk_')); fs.writeFileSync(path.join(root, 'junk_', 'obsolete.html'), 'Unused old editor');
   fs.writeFileSync(path.join(root, 'manager.js'), 'Private script');
   fs.writeFileSync(path.join(root, 'news-images', 'published.png'), 'image');
   fs.writeFileSync(path.join(root, 'news-images', 'draft.png'), 'private image');
@@ -80,6 +115,6 @@ test('public build excludes the editor, drafts, backups and unused image uploads
   store.create({ ...article, title: 'Private headline', image: 'news-images/draft.png' });
   const output = build(root);
   assert.ok(fs.existsSync(path.join(output, 'index.html'))); assert.ok(fs.existsSync(path.join(output, 'news-images/published.png')));
-  for (const file of ['news-manager.html', 'manager.js', '.local', 'local-admin', 'news-images/draft.png']) assert.equal(fs.existsSync(path.join(output, file)), false);
+  for (const file of ['news-manager.html', 'manager.js', '.local', 'local-admin', 'junk_', 'news-images/draft.png']) assert.equal(fs.existsSync(path.join(output, file)), false);
   assert.equal(fs.readFileSync(path.join(output, 'data/news.json'), 'utf8').includes('Private headline'), false);
 });

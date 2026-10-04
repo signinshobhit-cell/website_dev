@@ -47,7 +47,7 @@ class NewsStore {
   list() { return this.state.records.map(record => ({ ...record, history: record.history.map(({ draft, ...entry }) => entry), hasChanges: Boolean(record.live && JSON.stringify(record.live) !== JSON.stringify(record.draft)) })); }
   uniqueSlug(title) { const base = slugify(title); let slug = base, n = 2; while (this.state.records.some(record => record.slug === slug)) slug = `${base}-${n++}`; return slug; }
   exportPublic() {
-    const items = this.state.records.filter(record => record.live && !record.trashedAt).map(record => ({ ...record.live, id: record.id, slug: record.slug, type: 'news', published: true, updatedAt: record.liveUpdatedAt || record.updatedAt })).sort((a, b) => b.date.localeCompare(a.date));
+    const items = this.state.records.filter(record => record.live && !record.trashedAt && !record.archivedAt).map(record => ({ ...record.live, id: record.id, slug: record.slug, type: 'news', published: true, updatedAt: record.liveUpdatedAt || record.updatedAt })).sort((a, b) => b.date.localeCompare(a.date));
     atomic(path.join(this.root, 'data', 'news.json'), { schemaVersion: 1, lastUpdated: today(), items });
     atomic(path.join(this.root, 'news.json'), { news: items.map(item => ({ ...item, category_key: item.category, category_label: item.categoryLabel, source_url: item.sourceUrl })) });
   }
@@ -67,7 +67,13 @@ class NewsStore {
     const next = structuredClone(this.state), record = next.records.find(item => item.id === id);
     if (!record) fail('This article no longer exists.', 404);
     if (record.revision !== revision) fail('This article changed in another window. Reload the workspace before editing again; your current text is still in the editor.', 409);
+    if (action === 'delete') {
+      next.records = next.records.filter(item => item.id !== id);
+      this.commit(next);
+      return { id, deleted: true };
+    }
     if (record.trashedAt && !['restore'].includes(action)) fail('Restore this article from Trash first.');
+    if (record.archivedAt && !['unarchive', 'trash'].includes(action)) fail('Restore this archived article before editing it.');
     record.history.unshift({ revision: record.revision, savedAt: record.updatedAt, draft: record.draft }); record.history = record.history.slice(0, 20);
     if (action === 'save') record.draft = clean(input);
     else if (action === 'publish') {
@@ -79,7 +85,9 @@ class NewsStore {
       record.live = structuredClone(draft);
       record.liveUpdatedAt = new Date().toISOString();
     } else if (action === 'unpublish') record.live = null;
-    else if (action === 'trash') { record.trashedAt = new Date().toISOString(); record.live = null; }
+    else if (action === 'archive') { if (!record.live) fail('Only published articles can be archived.'); record.archivedAt = new Date().toISOString(); }
+    else if (action === 'unarchive') { if (!record.archivedAt || !record.live) fail('This article is not archived.'); record.archivedAt = null; }
+    else if (action === 'trash') { record.trashedAt = new Date().toISOString(); record.archivedAt = null; record.live = null; }
     else if (action === 'restore') record.trashedAt = null;
     else if (action === 'discard') { if (!record.live) fail('There is no published version to restore.'); record.draft = structuredClone(record.live); }
     else if (action === 'revert') {

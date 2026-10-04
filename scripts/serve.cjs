@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   const adminFiles = { '/news-manager.html': '/local-admin/manager.html', '/manager.css': '/local-admin/manager.css', '/manager.js': '/local-admin/manager.js' };
   const file = path.resolve(root, '.' + (adminFiles[pathname] || (pathname === '/' ? '/index.html' : pathname)));
   const relative = path.relative(root, file);
-  if (pathname.startsWith('/local-admin/') || relative.startsWith('..') || path.isAbsolute(relative) || relative.split(/[\\/]/).some(part => part.startsWith('.')) || /\.(php|cjs)$/i.test(file)) {
+  if (pathname.startsWith('/local-admin/') || pathname === '/junk_' || pathname.startsWith('/junk_/') || relative.startsWith('..') || path.isAbsolute(relative) || relative.split(/[\\/]/).some(part => part.startsWith('.')) || /\.(php|cjs)$/i.test(file)) {
     res.writeHead(403).end('Unavailable in the static preview'); return;
   }
   if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405).end('Method not allowed'); return; }

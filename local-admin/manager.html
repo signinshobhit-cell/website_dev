@@ -6,7 +6,7 @@
 <aside class="library" aria-label="News library">
  <div class="library-heading"><div><p class="eyebrow">YOUR PUBLICATION</p><h1>News library</h1></div><button class="primary" id="newArticle" type="button">+ New update</button></div>
  <label class="sr-only" for="librarySearch">Search your news</label><input type="search" id="librarySearch" placeholder="Search your news…">
- <div class="filters"><label class="sr-only" for="libraryStatus">Article status</label><select id="libraryStatus"><option value="all">All active articles</option><option value="draft">Drafts</option><option value="published">Published</option><option value="changes">Unpublished changes</option><option value="trash">Trash</option></select><span id="libraryCount"></span></div>
+ <div class="filters"><label class="sr-only" for="libraryStatus">Article status</label><select id="libraryStatus"><option value="all">All active articles</option><option value="draft">Drafts</option><option value="published">Published</option><option value="changes">Unpublished changes</option><option value="archived">Archived</option><option value="trash">Trash</option></select><span id="libraryCount"></span></div>
  <div id="articleList" class="article-list"><p class="muted">Connecting to your workspace…</p></div>
  <div class="library-tools"><button id="importButton" type="button">Import JSON</button><input type="file" id="importFile" accept=".json,application/json" hidden><a class="button" href="/api/export" download>Export backup</a><button id="reloadButton" type="button">Reload library</button></div>
  <div class="sync-panel"><h2>Publish to GitHub</h2><p id="gitStatus">Checking connection…</p><button id="syncButton" type="button" disabled>Sync website to GitHub</button><p class="muted">Publish prepares your local website. Sync sends those changes to the live site.</p></div>
@@ -30,7 +30,7 @@
    </fieldset>
   </form>
   <div class="editor-footer"><div><span class="muted">Article link</span><code id="articleSlug"></code></div><a id="openArticle" target="_blank" rel="noopener" hidden>Open published update ↗</a></div>
-  <div class="article-tools"><button id="duplicateButton" type="button">Duplicate as draft</button><button id="discardButton" type="button" hidden>Discard unpublished changes</button><button id="unpublishButton" type="button" hidden>Unpublish</button><button id="trashButton" class="danger" type="button">Move to trash</button><button id="restoreButton" type="button" hidden>Restore as draft</button></div>
+  <div class="article-tools"><button id="duplicateButton" type="button">Duplicate as draft</button><button id="discardButton" type="button" hidden>Discard unpublished changes</button><button id="unpublishButton" type="button" hidden>Unpublish</button><button id="archiveButton" type="button" hidden>Archive update</button><button id="unarchiveButton" type="button" hidden>Restore published update</button><button id="trashButton" class="danger" type="button">Move to trash</button><button id="restoreButton" type="button" hidden>Restore as draft</button><button id="deleteButton" class="danger" type="button">Delete permanently</button></div>
   <details class="history"><summary>Recent saved versions</summary><p class="hint">Restore a saved version as a draft. The published article stays unchanged.</p><div id="historyList"></div></details>
  </div>
 </section>

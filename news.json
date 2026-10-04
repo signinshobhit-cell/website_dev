@@ -19,76 +19,10 @@
       "slug": "extension-in-minimum-import-price-mip-condition-of-specific-items-covered-under-chapter-48",
       "type": "news",
       "published": true,
-      "updatedAt": "2026-10-04T12:04:21.176Z",
+      "updatedAt": "2026-10-04T12:15:49.516Z",
       "category_key": "dgft",
       "category_label": "DGFT & FTP",
       "source_url": "https://www.dgft.gov.in/CP/"
-    },
-    {
-      "title": "DGFT & Foreign Trade Policy Updates",
-      "category": "dgft",
-      "categoryLabel": "DGFT & FTP",
-      "date": "2026-10-04",
-      "summary": "Track notifications, policy changes, procedures and developments affecting exporters and importers.",
-      "source": "DGFT / Ministry of Commerce",
-      "sourceUrl": "https://www.dgft.gov.in/",
-      "image": "",
-      "content": [
-        "Use this entry as a starter topic for your DGFT and Foreign Trade Policy coverage. Replace it with a verified notification, circular, trade notice or policy development from the official source."
-      ],
-      "takeaways": [],
-      "id": "1",
-      "slug": "dgft-foreign-trade-policy-updates",
-      "type": "news",
-      "published": true,
-      "updatedAt": "2026-10-04T11:46:43.163Z",
-      "category_key": "dgft",
-      "category_label": "DGFT & FTP",
-      "source_url": "https://www.dgft.gov.in/"
-    },
-    {
-      "title": "Customs & ICEGATE Compliance Alerts",
-      "category": "customs",
-      "categoryLabel": "Customs & ICEGATE",
-      "date": "2026-10-04",
-      "summary": "Monitor developments involving customs procedures, electronic filing, ports and shipment-related compliance.",
-      "source": "CBIC / ICEGATE",
-      "sourceUrl": "https://www.icegate.gov.in/",
-      "image": "",
-      "content": [
-        "Use this entry to publish verified Customs and ICEGATE developments that affect shipment filing, clearance, documentation or port operations."
-      ],
-      "takeaways": [],
-      "id": "2",
-      "slug": "customs-icegate-compliance-alerts",
-      "type": "news",
-      "published": true,
-      "updatedAt": "2026-10-04T11:46:43.163Z",
-      "category_key": "customs",
-      "category_label": "Customs & ICEGATE",
-      "source_url": "https://www.icegate.gov.in/"
-    },
-    {
-      "title": "RoDTEP & RoSCTL Updates",
-      "category": "incentives",
-      "categoryLabel": "Export Incentives",
-      "date": "2026-10-04",
-      "summary": "Follow developments related to export incentive rates, eligibility, scrips and related processes.",
-      "source": "DGFT / ICEGATE",
-      "sourceUrl": "https://www.dgft.gov.in/",
-      "image": "",
-      "content": [
-        "Use this entry to publish verified RoDTEP or RoSCTL changes and explain the practical impact on exporters. Add the applicable notification and official source link before publishing."
-      ],
-      "takeaways": [],
-      "id": "3",
-      "slug": "rodtep-rosctl-updates",
-      "type": "news",
-      "published": true,
-      "updatedAt": "2026-10-04T11:46:43.163Z",
-      "category_key": "incentives",
-      "category_label": "Export Incentives",
-      "source_url": "https://www.dgft.gov.in/"
     }
   ]
 }

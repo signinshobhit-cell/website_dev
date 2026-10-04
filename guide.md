@@ -28,15 +28,21 @@ Keep its original publication date when correcting older news. The article link 
 
 ## Organize, remove and recover
 
-The status filter shows active articles, drafts, published articles, unpublished changes or Trash. Search matches the headline, summary and category.
+The status filter shows active articles, drafts, published articles, unpublished changes, Archived or Trash. Search matches the headline, summary and category.
+
+**Archive update** removes a published article from local public pages and retains its published version, working draft, stable URL and revision history privately. Find it using **Archived**, then select **Restore published update** to make the saved published version public again. Any unpublished draft changes stay private. Archived articles must be restored before editing. Archive in the newsroom is separate from the public news archive, which lists all currently published articles.
+
+**Delete permanently** removes an article and its revision history from the newsroom and local public pages after confirmation. It works for published articles, drafts, archived articles and Trash. There is no undo in the editor. Automatic workspace backups may still contain earlier copies; uploaded image files are retained to avoid removing an image another article uses. Use Archive or Trash when you may need the article again.
 
 **Unpublish** removes an article from local public pages but keeps its draft. **Move to trash** removes it from those pages and moves it out of the active library. Select **Trash** and use **Restore as draft** to recover it privately. Publish it again if you want it public. Sync to propagate removals or republication to the live website.
+
+Archive, delete and restore update your local website immediately. **Sync website to GitHub** is required to apply those changes to the live website.
 
 Older published articles remain in the public archive. It shows nine articles per page, newest first, with keyword, category and inclusive date filters. The home carousel displays the six latest published articles; **New** applies to today and the preceding six calendar days in India time.
 
 ## Backups and importing
 
-**Export backup** downloads your active articles' working draft content as JSON. **Import JSON** adds the file's articles as new private drafts; it does not replace existing articles or publish imported entries. Review each imported draft before publishing. Duplicate imports create additional drafts.
+**Export backup** downloads the working draft content of all articles outside Trash, including archived articles, as JSON. **Import JSON** adds the file's articles as new private drafts; it does not replace existing articles or publish imported entries. Review each imported draft before publishing. Duplicate imports create additional drafts.
 
 That download is a content backup. It does not preserve article identities, published snapshots, revision history or image files. For a complete backup, stop the newsroom and copy both `.local` and `news-images` to a safe location. Restore those folders with the newsroom stopped.
 
@@ -69,4 +75,4 @@ Daily sync includes only the public news JSON files and images referenced by pub
 
 This pass supports manual writing and JSON import. It does not scrape or automatically publish daily news. Collect information from reliable original sources, verify it, write a short attributed summary, and review before publishing. A future collection workflow can feed private drafts into the same editor for human review.
 
-The three existing October 4, 2026 entries are starter content. Review or replace them with verified reporting before treating them as current news. Validation articles created while testing the newsroom are in local Trash and are not published.
+Starter entries and temporary validation articles have been removed. Your own MIP article has been preserved. Obsolete PHP CMS files, outdated setup instructions, the superseded news loader and test upload fixtures are stored in the ignored `junk_` folder. That folder is excluded from deployment and cannot be accessed through the local preview server. Current application code, tests and operational documentation remain in the project.
