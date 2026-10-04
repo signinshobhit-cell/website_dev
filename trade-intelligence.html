@@ -1,94 +1,42 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-
-  <!-- =========================================================
+<!-- =========================================================
        BASIC SEO
        ========================================================= -->
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>
-    Trade Intelligence | Export, Import & International Trade Updates | Flexlyf Commerce
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+    Trade Intelligence | Export, Import &amp; International Trade Updates | Flexlyf Commerce
   </title>
-
-  <meta
-    name="description"
-    content="Flexlyf Trade Intelligence provides important updates on DGFT, Customs, ICEGATE, export incentives, GST refunds, certifications, international trade and commodity markets."
-  >
-
-  <meta
-    name="keywords"
-    content="trade intelligence, export news India, import news India, DGFT updates, Customs updates, ICEGATE updates, RoDTEP updates, RoSCTL updates, export import news, international trade news"
-  >
-
-  <link rel="canonical"
-        href="https://flexlyf.com/trade-intelligence.html">
-
-
-  <!-- Open Graph -->
-
-  <meta property="og:title"
-        content="Trade Intelligence | Flexlyf Commerce">
-
-  <meta property="og:description"
-        content="Latest export, import and international trade developments for Indian businesses.">
-
-  <meta property="og:url"
-        content="https://flexlyf.com/trade-intelligence.html">
-
-  <meta property="og:type"
-        content="website">
-
-  <meta property="og:site_name"
-        content="Flexlyf Commerce">
-
-
-  <!-- Twitter -->
-
-  <meta name="twitter:card"
-        content="summary_large_image">
-
-  <meta name="twitter:title"
-        content="Trade Intelligence | Flexlyf Commerce">
-
-  <meta name="twitter:description"
-        content="Trade updates for Indian exporters, importers and MSMEs.">
-
-
-  <!-- =========================================================
+<meta content="Flexlyf Trade Intelligence provides important updates on DGFT, Customs, ICEGATE, export incentives, GST refunds, certifications, international trade and commodity markets." name="description"/>
+<meta content="trade intelligence, export news India, import news India, DGFT updates, Customs updates, ICEGATE updates, RoDTEP updates, RoSCTL updates, export import news, international trade news" name="keywords"/>
+<link href="https://flexlyf.com/trade-intelligence.html" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="Trade Intelligence | Flexlyf Commerce" property="og:title"/>
+<meta content="Latest export, import and international trade developments for Indian businesses." property="og:description"/>
+<meta content="https://flexlyf.com/trade-intelligence.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Flexlyf Commerce" property="og:site_name"/>
+<!-- Twitter -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Trade Intelligence | Flexlyf Commerce" name="twitter:title"/>
+<meta content="Trade updates for Indian exporters, importers and MSMEs." name="twitter:description"/>
+<!-- =========================================================
        FONT + GLOBAL CSS
        ========================================================= -->
-
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- YOUR EXISTING GLOBAL CSS -->
-  <link rel="stylesheet"
-        href="styles.css">
-
-  <link rel="icon"
-        type="image/x-icon"
-        href="/favicon.ico">
-
-
-  <!-- =========================================================
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- YOUR EXISTING GLOBAL CSS -->
+<link href="styles.css" rel="stylesheet"/>
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<!-- =========================================================
        PAGE-SPECIFIC CSS
        ========================================================= -->
-
-  <style>
+<style>
 
     /* =========================================================
        TRADE INTELLIGENCE HERO
@@ -1155,56 +1103,11 @@
 
     }
 
-
-
-    .trade-news-loading {
-      grid-column: 1 / -1;
-      padding: 42px 20px;
-      text-align: center;
-      color: var(--color-gray-700);
-      background: #FFFFFF;
-      border: 1px solid #E5E7EB;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .trade-news-card-image {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      display: block;
-      border-radius: 0;
-      background: #ECFDF5;
-    }
-
-    .trade-news-card-image-wrap {
-      overflow: hidden;
-      background: #ECFDF5;
-    }
-
-    .trade-news-card-featured {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 10px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #ECFDF5;
-      color: var(--color-green-mid);
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
   </style>
-
-
-  <!-- =========================================================
+<!-- =========================================================
        COLLECTION PAGE SCHEMA
        ========================================================= -->
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
 
   {
     "@context": "https://schema.org",
@@ -1221,414 +1124,212 @@
 
   </script>
 
+<style id="trade-static-cms-enhancements">
+  .trade-news-loading {
+    grid-column: 1 / -1;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--color-gray-700, #4B5563);
+  }
+  .trade-news-card-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+  }
+  .trade-news-card.has-image { overflow: hidden; }
+  .trade-news-card .trade-news-date { white-space: nowrap; }
+  .trade-news-empty {
+    grid-column: 1 / -1;
+    padding: 48px 24px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+  }
+  .trade-news-empty h3 { margin-bottom: 8px; color: var(--color-navy, #022C22); }
+  .trade-news-loading.error { color: #991B1B; }
+</style>
+
 </head>
-
-
 <body>
-
-  <!-- =========================================================
+<!-- =========================================================
        ACCESSIBILITY
        ========================================================= -->
-
-  <a href="#main-content"
-     class="skip-link">
+<a class="skip-link" href="#main-content">
     Skip to main content
   </a>
-
-
-  <!-- =========================================================
+<!-- =========================================================
        NAVBAR
        ========================================================= -->
-
-  <nav class="navbar"
-       role="navigation"
-       aria-label="Main navigation">
-
-    <div class="container navbar-container">
-
-
-      <!-- LOGO -->
-
-      <a href="index.html"
-         class="logo-wrapper"
-         aria-label="Flexlyf Commerce Home">
-
-        <svg class="corporate-brand-logo"
-             xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 1000 1000"
-             width="180"
-             height="65">
-
-          <circle cx="500"
-                  cy="470"
-                  r="380"
-                  fill="none"
-                  stroke="#4AA923"
-                  stroke-width="25"
-                  stroke-dasharray="12 6"
-                  opacity="0.85"/>
-
-          <circle cx="500"
-                  cy="470"
-                  r="365"
-                  fill="none"
-                  stroke="#2B7A1A"
-                  stroke-width="12"/>
-
-          <circle cx="500"
-                  cy="350"
-                  r="160"
-                  fill="#2B7A1A"
-                  opacity="0.85"/>
-
-          <path d="M340 350 A160 160 0 0 0 660 350 Z"
-                fill="#4AA923"
-                opacity="0.4"/>
-
-          <path d="M500 190 A160 160 0 0 0 500 510 Z"
-                fill="none"
-                stroke="#E3F4D7"
-                stroke-width="3"
-                opacity="0.3"/>
-
-          <line x1="340"
-                y1="350"
-                x2="660"
-                y2="350"
-                stroke="#E3F4D7"
-                stroke-width="3"
-                opacity="0.3"/>
-
-          <path d="M300 370 Q400 240 630 200"
-                fill="none"
-                stroke="#7FE327"
-                stroke-width="28"
-                stroke-linecap="round"/>
-
-          <polygon points="625,185 655,200 625,220"
-                   fill="#7FE327"/>
-
-          <path d="M315 450 Q500 550 670 420"
-                fill="none"
-                stroke="#56C127"
-                stroke-width="22"
-                opacity="0.9"/>
-
-          <path d="M330 490 Q500 580 650 470"
-                fill="none"
-                stroke="#1E5414"
-                stroke-width="15"
-                opacity="0.8"/>
-
-          <g fill="#DCA337"
-             stroke="#9A6F1A"
-             stroke-width="3">
-
-            <rect x="510"
-                  y="365"
-                  width="80"
-                  height="55"
-                  rx="4"/>
-
-            <rect x="560"
-                  y="390"
-                  width="75"
-                  height="55"
-                  rx="4"/>
-
-            <rect x="420"
-                  y="395"
-                  width="90"
-                  height="60"
-                  rx="4"/>
-
-            <rect x="465"
-                  y="440"
-                  width="65"
-                  height="45"
-                  rx="4"/>
-
-            <rect x="385"
-                  y="440"
-                  width="80"
-                  height="45"
-                  rx="4"/>
-
-          </g>
-
-          <text x="500"
-                y="680"
-                font-family="'Inter', sans-serif"
-                font-size="122"
-                font-weight="800"
-                fill="#155810"
-                text-anchor="middle">
+<nav aria-label="Main navigation" class="navbar" role="navigation">
+<div class="container navbar-container">
+<!-- LOGO -->
+<a aria-label="Flexlyf Commerce Home" class="logo-wrapper" href="index.html">
+<svg class="corporate-brand-logo" height="65" viewbox="0 0 1000 1000" width="180" xmlns="http://www.w3.org/2000/svg">
+<circle cx="500" cy="470" fill="none" opacity="0.85" r="380" stroke="#4AA923" stroke-dasharray="12 6" stroke-width="25"></circle>
+<circle cx="500" cy="470" fill="none" r="365" stroke="#2B7A1A" stroke-width="12"></circle>
+<circle cx="500" cy="350" fill="#2B7A1A" opacity="0.85" r="160"></circle>
+<path d="M340 350 A160 160 0 0 0 660 350 Z" fill="#4AA923" opacity="0.4"></path>
+<path d="M500 190 A160 160 0 0 0 500 510 Z" fill="none" opacity="0.3" stroke="#E3F4D7" stroke-width="3"></path>
+<line opacity="0.3" stroke="#E3F4D7" stroke-width="3" x1="340" x2="660" y1="350" y2="350"></line>
+<path d="M300 370 Q400 240 630 200" fill="none" stroke="#7FE327" stroke-linecap="round" stroke-width="28"></path>
+<polygon fill="#7FE327" points="625,185 655,200 625,220"></polygon>
+<path d="M315 450 Q500 550 670 420" fill="none" opacity="0.9" stroke="#56C127" stroke-width="22"></path>
+<path d="M330 490 Q500 580 650 470" fill="none" opacity="0.8" stroke="#1E5414" stroke-width="15"></path>
+<g fill="#DCA337" stroke="#9A6F1A" stroke-width="3">
+<rect height="55" rx="4" width="80" x="510" y="365"></rect>
+<rect height="55" rx="4" width="75" x="560" y="390"></rect>
+<rect height="60" rx="4" width="90" x="420" y="395"></rect>
+<rect height="45" rx="4" width="65" x="465" y="440"></rect>
+<rect height="45" rx="4" width="80" x="385" y="440"></rect>
+</g>
+<text fill="#155810" font-family="'Inter', sans-serif" font-size="122" font-weight="800" text-anchor="middle" x="500" y="680">
             Flex<tspan fill="#64C119">LyF</tspan>
-          </text>
-
-          <text x="500"
-                y="750"
-                font-family="'Inter', sans-serif"
-                font-size="34"
-                font-weight="700"
-                fill="#1C3F18"
-                text-anchor="middle"
-                letter-spacing="4">
+</text>
+<text fill="#1C3F18" font-family="'Inter', sans-serif" font-size="34" font-weight="700" letter-spacing="4" text-anchor="middle" x="500" y="750">
             COMMERCE PVT. LTD.
           </text>
-
-        </svg>
-
-      </a>
-
-
-      <!-- NAVIGATION -->
-
-      <ul class="nav-menu">
-
-        <li>
-          <a href="index.html"
-             class="nav-link">
+</svg>
+</a>
+<!-- NAVIGATION -->
+<ul class="nav-menu">
+<li>
+<a class="nav-link" href="index.html">
             Home
           </a>
-        </li>
-
-
-        <li>
-          <a href="trade-intelligence.html"
-             class="nav-link active">
+</li>
+<li>
+<a class="nav-link active" href="trade-intelligence.html">
             Trade Intelligence
           </a>
-        </li>
-
-
-        <li>
-          <a href="about.html"
-             class="nav-link">
+</li>
+<li>
+<a class="nav-link" href="about.html">
             About Us
           </a>
-        </li>
-
-
-        <li>
-          <a href="rodtep-exchange.html"
-             class="nav-link">
+</li>
+<li>
+<a class="nav-link" href="rodtep-exchange.html">
             RoDTEP/RoSCTL
           </a>
-        </li>
-
-
-        <!-- SERVICES DROPDOWN -->
-
-        <li class="nav-dropdown">
-
-          <button class="nav-link nav-dropdown-toggle"
-                  type="button"
-                  aria-expanded="false"
-                  aria-haspopup="true">
+</li>
+<!-- SERVICES DROPDOWN -->
+<li class="nav-dropdown">
+<button aria-expanded="false" aria-haspopup="true" class="nav-link nav-dropdown-toggle" type="button">
 
             Services
 
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 width="15"
-                 height="15"
-                 viewBox="0 0 24 24"
-                 fill="none"
-                 stroke="currentColor"
-                 stroke-width="2"
-                 stroke-linecap="round"
-                 stroke-linejoin="round">
-
-              <polyline points="6 9 12 15 18 9">
-              </polyline>
-
-            </svg>
-
-          </button>
-
-
-          <div class="services-dropdown">
-
-            <div class="services-dropdown-header">
-
-              <span class="eyebrow">
+            <svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+<polyline points="6 9 12 15 18 9">
+</polyline>
+</svg>
+</button>
+<div class="services-dropdown">
+<div class="services-dropdown-header">
+<span class="eyebrow">
                 OUR SERVICES
               </span>
-
-              <h3>
+<h3>
                 Export &amp; Import Trade Solutions
               </h3>
-
-              <p>
+<p>
                 End-to-end support for your international trade requirements.
               </p>
-
-            </div>
-
-
-            <div class="services-dropdown-grid">
-
-              <a href="certification.html"
-                 class="service-dropdown-item">
-
-                <span class="service-dropdown-icon">
+</div>
+<div class="services-dropdown-grid">
+<a class="service-dropdown-item" href="certification.html">
+<span class="service-dropdown-icon">
                   ✓
                 </span>
-
-                <span>
-                  <strong>Certification</strong>
-
-                  <small>
+<span>
+<strong>Certification</strong>
+<small>
                     ISO, CE, FDA, Organic, Halal &amp; more
                   </small>
-                </span>
-
-              </a>
-
-
-              <a href="licensing.html"
-                 class="service-dropdown-item">
-
-                <span class="service-dropdown-icon">
+</span>
+</a>
+<a class="service-dropdown-item" href="licensing.html">
+<span class="service-dropdown-icon">
                   ◆
                 </span>
-
-                <span>
-                  <strong>Licensing</strong>
-
-                  <small>
+<span>
+<strong>Licensing</strong>
+<small>
                     IEC, DGFT, EPCG, RCMC &amp; authorisations
                   </small>
-                </span>
-
-              </a>
-
-
-              <a href="testing.html"
-                 class="service-dropdown-item">
-
-                <span class="service-dropdown-icon">
+</span>
+</a>
+<a class="service-dropdown-item" href="testing.html">
+<span class="service-dropdown-icon">
                   ⌕
                 </span>
-
-                <span>
-                  <strong>Product Testing</strong>
-
-                  <small>
+<span>
+<strong>Product Testing</strong>
+<small>
                     Food, textile, chemical &amp; product testing
                   </small>
-                </span>
-
-              </a>
-
-
-              <a href="inspection.html"
-                 class="service-dropdown-item">
-
-                <span class="service-dropdown-icon">
+</span>
+</a>
+<a class="service-dropdown-item" href="inspection.html">
+<span class="service-dropdown-icon">
                   ✓
                 </span>
-
-                <span>
-                  <strong>Inspection</strong>
-
-                  <small>
+<span>
+<strong>Inspection</strong>
+<small>
                     Pre-shipment inspection &amp; quality verification
                   </small>
-                </span>
-
-              </a>
-
-
-              <a href="insurance.html"
-                 class="service-dropdown-item">
-
-                <span class="service-dropdown-icon">
+</span>
+</a>
+<a class="service-dropdown-item" href="insurance.html">
+<span class="service-dropdown-icon">
                   ◆
                 </span>
-
-                <span>
-                  <strong>Trade Insurance</strong>
-
-                  <small>
+<span>
+<strong>Trade Insurance</strong>
+<small>
                     Marine cargo, freight &amp; ECGC solutions
                   </small>
-                </span>
-
-              </a>
-
-
-              <a href="contact.html"
-                 class="service-dropdown-item">
-
-                <span class="service-dropdown-icon">
+</span>
+</a>
+<a class="service-dropdown-item" href="contact.html">
+<span class="service-dropdown-icon">
                   →
                 </span>
-
-                <span>
-                  <strong>Logistics &amp; Customs</strong>
-
-                  <small>
+<span>
+<strong>Logistics &amp; Customs</strong>
+<small>
                     Freight, customs clearance &amp; documentation
                   </small>
-                </span>
-
-              </a>
-
-            </div>
-
-
-            <div class="services-dropdown-footer">
-
-              <span>
+</span>
+</a>
+</div>
+<div class="services-dropdown-footer">
+<span>
                 Need help with an export or import requirement?
               </span>
-
-              <a href="contact.html">
+<a href="contact.html">
                 Talk to Our Trade Desk →
               </a>
-
-            </div>
-
-          </div>
-
-        </li>
-
-
-        <li>
-          <a href="commodity.html"
-             class="nav-link">
+</div>
+</div>
+</li>
+<li>
+<a class="nav-link" href="commodity.html">
             Commodity
           </a>
-        </li>
-
-
-        <li>
-          <a href="contact.html"
-             class="nav-link">
+</li>
+<li>
+<a class="nav-link" href="contact.html">
             Contact
           </a>
-        </li>
-
-      </ul>
-
-
-      <!-- PHONE -->
-
-      <a href="tel:+919220819906"
-         class="nav-phone">
-
-        <svg xmlns="http://www.w3.org/2000/svg"
-             width="18"
-             height="18"
-             viewBox="0 0 24 24"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round">
-
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+</li>
+</ul>
+<!-- PHONE -->
+<a class="nav-phone" href="tel:+919220819906">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2
                    19.79 19.79 0 0 1-8.63-3.07
                    19.5 19.5 0 0 1-6-6
                    19.79 19.79 0 0 1-3.07-8.67
@@ -1640,959 +1341,302 @@
                    a2 2 0 0 1 2.11-.45
                    12.84 12.84 0 0 0 2.81.7
                    A2 2 0 0 1 22 16.92z">
-          </path>
-
-        </svg>
+</path>
+</svg>
 
         +91 92208 19906
 
       </a>
-
-
-      <!-- MOBILE MENU -->
-
-      <div class="hamburger"
-           aria-label="Toggle menu"
-           role="button"
-           tabindex="0">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-
-  <!-- =========================================================
+<!-- MOBILE MENU -->
+<div aria-label="Toggle menu" class="hamburger" role="button" tabindex="0">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</nav>
+<!-- =========================================================
        MAIN
        ========================================================= -->
-
-  <main id="main-content">
-
-
-    <!-- =======================================================
+<main id="main-content">
+<!-- =======================================================
          HERO
          ======================================================= -->
-
-    <section class="trade-intelligence-hero">
-
-      <div class="container">
-
-        <div class="trade-intelligence-hero-content">
-
-          <span class="eyebrow">
+<section class="trade-intelligence-hero">
+<div class="container">
+<div class="trade-intelligence-hero-content">
+<span class="eyebrow">
             FLEXYF TRADE INTELLIGENCE
           </span>
-
-          <h1>
+<h1>
             Trade Updates That Matter
           </h1>
-
-          <p>
+<p>
             Follow important developments across export,
             import, customs, foreign trade policy,
             incentives, compliance and international markets.
           </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
+</div>
+</div>
+</section>
+<!-- =======================================================
          SEARCH + FILTER
          ======================================================= -->
-
-    <section class="trade-intelligence-toolbar">
-
-      <div class="container">
-
-        <div class="trade-intelligence-toolbar-inner">
-
-
-          <!-- SEARCH -->
-
-          <div class="trade-search-box">
-
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 width="19"
-                 height="19"
-                 viewBox="0 0 24 24"
-                 fill="none"
-                 stroke="currentColor"
-                 stroke-width="2"
-                 stroke-linecap="round"
-                 stroke-linejoin="round">
-
-              <circle cx="11"
-                      cy="11"
-                      r="8">
-              </circle>
-
-              <line x1="21"
-                    y1="21"
-                    x2="16.65"
-                    y2="16.65">
-              </line>
-
-            </svg>
-
-
-            <input
-              type="search"
-              id="tradeSearch"
-              class="trade-search-input"
-              placeholder="Search trade updates..."
-              aria-label="Search trade updates"
-            >
-
-          </div>
-
-
-          <!-- CATEGORY FILTER -->
-
-          <select
-            id="tradeCategory"
-            class="trade-category-select"
-            aria-label="Filter trade updates by category">
-
-            <option value="all">
+<section class="trade-intelligence-toolbar">
+<div class="container">
+<div class="trade-intelligence-toolbar-inner">
+<!-- SEARCH -->
+<div class="trade-search-box">
+<svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" r="8">
+</circle>
+<line x1="21" x2="16.65" y1="21" y2="16.65">
+</line>
+</svg>
+<input aria-label="Search trade updates" class="trade-search-input" id="tradeSearch" placeholder="Search trade updates..." type="search"/>
+</div>
+<!-- CATEGORY FILTER -->
+<select aria-label="Filter trade updates by category" class="trade-category-select" id="tradeCategory">
+<option value="all">
               All Categories
             </option>
-
-            <option value="dgft">
+<option value="dgft">
               DGFT &amp; FTP
             </option>
-
-            <option value="customs">
+<option value="customs">
               Customs &amp; ICEGATE
             </option>
-
-            <option value="incentives">
+<option value="incentives">
               Export Incentives
             </option>
-
-            <option value="gst">
+<option value="gst">
               GST &amp; Refunds
             </option>
-
-            <option value="certification">
+<option value="certification">
               Certifications
             </option>
-
-            <option value="international">
+<option value="international">
               International Trade
             </option>
-
-            <option value="commodity">
+<option value="commodity">
               Commodity Markets
             </option>
-
-          </select>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
+</select>
+</div>
+</div>
+</section>
+<!-- =======================================================
          FEATURED + LATEST NEWS
          ======================================================= -->
-
-    <section class="section">
-
-      <div class="container">
-
-
-        <!-- SECTION HEADER -->
-
-        <div class="trade-intelligence-section-header">
-
-          <div>
-
-            <span class="eyebrow">
+<section class="section">
+<div class="container">
+<!-- SECTION HEADER -->
+<div class="trade-intelligence-section-header">
+<div>
+<span class="eyebrow">
               TRADE INTELLIGENCE
             </span>
-
-            <h2>
+<h2>
               Latest Trade Developments
             </h2>
-
-            <p>
+<p>
               Curated areas of interest for exporters,
               importers and international trade businesses.
             </p>
-
-          </div>
-
-          <span
-            class="trade-results-count"
-            id="tradeResultsCount">
+</div>
+<span class="trade-results-count" id="tradeResultsCount">
             Showing updates
           </span>
-
-        </div>
-
-
-        <!-- FEATURED -->
-
-        <article class="trade-featured-card">
-
-          <div class="trade-featured-visual">
-
-            <div class="trade-featured-visual-content">
-
-              <div class="trade-featured-visual-icon">
-
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     width="34"
-                     height="34"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="1.7"
-                     stroke-linecap="round"
-                     stroke-linejoin="round">
-
-                  <path d="M4 4h16v16H4z">
-                  </path>
-
-                  <path d="M8 8h8">
-                  </path>
-
-                  <path d="M8 12h6">
-                  </path>
-
-                  <path d="M8 16h4">
-                  </path>
-
-                </svg>
-
-              </div>
-
-
-              <h3>
+</div>
+<!-- FEATURED -->
+<article class="trade-featured-card">
+<div class="trade-featured-visual">
+<div class="trade-featured-visual-content">
+<div class="trade-featured-visual-icon">
+<svg fill="none" height="34" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewbox="0 0 24 24" width="34" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4h16v16H4z">
+</path>
+<path d="M8 8h8">
+</path>
+<path d="M8 12h6">
+</path>
+<path d="M8 16h4">
+</path>
+</svg>
+</div>
+<h3>
                 Verified Trade Information
               </h3>
-
-              <p>
+<p>
                 Important regulatory and market developments
                 should always be checked against the applicable
                 official notification, circular or authority source.
               </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="trade-featured-content">
-
-            <span class="trade-news-category">
+</div>
+</div>
+<div class="trade-featured-content">
+<span class="trade-news-category">
               TRADE ALERT
             </span>
-
-            <h2>
+<h2>
               Stay Ahead of Export &amp; Import Changes
             </h2>
-
-            <p>
+<p>
               Trade regulations, customs procedures, export
               incentives and market conditions can directly
               affect shipment planning, compliance and
               commercial decisions.
             </p>
-
-            <p>
+<p>
               Use Trade Intelligence to identify the topic,
               understand the business impact and then verify
               the applicable official source before acting.
             </p>
-
-            <a href="contact.html"
-               class="btn btn-primary"
-               style="width: fit-content;">
+<a class="btn btn-primary" href="contact.html" style="width: fit-content;">
               Speak With Trade Desk →
             </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- =====================================================
+</div>
+</article>
+<!-- =====================================================
              NEWS GRID
              ===================================================== -->
-
-        <div
-          id="tradeNewsGrid"
-          class="trade-intelligence-grid">
-
-          <div id="tradeNewsLoading"
-               class="trade-news-loading"
-               aria-live="polite">
-            Loading Trade Intelligence…
-          </div>
-
-          <!-- NO RESULTS -->
-
-          <div id="tradeNoResults"
-               class="trade-no-results"
-               style="display:none;">
-
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 width="42"
-                 height="42"
-                 viewBox="0 0 24 24"
-                 fill="none"
-                 stroke="currentColor"
-                 stroke-width="1.5"
-                 stroke-linecap="round"
-                 stroke-linejoin="round">
-
-              <circle cx="11"
-                      cy="11"
-                      r="8">
-              </circle>
-
-              <line x1="21"
-                    y1="21"
-                    x2="16.65"
-                    y2="16.65">
-              </line>
-
-            </svg>
-
-            <h3>
-              No Trade Updates Found
-            </h3>
-
-            <p>
-              Try another keyword or select a different category.
-            </p>
-
-          </div>
-
-
-
-
-        </div>
-
-
-        <!-- =====================================================
+<div aria-live="polite" class="trade-intelligence-grid" id="tradeNewsGrid"><div class="trade-news-loading">Loading trade updates…</div></div>
+<!-- =====================================================
              CTA
              ===================================================== -->
-
-        <div class="trade-intelligence-cta">
-
-          <h2>
+<div class="trade-intelligence-cta">
+<h2>
             Need Help Understanding a Trade Update?
           </h2>
-
-          <p>
+<p>
             A policy change, customs requirement or export
             incentive update can have a direct impact on your
             shipment or business. Speak with the Flexlyf Trade Desk.
           </p>
-
-          <div class="trade-intelligence-cta-buttons">
-
-            <a href="contact.html"
-               class="btn btn-primary">
+<div class="trade-intelligence-cta-buttons">
+<a class="btn btn-primary" href="contact.html">
               Talk to Trade Desk →
             </a>
-
-            <a href="tel:+919220819906"
-               class="btn btn-secondary-white">
+<a class="btn btn-secondary-white" href="tel:+919220819906">
               Call +91 92208 19906
             </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================================================
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- =========================================================
        FOOTER
        ========================================================= -->
-
-  <footer class="footer"
-          role="contentinfo">
-
-    <div class="container">
-
-      <div class="footer-grid">
-
-
-        <!-- BRAND -->
-
-        <div>
-
-          <div class="logo-wrapper footer-logo">
-
-            <svg class="corporate-brand-logo"
-                 xmlns="http://www.w3.org/2000/svg"
-                 viewBox="0 0 1000 1000"
-                 width="160"
-                 height="60">
-
-              <circle cx="500"
-                      cy="470"
-                      r="380"
-                      fill="none"
-                      stroke="#4AA923"
-                      stroke-width="25"
-                      stroke-dasharray="12 6"
-                      opacity="0.85"/>
-
-              <circle cx="500"
-                      cy="470"
-                      r="365"
-                      fill="none"
-                      stroke="#2B7A1A"
-                      stroke-width="12"/>
-
-              <circle cx="500"
-                      cy="350"
-                      r="160"
-                      fill="#2B7A1A"
-                      opacity="0.85"/>
-
-              <path d="M300 370 Q400 240 630 200"
-                    fill="none"
-                    stroke="#7FE327"
-                    stroke-width="28"
-                    stroke-linecap="round"/>
-
-              <polygon points="625,185 655,200 625,220"
-                       fill="#7FE327"/>
-
-              <path d="M315 450 Q500 550 670 420"
-                    fill="none"
-                    stroke="#56C127"
-                    stroke-width="22"/>
-
-              <text x="500"
-                    y="680"
-                    font-family="'Inter', sans-serif"
-                    font-size="122"
-                    font-weight="800"
-                    fill="#FFFFFF"
-                    text-anchor="middle">
-                Flex<tspan fill="#64C119">LyF</tspan>
-              </text>
-
-              <text x="500"
-                    y="750"
-                    font-family="'Inter', sans-serif"
-                    font-size="34"
-                    font-weight="700"
-                    fill="#E3F4D7"
-                    text-anchor="middle"
-                    letter-spacing="4">
-                COMMERCE PVT. LTD.
-              </text>
-
-            </svg>
-
-          </div>
-
-
-          <p class="footer-tagline">
-            Empowering Indian MSMEs to compete confidently
-            in global markets through premium trade consultancy.
-          </p>
-
-
-          <div class="footer-social">
-
-            <a href="https://www.linkedin.com/in/shobhit-verma-l00/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn">
-
-              LinkedIn
-
-            </a>
-
-
-            <a href="https://www.instagram.com/flexlyf_commerce_pvt_ltd/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Instagram">
-
-              Instagram
-
-            </a>
-
-
-            <a href="https://www.youtube.com/@flexlyf"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="YouTube">
-
-              YouTube
-
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- SERVICES -->
-
-        <div>
-
-          <h4>
-            Services
-          </h4>
-
-          <ul class="footer-links">
-
-            <li>
-              <a href="certification.html">
-                Certification
-              </a>
-            </li>
-
-            <li>
-              <a href="licensing.html">
-                Licensing Support
-              </a>
-            </li>
-
-            <li>
-              <a href="testing.html">
-                Product Testing
-              </a>
-            </li>
-
-            <li>
-              <a href="inspection.html">
-                Inspection Services
-              </a>
-            </li>
-
-            <li>
-              <a href="insurance.html">
-                Trade Insurance
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- COMPANY -->
-
-        <div>
-
-          <h4>
-            Company
-          </h4>
-
-          <ul class="footer-links">
-
-            <li>
-              <a href="index.html">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a href="about.html">
-                About Us
-              </a>
-            </li>
-
-            <li>
-              <a href="trade-intelligence.html">
-                Trade Intelligence
-              </a>
-            </li>
-
-            <li>
-              <a href="contact.html">
-                Contact
-              </a>
-            </li>
-
-            <li>
-              <a href="privacy.html">
-                Privacy Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="terms.html">
-                Terms of Service
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- CONTACT -->
-
-        <div class="footer-contact">
-
-          <h4>
-            Contact
-          </h4>
-
-
-          <p>
-
-            <strong>
-              Corporate Office:
-            </strong>
-
-            <br>
-
-            310, Arjangarh,
-            <br>
-            New Delhi, Delhi, India
-
-          </p>
-
-
-          <p>
-
-            <strong>
-              Registered Office:
-            </strong>
-
-            <br>
-
-            606, Malviya Nagar,
-            <br>
-            Prayagraj,
-            <br>
-            Uttar Pradesh, India - 211003
-
-          </p>
-
-
-          <p>
-
-            <a href="tel:+919220819906">
-              +91 92208 19906
-            </a>
-
-          </p>
-
-
-          <p>
-
-            <a href="mailto:shobhit@flexlyf.com">
-              shobhit@flexlyf.com
-            </a>
-
-          </p>
-
-        </div>
-
-
-      </div>
-
-
-      <div class="footer-bottom">
-
-        <p class="footer-copyright">
-          ©
-          <span class="footer-year"></span>
-          Flexlyf Commerce Private Limited.
-          All rights reserved.
-        </p>
-
-
-        <span class="iift-badge">
-          IIFT Alumni
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================================================
+<footer class="footer" role="contentinfo">
+<div class="container">
+<div class="footer-grid">
+<!-- Col 1: Corporate Brand Identity Summary -->
+<div>
+<div class="logo-wrapper footer-logo" style="margin-bottom: 1.5rem;">
+<svg class="corporate-brand-logo" height="60" viewbox="0 0 1000 1000" width="160" xmlns="http://www.w3.org/2000/svg">
+<circle cx="500" cy="470" fill="none" opacity="0.85" r="380" stroke="#4AA923" stroke-dasharray="12 6" stroke-width="25"></circle>
+<circle cx="500" cy="470" fill="none" r="365" stroke="#2B7A1A" stroke-width="12"></circle>
+<circle cx="500" cy="350" fill="#2B7A1A" opacity="0.85" r="160"></circle>
+<path d="M340 350 A160 160 0 0 0 660 350 Z" fill="#4AA923" opacity="0.4"></path>
+<path d="M300 370 Q400 240 630 200" fill="none" stroke="#7FE327" stroke-linecap="round" stroke-width="28"></path>
+<polygon fill="#7FE327" points="625,185 655,200 625,220"></polygon>
+<path d="M315 450 Q500 550 670 420" fill="none" opacity="0.9" stroke="#56C127" stroke-width="22"></path>
+<g fill="#DCA337" stroke="#9A6F1A" stroke-width="3">
+<rect height="60" rx="4" width="90" x="420" y="395"></rect>
+<rect height="45" rx="4" width="65" x="465" y="440"></rect>
+</g>
+<text fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="122" font-weight="800" letter-spacing="-2" text-anchor="middle" x="500" y="680">Flex<tspan fill="#64C119">LyF</tspan></text>
+<text fill="#E3F4D7" font-family="'Inter', sans-serif" font-size="34" font-weight="700" letter-spacing="4" text-anchor="middle" x="500" y="750">COMMERCE PVT. LTD.</text>
+</svg>
+</div>
+<p class="footer-tagline">Empowering Indian MSMEs to compete confidently in global markets through premium IIFT expert trade consultancy.</p>
+<div class="footer-social" style="display: flex; gap: 1rem; margin-top: 1rem;">
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/shobhit-verma-l00/" rel="noopener noreferrer" target="_blank"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+<a aria-label="Instagram" href="https://www.instagram.com/flexlyf_commerce_pvt_ltd/" rel="noopener noreferrer" target="_blank"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+<a aria-label="YouTube" href="https://www.youtube.com/@flexlyf" rel="noopener noreferrer" target="_blank"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 3.88 12 3.88 12 3.88s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6 School .46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+<a aria-label="Facebook" href="https://www.facebook.com/flexlyfcommerceprivatelimited" rel="noopener noreferrer" target="_blank"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+</div>
+</div>
+<!-- Col 2: Services Directory -->
+<div>
+<h4>Services</h4>
+<ul class="footer-links" style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 0.6rem;"><a href="certification.html">Certification</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="licensing.html">Licensing Support</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="testing.html">Product Testing</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="inspection.html">Inspection Services</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="insurance.html">Trade Insurance</a></li>
+</ul>
+</div>
+<!-- Col 3: Extended Corporate Matrix -->
+<div>
+<h4>Company</h4>
+<ul class="footer-links" style="list-style: none; padding: 0; margin: 0;">
+<li style="margin-bottom: 0.6rem;"><a href="index.html">Home</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="about.html">About Us</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="contact.html">Contact</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="privacy.html">Privacy Policy</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="terms.html">Terms of Service</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="sitemap.xml">Site Map</a></li>
+<li style="margin-bottom: 0.6rem;"><a href="trade-intelligence.html">Trade Intelligence</a></li>
+</ul>
+</div>
+<!-- Col 4: Explicit Address Tracking Nodes -->
+<div class="footer-contact">
+<h4>Contact Grid</h4>
+<p class="address-node" style="display: flex; gap: 10px; margin-bottom: 1rem; align-items: flex-start;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="flex-shrink:0; margin-top:3px;" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span><strong>Corporate Office:</strong><br/>310, Arjangarh,<br/>New Delhi, Delhi, India</span>
+</p>
+<p class="address-node" style="display: flex; gap: 10px; margin-bottom: 1rem; align-items: flex-start;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="flex-shrink:0; margin-top:3px;" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><line x1="9" x2="9" y1="3" y2="21"></line></svg>
+<span><strong>Registered Office:</strong><br/>606, Malviya Nagar, Prayagraj,<br/>Uttar Pradesh, India - 211003</span>
+</p>
+<p style="display: flex; gap: 10px; margin-bottom: 0.6rem; align-items: center;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="flex-shrink:0;" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<a href="tel:+919220819906">+91 92208 19906</a>
+</p>
+<p style="display: flex; gap: 10px; margin-bottom: 0; align-items: center;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="flex-shrink:0;" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+<a href="mailto:shobhit@flexlyf.com">shobhit@flexlyf.com</a>
+</p>
+</div>
+</div>
+<!-- Footer Branding Attribution Block -->
+<div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+<p class="footer-copyright" style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);">© <span class="footer-year"></span> Flexlyf Commerce Private Limited. All rights reserved.</p>
+<span class="iift-badge" style="background: rgba(255, 255, 255, 0.15); padding: 0.35rem 0.85rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; color: #7FE327; text-transform: uppercase; letter-spacing: 0.5px;">IIFT Alumni</span>
+</div>
+</div>
+</footer>
+<!-- =========================================================
        WHATSAPP
        ========================================================= -->
-
-  <a href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20trade%20intelligence%20and%20services."
-     class="whatsapp-float"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Chat on WhatsApp">
-
-    <svg xmlns="http://www.w3.org/2000/svg"
-         width="28"
-         height="28"
-         viewBox="0 0 24 24"
-         fill="currentColor">
-
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.198.148-.446.05-.57-.098-.123-.74-.999-1.013-1.37-.273-.37-.574-.316-.747-.316-.174 0-.372.074-.57.372-.198.297-.767.966-.767 2.36 0 1.395 1.013 2.727 1.155 2.915.141.186 1.994 3.044 4.828 4.268.675.291 1.2.465 1.61.595.676.216 1.29.185 1.777.112.542-.081 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
-
-    </svg>
-
-    <span class="whatsapp-tooltip">
+<a aria-label="Chat on WhatsApp" class="whatsapp-float" href="https://wa.me/919220819906?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20trade%20intelligence%20and%20services." rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="28" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.198.148-.446.05-.57-.098-.123-.74-.999-1.013-1.37-.273-.37-.574-.316-.747-.316-.174 0-.372.074-.57.372-.198.297-.767.966-.767 2.36 0 1.395 1.013 2.727 1.155 2.915.141.186 1.994 3.044 4.828 4.268.675.291 1.2.465 1.61.595.676.216 1.29.185 1.777.112.542-.081 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"></path>
+</svg>
+<span class="whatsapp-tooltip">
       Chat with us on WhatsApp
     </span>
-
-  </a>
-
-
-  <!-- =========================================================
+</a>
+<!-- =========================================================
        BACK TO TOP
        ========================================================= -->
-
-  <button class="back-to-top"
-          aria-label="Back to top">
-
-    <svg xmlns="http://www.w3.org/2000/svg"
-         width="24"
-         height="24"
-         viewBox="0 0 24 24"
-         fill="none"
-         stroke="currentColor"
-         stroke-width="2"
-         stroke-linecap="round"
-         stroke-linejoin="round">
-
-      <polyline points="18 15 12 9 6 15">
-      </polyline>
-
-    </svg>
-
-  </button>
-
-
-  <!-- =========================================================
+<button aria-label="Back to top" class="back-to-top">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="18 15 12 9 6 15">
+</polyline>
+</svg>
+</button>
+<!-- =========================================================
        EXISTING GLOBAL JS
        ========================================================= -->
-
-  <script src="main.js"></script>
-
-
-  <!-- =========================================================
+<script src="main.js"></script><script defer="True" src="trade-intelligence.js"></script>
+<!-- =========================================================
        TRADE INTELLIGENCE PAGE JS
        ========================================================= -->
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      /* =====================================================
-         FOOTER YEAR
-         ===================================================== */
-      document.querySelectorAll(".footer-year").forEach(function (el) {
-        el.textContent = new Date().getFullYear();
-      });
-
-      /* =====================================================
-         SERVICES DROPDOWN
-         ===================================================== */
-      const serviceDropdown = document.querySelector(".nav-dropdown");
-      const serviceToggle = document.querySelector(".nav-dropdown-toggle");
-
-      if (serviceDropdown && serviceToggle) {
-        serviceToggle.addEventListener("click", function (event) {
-          event.preventDefault();
-          event.stopPropagation();
-          const isOpen = serviceDropdown.classList.contains("open");
-          serviceDropdown.classList.toggle("open");
-          serviceToggle.setAttribute("aria-expanded", String(!isOpen));
-        });
-
-        document.addEventListener("click", function (event) {
-          if (!serviceDropdown.contains(event.target)) {
-            serviceDropdown.classList.remove("open");
-            serviceToggle.setAttribute("aria-expanded", "false");
-          }
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") {
-            serviceDropdown.classList.remove("open");
-            serviceToggle.setAttribute("aria-expanded", "false");
-          }
-        });
-      }
-
-      /* =====================================================
-         TRADE NEWS CMS FEED
-         Loads published items from data/news.json.
-         ===================================================== */
-      const searchInput = document.getElementById("tradeSearch");
-      const categorySelect = document.getElementById("tradeCategory");
-      const newsGrid = document.getElementById("tradeNewsGrid");
-      const resultCount = document.getElementById("tradeResultsCount");
-      const noResults = document.getElementById("tradeNoResults");
-      const loading = document.getElementById("tradeNewsLoading");
-
-      if (!newsGrid) return;
-
-      function escapeHtml(value) {
-        return String(value ?? "").replace(/[&<>\"']/g, function (char) {
-          return {
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            "\"": "&quot;",
-            "'": "&#039;"
-          }[char];
-        });
-      }
-
-      function safeUrl(value, fallback) {
-        const raw = String(value || "").trim();
-        if (!raw) return fallback;
-        try {
-          const url = new URL(raw, window.location.href);
-          if (["http:", "https:"].includes(url.protocol)) return url.href;
-        } catch (_) {}
-        return fallback;
-      }
-
-      function formatDate(iso) {
-        if (!iso) return "Update";
-        const d = new Date(iso + "T00:00:00");
-        if (Number.isNaN(d.getTime())) return "Update";
-        return new Intl.DateTimeFormat("en-IN", {
-          day: "2-digit",
-          month: "short",
-          year: "numeric"
-        }).format(d);
-      }
-
-      function renderCategories(items) {
-        if (!categorySelect) return;
-        const current = categorySelect.value || "all";
-        const categories = [...new Map(items.map(function (item) {
-          const key = String(item.category_key || "other").toLowerCase();
-          return [key, {
-            key: key,
-            label: item.category_label || item.category || key
-          }];
-        })).values()];
-
-        categorySelect.innerHTML = '<option value="all">All Categories</option>' +
-          categories.map(function (cat) {
-            return '<option value="' + escapeHtml(cat.key) + '">' +
-              escapeHtml(cat.label) + '</option>';
-          }).join("");
-
-        if (["all"].concat(categories.map(function (c) { return c.key; })).includes(current)) {
-          categorySelect.value = current;
-        }
-      }
-
-      function renderCards(items) {
-        const existingNoResults = noResults ? noResults.outerHTML :
-          '<div id="tradeNoResults" class="trade-no-results" style="display:none;"></div>';
-
-        newsGrid.innerHTML = items.map(function (item) {
-          const href = "news-article.php?slug=" + encodeURIComponent(item.slug);
-          const image = item.image ?
-            '<div class="trade-news-card-image-wrap">' +
-            '<img class="trade-news-card-image" src="' + escapeHtml(safeUrl(item.image, "")) + '" alt="" loading="lazy" onerror="this.parentElement.style.display=\'none\'">' +
-            '</div>' : "";
-
-          return '<article class="trade-news-card"' +
-            ' data-category="' + escapeHtml(item.category_key || "other") + '"' +
-            ' data-title="' + escapeHtml(item.title || "") + '">' +
-              image +
-              '<div class="trade-news-card-top">' +
-                '<span class="trade-news-category">' + escapeHtml(item.category_label || item.category || "Trade Update") + '</span>' +
-                '<span class="trade-news-date">' + escapeHtml(formatDate(item.date)) + '</span>' +
-              '</div>' +
-              '<div class="trade-news-card-body">' +
-                (item.featured ? '<span class="trade-news-card-featured">★ Featured</span>' : '') +
-                '<h3>' + escapeHtml(item.title) + '</h3>' +
-                '<p>' + escapeHtml(item.summary) + '</p>' +
-                '<div class="trade-news-source">' +
-                  escapeHtml(item.source ? ("Source: " + item.source) : "Official source should be verified before acting.") +
-                '</div>' +
-                '<a href="' + escapeHtml(href) + '" class="trade-news-link">' +
-                  'Read Trade Update <span>→</span>' +
-                '</a>' +
-              '</div>' +
-            '</article>';
-        }).join("") + existingNoResults;
-      }
-
-      function filterTradeNews() {
-        const cards = Array.from(newsGrid.querySelectorAll(".trade-news-card"));
-        const searchTerm = (searchInput?.value || "").trim().toLowerCase();
-        const selectedCategory = categorySelect?.value || "all";
-        let visibleCount = 0;
-
-        cards.forEach(function (card) {
-          const title = (card.dataset.title || "").toLowerCase();
-          const category = (card.dataset.category || "").toLowerCase();
-          const text = card.textContent.toLowerCase();
-          const searchMatch = !searchTerm || title.includes(searchTerm) || text.includes(searchTerm);
-          const categoryMatch = selectedCategory === "all" || category === selectedCategory;
-          const show = searchMatch && categoryMatch;
-          card.style.display = show ? "flex" : "none";
-          if (show) visibleCount++;
-        });
-
-        const currentNoResults = document.getElementById("tradeNoResults");
-        if (currentNoResults) currentNoResults.style.display = visibleCount ? "none" : "block";
-        if (resultCount) resultCount.textContent = String(visibleCount);
-      }
-
-      fetch("data/news.json?v=" + Date.now(), { cache: "no-store" })
-        .then(function (response) {
-          if (!response.ok) throw new Error("News feed could not be loaded.");
-          return response.json();
-        })
-        .then(function (payload) {
-          const items = Array.isArray(payload) ? payload : (payload.news || []);
-          const published = items.filter(function (item) { return item.published !== false; })
-            .sort(function (a, b) {
-              const af = a.featured ? 1 : 0;
-              const bf = b.featured ? 1 : 0;
-              if (af !== bf) return bf - af;
-              return String(b.date || "").localeCompare(String(a.date || ""));
-            });
-
-          renderCategories(published);
-          renderCards(published);
-          if (loading) loading.style.display = "none";
-          if (searchInput) searchInput.addEventListener("input", filterTradeNews);
-          if (categorySelect) categorySelect.addEventListener("change", filterTradeNews);
-          filterTradeNews();
-        })
-        .catch(function (error) {
-          console.error(error);
-          if (loading) loading.textContent = "Trade Intelligence is temporarily unavailable. Please refresh the page.";
-          if (resultCount) resultCount.textContent = "0";
-        });
-    });
-  </script>
-
-
 </body>
-
 </html>
