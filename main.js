@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   updateFooterYear();
   initContactFormValidation();
+  initServicesDropdown();
 });
 
 // Optimized Window Scroll Architecture (Combines Navbar and Back-To-Top to save event threads)
@@ -272,3 +273,70 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+/* =========================================================
+   SERVICES DROPDOWN
+   ========================================================= */
+
+function initServicesDropdown() {
+
+  const dropdown = document.querySelector('.nav-dropdown');
+  const toggle = document.querySelector('.nav-dropdown-toggle');
+
+  if (!dropdown || !toggle) return;
+
+
+  toggle.addEventListener('click', function(e) {
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const isOpen = dropdown.classList.contains('open');
+
+    dropdown.classList.toggle('open');
+
+    toggle.setAttribute(
+      'aria-expanded',
+      String(!isOpen)
+    );
+
+  });
+
+
+  /* Close when clicking outside */
+
+  document.addEventListener('click', function(e) {
+
+    if (!dropdown.contains(e.target)) {
+
+      dropdown.classList.remove('open');
+
+      toggle.setAttribute(
+        'aria-expanded',
+        'false'
+      );
+
+    }
+
+  });
+
+
+  /* Close when pressing Escape */
+
+  document.addEventListener('keydown', function(e) {
+
+    if (e.key === 'Escape') {
+
+      dropdown.classList.remove('open');
+
+      toggle.setAttribute(
+        'aria-expanded',
+        'false'
+      );
+
+      toggle.focus();
+
+    }
+
+  });
+
+}
