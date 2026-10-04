@@ -1459,3 +1459,433 @@ footer.footer h4 {
     font-size: 1.3rem;
   }
 }
+/* =========================================================
+   FLEXYF SERVICES DROPDOWN NAVIGATION
+   ========================================================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+
+/* Services button */
+
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  background: none;
+  border: none;
+
+  font-family: var(--font-heading);
+
+  cursor: pointer;
+}
+
+
+.nav-dropdown-toggle svg {
+  transition: transform var(--transition-normal);
+}
+
+
+.nav-dropdown.open .nav-dropdown-toggle svg {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN PANEL
+   ========================================================= */
+
+.services-dropdown {
+  position: absolute;
+
+  top: calc(100% + 18px);
+  left: 50%;
+
+  width: 720px;
+
+  transform: translateX(-50%) translateY(8px);
+
+  background: var(--color-white);
+
+  border-radius: var(--radius-card);
+
+  border: 1px solid var(--color-gray-100);
+
+  box-shadow: 0 20px 55px rgba(2, 44, 34, 0.18);
+
+  padding: 24px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity var(--transition-normal),
+    transform var(--transition-normal),
+    visibility var(--transition-normal);
+
+  z-index: 2000;
+}
+
+
+/* Small arrow above dropdown */
+
+.services-dropdown::before {
+  content: "";
+
+  position: absolute;
+
+  top: -7px;
+  left: 50%;
+
+  width: 14px;
+  height: 14px;
+
+  background: var(--color-white);
+
+  border-left: 1px solid var(--color-gray-100);
+  border-top: 1px solid var(--color-gray-100);
+
+  transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* Open state */
+
+.nav-dropdown:hover .services-dropdown,
+.nav-dropdown.open .services-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* =========================================================
+   DROPDOWN HEADER
+   ========================================================= */
+
+.services-dropdown-header {
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid var(--color-gray-100);
+
+  margin-bottom: 18px;
+}
+
+
+.services-dropdown-header .eyebrow {
+  margin-bottom: 5px;
+}
+
+
+.services-dropdown-header h3 {
+  margin: 0 0 5px;
+
+  font-size: 1.25rem;
+
+  color: var(--color-navy);
+}
+
+
+.services-dropdown-header p {
+  margin: 0;
+
+  font-size: 0.88rem;
+
+  color: var(--color-gray-700);
+}
+
+
+/* =========================================================
+   DROPDOWN SERVICE GRID
+   ========================================================= */
+
+.services-dropdown-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+.service-dropdown-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  color: var(--color-text);
+
+  border: 1px solid transparent;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+
+.service-dropdown-item:hover {
+  background: #F0FDF4;
+
+  border-color: #D1FAE5;
+
+  color: var(--color-navy);
+
+  transform: translateY(-2px);
+}
+
+
+/* Icon */
+
+.service-dropdown-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #ECFDF5;
+
+  color: var(--color-green-mid);
+
+  font-size: 0.9rem;
+
+  font-weight: 800;
+}
+
+
+/* Text */
+
+.service-dropdown-item strong {
+  display: block;
+
+  color: var(--color-navy);
+
+  font-size: 0.92rem;
+
+  margin-bottom: 3px;
+}
+
+
+.service-dropdown-item small {
+  display: block;
+
+  color: var(--color-gray-700);
+
+  font-size: 0.76rem;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   DROPDOWN FOOTER
+   ========================================================= */
+
+.services-dropdown-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 18px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid var(--color-gray-100);
+}
+
+
+.services-dropdown-footer span {
+  color: var(--color-gray-700);
+
+  font-size: 0.8rem;
+}
+
+
+.services-dropdown-footer a {
+  color: var(--color-green-mid);
+
+  font-size: 0.82rem;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+.services-dropdown-footer a:hover {
+  color: var(--color-green-accent);
+}
+
+
+/* =========================================================
+   NAVBAR SPACING
+   ========================================================= */
+
+.nav-menu {
+  gap: 1.35rem;
+}
+
+
+.nav-link {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOBILE DROPDOWN
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown-toggle {
+    width: 100%;
+
+    justify-content: space-between;
+
+    padding: 15px 0;
+
+    color: var(--color-white) !important;
+  }
+
+
+  .services-dropdown {
+    position: static;
+
+    width: 100%;
+
+    transform: none !important;
+
+    box-shadow: none;
+
+    border: none;
+
+    border-radius: 0;
+
+    padding: 0;
+
+    background: transparent;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    display: none;
+  }
+
+
+  .nav-dropdown.open .services-dropdown {
+    display: block;
+  }
+
+
+  .services-dropdown::before {
+    display: none;
+  }
+
+
+  .services-dropdown-header {
+    padding: 15px 10px;
+
+    margin: 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+
+  .services-dropdown-header .eyebrow {
+    color: var(--color-green-accent);
+  }
+
+
+  .services-dropdown-header h3 {
+    color: var(--color-white);
+
+    font-size: 1rem;
+  }
+
+
+  .services-dropdown-header p {
+    color: rgba(255,255,255,0.7);
+
+    font-size: 0.8rem;
+  }
+
+
+  .services-dropdown-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .service-dropdown-item {
+    border-radius: 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    padding: 12px 10px;
+  }
+
+
+  .service-dropdown-item strong {
+    color: var(--color-white);
+  }
+
+
+  .service-dropdown-item small {
+    color: rgba(255,255,255,0.65);
+  }
+
+
+  .service-dropdown-item:hover {
+    background: rgba(127,227,39,0.08);
+
+    border-color: transparent;
+
+    transform: none;
+  }
+
+
+  .service-dropdown-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 16px 10px;
+  }
+
+
+  .services-dropdown-footer span {
+    color: rgba(255,255,255,0.65);
+  }
+
+}
