@@ -1,6 +1,31 @@
 {
   "news": [
     {
+      "title": "Export consignments with FOB value up to ₹3 lakh are exempt from the RCMC / Certificate of Registration required",
+      "category": "dgft",
+      "categoryLabel": "DGFT & FTP",
+      "date": "2026-10-06",
+      "summary": "FOB value from Rs. 1,00,000 increased to 3,00,000 for RCMC exemption",
+      "source": "DGFT",
+      "sourceUrl": "https://content.dgft.gov.in/Website/dgftprod/69933014-5a6c-4729-a54e-b13ada824508/Eng%20Notification%2036.pdf",
+      "image": "https://content.dgft.gov.in/NCSTC/ncstc-sliderlogo/dgft-logo.jpg",
+      "content": [
+        "S.O. (E): In exercise of powers conferred by Section 5 of Foreign Trade (Development &\nRegulation) Act, 1992, read with paragraph 1.02 of the Foreign Trade Policy, 2023, as\namended from time to time, the Central Government hereby makes the following amendment\nto the Foreign Trade Policy, 2023, with immediate effect:\nIn the Foreign Trade Policy, 2023, in paragraph 2.57, after sub-paragraph (b), the following\nsub-paragraph shall be inserted, namely:-\n(c) Notwithstanding anything contained in sub-paragraphs (a) and (b) above, the requirement\nof a Registration-cum-Membership Certificate or a Certificate of Registration shall not apply to\nan export consignment where the Free-on-Board(FOB) value of the consignment does not\nexceed₹3,00,000.\nEffect of the Notification: With an objective to promote small value exports, especially\nExports through Postal, Courier and other emerging channels, this notification exempts export\nconsignments with an FOB value not exceeding 3,00,000 from the requirement of obtaining\nRCMC or Certificate of Registration. Export consignments with an FOB value exceeding\n3,00,000 shall continue to require a valid RCMC or Certificate of Registration wherever such\nrequirement is otherwise applicable under the Foreign Trade Policy, 2023.\na\nThis is issued with the approval of Minister of Commerce & Industry."
+      ],
+      "takeaways": [
+        "Boost export",
+        "Boost agriculture export"
+      ],
+      "id": "3c5264f0-410e-4f23-8808-803c771c032a",
+      "slug": "export-consignments-with-fob-value-up-to-3-lakh-are-exempt-from-the-rcmc-certificate-of-re",
+      "type": "news",
+      "published": true,
+      "updatedAt": "2026-10-06T16:42:17.480Z",
+      "category_key": "dgft",
+      "category_label": "DGFT & FTP",
+      "source_url": "https://content.dgft.gov.in/Website/dgftprod/69933014-5a6c-4729-a54e-b13ada824508/Eng%20Notification%2036.pdf"
+    },
+    {
       "title": "India's April–August exports reach an estimated US$399.27 billion",
       "category": "international",
       "categoryLabel": "International Trade",
