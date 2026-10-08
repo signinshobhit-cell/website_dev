@@ -1,7 +1,32 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-10-06",
+  "lastUpdated": "2026-10-09",
   "items": [
+    {
+      "title": "DGFT extends RoDTEP support through 31 December 2026",
+      "category": "incentives",
+      "categoryLabel": "Export Incentives",
+      "date": "2026-10-09",
+      "summary": "DGFT Notification 41/2026–27, dated 30 September 2026, continues RoDTEP through 31 December 2026 for eligible exports by DTA units, Advance Authorisation holders, SEZ units and EOUs. Existing rates and value caps remain unchanged.",
+      "source": "DGFT — Notification 41/2026–27, 30 September 2026",
+      "sourceUrl": "https://content.dgft.gov.in/Website/dgftprod/be0b7ef2-e1e3-48a1-adc8-529ba4de48c5/RODTEP%20NOTIFICATION.pdf",
+      "image": "",
+      "content": [
+        "DGFT has extended the Remission of Duties and Taxes on Exported Products (RoDTEP) Scheme until 31 December 2026 under Notification 41/2026–27, issued on 30 September 2026.",
+        "The extension covers eligible exports from Domestic Tariff Area (DTA) units, Advance Authorisation (AA) holders, Special Economic Zone (SEZ) units and Export Oriented Units (EOUs).",
+        "Rates and value caps under Appendices 4R and 4RE applicable on 30 September 2026 continue during this period. Other scheme terms and conditions also remain unchanged."
+      ],
+      "takeaways": [
+        "RoDTEP continues through 31 December 2026.",
+        "Eligible DTA, AA, SEZ and EOU exports are covered.",
+        "Existing rates, value caps and other conditions continue."
+      ],
+      "id": "77942d28-868f-4e12-b665-f990798aac57",
+      "slug": "dgft-extends-rodtep-support-through-31-december-2026",
+      "type": "news",
+      "published": true,
+      "updatedAt": "2026-10-08T18:36:04.280Z"
+    },
     {
       "title": "Export consignments with FOB value up to ₹3 lakh are exempt from the RCMC / Certificate of Registration required",
       "category": "dgft",
