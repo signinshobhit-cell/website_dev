@@ -25,10 +25,31 @@ test('sync pushes only published content and images, supports retry, and blocks 
   fs.writeFileSync(path.join(root, 'unrelated.txt'), 'unrelated');
   git(root, 'add', 'data/news.json'); // Retry a previously staged news commit.
   assert.equal(status(root).ready, true); sync(root);
+  if (process.platform === 'win32') {
+    const previousPath = process.env.PATH;
+    try {
+      process.env.PATH = '';
+      assert.equal(status(root).ready, true, 'Finds installed Git when the launcher has no Git on PATH');
+      sync(root);
+    } finally { process.env.PATH = previousPath; }
+  }
   const tree = git(base, '--git-dir', remote, 'ls-tree', '-r', '--name-only', 'main').split('\n');
   assert.deepEqual(tree, ['.gitignore', 'data/news.json', 'news-images/public.png', 'news.json']);
   sync(root); // A no-change retry is safe.
   git(root, 'add', 'unrelated.txt'); assert.throws(() => sync(root), /Other changes/);
   git(root, 'reset', 'unrelated.txt'); git(root, 'checkout', '-b', 'feature/test');
   assert.equal(status(root).ready, false); assert.throws(() => sync(root), /One-time setup/);
+});
+
+test('Git setup errors explain the actual failure', () => {
+  const previous = process.env.GIT_EXECUTABLE;
+  try {
+    process.env.GIT_EXECUTABLE = path.join(os.tmpdir(), 'missing-newsroom-git.exe');
+    const result = status(os.tmpdir());
+    assert.equal(result.ready, false);
+    assert.match(result.message, /ENOENT/);
+  } finally {
+    if (previous === undefined) delete process.env.GIT_EXECUTABLE;
+    else process.env.GIT_EXECUTABLE = previous;
+  }
 });

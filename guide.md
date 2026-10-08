@@ -52,6 +52,8 @@ Do not edit `data/news.json` or `news.json` by hand after initializing the newsr
 
 ## One-time GitHub setup
 
+The newsroom finds Git on PATH, in standard Git for Windows installation folders, or in the bundled Codex runtime. For another installation, set `GIT_EXECUTABLE` to the full path of `git.exe` before launching. Restart the newsroom after changing its installation or environment.
+
 The approved implementation has been merged into local `main`. Live sync is disabled whenever you use a development branch.
 
 1. Push the approved `main` branch to the existing GitHub repository. The implementation includes `.github/workflows/pages.yml` and the scripts/tests it uses.

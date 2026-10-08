@@ -1,0 +1,15 @@
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+function setup(fail=false) {
+  const rows=[];
+  const sheet={getLastRow:()=>rows.length,appendRow:r=>{if(fail && rows.length) throw Error('write failed');rows.push(r);},setFrozenRows:()=>{},getRange:(start,col,count)=>({setBackground(){return this;},setFontColor(){return this;},setFontWeight(){return this;},getValues:()=>rows.slice(start-1,start-1+count),createTextFinder:id=>({matchEntireCell(){return this;},findNext:()=>rows.slice(1).some(r=>r[0]===id)})})};
+  const context=vm.createContext({Date,console,HtmlService:{createHtmlOutput:s=>s},LockService:{getScriptLock:()=>({tryLock:()=>true,releaseLock(){}})},SpreadsheetApp:{openById:()=>({getSheetByName:()=>sheet,insertSheet:()=>sheet}),flush(){}}});
+  vm.runInContext(fs.readFileSync(path.join(__dirname,'../integrations/cargo-sheets/Code.gs'),'utf8'),context);
+  return {context,rows};
+}
+function sample(extra={}) { return {requestId:'12345678-1234-4123-8123-123456789012',startedAt:Date.now()-10000,consent:'yes',mode:'air',service:'port-port',origin:'Delhi',destination:'Dubai',readyDate:'2026-10-10',incoterm:'unsure',commodity:'Garments',packaging:'Cartons',handling:'general',contactName:'Test Client',email:'test@example.com',phone:'+919999999999',packages:[{pieces:2,weight:10,length:100,width:50,height:40}],...extra}; }
+test('air and LCL totals are computed from package groups',()=>{const {context}=setup();for(const extra of [{},{mode:'sea',seaLoad:'lcl'}]) {const r=context.cargoValidate(sample(extra));assert.equal(r[18],2);assert.equal(r[19],20);assert.equal(r[20],0.4);}});
+test('FCL accepts container details without package dimensions',()=>{const {context}=setup();const r=context.cargoValidate(sample({mode:'sea',seaLoad:'fcl',containerType:'40ft high cube',containers:2,fclWeight:15000,packages:[]}));assert.equal(r[17],2);assert.equal(r[19],15000);assert.equal(r[20],'');});
+test('invalid dimensions, consent, email and missing door addresses fail',()=>{const {context}=setup();for(const extra of [{packages:[{pieces:1,weight:-2,length:1,width:1,height:1}]},{consent:''},{email:'invalid'},{service:'door-door'},{website:'spam'},{readyDate:'2026-02-31'}]) assert.throws(()=>context.cargoValidate(sample(extra)));});
+test('spreadsheet formula input is neutralized',()=>{const {context}=setup();for(const value of ['=IMPORTXML("x")',' +123','@evil','-2']) assert.equal(context.cargoSafe(value),"'"+value);assert.equal(context.cargoSafe('Garments'),'Garments');});
+test('successful writes return a receipt and retries do not duplicate',()=>{const {context,rows}=setup();const e={parameter:{payload:JSON.stringify(sample())}};assert.match(context.doPost(e),/Your quote request is saved/);assert.match(context.doPost(e),/already saved/);assert.equal(rows.length,2);assert.equal(rows[1][28],'New');});
+test('failed write never reports success',()=>{const {context}=setup(true);assert.match(context.doPost({parameter:{payload:JSON.stringify(sample())}}),/not confirmed/);});

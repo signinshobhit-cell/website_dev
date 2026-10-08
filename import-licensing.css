@@ -1,0 +1,40 @@
+.import-catalog { background: var(--color-off-white); }
+.import-catalog-header { max-width: 760px; margin-bottom: 2rem; }
+.import-catalog-header h2 { color: var(--color-navy); margin: .5rem 0 1rem; }
+.import-catalog-header p { color: var(--color-gray-700); line-height: 1.7; }
+.import-catalog-nav { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0 2.5rem; }
+.import-catalog-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: .65rem 1rem; background: var(--color-white); border: 1px solid var(--color-gray-100); border-radius: var(--radius-btn); color: var(--color-navy); font-size: .875rem; font-weight: 600; text-decoration: none; }
+.import-catalog-nav a:hover { border-color: var(--color-navy); }
+.import-group { margin-top: 2.5rem; scroll-margin-top: 120px; }
+.import-group-header { display: flex; align-items: baseline; gap: 1rem; border-bottom: 1px solid var(--color-gray-100); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.import-group-header span { color: var(--color-green-mid); font-size: .875rem; font-weight: 700; }
+.import-group-header h3 { color: var(--color-navy); font-size: 1.5rem; margin: 0; }
+.import-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; list-style: none; padding: 0; margin: 0; }
+.import-service { display: flex; flex-direction: column; background: var(--color-white); padding: 1.5rem; border: 1px solid var(--color-gray-100); border-radius: var(--radius-card); min-width: 0; }
+.import-service h4 { font-size: 1.1rem; color: var(--color-navy); line-height: 1.45; margin: 0 0 .75rem; }
+.import-service p { font-size: .95rem; line-height: 1.65; color: var(--color-gray-700); margin: 0 0 1.25rem; }
+.import-service a { margin-top: auto; color: var(--color-navy); font-size: .875rem; font-weight: 700; text-decoration: none; min-height: 44px; display: flex; align-items: center; }
+.import-service a:hover { text-decoration: underline; }
+.import-catalog-note { border-left: 3px solid var(--color-navy); padding: 1rem 1.25rem; margin-top: 2rem; background: var(--color-white); color: var(--color-gray-700); line-height: 1.7; }
+.import-catalog :focus-visible { outline: 3px solid var(--color-green-mid); outline-offset: 3px; }
+.import-catalog { padding-top: 2.5rem; padding-bottom: 2.5rem; scroll-margin-top: 100px; }
+.import-catalog-header { margin-bottom: 1rem; }
+.import-catalog-header p { margin-bottom: 0; }
+.import-catalog-nav { margin: 1rem 0 1.5rem; gap: .5rem; }
+.import-catalog-nav a { font-size: .8rem; padding: .5rem .75rem; }
+.import-group { margin-top: 1.5rem; }
+.import-group-header { margin-bottom: .75rem; padding-bottom: .75rem; }
+.import-group-header h3 { font-size: 1.15rem; }
+.import-service-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
+.import-service { padding: 1rem; border-radius: 6px; }
+.import-service h4 { font-size: .95rem; line-height: 1.4; margin-bottom: .5rem; }
+.import-service p { font-size: .85rem; line-height: 1.5; margin-bottom: .5rem; }
+.import-service a { font-size: .8rem; }
+.page-hero .licensing-switch { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; padding: 0; }
+.page-hero .licensing-switch a { min-height: 48px; display: inline-flex; align-items: center; padding: .75rem 1.25rem; background: var(--color-white); color: var(--color-navy); border: 2px solid var(--color-white); border-radius: var(--radius-btn); font-weight: 700; text-decoration: none; }
+.page-hero .licensing-switch a:last-child { background: var(--color-green-accent); border-color: var(--color-green-accent); }
+.page-hero .licensing-switch a:hover { background: var(--color-off-white); border-color: var(--color-green-accent); }
+.page-hero .licensing-switch a:focus-visible { outline: 3px solid var(--color-white); outline-offset: 4px; }
+.licensing-extras { padding: 1.5rem; color: var(--color-navy); background: var(--color-white); text-align: center; line-height: 1.7; }
+@media (max-width: 1024px) { .import-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .import-service-grid { grid-template-columns: minmax(0, 1fr); } .import-group-header { align-items: flex-start; } .import-service { padding: 1.25rem; } .import-catalog-nav { gap: .5rem; } }

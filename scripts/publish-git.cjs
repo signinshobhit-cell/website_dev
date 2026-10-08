@@ -1,12 +1,26 @@
 const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
-const run = (root, args) => execFileSync('git', args, { cwd: root, encoding: 'utf8', timeout: 60000, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+const os = require('node:os');
+function gitExecutable() {
+  if (process.env.GIT_EXECUTABLE) return process.env.GIT_EXECUTABLE;
+  try { execFileSync('git', ['--version'], { windowsHide: true, stdio: 'ignore' }); return 'git'; } catch {}
+  if (process.platform === 'win32') {
+    const candidates = [
+      path.join(process.env.ProgramFiles || 'C:\\Program Files', 'Git', 'cmd', 'git.exe'),
+      path.join(process.env.LOCALAPPDATA || path.join(os.homedir(), 'AppData', 'Local'), 'Programs', 'Git', 'cmd', 'git.exe'),
+      path.join(os.homedir(), '.cache', 'codex-runtimes', 'codex-primary-runtime', 'dependencies', 'native', 'git', 'cmd', 'git.exe')
+    ];
+    for (const candidate of candidates) if (fs.existsSync(candidate)) return candidate;
+  }
+  throw new Error('Git was not found. Install Git for Windows, restart the newsroom, or set GIT_EXECUTABLE to your git.exe path.');
+}
+const run = (root, args) => execFileSync(gitExecutable(), args, { cwd: root, encoding: 'utf8', timeout: 60000, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] }).trim();
 function status(root) {
   try {
     const branch = run(root, ['branch', '--show-current']);
     return { branch, ready: branch === 'main', message: branch === 'main' ? 'Ready to sync published news to GitHub.' : `One-time setup: merge ${branch} into main before syncing the live website.` };
-  } catch { return { ready: false, message: 'Git is unavailable. Use the publishing instructions in guide.md.' }; }
+  } catch (error) { return { ready: false, message: error.stderr?.toString().trim() || error.message }; }
 }
 function sync(root) {
   const info = status(root); if (!info.ready) throw new Error(info.message);
