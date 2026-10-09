@@ -63,7 +63,7 @@
         items = NewsCore.normalize(await response.json()).slice(0, 6);
         track.innerHTML = items.length ? items.map(item => {
           const image = safeUrl(item.image);
-          return `<article class="home-news-card" data-slug="${esc(item.slug)}">${image ? `<img src="${esc(image)}" alt="" loading="lazy">` : ''}<div class="home-news-meta"><span class="home-news-category">${esc(item.categoryLabel || 'Trade Update')}</span><span>${formatDate(item.date)}</span><span class="home-news-new" ${NewsCore.isRecent(item.date) ? '' : 'hidden'}>New</span></div><h3>${esc(item.title)}</h3><p>${esc(brief(item.summary, 40))}</p><a class="home-news-link" href="trade-article.html?slug=${encodeURIComponent(item.slug)}" aria-haspopup="dialog" aria-label="Read update: ${esc(item.title)}">Read update <span aria-hidden="true">→</span></a></article>`;
+          return `<article class="home-news-card" data-slug="${esc(item.slug)}">${image ? `<img src="${esc(image)}" alt="" loading="lazy">` : ''}<div class="home-news-meta"><span class="home-news-category">${esc(item.categoryLabel || 'Trade Update')}</span><span>${formatDate(item.date)}</span><span class="home-news-new" ${NewsCore.isRecent(item.date) ? '' : 'hidden'}>New</span></div><h3>${esc(item.title)}</h3><p>${esc(brief(item.summary, 40))}</p><a class="home-news-link" href="${esc(item.url || ("trade-article.html?slug=" + encodeURIComponent(item.slug)))}" aria-haspopup="dialog" aria-label="Read update: ${esc(item.title)}">Read update <span aria-hidden="true">→</span></a></article>`;
         }).join('') : '<p class="home-news-state">No news has been published yet. Check back soon.</p>';
         controls.hidden = !items.length; updatePosition(); playbackLabel();
       } catch (error) {

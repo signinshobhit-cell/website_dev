@@ -1,66 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Main Landing Page -->
-  <url>
-    <loc>https://flexlyf.com/</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <!-- Service Segments -->
-  <url>
-    <loc>https://flexlyf.com/certification-services</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <url>
-    <loc>https://flexlyf.com/licensing-support</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <url>
-    <loc>https://flexlyf.com/product-testing</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <url>
-    <loc>https://flexlyf.com/inspection-services</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <url>
-    <loc>https://flexlyf.com/trade-insurance</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <url>
-    <loc>https://flexlyf.com/logistics-customs</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <!-- News / Insights Portal -->
-  <url>
-    <loc>https://flexlyf.com/news-logs-desk</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <!-- Essential Utility Pages -->
-  <url>
-    <loc>https://flexlyf.com/about-us</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-  <url>
-    <loc>https://flexlyf.com/contact</loc>
-    <lastmod>2026-07-16</lastmod>
-  </url>
-
-<url><loc>https://flexlyf.com/logistics.html</loc></url>
-<url><loc>https://flexlyf.com/trade-finance.html</loc></url>
-<url><loc>https://flexlyf.com/trade-agreements.html</loc></url>
-<url><loc>https://flexlyf.com/export-benefits.html</loc><lastmod>2026-10-09</lastmod></url>
-<url><loc>https://flexlyf.com/import-monitoring.html</loc><lastmod>2026-10-09</lastmod></url>
-<url><loc>https://flexlyf.com/epr-registration.html</loc><lastmod>2026-10-09</lastmod></url>
-<url><loc>https://flexlyf.com/rcmc-registration.html</loc><lastmod>2026-10-09</lastmod></url>
-<url><loc>https://flexlyf.com/ecommerce-export.html</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://flexlyf.com/</loc></url>
+  <url><loc>https://flexlyf.com/about.html</loc></url>
+  <url><loc>https://flexlyf.com/certification.html</loc></url>
+  <url><loc>https://flexlyf.com/contact.html</loc></url>
+  <url><loc>https://flexlyf.com/ecommerce-export.html</loc></url>
+  <url><loc>https://flexlyf.com/epr-registration.html</loc></url>
+  <url><loc>https://flexlyf.com/export-benefits.html</loc></url>
+  <url><loc>https://flexlyf.com/import-monitoring.html</loc></url>
+  <url><loc>https://flexlyf.com/insurance.html</loc></url>
+  <url><loc>https://flexlyf.com/licensing.html</loc></url>
+  <url><loc>https://flexlyf.com/logistics.html</loc></url>
+  <url><loc>https://flexlyf.com/privacy.html</loc></url>
+  <url><loc>https://flexlyf.com/rcmc-registration.html</loc></url>
+  <url><loc>https://flexlyf.com/rodtep-exchange.html</loc></url>
+  <url><loc>https://flexlyf.com/terms.html</loc></url>
+  <url><loc>https://flexlyf.com/testing.html</loc></url>
+  <url><loc>https://flexlyf.com/trade-agreements.html</loc></url>
+  <url><loc>https://flexlyf.com/trade-finance.html</loc></url>
+  <url><loc>https://flexlyf.com/trade-intelligence.html</loc></url>
 </urlset>

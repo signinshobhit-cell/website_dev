@@ -40,7 +40,7 @@
             ${image ? `<img class="trade-news-card-image" src="${esc(image)}" alt="" loading="lazy">` : ''}
             <div class="trade-news-card-top"><span class="trade-news-category">${esc(item.categoryLabel || 'Trade Update')}</span><span class="trade-news-date">${formatDate(item.date)}</span></div>
             <div class="trade-news-card-body"><h3>${esc(item.title)}</h3><p>${esc(brief(item.summary, 45))}</p><div class="trade-news-source">${esc(item.source || 'Flexlyf Trade Desk')}</div>
-            <a href="trade-article.html?slug=${encodeURIComponent(item.slug)}" class="trade-news-link" aria-haspopup="dialog" aria-label="Read update: ${esc(item.title)}">Read update <span aria-hidden="true">→</span></a></div></article>`;
+            <a href="${esc(item.url || ("trade-article.html?slug=" + encodeURIComponent(item.slug)))}" class="trade-news-link" aria-haspopup="dialog" aria-label="Read update: ${esc(item.title)}">Read update <span aria-hidden="true">→</span></a></div></article>`;
         }).join('');
       }
       pager.hidden = !result.total;
