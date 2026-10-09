@@ -1894,3 +1894,6 @@ footer.footer h4 {
   }
 
 }
+
+/* Keep the expanded primary navigation comfortable on desktop. */
+@media (min-width:1025px){.navbar-container{gap:1rem}.nav-menu{gap:1rem}.nav-menu .nav-link{font-size:.875rem}.nav-phone{font-size:.95rem;padding:.75rem}.logo-wrapper{flex-shrink:0}}
