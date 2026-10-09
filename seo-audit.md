@@ -14,6 +14,7 @@ Reviewed 9 October 2026. Scope: public HTML pages, navigation/footer links, inte
 - Generated public news as static HTML under `updates/`, with individual titles, descriptions, canonical URLs and NewsArticle structured data. Search engines and readers can access the full text without JavaScript. Public news links use these URLs; existing query-string article links continue to work.
 - Added plain article links for the news archive when JavaScript is unavailable. The old generic article loader is marked noindex; its canonical is set to the specific static article when loaded.
 - Added a regression check for public internal links, local assets, anchor targets, page headings, canonical tags, descriptions, sitemap targets and published article markup. The complete suite has 33 tests.
+- Live verification exposed a deployment conflict: Pages was configured for the legacy branch build while the repository also deployed a custom public build. Switched Pages to GitHub Actions and dispatched the existing workflow so only the intended public build is served, including generated article pages and the sitemap.
 
 ## External links needing manual verification
 
