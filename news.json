@@ -1,6 +1,37 @@
 {
   "news": [
     {
+      "title": "Credit assistance for e-commerce exporters: eligibility and how to apply",
+      "category": "incentives",
+      "categoryLabel": "Export Incentives",
+      "date": "2026-10-09",
+      "summary": "Eligible MSME e-commerce exporters can seek working-capital credit up to ₹50 lakh for direct exports or ₹5 crore for overseas inventory. The scheme provides interest support and a lender guarantee, subject to bank approval and notified conditions.",
+      "source": "DGFT — Trade Notice 31/2025–26, dated 6 March 2026",
+      "sourceUrl": "https://content.dgft.gov.in/Website/dgftprod/fbd98f43-b261-42a5-a312-b15759c6ff0a/Guidelines-Credit%20Assistance%20for%20E-Commerce%20Exporters.pdf",
+      "image": "",
+      "content": [
+        "Credit Assistance for E-Commerce Exporters under the Export Promotion Mission — NIRYAT PROTSAHAN supports working capital to procure or manufacture goods for e-commerce exports. This is repayable bank finance with interest support and a guarantee for the lender. It is not a cash grant or loan waiver. DGFT launched the scheme on 6 March 2026.",
+        "The notified limits are up to ₹50 lakh for direct e-commerce exports, with guarantee cover up to 90%, and up to ₹5 crore for overseas warehouse inventory, with cover up to 75%. Financing periods can run up to 365 days. The March guidelines specify 2.75% interest subvention, capped at ₹15 lakh per MSME per financial year. Parameters are periodically reviewable: confirm applicable rates, terms and charges with your participating lender.",
+        "Applicants need an active IEC, valid Udyam registration and a satisfactory eligible credit record. The guidelines include a route for new e-commerce exporters with at least one year of regular domestic e-commerce operations, and routes for established exporters with at least six months of postal/courier exports or eligible inventory in overseas warehouses or an E-Commerce Export Hub. The bank checks the applicable route and supporting evidence.",
+        "How to apply: first submit an Intent on the DGFT portal with your business, products and preferred eligible lender. Obtain the Unique Identification Number (UIN), then approach a participating lender for the credit facility. The lender assesses your application and manages the guarantee and interest-support arrangements. Finance is subject to its credit approval.",
+        "Prepare IEC, Udyam, PAN, business details, financial statements, CA-certified revenue/export turnover information, sales and shipping records, product descriptions and HS codes, target markets, the requested loan amount and bank details. The guidelines request three financial years of turnover information; newer firms should confirm the documents accepted by the bank.",
+        "Need help preparing your application? Contact Flexlyf’s Trade Desk to discuss eligibility, documentation and lender coordination. Consult the linked official guidelines before applying. This explainer does not guarantee finance or scheme approval."
+      ],
+      "takeaways": [
+        "Credit limits: ₹50 lakh for direct exports; ₹5 crore for overseas inventory.",
+        "March guidelines specify 2.75% interest support; confirm current terms with your bank.",
+        "Submit DGFT Intent, obtain a UIN, then apply to a participating lender."
+      ],
+      "id": "de04ecb8-0e8d-4008-bd9f-9aee2352be76",
+      "slug": "credit-assistance-for-e-commerce-exporters-eligibility-and-how-to-apply",
+      "type": "news",
+      "published": true,
+      "updatedAt": "2026-10-09T16:04:20.689Z",
+      "category_key": "incentives",
+      "category_label": "Export Incentives",
+      "source_url": "https://content.dgft.gov.in/Website/dgftprod/fbd98f43-b261-42a5-a312-b15759c6ff0a/Guidelines-Credit%20Assistance%20for%20E-Commerce%20Exporters.pdf"
+    },
+    {
       "title": "DGFT extends RoDTEP support through 31 December 2026",
       "category": "incentives",
       "categoryLabel": "Export Incentives",
