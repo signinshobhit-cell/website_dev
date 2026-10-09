@@ -956,7 +956,7 @@ footer.footer h4 {
    ========================================================================== */
 
 /* Tablets and Landscapes (Small Laptops) */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   h1 { font-size: 2.75rem; }
   h2 { font-size: 2rem; }
   
@@ -1763,7 +1763,7 @@ footer.footer h4 {
    MOBILE DROPDOWN
    ========================================================= */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
   .nav-dropdown {
     width: 100%;
@@ -1896,6 +1896,8 @@ footer.footer h4 {
 }
 
 /* Keep the expanded primary navigation comfortable on desktop. */
-@media (min-width:1025px){.navbar-container{gap:1rem}.nav-menu{gap:1rem}.nav-menu .nav-link{font-size:.875rem}.nav-phone{font-size:.95rem;padding:.75rem}.logo-wrapper{flex-shrink:0}}
+@media (min-width:1201px){.navbar-container{gap:1rem}.nav-menu{gap:1rem}.nav-menu .nav-link{font-size:.875rem}.nav-phone{font-size:.95rem;padding:.75rem}.logo-wrapper{flex-shrink:0}}
 
 .footer-policy-links{font-size:.8rem;line-height:1.8}.footer-policy-links a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+.nav-phone{white-space:nowrap;flex-shrink:0}
