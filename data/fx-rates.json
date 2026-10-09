@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-08",
+  "source": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+  "rates": {
+    "EUR": {
+      "inr": 108.2635,
+      "basis": "ECB cross-rate"
+    },
+    "USD": {
+      "inr": 96.78482031110316,
+      "basis": "ECB cross-rate"
+    },
+    "JPY": {
+      "inr": 0.6114854560858514,
+      "basis": "ECB cross-rate"
+    },
+    "CZK": {
+      "inr": 4.436483219276319,
+      "basis": "ECB cross-rate"
+    },
+    "DKK": {
+      "inr": 14.485543023053557,
+      "basis": "ECB cross-rate"
+    },
+    "GBP": {
+      "inr": 127.82297102647051,
+      "basis": "ECB cross-rate"
+    },
+    "HUF": {
+      "inr": 0.2956,
+      "basis": "ECB cross-rate"
+    },
+    "PLN": {
+      "inr": 24.744246108838247,
+      "basis": "ECB cross-rate"
+    },
+    "RON": {
+      "inr": 20.261163304263203,
+      "basis": "ECB cross-rate"
+    },
+    "SEK": {
+      "inr": 9.671565124173663,
+      "basis": "ECB cross-rate"
+    },
+    "CHF": {
+      "inr": 116.08781900064336,
+      "basis": "ECB cross-rate"
+    },
+    "ISK": {
+      "inr": 0.7902445255474452,
+      "basis": "ECB cross-rate"
+    },
+    "NOK": {
+      "inr": 10.102034151348324,
+      "basis": "ECB cross-rate"
+    },
+    "TRY": {
+      "inr": 1.9665572555551718,
+      "basis": "ECB cross-rate"
+    },
+    "AUD": {
+      "inr": 67.20266914959652,
+      "basis": "ECB cross-rate"
+    },
+    "BRL": {
+      "inr": 19.292116611425925,
+      "basis": "ECB cross-rate"
+    },
+    "CAD": {
+      "inr": 67.86403811195386,
+      "basis": "ECB cross-rate"
+    },
+    "CNY": {
+      "inr": 14.440524462465985,
+      "basis": "ECB cross-rate"
+    },
+    "HKD": {
+      "inr": 12.333082715332125,
+      "basis": "ECB cross-rate"
+    },
+    "IDR": {
+      "inr": 0.005400939172305142,
+      "basis": "ECB cross-rate"
+    },
+    "ILS": {
+      "inr": 31.450919443395403,
+      "basis": "ECB cross-rate"
+    },
+    "KRW": {
+      "inr": 0.0720416691620253,
+      "basis": "ECB cross-rate"
+    },
+    "MXN": {
+      "inr": 5.373251739574958,
+      "basis": "ECB cross-rate"
+    },
+    "MYR": {
+      "inr": 23.65484618073763,
+      "basis": "ECB cross-rate"
+    },
+    "NZD": {
+      "inr": 54.0938842810033,
+      "basis": "ECB cross-rate"
+    },
+    "PHP": {
+      "inr": 1.5361972330613693,
+      "basis": "ECB cross-rate"
+    },
+    "SGD": {
+      "inr": 75.49755927475593,
+      "basis": "ECB cross-rate"
+    },
+    "THB": {
+      "inr": 2.873235138004246,
+      "basis": "ECB cross-rate"
+    },
+    "ZAR": {
+      "inr": 5.812742950411271,
+      "basis": "ECB cross-rate"
+    },
+    "AED": {
+      "inr": 26.353933372662535,
+      "basis": "USD peg estimate"
+    },
+    "SAR": {
+      "inr": 25.809285416294177,
+      "basis": "USD peg estimate"
+    }
+  }
+}

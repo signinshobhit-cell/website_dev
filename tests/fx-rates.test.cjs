@@ -1,0 +1,5 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {parseRates}=require('../scripts/update-fx.cjs');
+const currencies=['INR','USD','JPY','GBP','CNY','CAD','AUD','CHF','SGD','HKD','NZD','SEK','NOK','DKK','PLN','CZK','HUF','RON','ZAR','BRL','MXN'];
+test('ECB INR cross rates and USD peg estimates use the correct direction',()=>{const xml="<Cube time='2026-10-08'>"+currencies.map(code=>`<Cube currency='${code}' rate='${code==='INR'?100:code==='USD'?2:4}'/>`).join('')+'</Cube>';const result=parseRates(xml);assert.equal(result.rates.USD.inr,50);assert.equal(result.rates.EUR.inr,100);assert.equal(result.rates.JPY.inr,25);assert.equal(result.rates.AED.inr,50/3.6725);assert.equal(result.rates.SAR.inr,50/3.75);assert.equal(result.rates.SAR.basis,'USD peg estimate');});
+test('invalid or partial feeds cannot replace reference data',()=>{for(const xml of ['<html>Error</html>',"<Cube time='2026-10-08'><Cube currency='USD' rate='0'/></Cube>"])assert.throws(()=>parseRates(xml));});

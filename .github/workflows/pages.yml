@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '30 16,20 * * 1-5'
 permissions:
   contents: read
   pages: write
@@ -16,6 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/configure-pages@v5
+      - name: Refresh official currency references
+        run: node scripts/update-fx.cjs
       - name: Test newsroom and build public site
         run: |
           node --test tests/*.test.cjs

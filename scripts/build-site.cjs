@@ -26,6 +26,7 @@ function build(root, destination = path.join(root, 'dist')) {
   const publicNews = JSON.parse(fs.readFileSync(path.join(root, 'data/news.json'), 'utf8'));
   if (!Array.isArray(publicNews.items) || publicNews.items.some(item => item.published !== true)) throw new Error('Public news must contain only published items.');
   copy('data/news.json');
+  if (fs.existsSync(path.join(root, 'data/fx-rates.json'))) copy('data/fx-rates.json');
   for (const image of new Set(publicNews.items.map(item => item.image).filter(image => /^news-images\/[a-zA-Z0-9_.-]+\.(png|jpe?g|webp|gif)$/i.test(image)))) copy(image);
   fs.writeFileSync(path.join(destination, '.nojekyll'), '');
   return destination;
