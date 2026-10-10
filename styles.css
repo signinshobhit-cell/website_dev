@@ -1507,11 +1507,11 @@ footer.footer h4 {
   position: absolute;
 
   top: calc(100% + 18px);
-  left: 50%;
+  left: 0;
 
-  width: 720px;
+  width: min(720px, calc(100vw - 32px));
 
-  transform: translateX(-50%) translateY(8px);
+  transform: translateY(8px);
 
   background: var(--color-white);
 
@@ -1544,7 +1544,7 @@ footer.footer h4 {
   position: absolute;
 
   top: -7px;
-  left: 50%;
+  left: 32px;
 
   width: 14px;
   height: 14px;
@@ -1566,7 +1566,7 @@ footer.footer h4 {
   visibility: visible;
   pointer-events: auto;
 
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 

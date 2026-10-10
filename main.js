@@ -83,7 +83,7 @@ function initMobileMenu() {
   });
 
   // Close navigation tray smoothly when selecting a deep-anchored link strip
-  const navLinks = navMenu.querySelectorAll('.nav-link');
+  const navLinks = navMenu.querySelectorAll('a.nav-link');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
