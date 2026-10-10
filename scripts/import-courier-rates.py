@@ -44,7 +44,7 @@ add('dhl-export', 'DHL Express Worldwide', 'DHL EXPORT', range(14,64), 1,
 add('aramex-export', 'Aramex International', 'Aramex', range(5,45), 1,
     {str(i): 1+i for i in range(1,14)}, [(16,17),(18,19),(20,21),(22,23)])
 data = {'schema':1, 'supplier':'Orangestar', 'sourceSha256':hashlib.sha256(source.read_bytes()).hexdigest(),
-        'markup':0.30, 'surchargesIncluded':True, 'confirmedValidityYear':2027,
+        'markup':0.70, 'surchargesIncluded':True, 'confirmedValidityYear':2027,
         'validUntil':None, 'currency':'INR', 'dimensionalDivisor':5000, 'services':services}
 target = root / '.local' / 'courier-rates.json'
 target.parent.mkdir(exist_ok=True)

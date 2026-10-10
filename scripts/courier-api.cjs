@@ -29,7 +29,7 @@ const aliases = new Map(Object.entries({
 function key(value) { const k=String(value || '').trim().toLowerCase().replace(/\*$/,'').replace(/\s+/g,' ').replace(/\s*-\s*/g,' - '); return aliases.get(k)||k; }
 function readRates(root) {
   const data=JSON.parse(fs.readFileSync(path.join(root,'.local/courier-rates.json'),'utf8'));
-  if(data.schema!==1 || !Array.isArray(data.services) || data.markup!==0.3 || !data.surchargesIncluded) throw Error('Pricing is not configured.');
+  if(data.schema!==1 || !Array.isArray(data.services) || data.markup!==0.7 || !data.surchargesIncluded) throw Error('Pricing is not configured.');
   return data;
 }
 function calculate(data, input, now=new Date()) {

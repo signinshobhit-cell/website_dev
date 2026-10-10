@@ -6,7 +6,10 @@ Sea freight remains manual. Choose Sea freight and follow the enquiry link. The 
 
 ## Pricing
 
-- Customer transport estimate = supplied purchase rate × 1.30, rounded to two decimals.
+The quote form supports searchable countries (including USA, UK and UAE), kg / grams and cm / inches. Changing units converts existing measurements. The ready date defaults to today in India. Goods description is optional for estimates. A live summary explains estimated shipping weight; errors link directly to the affected fields. Entries are saved only in this browser tab and cleared with **Start again**. No contact details are required to compare estimates.
+
+- Customer transport estimate = supplied purchase rate × 1.70, rounded to two decimals.
+- This is a 70% markup on purchase cost, as confirmed by the owner, rather than a 70% gross profit margin.
 - Fuel and other supplier surcharges are treated as included, as confirmed by the owner. They are not added again despite older notes in the workbook.
 - Taxes, customs duties and optional insurance are excluded. No GST rate is assumed.
 - General parcels use L × W × H / 5,000. Dimensions are rounded up to whole cm, and the larger of actual / volumetric weight is rounded up to 0.5 kg per piece. Piece weights are added and the next available shipment slab is used. These are disclosed estimation rules; final account-specific rounding and measurements are checked before booking.
