@@ -293,7 +293,7 @@
     }
   </style>
   <link rel="stylesheet" href="news-archive.css">
-</head>
+<link rel="stylesheet" href="hero-globe.css"></head>
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -518,16 +518,16 @@
 <!-- Integrated Hero Core Details & Automated Infinite Showcase Loop Ribbon -->
     <section class="hero-showcase-section" aria-label="Introduction and Live Trade Track">
       <div class="container">
-        <div class="hero-headline-block">
+        <div class="hero-opening"><div class="hero-headline-block">
           <span class="hero-eyebrow" style="color:#7FE327; font-weight:700; font-size:0.9rem; text-transform:uppercase; tracking-spacing:1px; display:block; margin-bottom:0.75rem;">IIFT Alumni Advisory Firm | 5+ Years Sourcing Mastery</span>
-          <h1>Your Gateway to Global Markets.<br>Certified. Compliant. Confident.</h1>
-          <p>End-to-end foreign trade consultancy for Indian MSMEs. We streamline cross-border certification architecture, execute centralized customs filings, and secure multi-modal transit parameters flawlessly.</p>
+          <h1>Your gateway to<br><em>global markets.</em></h1>
+          <p>Certified. Compliant. Confident. We help Indian MSMEs navigate licensing, certification and logistics—connecting your business to global opportunity.</p>
           <div class="hero-buttons-wrapper">
             <a href="contact.html" class="btn btn-primary">Schedule Free Consultation</a>
             <a href="#services" class="btn btn-secondary-white">Explore Core Services ↓</a>
           </div>
-        </div>
-      </div>
+          <div class="hero-kicker">INDIAN EXPERTISE. GLOBAL REACH.</div>        </div>
+<div class="hero-globe"><span class="globe-label">GLOBAL TRADE NETWORK</span><canvas id="tradeGlobe" aria-hidden="true"></canvas><button type="button" class="globe-control" id="globePause" aria-pressed="false">Pause animation</button><span class="globe-caption">CONNECTED MARKETS · LIMITLESS OPPORTUNITY</span></div></div>      </div>
 
       <!-- Live Automatic Scroll Marquee Track Setup (10 Extended Unique Cards) -->
       <div class="infinite-loop-wrapper">
@@ -1119,7 +1119,7 @@
 
   <script src="assets/gsap.min.js"></script>
   <script src="phone-motion.js"></script>
-  <script src="main.js"></script>
+  <script src="main.js"></script><script src="hero-globe.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       // Setup current calendar date value strings dynamically inside footer nodes
