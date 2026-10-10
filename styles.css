@@ -1903,3 +1903,4 @@ footer.footer h4 {
 .nav-phone{white-space:nowrap;flex-shrink:0}
 
 .google-review-link{display:inline-flex;align-items:center;gap:.75rem;padding:.75rem 1rem;background:#fff;border:1px solid #dce5df;border-radius:6px;color:#174d3e!important;min-height:48px;text-decoration:none}.google-review-link svg{flex-shrink:0}.google-review-title{display:block;font-size:.8rem;font-weight:700}.google-review-stars{display:block;color:#a86500;font-size:1rem;letter-spacing:.12em;line-height:1.4}.google-review-link:hover{background:#edf6e8}.google-review-link:focus-visible{outline:3px solid #a5e574;outline-offset:3px}
+.footer-bottom .google-review-link .google-review-title{color:#174d3e!important}
