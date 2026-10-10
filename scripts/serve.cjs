@@ -10,6 +10,7 @@ const server = http.createServer((req, res) => {
   let pathname;
   try { pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname); }
   catch { res.writeHead(400).end('Bad request'); return; }
+  if (pathname.startsWith('/api/courier/')) { require('./courier-api.cjs').createCourierApi(root)(req,res,pathname); return; }
   if (pathname.startsWith('/api/')) { api(req, res, pathname); return; }
   const adminFiles = { '/news-manager.html': '/local-admin/manager.html', '/manager.css': '/local-admin/manager.css', '/manager.js': '/local-admin/manager.js' };
   const file = path.resolve(root, '.' + (adminFiles[pathname] || (pathname === '/' ? '/index.html' : pathname)));
