@@ -20,8 +20,8 @@
   form.addEventListener('submit',async event=>{event.preventDefault();if(direction.value==='sea'||!validate())return;
     clear();const version=revision;abort=new AbortController();submit.disabled=true;submit.textContent='Calculating…';status('Calculating your courier rates…');
     const input={direction:direction.value,country:country.value,readyDate:form.elements.readyDate.value,handling:form.elements.handling.value,packages:packages()};
-    try {const response=await fetch('/api/courier/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(input),signal:abort.signal});
-      const data=await response.json();if(version!==revision)return;if(!response.ok)throw Error(data.error||'Could not calculate a rate.');result.replaceChildren();result.hidden=false;
+    try {const data=await window.flexlyfCourierRequest('quote',input,abort.signal);
+      if(version!==revision)return;result.replaceChildren();result.hidden=false;
       const title=document.createElement('h3');title.textContent=data.quotes.length?'Your courier estimates':'Let our team quote this shipment';result.append(title);
       if(data.shipment){const summary=document.createElement('p');summary.textContent=`${data.shipment.pieces} pieces · ${data.shipment.grossKg} kg actual · ${data.shipment.volumetricKg} kg volumetric · ${data.shipment.billableKg} kg estimated billable`;result.append(summary);}
       for(const [index,quote] of data.quotes.entries()){
@@ -58,6 +58,6 @@
   form.addEventListener('input',()=>{updateSummary();save();});form.addEventListener('change',save);
   add();submit.disabled=true;
   try{const saved=JSON.parse(sessionStorage.getItem(storageKey));if(saved?.fields&&Array.isArray(saved.packages)&&saved.packages.length<=20&&saved.packages.length){for(const [k,v] of Object.entries(saved.fields))if(form.elements[k]){form.elements[k].value=v;if(k.endsWith("Unit"))form.elements[k].dataset.previous=v;}rows.replaceChildren();for(const p of saved.packages){add();rows.lastElementChild.querySelectorAll('input').forEach(el=>el.value=p[el.dataset.key]||'');}updateLabels();updateSummary();}}catch{}
-  if(!['localhost','127.0.0.1'].includes(location.hostname)) {status('Instant courier estimates are being connected. Please use the manual enquiry form below.');return;}
-  fetch('/api/courier/options').then(async response=>{if(!response.ok)throw Error();return response.json();}).then(data=>{options=data;direction.dispatchEvent(new Event('change'));submit.disabled=false;result.hidden=true;}).catch(()=>status('Instant rates are unavailable on this preview. Please use the manual enquiry form below.'));
+  if(!window.FLEXLYF_COURIER_CONFIG?.endpoint&&!['localhost','127.0.0.1'].includes(location.hostname)) {status('Instant courier estimates are being connected. Please use the manual enquiry form below.');return;}
+  window.flexlyfCourierRequest('options').then(data=>{options=data;direction.dispatchEvent(new Event('change'));submit.disabled=false;result.hidden=true;}).catch(()=>status('Instant rates are unavailable on this preview. Please use the manual enquiry form below.'));
 })();
