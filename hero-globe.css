@@ -1,3 +1,26 @@
 .hero-showcase-section{background:#022c25;padding-top:48px}.hero-showcase-section:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 75% 35%,#146c5044,transparent 55%),linear-gradient(90deg,#b2efc405 1px,transparent 1px),linear-gradient(#b2efc405 1px,transparent 1px);background-size:auto,64px 64px,64px 64px}.hero-opening{position:relative;display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:1rem;min-height:460px;margin-bottom:2rem}.hero-opening .hero-headline-block{max-width:none;text-align:left;padding:0;margin:0}.hero-opening .hero-eyebrow{background:none!important;color:#a4ec75;font-size:.75rem!important;letter-spacing:.12em;line-height:1.7}.hero-opening .hero-headline-block h1{font-size:clamp(2.5rem,4.7vw,4rem);line-height:1.05;letter-spacing:-.045em;margin:1.25rem 0}.hero-opening h1 em{font-style:normal;color:#b6ee92}.hero-opening .hero-headline-block p{font-size:1rem;line-height:1.8;max-width:530px;color:#c2d9ce}.hero-opening .hero-buttons-wrapper{justify-content:flex-start}.hero-opening .btn{font-size:.875rem;padding:1rem 1.25rem}.hero-globe{position:relative;min-width:0;aspect-ratio:1;max-height:530px}.hero-globe canvas{width:100%;height:100%;display:block}.globe-label{position:absolute;top:8%;left:10%;color:#a6c3b6;font-family:monospace;font-size:.65rem;letter-spacing:.15em}.globe-caption{position:absolute;bottom:9%;left:0;right:0;text-align:center;font-family:monospace;font-size:.7rem;color:#a5df87;letter-spacing:.12em}.globe-control{position:absolute;right:6%;top:8%;background:#073f32;color:#c5ead1;border:1px solid #54856d;border-radius:4px;padding:.5rem .75rem;font-size:.7rem;cursor:pointer;min-height:36px}.globe-control:focus-visible{outline:3px solid #b6ee92;outline-offset:3px}.hero-kicker{display:flex;align-items:center;gap:.65rem;margin-top:2rem;color:#a7c9b8;font-family:monospace;font-size:.7rem;letter-spacing:.1em}.hero-kicker:before{content:"";height:7px;width:7px;background:#a9ee75;box-shadow:0 0 12px #9fea68;border-radius:50%}@media(max-width:900px){.hero-opening{grid-template-columns:1fr}.hero-opening .hero-headline-block{max-width:680px}.hero-globe{max-width:480px;width:100%;margin:auto}.hero-opening .hero-headline-block h1{font-size:clamp(2.5rem,7vw,3.5rem)!important}.hero-showcase-section{padding-top:48px}}@media(max-width:600px){.hero-showcase-section{padding-top:40px}.hero-opening{gap:1rem}.hero-opening .hero-headline-block h1{font-size:2.6rem!important}.hero-opening .hero-buttons-wrapper{gap:.75rem}.hero-globe{max-width:380px}.hero-opening .hero-headline-block p{font-size:.95rem}.hero-kicker{letter-spacing:.05em;font-size:.65rem}.globe-caption{font-size:.6rem}}
 
 @media(max-width:1200px){nav.navbar .nav-phone{display:none!important}}
+
+/* Keep the opening message and globe together without narrowing the body copy. */
+@media(max-width:900px){
+  .hero-opening{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:1rem;min-height:0;align-items:center}
+  .hero-opening .hero-headline-block{display:contents}
+  .hero-opening .hero-headline-block h1{grid-column:1;grid-row:1;font-size:clamp(1.75rem,5.5vw,3rem)!important;margin:0;line-height:1.12;overflow-wrap:normal}
+  .hero-opening .hero-globe{grid-column:2;grid-row:1;width:100%;max-width:360px;margin:0;align-self:center;aspect-ratio:auto;padding-bottom:2.75rem}
+  .hero-opening .hero-globe canvas{aspect-ratio:1;height:auto}
+  .hero-opening .hero-headline-block p{grid-column:1/-1;grid-row:2;max-width:none;margin:0;font-size:1rem;line-height:1.65}
+  .hero-opening .hero-buttons-wrapper{grid-column:1/-1;grid-row:3;display:flex;flex-wrap:wrap;margin-top:0;gap:.75rem}
+  .hero-opening .hero-kicker{grid-column:1/-1;grid-row:4;margin-top:.25rem;line-height:1.5}
+  .hero-opening .globe-label{top:0;left:0;right:0;text-align:center;font-size:.55rem;letter-spacing:.05em}
+  .hero-opening .globe-caption{display:none}
+  .hero-opening .globe-control{top:auto;bottom:0;right:0;left:0;margin:auto;width:max-content;min-height:44px;padding:.5rem .625rem;font-size:.7rem}
+}
+@media(max-width:600px){
+  .hero-showcase-section{padding-top:24px}
+  .hero-opening{gap:1rem .5rem;margin-bottom:1.5rem}
+  .hero-opening .hero-headline-block h1{font-size:clamp(1.75rem,6.5vw,2.5rem)!important}
+  .hero-opening .hero-buttons-wrapper .btn{min-height:48px;padding:.75rem 1rem;white-space:normal;text-align:center}
+  .hero-opening .hero-buttons-wrapper .btn:first-child{flex:1 1 100%}
+  .hero-opening .hero-buttons-wrapper .btn:last-child{flex:1 1 100%}
+}
