@@ -58,4 +58,11 @@ Edit the service HTML carefully and keep title, description, visible headings an
 - [DGFT IEC manual](https://content.dgft.gov.in/Website/IEC_Manual_V4.0.pdf)
 - [APEDA RCMC guidance](https://apeda.gov.in/RCMC2)
 
-Deployment and Search Console submission outcomes are recorded separately when confirmed; this report does not invent indexing or ranking results for new pages.
+## Confirmed deployment and submissions
+
+- Published to main and GitHub Pages on 12 October 2026. Both deployments completed successfully; all 43 automated tests passed after the redirect compatibility fix.
+- Live audit checked 28 canonical/hostname URLs with no failures; the deployed sitemap contains 29 canonical URLs including published news. All eight legacy redirect pages were verified live.
+- Google accepted the sitemap resubmission and indexing requests for licensing.html, iec-registration.html, rcmc-registration.html and logistics.html.
+- URL Inspection showed licensing and logistics already indexed. IEC was newly unknown to Google; RCMC was discovered but not yet indexed. Accepted requests place URLs in a crawl queue, not a confirmed index or ranking position.
+- Google Manual Actions and Security Issues reports both displayed **No issues detected**. This is a Search Console observation, not a complete security assessment.
+- Mobile content and the live service catalogue were visually checked. Future ranking changes must be measured against the private domain-property baseline.

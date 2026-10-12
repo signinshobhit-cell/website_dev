@@ -1,5 +1,7 @@
 # Flexlyf link and SEO audit
 
+For the newer 12 October 2026 live-site and Search Console review, see [the SEO action plan](seo-action-plan.md). The findings below describe the earlier audit.
+
 Reviewed 9 October 2026. Scope: public HTML pages, navigation/footer links, internal anchors, linked local assets, live HTTP responses, sitemap, canonical URLs, metadata and published news discovery. This is a technical audit, not a ranking guarantee or a measured Core Web Vitals report.
 
 ## Findings and fixes
