@@ -1,0 +1,6 @@
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+async function inspect(url){try{const r=await fetch(url,{signal:AbortSignal.timeout(15000)}),html=await r.text();return {url,status:r.status,finalUrl:r.url,robotsHeader:r.headers.get('x-robots-tag'),title:html.match(/<title>([\s\S]*?)<\/title>/i)?.[1],canonical:html.match(/<link[^>]*rel="canonical"[^>]*>/i)?.[0]?.match(/href="([^"]+)"/i)?.[1],robots:html.match(/<meta[^>]*name="robots"[^>]*content="([^"]+)"/i)?.[1],h1:html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g,' '),schemaBlocks:(html.match(/application\/ld\+json/g)||[]).length,bytes:Buffer.byteLength(html)};}catch(e){return {url,error:e.message};}}
+async function audit(){const sitemap=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');const urls=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);urls.push('http://flexlyf.com/','https://www.flexlyf.com/','https://flexlyf.com/index.html','https://signinshobhit-cell.github.io/website_dev/');const results=[];for(let i=0;i<urls.length;i+=6)results.push(...await Promise.all(urls.slice(i,i+6).map(inspect)));return results;}
+if(require.main===module)audit().then(r=>console.log(JSON.stringify(r,null,2)));
+module.exports={audit};
