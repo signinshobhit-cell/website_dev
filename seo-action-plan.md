@@ -6,7 +6,8 @@
 - Public search results already include the homepage and contact page. A site search does not establish complete indexing coverage or exact rankings.
 - Google Search Console recognised the signed-in owner's existing DNS verification. The sitemap report showed Success, 25 discovered pages and last read on 10 October 2026 before this update.
 - Licensing URL Inspection explicitly showed **URL is on Google**, **Page is indexed**, successful fetch and crawling/indexing allowed. Its last recorded crawl was 28 September 2026. Google still recorded the older user-declared extensionless canonical `/licensing`; the live HTML now declares `/licensing.html`.
-- Performance and Page Indexing summary reports displayed “Processing data”. There is no verified baseline for clicks, impressions, positions or exclusion reasons yet. No manual-action or Core Web Vitals audit result is claimed.
+- The newer URL-prefix property displayed “Processing data”, but the existing domain property provided historical performance and indexing reports. A detailed baseline is saved privately in `.local/seo-search-console-baseline.md`, excluded from Git and the public build. No manual-action audit result is claimed; the overview lacked field Core Web Vitals data.
+- Exclusion examples were legacy URLs, redirect/canonical alternatives and the favicon. Eight legacy paths with relevant replacements receive immediate redirects: product-testing, certification-services, about-us, contact, licensing-support, logistics-customs, news-logs-desk and trade-insurance. Removed commodity/inspection services and meaningless site URLs are not indiscriminately redirected to the homepage.
 
 ## Changes implemented
 
@@ -17,6 +18,7 @@
 5. Three distinct, substantive service pages: `/iec-registration.html`, `/apeda-registration.html` and `/international-courier.html`. Each explains scope, information to prepare, process, quotation limits and next steps. IEC and APEDA have official source references. Courier content explains the actual live calculator.
 6. Related-service links, accurate service-area copy for Delhi, Uttar Pradesh and Mumbai, and new canonical URLs in the sitemap. There are no cloned city pages or hidden keyword lists.
 7. Link, sitemap, canonical and structured-data regression checks. Pricing, news publishing and private-data build exclusion remain covered by the existing suite.
+8. Crawler-readable immediate redirects for the eight known old paths. GitHub Pages does not offer configurable server-side redirects; the build uses zero-second HTML refresh and destination canonicals, which Google recognises as permanent redirect signals. Redirects are excluded from the sitemap.
 
 ## Priority search intent map
 
@@ -52,6 +54,7 @@ Edit the service HTML carefully and keep title, description, visible headings an
 - [Google technical indexing requirements](https://developers.google.com/search/docs/essentials/technical)
 - [Business structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
 - [Local ranking guidance](https://support.google.com/business/answer/7091)
+- [Google redirect guidance](https://developers.google.com/search/docs/crawling-indexing/301-redirects)
 - [DGFT IEC manual](https://content.dgft.gov.in/Website/IEC_Manual_V4.0.pdf)
 - [APEDA RCMC guidance](https://apeda.gov.in/RCMC2)
 

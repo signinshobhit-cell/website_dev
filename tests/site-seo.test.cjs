@@ -14,6 +14,11 @@ test('public pages, assets and anchors resolve; sitemap and article metadata are
       }
     }
     const output=build(root);
+    for(const [legacy,target] of Object.entries({'product-testing':'testing.html','certification-services':'certification.html','about-us':'about.html','contact':'contact.html','licensing-support':'licensing.html','logistics-customs':'logistics.html','news-logs-desk':'trade-intelligence.html','trade-insurance':'insurance.html'})){
+      const redirect=fs.readFileSync(path.join(output,legacy,'index.html'),'utf8');
+      assert.ok(redirect.includes('content="0;url=https://flexlyf.com/'+target+'"'));
+      assert.ok(redirect.includes('rel="canonical" href="https://flexlyf.com/'+target+'"'));
+    }
     const files=fs.readdirSync(output).filter(name=>name.endsWith('.html')).map(name=>path.join(output,name));
     files.push(...fs.readdirSync(path.join(output,'updates')).map(name=>path.join(output,'updates',name)));
     const failures=[];
