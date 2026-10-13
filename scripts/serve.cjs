@@ -26,4 +26,4 @@ const server = http.createServer((req, res) => {
   });
 });
 server.on('error', error => { console.error(error.message); process.exit(1); });
-server.listen(port, '127.0.0.1', () => console.log(`Flexlyf preview: http://localhost:${port}`));
+server.listen(port, '127.0.0.1', () => console.log(`Yuvglobal preview: http://localhost:${port}`));

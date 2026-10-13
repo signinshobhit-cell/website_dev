@@ -6,7 +6,7 @@ const path = require('node:path');
 const { NewsStore, today } = require('../scripts/news-store.cjs');
 const { build } = require('../scripts/build-site.cjs');
 function fixture(t) {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'flexlyf-store-test-'));
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'Yuvglobal-store-test-'));
   t.after(() => fs.rmSync(root, { recursive: true, force: true }));
   return { root, store: new NewsStore(root) };
 }

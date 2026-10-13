@@ -1,4 +1,4 @@
-name: Publish Flexlyf website
+name: Publish Yuvglobal website
 on:
   push:
     branches: [main]

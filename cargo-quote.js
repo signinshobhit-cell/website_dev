@@ -50,7 +50,7 @@
   form.addEventListener('submit',event=>{
     event.preventDefault();
     if (!form.reportValidity()) return;
-    const referenceText=`Hello Flexlyf, I would like to discuss cargo quote request ${requestId}. Please help me with the rate.`;
+    const referenceText=`Hello Yuvglobal, I would like to discuss cargo quote request ${requestId}. Please help me with the rate.`;
     whatsapp.href='https://wa.me/919220819906?text='+encodeURIComponent(referenceText);
     whatsapp.hidden=false;whatsappNote.hidden=false;
     const endpoint=String(window.CARGO_QUOTE_ENDPOINT||'');

@@ -1,6 +1,6 @@
 # Local courier estimates
 
-Open https://flexlyf.com/logistics.html#instant-courier (or the local preview). Choose export from India or import to India, country, ready date and package details. Click **Show my rates**. You can compare prices, open a prepared WhatsApp message or transfer details into the existing cargo enquiry form. WhatsApp requires the customer to press Send. Estimates do not book a shipment or submit contact details automatically.
+Open https://www.yuvglobal.com/logistics.html#instant-courier (or the local preview). Choose export from India or import to India, country, ready date and package details. Click **Show my rates**. You can compare prices, open a prepared WhatsApp message or transfer details into the existing cargo enquiry form. WhatsApp requires the customer to press Send. Estimates do not book a shipment or submit contact details automatically.
 
 Sea freight remains manual. Choose Sea freight and follow the enquiry link. The existing air and sea enquiry form continues to save submissions through the configured Google Apps Script deployment.
 
@@ -32,7 +32,7 @@ The importer replaces the private JSON. Preserve any subsequently confirmed exac
 
 ## Public quote service
 
-GitHub Pages serves the frontend; the separate **Flexlyf Courier Quotes** Apps Script project calculates prices privately. `courier-config.js` contains its public read-only endpoint URL. Customers do not need Google accounts. Purchase prices remain in private server source and the local ignored JSON; the cargo-enquiry spreadsheet is separate and stays private. No contact or commodity text is sent to the pricing service. Network failures and unsupported shipments have manual enquiry fallback.
+GitHub Pages serves the frontend; the separate **Yuvglobal Courier Quotes** Apps Script project calculates prices privately. `courier-config.js` contains its public read-only endpoint URL. Customers do not need Google accounts. Purchase prices remain in private server source and the local ignored JSON; the cargo-enquiry spreadsheet is separate and stays private. No contact or commodity text is sent to the pricing service. Network failures and unsupported shipments have manual enquiry fallback.
 
 See [deployment and rate update instructions](integrations/courier/deployment.md). Before confirming a booking, verify exact supplier expiry, carrier billing rules, final measurements, postcode serviceability and applicable taxes. The owner has confirmed rates into 2027; the exact expiry remains unconfirmed.
 

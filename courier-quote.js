@@ -23,7 +23,7 @@
   form.addEventListener('submit',async event=>{event.preventDefault();if(direction.value==='sea')return;if(form.elements.shipmentType.value!=='packages'){document.getElementById('courierDocumentEnquiry').click();return;}if(!validate())return;
     clear();const version=revision;abort=new AbortController();submit.disabled=true;submit.textContent='Calculating…';status('Calculating your courier rates…');
     const input={direction:direction.value,country:country.value,readyDate:form.elements.readyDate.value,handling:form.elements.handling.value,packages:packages()};
-    try {const data=await window.flexlyfCourierRequest('quote',input,abort.signal);
+    try {const data=await window.YuvglobalCourierRequest('quote',input,abort.signal);
       if(version!==revision)return;result.replaceChildren();result.hidden=false;
       const title=document.createElement('h3');title.textContent=data.quotes.length?'Your courier estimates':'Let our team quote this shipment';result.append(title);
       if(data.shipment){const summary=document.createElement('p');summary.textContent=`${data.shipment.pieces} pieces · ${data.shipment.grossKg} kg actual · ${data.shipment.volumetricKg} kg volumetric · ${data.shipment.billableKg} kg estimated billable`;result.append(summary);}
@@ -33,7 +33,7 @@
         const price=document.createElement('strong');price.textContent=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(quote.amount);
         const note=document.createElement('p');note.textContent=`${quote.chargedKg} kg rate slab · ${index===0?'Lowest available estimate':'Courier service'}`;
         const link=document.createElement('a');link.className='cargo-tool';link.textContent='Confirm this rate on WhatsApp';link.target='_blank';link.rel='noopener noreferrer';
-        link.href='https://wa.me/919220819906?text='+encodeURIComponent(`Hello Flexlyf, please confirm courier estimate ${data.reference}: ${quote.service}, ${price.textContent}, ${input.direction==='export'?'India to '+input.country:input.country+' to India'}, ready ${input.readyDate}. Shipping as ${form.elements.shipperType.value}; contents: packages. Commodity: ${form.elements.commodity.value}. Packages: ${JSON.stringify(input.packages)}. Taxes and duties excluded. Please check postcode serviceability.`);
+        link.href='https://wa.me/919220819906?text='+encodeURIComponent(`Hello Yuvglobal, please confirm courier estimate ${data.reference}: ${quote.service}, ${price.textContent}, ${input.direction==='export'?'India to '+input.country:input.country+' to India'}, ready ${input.readyDate}. Shipping as ${form.elements.shipperType.value}; contents: packages. Commodity: ${form.elements.commodity.value}. Packages: ${JSON.stringify(input.packages)}. Taxes and duties excluded. Please check postcode serviceability.`);
         card.append(name,price,note,link);result.append(card);
       }
       const note=document.createElement('p');note.className='cargo-note';note.textContent=data.message;result.append(note);
@@ -50,7 +50,7 @@
     }catch(error){if(error.name!=='AbortError'&&version===revision)status(error.message==='Failed to fetch'?'Rates could not be loaded. Please retry or use the manual enquiry form.':error.message);}
     finally{if(version===revision){submit.disabled=false;submit.textContent='Show my rates';}}
   });
-  const storageKey='flexlyf-courier-draft-v1',today=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});
+  const storageKey='Yuvglobal-courier-draft-v1',today=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});
   form.elements.readyDate.min=today;form.elements.readyDate.value=today;
   function updateLabels(){rows.querySelectorAll('input').forEach(el=>{const k=el.dataset.key;el.parentElement.firstChild.textContent=k==='pieces'?'Identical boxes *':k==='weight'?`Weight per box (${form.elements.weightUnit.value}) *`:`${k[0].toUpperCase()+k.slice(1)} (${form.elements.sizeUnit.value}) *`;el.inputMode=k==='pieces'?'numeric':'decimal';if(k!=='pieces'){el.step='any';el.max=k==='weight'&&form.elements.weightUnit.value==='g'?'1000000':k!=='weight'&&form.elements.sizeUnit.value==='in'?'393.700787':'1000';el.min='0.001';}});}
   function updateSummary(){const p=packages(),target=document.getElementById('courierLiveSummary');if(p.some(x=>Object.values(x).some(v=>!Number.isFinite(v)||v<=0))){target.textContent='Enter the weight and three dimensions of each box to see your shipping weight.';return;}let count=0,gross=0,billable=0;for(const x of p){count+=x.pieces;gross+=x.weight*x.pieces;const v=Math.ceil(x.length)*Math.ceil(x.width)*Math.ceil(x.height)/5000;billable+=Math.ceil((Math.max(x.weight,v)-1e-9)*2)/2*x.pieces;}target.textContent=`${count} boxes · ${Number(gross.toFixed(3))} kg actual · ${billable} kg estimated shipping weight`;}
@@ -61,6 +61,6 @@
   form.addEventListener('input',()=>{updateSummary();save();});form.addEventListener('change',save);
   add();submit.disabled=true;
   try{const saved=JSON.parse(sessionStorage.getItem(storageKey));if(saved?.fields&&Array.isArray(saved.packages)&&saved.packages.length<=20&&saved.packages.length){for(const [k,v] of Object.entries(saved.fields))if(form.elements[k]){form.elements[k].value=v;if(k.endsWith("Unit"))form.elements[k].dataset.previous=v;}rows.replaceChildren();for(const p of saved.packages){add();rows.lastElementChild.querySelectorAll('input').forEach(el=>el.value=p[el.dataset.key]||'');}updateLabels();updateSummary();}}catch{}
-  if(!window.FLEXLYF_COURIER_CONFIG?.endpoint&&!['localhost','127.0.0.1'].includes(location.hostname)) {status('Instant courier estimates are being connected. Please use the manual enquiry form below.');return;}
-  window.flexlyfCourierRequest('options').then(data=>{options=data;direction.dispatchEvent(new Event('change'));submit.disabled=false;result.hidden=true;}).catch(()=>status('Instant rates are unavailable on this preview. Please use the manual enquiry form below.'));
+  if(!window.Yuvglobal_COURIER_CONFIG?.endpoint&&!['localhost','127.0.0.1'].includes(location.hostname)) {status('Instant courier estimates are being connected. Please use the manual enquiry form below.');return;}
+  window.YuvglobalCourierRequest('options').then(data=>{options=data;direction.dispatchEvent(new Event('change'));submit.disabled=false;result.hidden=true;}).catch(()=>status('Instant rates are unavailable on this preview. Please use the manual enquiry form below.'));
 })();

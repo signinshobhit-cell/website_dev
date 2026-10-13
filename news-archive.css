@@ -1,4 +1,4 @@
-/* Public archive additions, using the existing Flexlyf palette. */
+/* Public archive additions, using the existing Yuvglobal palette. */
 .trade-intelligence-toolbar > .container { padding: 1.5rem; background: var(--color-white); border: 1px solid var(--color-gray-100); border-radius: 8px; }
 #tradeNewsGrid { scroll-margin-top: 120px; }
 .news-filters { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)) auto; gap: 1rem; align-items: end; }

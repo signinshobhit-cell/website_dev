@@ -6,7 +6,7 @@ const os = require('node:os');
 const path = require('node:path');
 const { createApi } = require('../scripts/news-api.cjs');
 async function fixture(t) {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'flexlyf-api-test-'));
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'Yuvglobal-api-test-'));
   let api;
   const server = http.createServer((req, res) => api(req, res, new URL(req.url, 'http://localhost').pathname));
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));

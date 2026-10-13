@@ -1,5 +1,5 @@
 /**
- * Flexlyf Commerce - Main JavaScript
+ * Yuvglobal - Main JavaScript
  * Premium International Trade Consultancy
  * Optimized for peak performance and 60fps frame rates
  */
@@ -250,7 +250,7 @@ function initContactFormValidation() {
 }
 
 // Corporate Technical Branding Log Message Node Group
-console.log('%cFlexlyf Commerce', 'color: #2B7A1A; font-size: 24px; font-weight: bold;');
+console.log('%cYuvglobal', 'color: #2B7A1A; font-size: 24px; font-weight: bold;');
 console.log('%cPremium International Trade Advisory Services', 'color: #064E3B; font-size: 14px;');
 console.log('%cBuilt with Performance Precision for Indian MSMEs', 'color: #6B7280; font-size: 12px;');
 // ... Your existing javascript code is up here ...

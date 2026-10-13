@@ -44,10 +44,10 @@ function cargoValidate(d) {
 function cargoSafe(value) { return typeof value==='string' && /^[\s]*[=+@-]/.test(value) ? "'"+value : value; }
 function cargoReceipt(ok,message) {
   const safe=String(message).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const whatsapp=ok?'<p><a target="_blank" rel="noopener noreferrer" href="https://wa.me/919220819906?text='+encodeURIComponent('Hello Flexlyf, I would like to discuss my cargo enquiry. '+message)+'">Discuss on WhatsApp</a></p><p>Press Send in WhatsApp to contact our team.</p>':'';
-  return HtmlService.createHtmlOutput('<!doctype html><html lang="en"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cargo enquiry</title><body style="font-family:Arial,sans-serif;max-width:640px;margin:60px auto;padding:24px;color:#064c3f"><h1>'+ (ok?'Your quote request is saved':'Your request was not confirmed')+'</h1><p>'+safe+'</p><p>'+ (ok?'Our team will review your shipment and contact you with a quote.':'Return to the form and retry. If this continues, call +91 92208 19906.')+'</p>'+whatsapp+'<a href="https://flexlyf.com/logistics.html">Back to Flexlyf</a></body></html>');
+  const whatsapp=ok?'<p><a target="_blank" rel="noopener noreferrer" href="https://wa.me/919220819906?text='+encodeURIComponent('Hello Yuvglobal, I would like to discuss my cargo enquiry. '+message)+'">Discuss on WhatsApp</a></p><p>Press Send in WhatsApp to contact our team.</p>':'';
+  return HtmlService.createHtmlOutput('<!doctype html><html lang="en"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cargo enquiry</title><body style="font-family:Arial,sans-serif;max-width:640px;margin:60px auto;padding:24px;color:#064c3f"><h1>'+ (ok?'Your quote request is saved':'Your request was not confirmed')+'</h1><p>'+safe+'</p><p>'+ (ok?'Our team will review your shipment and contact you with a quote.':'Return to the form and retry. If this continues, call +91 92208 19906.')+'</p>'+whatsapp+'<a href="https://www.yuvglobal.com/logistics.html">Back to Yuvglobal</a></body></html>');
 }
-function doGet() { return cargoReceipt(false,'Please submit your enquiry from the Flexlyf Logistics page.'); }
+function doGet() { return cargoReceipt(false,'Please submit your enquiry from the Yuvglobal Logistics page.'); }
 function doPost(e) {
   let lock;
   try {

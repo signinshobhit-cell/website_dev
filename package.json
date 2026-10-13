@@ -1,5 +1,5 @@
 {
-  "name": "flexlyf-website",
+  "name": "yuvglobal-website",
   "private": true,
   "scripts": {
     "start": "node scripts/serve.cjs",

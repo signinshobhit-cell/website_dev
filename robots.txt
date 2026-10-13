@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://flexlyf.com/sitemap.xml
+Sitemap: https://www.yuvglobal.com/sitemap.xml

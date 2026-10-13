@@ -59,7 +59,7 @@
     $('historyList').innerHTML = record.history.length ? record.history.slice(0, 8).map(version => `<button type="button" data-version="${version.revision}">Restore v${version.revision} · ${esc(new Date(version.savedAt).toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Asia/Kolkata' }))}</button>`).join('') : '<p class="hint">Saved versions will appear here as you work.</p>';
   }
   function populate(record) {
-    selected = record.id; localStorage.setItem('flexlyf-selected-article', selected); dirty = false; conflicted = false;
+    selected = record.id; localStorage.setItem('Yuvglobal-selected-article', selected); dirty = false; conflicted = false;
     fields.forEach(key => { $(key).value = Array.isArray(record.draft[key]) ? record.draft[key].join(key === 'content' ? '\n\n' : '\n') : record.draft[key] || ''; });
     $('emptyEditor').hidden = true; $('editorPanel').hidden = false; $('saveStatus').textContent = 'Saved on this computer';
     counts(); renderLibrary(); meta();
@@ -98,7 +98,7 @@
       const { record } = await request(`/api/articles/${encodeURIComponent(selected)}/${name}`, { revision: current().revision, ...extra });
       if (record.deleted) {
         records = records.filter(item => item.id !== record.id); selected = null; dirty = false; conflicted = false;
-        localStorage.removeItem('flexlyf-selected-article'); $('editorPanel').hidden = true; $('emptyEditor').hidden = false;
+        localStorage.removeItem('Yuvglobal-selected-article'); $('editorPanel').hidden = true; $('emptyEditor').hidden = false;
         renderLibrary(); $('newArticle').focus();
       } else { updateRecord(record); populate(record); }
       const messages = { publish: 'Published to your local website. Sync to GitHub to update the live site.', unpublish: 'Removed from the local website. Your editable draft is saved.', archive: 'Archived privately and removed from local public pages. Sync to GitHub to update the live site.', unarchive: 'Published version restored to local public pages. Sync to GitHub to update the live site.', delete: 'Article deleted from the newsroom and local public pages. Sync to GitHub to update the live site.', trash: 'Moved to Trash and removed from the local website. You can restore it as a draft.', restore: 'Restored as a private draft.', discard: 'Draft restored to the published version.', revert: 'Previous version restored as a draft. Publish when ready.' };
@@ -161,7 +161,7 @@
       session = await response.json(); records = session.records;
       $('category').innerHTML = Object.entries(session.categories).map(([value, label]) => `<option value="${value}">${esc(label)}</option>`).join('');
       $('date').max = session.today; $('gitStatus').textContent = session.git.message; $('syncButton').disabled = !session.git.ready;
-      renderLibrary(); const last = records.find(record => record.id === localStorage.getItem('flexlyf-selected-article') && !record.trashedAt && !record.archivedAt); if (last) populate(last);
+      renderLibrary(); const last = records.find(record => record.id === localStorage.getItem('Yuvglobal-selected-article') && !record.trashedAt && !record.archivedAt); if (last) populate(last);
       notify('Ready. Drafts save automatically on this computer.');
     } catch (error) { $('newArticle').disabled = true; notify('Start the local workspace with npm start, then open http://localhost:3000/news-manager.html. If it is already running, restart it and reload this page.', true); }
   }

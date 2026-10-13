@@ -1,4 +1,4 @@
-# Flexlyf Newsroom — daily publishing guide
+# Yuvglobal Newsroom — daily publishing guide
 
 ## Start here
 

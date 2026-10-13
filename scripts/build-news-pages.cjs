@@ -9,10 +9,10 @@ function buildNewsPages(root, destination, items) {
   fs.mkdirSync(directory, { recursive: true });
   const published = items.map(item => {
     if (!/^[a-z0-9][a-z0-9-]*$/.test(item.slug)) throw new Error('Invalid public article slug.');
-    const url = `updates/${item.slug}.html`, canonical = `https://flexlyf.com/${url}`;
+    const url = `updates/${item.slug}.html`, canonical = `https://www.yuvglobal.com/${url}`;
     const body = `<div class="trade-article-meta"><span>${escape(item.categoryLabel)}</span><time datetime="${escape(item.date)}">${escape(item.date)}</time></div><h1>${escape(item.title)}</h1><p class="trade-article-summary">${escape(item.summary)}</p>${item.image ? `<img class="trade-article-image" src="${escape(item.image)}" alt="" loading="eager">` : ''}<div class="trade-article-content">${item.content.map(paragraph => `<p>${escape(paragraph)}</p>`).join('')}</div>${item.sourceUrl && /^https?:\/\//.test(item.sourceUrl) ? `<div class="trade-article-source"><strong>Source:</strong> ${escape(item.source)}<br><a href="${escape(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">Read official source ↗</a></div>` : ''}<div class="trade-article-actions"><a class="btn btn-primary" href="trade-intelligence.html">← All trade updates</a></div>`;
-    const schema = {'@context':'https://schema.org','@type':'NewsArticle',headline:item.title,description:item.summary,datePublished:item.date, dateModified:item.updatedAt || item.date, mainEntityOfPage:canonical,author:{'@type':'Organization',name:'Flexlyf Commerce Private Limited',url:'https://flexlyf.com/'},publisher:{'@type':'Organization',name:'Flexlyf Commerce Private Limited',url:'https://flexlyf.com/'}};
-    let page = template.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(item.title)} | Flexlyf Commerce</title>`)
+    const schema = {'@context':'https://schema.org','@type':'NewsArticle',headline:item.title,description:item.summary,datePublished:item.date, dateModified:item.updatedAt || item.date, mainEntityOfPage:canonical,author:{'@type':'Organization',name:'Yuvglobal',url:'https://www.yuvglobal.com/'},publisher:{'@type':'Organization',name:'Yuvglobal',url:'https://www.yuvglobal.com/'}};
+    let page = template.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(item.title)} | Yuvglobal</title>`)
       .replace(/<meta name="robots"[^>]*>/, '<meta name="robots" content="index,follow">')
       .replace(/(<meta name="description" content=")[^"]*/, (_,prefix)=>prefix+escape(item.summary))
       .replace(/(<link rel="canonical" href=")[^"]*/, (_,prefix)=>prefix+canonical)
@@ -37,6 +37,6 @@ function buildNewsPages(root, destination, items) {
     fs.writeFileSync(archiveFile,fs.readFileSync(archiveFile,'utf8').replace('</main>',`<noscript><div class="container"><h2>Published updates</h2><ul>${links}</ul></div></noscript></main>`));
   }
   const sitemapFile=path.join(destination,'sitemap.xml');
-  if(fs.existsSync(sitemapFile)) fs.writeFileSync(sitemapFile,fs.readFileSync(sitemapFile,'utf8').replace('</urlset>',published.map(item=>`<url><loc>https://flexlyf.com/${escape(item.url)}</loc></url>\n`).join('')+'</urlset>'));
+  if(fs.existsSync(sitemapFile)) fs.writeFileSync(sitemapFile,fs.readFileSync(sitemapFile,'utf8').replace('</urlset>',published.map(item=>`<url><loc>https://www.yuvglobal.com/${escape(item.url)}</loc></url>\n`).join('')+'</urlset>'));
 }
 module.exports = {buildNewsPages};

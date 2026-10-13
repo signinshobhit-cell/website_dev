@@ -1,7 +1,7 @@
 (() => {
   let sequence=0;
-  window.flexlyfCourierRequest=async(action,shipment,signal)=>{
-    const endpoint=window.FLEXLYF_COURIER_CONFIG?.endpoint;
+  window.YuvglobalCourierRequest=async(action,shipment,signal)=>{
+    const endpoint=window.Yuvglobal_COURIER_CONFIG?.endpoint;
     if(!endpoint){
       if(!['localhost','127.0.0.1'].includes(location.hostname))throw Error('Instant rates are being connected. Please use the manual enquiry form below.');
       const response=await fetch('/api/courier/'+action,action==='quote'?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(shipment),signal}:{signal});

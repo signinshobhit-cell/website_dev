@@ -6,7 +6,7 @@ const os = require('node:os');
 const { execFileSync } = require('node:child_process');
 const { status, sync } = require('../scripts/publish-git.cjs');
 test('sync pushes only published content and images, supports retry, and blocks unrelated staged work', t => {
-  const base = fs.mkdtempSync(path.join(os.tmpdir(), 'flexlyf-git-test-'));
+  const base = fs.mkdtempSync(path.join(os.tmpdir(), 'Yuvglobal-git-test-'));
   t.after(() => fs.rmSync(base, { recursive: true, force: true }));
   const root = path.join(base, 'site'), remote = path.join(base, 'remote.git');
   fs.mkdirSync(root);

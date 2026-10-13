@@ -6,7 +6,7 @@ const os = require('node:os');
 const {build} = require('../scripts/build-site.cjs');
 test('public pages, assets and anchors resolve; sitemap and article metadata are consistent', () => {
   const source = path.resolve(__dirname,'..');
-  const root = fs.mkdtempSync(path.join(os.tmpdir(),'flexlyf-seo-'));
+  const root = fs.mkdtempSync(path.join(os.tmpdir(),'Yuvglobal-seo-'));
   try {
     for (const name of fs.readdirSync(source)) {
       if (/\.(html|css|js|svg|ico)$/.test(name) || ['sitemap.xml','robots.txt','news.json','assets','data','news-images'].includes(name)) {
@@ -16,8 +16,8 @@ test('public pages, assets and anchors resolve; sitemap and article metadata are
     const output=build(root);
     for(const [legacy,target] of Object.entries({'product-testing':'testing.html','certification-services':'certification.html','about-us':'about.html','contact':'contact.html','licensing-support':'licensing.html','logistics-customs':'logistics.html','news-logs-desk':'trade-intelligence.html','trade-insurance':'insurance.html'})){
       const redirect=fs.readFileSync(path.join(output,legacy,'index.html'),'utf8');
-      assert.ok(redirect.includes('content="0;url=https://flexlyf.com/'+target+'"'));
-      assert.ok(redirect.includes('rel="canonical" href="https://flexlyf.com/'+target+'"'));
+      assert.ok(redirect.includes('content="0;url=https://www.yuvglobal.com/'+target+'"'));
+      assert.ok(redirect.includes('rel="canonical" href="https://www.yuvglobal.com/'+target+'"'));
     }
     const files=fs.readdirSync(output).filter(name=>name.endsWith('.html')).map(name=>path.join(output,name));
     files.push(...fs.readdirSync(path.join(output,'updates')).map(name=>path.join(output,'updates',name)));
@@ -29,7 +29,7 @@ test('public pages, assets and anchors resolve; sitemap and article metadata are
       for(const match of markup.matchAll(/(?:href|src)=["']([^"']+)["']/g)) {
         const href=match[1];
         if(/^(?:[a-z]+:|\/\/)/i.test(href)) continue;
-        const url=new URL(href,'https://flexlyf.com/'+path.basename(file));
+        const url=new URL(href,'https://www.yuvglobal.com/'+path.basename(file));
         const target=url.pathname==='/'?path.join(base,'index.html'):path.join(base,decodeURIComponent(url.pathname));
         if(!fs.existsSync(target)){failures.push(`${path.basename(file)}: ${href}`);continue;}
         if(url.hash && target.endsWith('.html')) {
