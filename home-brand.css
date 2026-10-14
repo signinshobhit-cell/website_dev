@@ -1,0 +1,5 @@
+.home-brand-logo{display:block;width:216px;height:auto;max-width:100%;}
+.navbar .logo-wrapper{flex-shrink:0;}
+.footer-logo .home-brand-logo{width:280px;}
+@media(min-width:1201px) and (max-width:1450px){.navbar .home-brand-logo{width:175px;}}
+@media(max-width:600px){.navbar .home-brand-logo{width:210px;}.footer-logo .home-brand-logo{width:260px;}}

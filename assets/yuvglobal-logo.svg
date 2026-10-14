@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 200" role="img" aria-labelledby="title desc">
+  <title id="title">YuvGlobal</title>
+  <desc id="desc">Young Ambition. Global Possibilities.</desc>
+  <defs><linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaff32"/><stop offset=".48" stop-color="#81f542"/><stop offset="1" stop-color="#00e7ce"/></linearGradient></defs>
+  <g fill="none" stroke="url(#brand)" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="91" stroke-width="4"/>
+    <path d="M151 62H132L98 43 49 72V131L98 159 151 130V109H123" stroke-width="17"/>
+  </g>
+  <g fill="url(#brand)"><path d="M146 48l19 14-19 14zM126 95l-19 14 19 14z"/><path d="M62 77h18l20 24 20-24h18l-31 35v28H91v-28z"/></g>
+  <text x="214" y="118" fill="#88ed32" font-family="Inter,Arial,sans-serif" font-size="85" font-weight="800" letter-spacing="-4">YuvGlobal</text>
+  <text x="221" y="153" fill="#9dea45" font-family="Inter,Arial,sans-serif" font-size="22">Young Ambition. Global Possibilities.</text>
+</svg>
