@@ -45,15 +45,8 @@
     <!-- Structured Data (JSON-LD Schema) -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy - Yuvglobal","description":"Privacy guidelines, collection matrices, and retention frameworks of Yuvglobal.","url":"https://www.yuvglobal.com/privacy","provider":{"@type":"Organization","name":"Yuvglobal","url":"https://www.yuvglobal.com/","telephone":"+919220819906","email":"shobhit@flexlyf.com"}}</script>
 
-    <style>
-        /* Base Container & Typography Framework Layouts */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="shared-shell.css">
+<style>
 
         /* Custom Lime Green Header Theme Override matching requested design updates */
         nav.navbar {
@@ -90,13 +83,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        .breadcrumb {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
         .breadcrumb a {
             color: #F59E0B;
             text-decoration: none;
@@ -132,20 +118,10 @@
         .policy-container ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
         .policy-container li { margin-bottom: 0.5rem; }
         .policy-section { margin-bottom: 3.5rem; }
-
-        /* Footer Framework Components */
-        .footer { background: #022c22; color: white; padding: 60px 0 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
-        .footer h4 { color: white; margin-bottom: 1.5rem; }
-        .footer ul { list-style: none; padding: 0; }
-        .footer-links li { margin-bottom: 0.8rem; }
-        .footer-links a { color: #9CA3AF; text-decoration: none; }
-        .footer-contact-list li { margin-bottom: 1rem; display: flex; gap: 10px; color: #9CA3AF; }
-        .footer-bottom { border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem; }
     </style>
 <link rel="stylesheet" href="seo-services.css"><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=yg-20261014"><link rel="stylesheet" href="home-brand.css">
 </head>
-<body>
+<body class="shared-shell-1 shared-shell-11 shared-shell-16 shared-shell-17 shared-shell-18 shared-shell-19 shared-shell-20 shared-shell-21 shared-shell-22 shared-shell-23">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -521,10 +497,8 @@
         });
 
         // Safe Dynamic Year Interpolation
-        const dynamicYearElement = document.getElementById('year');
-        if (dynamicYearElement) {
-            dynamicYearElement.textContent = new Date().getFullYear();
-        }
+
     </script>
+<script src="shared-shell.js" defer></script>
 </body>
 </html>

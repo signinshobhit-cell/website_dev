@@ -45,59 +45,8 @@
     <!-- Structured Data (JSON-LD Schema) -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Terms of Service - Yuvglobal","description":"Terms of service, legal guidelines, and user responsibilities of Yuvglobal.","url":"https://www.yuvglobal.com/terms","provider":{"@type":"Organization","name":"Yuvglobal","url":"https://www.yuvglobal.com/","telephone":"+919220819906","email":"shobhit@flexlyf.com"}}</script>
 
-    <style>
-        /* Base Container */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            box-sizing: border-box;
-        }
-
-        /* Navigation Green Theme Overrides */
-        nav.navbar {
-            background: #064E3B !important;
-            box-shadow: 0 4px 15px rgba(2, 44, 34, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav.navbar .logo-text-main { color: #FFFFFF !important; }
-        nav.navbar .logo-text-sub { color: #F59E0B !important; }
-        nav.navbar .nav-link { color: rgba(255, 255, 255, 0.85) !important; }
-        nav.navbar .nav-link:hover, nav.navbar .nav-link.active { color: #F59E0B !important; }
-
-        nav.navbar .nav-phone {
-            color: #FFFFFF !important;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            transition: background 0.3s ease;
-        }
-        nav.navbar .nav-phone:hover { background: rgba(255, 255, 255, 0.2); }
-        nav.navbar .hamburger span { background-color: #FFFFFF !important; }
-
-        /* Page Hero Layout Block */
-        .page-hero {
-            background: linear-gradient(135deg, var(--color-primary-dark, #064E3B) 0%, var(--color-primary, #059669) 100%);
-            padding: 120px 0 80px;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .breadcrumb {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-        .breadcrumb a {
-            color: var(--color-accent, #F59E0B);
-            text-decoration: none;
-        }
+    <link rel="stylesheet" href="shared-shell.css">
+<style>
 
         /* Terms Content Styling Fixes */
         .terms-container {
@@ -122,20 +71,10 @@
         }
         .terms-container ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
         .terms-container li { margin-bottom: 0.5rem; }
-
-        /* Footer System Components */
-        .footer { background: #022c22; color: white; padding: 60px 0 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
-        .footer h4 { color: white; margin-bottom: 1.5rem; }
-        .footer ul { list-style: none; padding: 0; }
-        .footer-links li { margin-bottom: 0.8rem; }
-        .footer-links a { color: #9CA3AF; text-decoration: none; }
-        .footer-contact-list li { margin-bottom: 1rem; display: flex; gap: 10px; color: #9CA3AF; }
-        .footer-bottom { border-top: 1px solid #374151; padding-top: 2rem; text-align: center; color: #9CA3AF; font-size: 0.9rem; }
     </style>
 <link rel="stylesheet" href="seo-services.css"><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=yg-20261014"><link rel="stylesheet" href="home-brand.css">
 </head>
-<body>
+<body class="shared-shell-1 shared-shell-2 shared-shell-3 shared-shell-4 shared-shell-5 shared-shell-6 shared-shell-7 shared-shell-8 shared-shell-9 shared-shell-10 shared-shell-11 shared-shell-12 shared-shell-16 shared-shell-17 shared-shell-18 shared-shell-19 shared-shell-20 shared-shell-21 shared-shell-22 shared-shell-23">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -332,10 +271,8 @@
         });
 
         // Safe Dynamic Year Interpolation
-        const dynamicYearElement = document.getElementById('year');
-        if (dynamicYearElement) {
-            dynamicYearElement.textContent = new Date().getFullYear();
-        }
+
     </script>
+<script src="shared-shell.js" defer></script>
 </body>
 </html>

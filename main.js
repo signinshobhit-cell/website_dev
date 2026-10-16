@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
   initStatsCounter();
   initFAQAccordion();
   initSmoothScroll();
-  updateFooterYear();
+
   initContactFormValidation();
-  initServicesDropdown();
+
 });
 
 // Optimized Window Scroll Architecture (Combines Navbar and Back-To-Top to save event threads)
@@ -72,7 +72,7 @@ function initGlobalScrollEffects() {
 function initMobileMenu() {
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
-  
+
   if (!hamburger || !navMenu) return;
 
   hamburger.addEventListener('click', (e) => {
@@ -142,7 +142,7 @@ function animateFluidCounter(element, target) {
   function updateFrame(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    
+
     // Progressive Quad out easing mathematical curve formula mapping
     const easeOutQuad = progress * (2 - progress);
     const currentCount = Math.floor(easeOutQuad * target);
@@ -197,13 +197,7 @@ function initSmoothScroll() {
 }
 
 // Dynamic Calendar Setup Nodal Logic
-function updateFooterYear() {
-  const yearElements = document.querySelectorAll('.footer-year, #year');
-  const currentYear = new Date().getFullYear();
-  yearElements.forEach(el => {
-    el.textContent = currentYear;
-  });
-}
+
 
 // Secure Field Form Validation Architecture Setup
 function initContactFormValidation() {
@@ -220,7 +214,7 @@ function initContactFormValidation() {
         isFormValid = false;
       } else {
         input.style.borderColor = '#C4C7CC';
-        
+
         if (input.type === 'email') {
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(input.value)) {
@@ -264,10 +258,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".nav-link");
 
     navLinks.forEach(link => {
-        link.classList.remove("active"); 
-        
+        link.classList.remove("active");
+
         const href = link.getAttribute("href");
-        
+
         if (currentPath === href || (currentPath === "/" && href === "/")) {
             link.classList.add("active");
         }
@@ -276,67 +270,3 @@ document.addEventListener("DOMContentLoaded", () => {
 /* =========================================================
    SERVICES DROPDOWN
    ========================================================= */
-
-function initServicesDropdown() {
-
-  const dropdown = document.querySelector('.nav-dropdown');
-  const toggle = document.querySelector('.nav-dropdown-toggle');
-
-  if (!dropdown || !toggle) return;
-
-
-  toggle.addEventListener('click', function(e) {
-
-    e.preventDefault();
-    e.stopPropagation();
-
-    const isOpen = dropdown.classList.contains('open');
-
-    dropdown.classList.toggle('open');
-
-    toggle.setAttribute(
-      'aria-expanded',
-      String(!isOpen)
-    );
-
-  });
-
-
-  /* Close when clicking outside */
-
-  document.addEventListener('click', function(e) {
-
-    if (!dropdown.contains(e.target)) {
-
-      dropdown.classList.remove('open');
-
-      toggle.setAttribute(
-        'aria-expanded',
-        'false'
-      );
-
-    }
-
-  });
-
-
-  /* Close when pressing Escape */
-
-  document.addEventListener('keydown', function(e) {
-
-    if (e.key === 'Escape') {
-
-      dropdown.classList.remove('open');
-
-      toggle.setAttribute(
-        'aria-expanded',
-        'false'
-      );
-
-      toggle.focus();
-
-    }
-
-  });
-
-}

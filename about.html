@@ -37,62 +37,8 @@
 
 
 
-    <style>
-        /* Base Container Fixes */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            box-sizing: border-box;
-        }
-
-        /* Custom Green Header Theme Override for About Page */
-        nav.navbar {
-            background: #064E3B !important;
-            box-shadow: 0 4px 15px rgba(2, 44, 34, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav.navbar .logo-text-main { color: #FFFFFF !important; }
-        nav.navbar .logo-text-sub { color: #F59E0B !important; }
-        nav.navbar .nav-link { color: rgba(255, 255, 255, 0.85) !important; }
-        nav.navbar .nav-link:hover, nav.navbar .nav-link.active { color: #F59E0B !important; }
-
-        nav.navbar .nav-phone {
-            color: #FFFFFF !important;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            transition: background 0.3s ease;
-        }
-        nav.navbar .nav-phone:hover { background: rgba(255, 255, 255, 0.2); }
-        nav.navbar .hamburger span { background-color: #FFFFFF !important; }
-
-        /* Page Layout Specific Styles */
-        .page-hero {
-            background: linear-gradient(135deg, var(--color-primary-dark, #064E3B) 0%, var(--color-primary, #059669) 100%);
-            padding: 120px 0 80px;
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .breadcrumb {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-        .breadcrumb a {
-            color: var(--color-accent, #F59E0B);
-            text-decoration: none;
-        }
-
-        .section-padding { padding: 80px 0; }
-        .bg-light { background: #F9FAFB; }
+    <link rel="stylesheet" href="shared-shell.css">
+<style>
 
         .grid-2-col {
             display: grid;
@@ -293,14 +239,6 @@
             color: var(--color-gray-600);
             font-size: 0.9rem;
         }
-
-        /* Call To Action Interactivity Base */
-        .cta-section {
-            background: var(--color-primary-dark, #064E3B);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
         .cta-section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
         .cta-subtext { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2.5rem; }
         .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -323,31 +261,10 @@
             font-size: 1.1rem;
             background: none;
         }
-
-        /* Footer Structural Framework Elements */
-        .footer { background: #022c22; color: white; padding: 60px 0 20px; }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        .footer h4 { color: white; margin-bottom: 1.5rem; }
-        .footer ul { list-style: none; padding: 0; }
-        .footer-links li { margin-bottom: 0.8rem; }
-        .footer-links a { color: #9CA3AF; text-decoration: none; }
-        .footer-contact-list li { margin-bottom: 1rem; display: flex; gap: 10px; color: #9CA3AF; }
-        .footer-bottom {
-            border-top: 1px solid #374151;
-            padding-top: 2rem;
-            text-align: center;
-            color: #9CA3AF;
-            font-size: 0.9rem;
-        }
     </style>
 <link rel="stylesheet" href="seo-services.css"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://www.yuvglobal.com/#business","name":"Yuvglobal","url":"https://www.yuvglobal.com/","telephone":"+919220819906","email":"shobhit@flexlyf.com","address":{"@type":"PostalAddress","streetAddress":"310, Arjangarh","addressLocality":"New Delhi","addressRegion":"Delhi","addressCountry":"IN"},"areaServed":[{"@type":"Country","name":"India"},{"@type":"AdministrativeArea","name":"Delhi"},{"@type":"AdministrativeArea","name":"Uttar Pradesh"},{"@type":"City","name":"Mumbai"}]},{"@type":"WebSite","@id":"https://www.yuvglobal.com/#website","url":"https://www.yuvglobal.com/","name":"Yuvglobal"},{"@type":"AboutPage","url":"https://www.yuvglobal.com/about.html","about":{"@id":"https://www.yuvglobal.com/#business"}}]}</script><link rel="icon" type="image/svg+xml" href="/favicon.svg?v=yg-20261014"><link rel="stylesheet" href="home-brand.css">
 </head>
-<body>
+<body class="shared-shell-1 shared-shell-2 shared-shell-3 shared-shell-4 shared-shell-5 shared-shell-6 shared-shell-7 shared-shell-8 shared-shell-9 shared-shell-10 shared-shell-11 shared-shell-12 shared-shell-13 shared-shell-14 shared-shell-15 shared-shell-16 shared-shell-17 shared-shell-18 shared-shell-19 shared-shell-20 shared-shell-21 shared-shell-22 shared-shell-23">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <nav class="navbar" role="navigation" aria-label="Main navigation">
@@ -720,10 +637,8 @@
         });
 
         // Safe Year Interpolation
-        const dynamicYearElement = document.getElementById('year');
-        if (dynamicYearElement) {
-            dynamicYearElement.textContent = new Date().getFullYear();
-        }
+
     </script>
+<script src="shared-shell.js" defer></script>
 </body>
 </html>

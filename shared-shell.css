@@ -1,0 +1,152 @@
+/* Shared shell rules extracted from page styles. :where preserves original specificity. */
+:where(body.shared-shell-1) .container {
+width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            box-sizing: border-box;
+}
+
+:where(body.shared-shell-2) nav.navbar {
+background: #064E3B !important;
+            box-shadow: 0 4px 15px rgba(2, 44, 34, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+}
+
+:where(body.shared-shell-3) nav.navbar .logo-text-main {
+color: #FFFFFF !important;
+}
+
+:where(body.shared-shell-4) nav.navbar .logo-text-sub {
+color: #F59E0B !important;
+}
+
+:where(body.shared-shell-5) nav.navbar .nav-link {
+color: rgba(255, 255, 255, 0.85) !important;
+}
+
+:where(body.shared-shell-6) nav.navbar .nav-link:hover,
+:where(body.shared-shell-6) nav.navbar .nav-link.active {
+color: #F59E0B !important;
+}
+
+:where(body.shared-shell-7) nav.navbar .nav-phone {
+color: #FFFFFF !important;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+}
+
+:where(body.shared-shell-8) nav.navbar .nav-phone:hover {
+background: rgba(255, 255, 255, 0.2);
+}
+
+:where(body.shared-shell-9) nav.navbar .hamburger span {
+background-color: #FFFFFF !important;
+}
+
+:where(body.shared-shell-10) .page-hero {
+background: linear-gradient(135deg, var(--color-primary-dark, #064E3B) 0%, var(--color-primary, #059669) 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+}
+
+:where(body.shared-shell-11) .breadcrumb {
+font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            display: inline-block;
+}
+
+:where(body.shared-shell-12) .breadcrumb a {
+color: var(--color-accent, #F59E0B);
+            text-decoration: none;
+}
+
+:where(body.shared-shell-13) .section-padding {
+padding: 80px 0;
+}
+
+:where(body.shared-shell-14) .bg-light {
+background: #F9FAFB;
+}
+
+:where(body.shared-shell-15) .cta-section {
+background: var(--color-primary-dark, #064E3B);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+}
+
+:where(body.shared-shell-16) .footer {
+background: #022c22; color: white; padding: 60px 0 20px;
+}
+
+:where(body.shared-shell-17) .footer-grid {
+display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+}
+
+:where(body.shared-shell-18) .footer h4 {
+color: white; margin-bottom: 1.5rem;
+}
+
+:where(body.shared-shell-19) .footer ul {
+list-style: none; padding: 0;
+}
+
+:where(body.shared-shell-20) .footer-links li {
+margin-bottom: 0.8rem;
+}
+
+:where(body.shared-shell-21) .footer-links a {
+color: #9CA3AF; text-decoration: none;
+}
+
+:where(body.shared-shell-22) .footer-contact-list li {
+margin-bottom: 1rem; display: flex; gap: 10px; color: #9CA3AF;
+}
+
+:where(body.shared-shell-23) .footer-bottom {
+border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 0.9rem;
+}
+
+:where(body.shared-shell-24) .industry-tags {
+display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;
+}
+
+:where(body.shared-shell-25) .faq-item {
+border-bottom: 1px solid #e5e7eb; margin-bottom: 1rem;
+}
+
+:where(body.shared-shell-26) .faq-answer {
+max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--color-gray-600, #4B5563);
+            line-height: 1.6;
+}
+
+:where(body.shared-shell-27) .faq-item.active .faq-answer {
+max-height: 200px; padding-bottom: 1.5rem;
+}
+
+:where(body.shared-shell-28) .faq-icon {
+transition: transform 0.3s ease;
+}
+
+:where(body.shared-shell-29) .faq-item.active .faq-icon {
+transform: rotate(45deg);
+}
