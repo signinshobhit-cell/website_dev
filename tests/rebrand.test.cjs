@@ -8,7 +8,8 @@ test('Yuvglobal public branding preserves contact details and deployed quote com
   assert.equal(fs.readFileSync(path.join(root, 'CNAME'), 'utf8').trim(), 'www.yuvglobal.com');
   for (const name of fs.readdirSync(root).filter(name => name.endsWith('.html'))) {
     const html = fs.readFileSync(path.join(root, name), 'utf8');
-    assert.doesNotMatch(html, /Flexlyf Commerce|Flex<tspan[^>]*>LyF/);
+    assert.doesNotMatch(html.replaceAll('Flexlyf Commerce Private Limited. All rights reserved.', ''), /Flexlyf Commerce|Flex<tspan[^>]*>LyF/);
+    if (html.includes('All rights reserved.')) assert.ok(html.includes('Flexlyf Commerce Private Limited. All rights reserved.'), `Legal footer missing on ${name}`);
     if (html.includes('rel="canonical"')) assert.match(html, /https:\/\/www\.yuvglobal\.com\//);
     if (html.includes('mailto:')) assert.match(html, /mailto:shobhit@flexlyf\.com/);
   }
