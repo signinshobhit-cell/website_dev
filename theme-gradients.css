@@ -9,12 +9,33 @@
   --yg-mesh-soft:
     radial-gradient(ellipse at 100% 0, #b9ed9240, transparent 55%),
     linear-gradient(120deg, #f7faf5, #edf5ef 65%, #f4f9f1);
+  --yg-mesh-paper:
+    radial-gradient(ellipse at 100% 5%, #b9ed9226, transparent 55%),
+    linear-gradient(120deg, #ffffff, #f2f8f3 70%, #f8fbf5);
   --yg-lime-surface: linear-gradient(115deg, #c5f789, #a8ed64 60%, #88e559);
+}
+
+/* Cover every public content section, including inline and page-specific surfaces.
+   Keep dark surfaces explicit below so existing white text stays readable. */
+body main { background: var(--yg-mesh-paper); }
+body main section,
+body .trade-article-page {
+  background: var(--yg-mesh-paper) !important;
+}
+body main :is(.bg-light, .section-bg-off-white, .bg-off-white,
+  .ec-tinted, .ec-services, .ec-resources, .ec-guide-section,
+  .ec-walmart-section, .benefits-section, .ims-section, .epr-section,
+  .rcmc-section, .agreements-section, .finance-services, .finance-rates,
+  .finance-schemes, .import-catalog, .logistics-services, .cargo-quote,
+  .courier-section, .scrip-doc-section, .scrip-support-section,
+  .seo-related-section, .seo-service-area) {
+  background: var(--yg-mesh-soft) !important;
 }
 
 /* Large editorial surfaces: soft, restrained pools of the brand colours. */
 body :is(.hero, .hero-showcase-section, .page-header, .page-hero,
   .ec-hero, .scrip-hero, .stats-section, .cta-banner,
+  .cta-section, .trade-intelligence-hero,
   .ec-enquiry-section, .scrip-contact-section) {
   background: var(--yg-mesh-dark) !important;
 }
@@ -65,5 +86,8 @@ body .btn-primary:hover { background: linear-gradient(110deg, #c46a05, #d67c06);
 @media (forced-colors: active) {
   body :is(.hero, .hero-showcase-section, .page-header, .page-hero, .ec-hero,
     .scrip-hero, .stats-section, .cta-banner, .ec-enquiry-section,
-    .scrip-contact-section, .footer) { background: Canvas !important; }
+    .cta-section, .trade-intelligence-hero, .scrip-contact-section,
+    .footer), body main, body main section, body .trade-article-page {
+    background: Canvas !important;
+  }
 }
