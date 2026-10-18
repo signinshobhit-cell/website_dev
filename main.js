@@ -19,26 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Optimized Window Scroll Architecture (Combines Navbar and Back-To-Top to save event threads)
 function initGlobalScrollEffects() {
-  const navbar = document.querySelector('.navbar');
   const backToTop = document.querySelector('.back-to-top');
   let scrollTimeout;
 
-  if (!navbar && !backToTop) return;
+  if (!backToTop) return;
 
   // Use a passive scroll listener to prevent touch/scroll performance degradation on mobile
   window.addEventListener('scroll', () => {
     if (!scrollTimeout) {
       window.requestAnimationFrame(() => {
         const currentScrollY = window.scrollY;
-
-        // Navbar scroll state check
-        if (navbar) {
-          if (currentScrollY > 80) {
-            navbar.classList.add('scrolled');
-          } else {
-            navbar.classList.remove('scrolled');
-          }
-        }
 
         // Back-To-Top visibility button check
         if (backToTop) {

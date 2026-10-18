@@ -234,6 +234,20 @@ img {
   align-items: center;
 }
 
+/* A translucent green layer keeps white navigation legible over page content. */
+nav.navbar.is-scrolled {
+  background: rgba(3, 53, 42, .72) !important;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px rgba(0, 25, 18, .12);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+nav.navbar.is-scrolled .nav-link { color: #fff !important; }
+nav.navbar.is-scrolled .hamburger span { background-color: #fff !important; }
+@media (prefers-reduced-motion: reduce) {
+  nav.navbar { transition: none; }
+}
+
 .logo {
   display: flex;
   flex-direction: column;

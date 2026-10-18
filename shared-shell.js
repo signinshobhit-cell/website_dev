@@ -70,6 +70,20 @@ function initServicesDropdown() {
   });
 
 }
-const init=()=>{updateFooterYear();initServicesDropdown();};
+function initNavbarTransparency() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+  let scheduled = false;
+  const update = () => {
+    navbar.classList.toggle('is-scrolled', window.scrollY > 60);
+    scheduled = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  }, {passive:true});
+  window.addEventListener('pageshow', update);
+  update();
+}
+const init=()=>{updateFooterYear();initServicesDropdown();initNavbarTransparency();};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
