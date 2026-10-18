@@ -1,0 +1,69 @@
+/* Shared Yuvglobal surfaces. Decorative gradients stay outside working form fields. */
+:root {
+  --yg-forest: #022c22;
+  --yg-emerald: #065641;
+  --yg-mesh-dark:
+    radial-gradient(ellipse at 95% 5%, #7fe32738 0, transparent 42%),
+    radial-gradient(ellipse at 8% 95%, #159d7866 0, transparent 48%),
+    linear-gradient(125deg, #022c22 12%, #064e3b 62%, #073e30 100%);
+  --yg-mesh-soft:
+    radial-gradient(ellipse at 100% 0, #b9ed9240, transparent 55%),
+    linear-gradient(120deg, #f7faf5, #edf5ef 65%, #f4f9f1);
+  --yg-lime-surface: linear-gradient(115deg, #c5f789, #a8ed64 60%, #88e559);
+}
+
+/* Large editorial surfaces: soft, restrained pools of the brand colours. */
+body :is(.hero, .hero-showcase-section, .page-header, .page-hero,
+  .ec-hero, .scrip-hero, .stats-section, .cta-banner,
+  .ec-enquiry-section, .scrip-contact-section) {
+  background: var(--yg-mesh-dark) !important;
+}
+body .footer {
+  background: radial-gradient(ellipse at 95% 100%, #37975c33, transparent 55%),
+    linear-gradient(120deg, #033b2e, #064e3b 65%, #03513d) !important;
+}
+
+/* The home globe keeps its existing grid and animation above this surface. */
+body .hero-showcase-section::before {
+  background-image: linear-gradient(90deg, #b2efc408 1px, transparent 1px),
+    linear-gradient(#b2efc408 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+body .stats-section .stat-label,
+body .stats-section .stat-heading {
+  color: #c8f4ab;
+  font-weight: 600;
+  margin-top: .75rem;
+}
+body .stats-section .stat-description { color: #e1eee6; opacity: 1; }
+
+/* Light sections provide breathing room between the richer hero and footer. */
+body :is(.bg-off-white, .logistics-services, .ec-tinted, .ec-guide-section,
+  .ec-walmart-section, .scrip-doc-section, .scrip-support-section,
+  .seo-related-section, .seo-service-area) {
+  background: var(--yg-mesh-soft);
+}
+body :is(.ec-channel-map, .ec-launch-card) {
+  background: linear-gradient(145deg, #ffffff0b, transparent 70%), #0b483a;
+}
+body :is(.ec-directory-controls, .ec-selection-panel, .scrip-cta) {
+  background: var(--yg-mesh-soft);
+}
+body :is(.ec-button:not(.ec-button-dark), .scrip-button:not(.scrip-button-primary),
+  .logistics-button-accent) {
+  background: var(--yg-lime-surface);
+  color: #163f25;
+}
+body :is(.ec-button-dark, .scrip-button-primary) {
+  background: linear-gradient(120deg, #07513e, #0a654b);
+  color: #fff;
+}
+/* Preserve the existing amber consultation action as a distinct focal point. */
+body .btn-primary { background: linear-gradient(110deg, #d97706, #e58c08); }
+body .btn-primary:hover { background: linear-gradient(110deg, #c46a05, #d67c06); }
+
+@media (forced-colors: active) {
+  body :is(.hero, .hero-showcase-section, .page-header, .page-hero, .ec-hero,
+    .scrip-hero, .stats-section, .cta-banner, .ec-enquiry-section,
+    .scrip-contact-section, .footer) { background: Canvas !important; }
+}
