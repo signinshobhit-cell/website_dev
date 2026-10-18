@@ -35,13 +35,34 @@ body main :is(.bg-light, .section-bg-off-white, .bg-off-white,
 /* Large editorial surfaces: soft, restrained pools of the brand colours. */
 body :is(.hero, .hero-showcase-section, .page-header, .page-hero,
   .ec-hero, .scrip-hero, .stats-section, .cta-banner,
-  .cta-section, .trade-intelligence-hero,
+  .cta-section, .trade-intelligence-hero, .trade-intelligence-cta,
   .ec-enquiry-section, .scrip-contact-section) {
   background: var(--yg-mesh-dark) !important;
 }
 body .footer {
   background: radial-gradient(ellipse at 95% 100%, #37975c33, transparent 55%),
     linear-gradient(120deg, #033b2e, #064e3b 65%, #03513d) !important;
+}
+
+/* Pair dark surfaces with explicit text colours: global heading and paragraph
+   rules otherwise override inherited white text on several legacy pages. */
+body .ec-hero .ec-start h2,
+body .cta-section :is(h2, h3),
+body .footer :is(h2, h3, h4) { color: #fff !important; }
+body .cta-section p,
+body .footer p,
+body .footer .footer-contact-list li { color: #e1eee6 !important; }
+body .footer a:not(.google-review-link) { color: #e1eee6; }
+body .footer .footer-bottom p span { color: inherit; }
+body :is(.page-hero, .ec-hero) .eyebrow { color: #c8f4ab; }
+body .cta-section .btn-cta-primary {
+  background: var(--yg-lime-surface);
+  color: #163f25;
+}
+body .cta-section .btn-cta-secondary { color: #fff; border-color: #fff; }
+body .cta-section .btn-cta-secondary:hover {
+  background: #fff;
+  color: #064e3b;
 }
 
 /* The home globe keeps its existing grid and animation above this surface. */
@@ -80,13 +101,16 @@ body :is(.ec-button-dark, .scrip-button-primary) {
   color: #fff;
 }
 /* Preserve the existing amber consultation action as a distinct focal point. */
-body .btn-primary { background: linear-gradient(110deg, #d97706, #e58c08); }
+body .btn-primary {
+  background: linear-gradient(110deg, #d97706, #e58c08);
+  color: #09261b !important;
+}
 body .btn-primary:hover { background: linear-gradient(110deg, #c46a05, #d67c06); }
 
 @media (forced-colors: active) {
   body :is(.hero, .hero-showcase-section, .page-header, .page-hero, .ec-hero,
     .scrip-hero, .stats-section, .cta-banner, .ec-enquiry-section,
-    .cta-section, .trade-intelligence-hero, .scrip-contact-section,
+    .cta-section, .trade-intelligence-hero, .trade-intelligence-cta, .scrip-contact-section,
     .footer), body main, body main section, body .trade-article-page {
     background: Canvas !important;
   }
