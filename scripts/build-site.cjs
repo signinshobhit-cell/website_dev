@@ -12,7 +12,7 @@ function build(root, destination = path.join(root, 'dist')) {
   };
   const blocked = new Set(['news-manager.html', 'manager.js', 'manager.css']);
   for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
-    if (entry.isFile() && !blocked.has(entry.name) && (/\.(html|css|js|svg|ico)$/i.test(entry.name) || ['CNAME', 'robots.txt', 'sitemap.xml', 'news.json'].includes(entry.name))) copy(entry.name);
+    if (entry.isFile() && !blocked.has(entry.name) && (/\.(html|css|js|svg|ico)$/i.test(entry.name) || ['CNAME', 'robots.txt', 'sitemap.xml', 'news.json', 'BingSiteAuth.xml'].includes(entry.name))) copy(entry.name);
   }
   const assetFiles = folder => {
     if (!fs.existsSync(path.join(root, folder))) return;

@@ -9,11 +9,16 @@ test('public pages, assets and anchors resolve; sitemap and article metadata are
   const root = fs.mkdtempSync(path.join(os.tmpdir(),'Yuvglobal-seo-'));
   try {
     for (const name of fs.readdirSync(source)) {
-      if (/\.(html|css|js|svg|ico)$/.test(name) || ['sitemap.xml','robots.txt','news.json','assets','data','news-images'].includes(name)) {
+      if (/\.(html|css|js|svg|ico)$/.test(name) || ['sitemap.xml','robots.txt','news.json','assets','data','news-images','BingSiteAuth.xml'].includes(name)) {
         fs.cpSync(path.join(source,name),path.join(root,name),{recursive:true});
       }
     }
     const output=build(root);
+    if(fs.existsSync(path.join(source,'BingSiteAuth.xml')))assert.equal(fs.readFileSync(path.join(output,'BingSiteAuth.xml'),'utf8'),fs.readFileSync(path.join(source,'BingSiteAuth.xml'),'utf8'));
+    const linkAudit=require('../scripts/audit-internal-links.cjs').audit(output);
+    assert.deepEqual(linkAudit.errors,[],'Built internal-link graph must resolve');
+    assert.ok(!linkAudit.warnings.some(item=>item.issue==='link-to-noindex-page'),'Public links should use canonical article pages');
+    assert.ok(linkAudit.maxDepth<=2,'Indexable pages should remain within two links of home');
     for(const [legacy,target] of Object.entries({'product-testing':'testing.html','certification-services':'certification.html','about-us':'about.html','contact':'contact.html','licensing-support':'licensing.html','logistics-customs':'logistics.html','news-logs-desk':'trade-intelligence.html','trade-insurance':'insurance.html'})){
       const redirect=fs.readFileSync(path.join(output,legacy,'index.html'),'utf8');
       assert.ok(redirect.includes('content="0;url=https://www.yuvglobal.com/'+target+'"'));

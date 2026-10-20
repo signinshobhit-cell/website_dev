@@ -31,6 +31,19 @@ function buildNewsPages(root, destination, items) {
   payload.items = published;
   fs.writeFileSync(path.join(destination, 'data/news.json'), JSON.stringify(payload,null,2)+'\n');
   fs.writeFileSync(path.join(destination, 'news.json'), JSON.stringify({news:published},null,2)+'\n');
+  // Link public guides directly to their crawlable article pages. Keep the
+  // query-based reader available for local previews and old bookmarks.
+  const articleUrls = new Map(published.map(item => [item.slug, item.url]));
+  for (const name of fs.readdirSync(destination).filter(name => name.endsWith('.html'))) {
+    const file = path.join(destination, name);
+    const html = fs.readFileSync(file, 'utf8').replace(/\bhref=(["'])(?:\.\/|\/)?trade-article\.html\?slug=([^"'&#]+)\1/g,
+      (match, quote, encodedSlug) => {
+        let slug;
+        try { slug = decodeURIComponent(encodedSlug); } catch { return match; }
+        return articleUrls.has(slug) ? `href=${quote}${escape(articleUrls.get(slug))}${quote}` : match;
+      });
+    fs.writeFileSync(file, html);
+  }
   const archiveFile = path.join(destination, 'trade-intelligence.html');
   if(fs.existsSync(archiveFile)) {
     const links = published.map(item=>`<li><a href="${escape(item.url)}">${escape(item.title)}</a></li>`).join('');
