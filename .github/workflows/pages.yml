@@ -25,6 +25,8 @@ jobs:
         run: |
           node --test tests/*.test.cjs
           node scripts/build-site.cjs
+      - name: Copy IndexNow key into published site
+        run: cp 20666bb018d746d18ee9d556e81cae30.txt dist/
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
